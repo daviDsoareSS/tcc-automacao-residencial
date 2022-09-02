@@ -1,0 +1,150 @@
+*{
+    font-family: 'Poppins', sans-serif;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    margin-left: 10vw;
+    margin-right: 10vw;
+
+}
+.circle {
+    z-index: -999;
+    margin: 0 ;
+    padding: 0;
+    top: -8vw;
+    left: -12vw;
+    position: absolute;
+    clip-path: circle(50% at 50% 50%);
+}
+.circle svg{
+    background: rgb(63, 89, 180,1);
+background: linear-gradient(90deg,  rgb(51, 24, 81) 0%, rgba(63,89,180,1) 100%);
+    width: 52vw;
+}
+nav{
+    animation-name: animationNav;
+    animation-delay: 0s;
+    animation-duration: 1.2s;
+    padding: 2vw 3vw !important;
+    background-color: transparent;
+ 
+}
+nav .navbar-brand{
+    font-size: 30px;
+    font-weight: bolder;
+}
+nav .nav-item {
+    margin-left: 2vw !important;
+    font-weight: bolder;
+    color: rgb(0, 0, 0) !important;
+}
+nav .form-inline{
+    margin-left: 20vw;
+    display: flex;
+}
+main{
+}
+main .container-main{
+}
+main .container-main img{
+    margin-left: 30vw;
+    width: 50vw;
+}
+main .container-main .text-main{
+    animation-name: animation;
+    animation-delay: 0s;
+    animation-duration: 1.5s;
+    width: 31vw;
+    text-align: justify;
+    position: absolute;
+    top: 15vw;
+}
+main .container-main .text-main h1{
+    font-weight: bolder;
+    font-size: 60px;
+    color: white;
+    
+
+}
+main .container-main .text-main small{
+    font-weight: bold;
+    font-size: 20px;
+    color:#91b3fa;
+}
+main .container-main .text-main p{
+    font-size: 18px;
+    color: rgb(22, 22, 22);
+}
+main .container-main .text-main button{
+    color: white;
+    border: none;
+    background: rgb(22,26,66);
+    background: linear-gradient(90deg, rgba(22,26,66,1) 0%, rgba(46,54,128,1));
+    font-weight: bolder;
+    font-size: 17px;
+    padding: 10px 70px;
+    border-radius: 20px;
+}
+section{
+    margin-top: 10vw;
+    position: relative;
+    display: grid;
+    background-color: white;
+    gap: 1vw;
+    grid-template-columns: repeat(3,1fr);
+}
+section .card-section{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 2vw;
+}
+section .card-section img{
+    margin-bottom: 1vw;
+    width: 5vw;
+}
+section .card-section p{
+    margin-top: 1vw;
+    font-size: 16px;
+    font-weight: normal;
+}
+section .first{
+    background-color: #91b3fa;
+}
+section .second{
+    background-color: #13097d;
+}
+section .three{
+    background-color: #fe7062;
+
+}
+@media(max-width:1000px){
+    main .container-main{
+        position: relative;
+    }
+    
+}
+@keyframes animation{
+    from{
+        transform: translate3d(-500px,100px,0);
+        opacity: 0;
+    }
+    to{
+        transform: translate3d(0px,0px,0px);
+        opacity: 1;
+    }
+}
+@keyframes animationNav{
+    from{
+        transform: translate3d(0px,-100px,0);
+        opacity: 0;
+    }
+    to{
+        transform: translate3d(0px,0px,0px);
+        opacity: 1;
+    }
+}

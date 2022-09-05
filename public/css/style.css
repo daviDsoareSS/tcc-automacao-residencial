@@ -6,8 +6,7 @@
     box-sizing: border-box;
 }
 body,html{
-    margin-left: 10vw;
-    margin-right: 10vw;
+    overflow-x: hidden;
 
 }
 .circle {
@@ -21,10 +20,12 @@ body,html{
 }
 .circle svg{
     background: rgb(63, 89, 180,1);
-background: linear-gradient(90deg,  rgb(51, 24, 81) 0%, rgba(63,89,180,1) 100%);
+    background: linear-gradient(90deg,  rgb(51, 24, 81) 0%, rgba(63,89,180,1) 100%);
     width: 52vw;
 }
 nav{
+    margin-left: 10vw;
+    margin-right: 10vw;
     animation-name: animationNav;
     animation-delay: 0s;
     animation-duration: 1.2s;
@@ -42,13 +43,14 @@ nav .nav-item {
     color: rgb(0, 0, 0) !important;
 }
 nav .form-inline{
-    margin-left: 20vw;
+    margin-left: 10vw;
     display: flex;
 }
 main{
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
-main .container-main{
-}
+
 main .container-main img{
     margin-left: 30vw;
     width: 50vw;
@@ -89,44 +91,205 @@ main .container-main .text-main button{
     border-radius: 20px;
 }
 section{
-    margin-top: 10vw;
-    position: relative;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 4vw;
+    text-align: center;
+}
+section small{
+    font-weight: lighter;
+    color: rgb(97, 97, 97);
+}
+section h3{
+    font-weight: bolder;
+}
+section .container-cards{
+    margin-top: 2vw;
     display: grid;
-    background-color: white;
-    gap: 1vw;
     grid-template-columns: repeat(3,1fr);
 }
-section .card-section{
+
+section .container-section{
+    text-align: center;
+    margin: 1vw;
+}
+section .container-section img{
+    clip-path: circle();
+    width: 50%;
+}
+section .container-section h2{
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: 1.5vw;
+    margin-bottom: 1vw;
+}
+section #btn-veja-todos-servicos{
+    color: rgb(19, 15, 74);
+    border: none;
+    padding: 10px 40px;
+    font-weight: bolder;
+    margin: 10px 0 2vw;
+}
+#content-line{
+    display: block;
+    margin-bottom: 20px !important;
+    margin: 0 auto;
+    width: 12vw;
+    border-radius: 20px;
+    border: 5px solid #fe7062 ;
+}
+article{
+    margin-left: 0vw;
+    margin-right: 0vw;
+}
+article .container-article{
+    display: flex;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    background: rgb(63, 89, 180,1);
+    background: linear-gradient(-90deg,  rgb(19, 15, 74) 0%, rgb(75, 103, 201) 100%);
+}
+article .container-article .container-article-text{
+    padding: 8vw;
+}
+article .container-article .container-article-text small{
+    text-align: center;
+    color: #fe6f6298;
+    font-weight: lighter;
+}
+article .container-article .container-article-text h3{
+    font-weight: bolder;
+    color: white;
+}
+article .container-article .container-article-text p{
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.636);
+}
+article .container-article .container-article-text .cards{
+    margin-top: 2vw;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+article .container-article .container-article-text .cards .card{
+    align-items: center;
+    background: none;
+    border: none;
+}
+article .container-article .container-article-text .cards img{
+    width: 3vw;
+}
+figure{
+    margin: 10vw !important;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: white;
+    gap: 1vw;
+}
+figure .card-figure{
     text-align: center;
     color: white;
     font-size: 20px;
     font-weight: bolder;
     padding: 2vw;
 }
-section .card-section img{
+figure .card-figure img{
     margin-bottom: 1vw;
     width: 5vw;
 }
-section .card-section p{
+figure .card-figure p{
     margin-top: 1vw;
     font-size: 16px;
     font-weight: normal;
 }
-section .first{
+figure .first{
     background-color: #91b3fa;
 }
-section .second{
+figure .second{
     background-color: #13097d;
 }
-section .three{
+figure .three{
     background-color: #fe7062;
-
+}
+footer{
+    background: rgb(63, 89, 180,1);
+    background: linear-gradient(90deg,  rgb(51, 24, 81) 0%, rgba(63,89,180,1) 100%);
 }
 @media(max-width:1000px){
-    main .container-main{
-        position: relative;
+    nav .form-inline{
+        margin-left: 0vw;
+        display: flex;
+    }
+    .circle {
+        z-index: -999;
+        margin: 0 ;
+        padding: 0;
+        top: -100vw;
+        left: -100vw;
+        position: absolute;
+        clip-path: circle(50% at 50% 50%);
+    }
+    .circle svg{
+        background: rgb(63, 89, 180,1);
+        background: linear-gradient(90deg,  rgb(51, 24, 81) 0%, rgba(63,89,180,1) 100%);
+        width: 300vw;
+        height: 400vw;
     }
     
+    main .container-main img{
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;;
+    }
+    main .container-main .text-main{
+        animation-name: animation;
+        animation-delay: 0s;
+        animation-duration: 1.5s;
+        width: 95%;
+        text-align: justify;
+        position: relative;
+        top: 15vw;
+    }
+    main .container-main .text-main h1{
+        font-size: 45px;
+    }
+    section{
+        margin-top: 28vw;
+    }
+    section .container-cards{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    } 
+    section .container-cards .container-section p{
+        padding: 20px;
+        text-align: justify;
+    } 
+    #content-line{
+        width: 30vw;
+    }
+    article .container-article{
+        display: block;
+    }
+    article .container-article img{
+        width: 100%;
+    }
+    article .container-article .container-article-text .cards{
+        margin-top: 10vw;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    article .container-article .container-article-text .cards img{
+        width: 20vw;
+    }
+    figure{
+        margin: 10vw !important;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 1vw;
+    }
 }
 @keyframes animation{
     from{

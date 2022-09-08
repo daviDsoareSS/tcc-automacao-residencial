@@ -25,13 +25,13 @@
 
     if($senha !== $senha2){
         $_SESSION['senhas_iguais'] = "<p style='color:red';>As senhas não são iguais.</p>";
-        header('Location:create-account.php');
+        header('Location:signup.php');
         exit;
     }
 
     if($row['total'] == 1){
         $_SESSION['usuario_existe']= "<p style='color:red';>Usuário ja existe.</p>";
-        header('Location:create-account.php');
+        header('Location:signup.php');
         exit;
     }
 
@@ -45,11 +45,11 @@
     else if(empty($nome) || empty($email) || 
     empty($senha) || empty($dataNasc) || empty($vericarSenha)){
         $_SESSION['campos_vazios'] = "<p style='color:red';>Campos obrigatórios.</p>";
-        header('Location:create-account.php');
+        header('Location:signup.php');
         exit;
     }
     else{
-        header('Location: create-account.php');
+        header('Location:signup.php');
     }
     
     $conn->close();

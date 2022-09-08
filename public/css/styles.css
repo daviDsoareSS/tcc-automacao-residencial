@@ -12,20 +12,9 @@
     margin-top: -6vw;
     
 }*/
-#pag-criar-conta{
-    display: flex;
-    align-items: center;
-    min-height: 60vw;
-    margin-top: -6vw;
-    background: rgb(36,41,57);
-    background: linear-gradient(0deg, rgba(36,41,57,1) 0%, rgba(53,59,80,1) 100%, rgba(184,30,30,1) 100%);
-}
-
 
 /*TELA DE LOGIN*/
 #pag-login{
-    background: rgb(36,41,57);
-    background: linear-gradient(0deg, rgba(36,41,57,1) 0%, rgba(53,59,80,1) 100%, rgba(184,30,30,1) 100%);
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -34,18 +23,17 @@
     align-items: center;
 }
 .container-login{
-    margin: 18vw;
-    background-color: white;
-    border-top: 4px solid #F66B6B;
-    min-width: 20vw;
+    margin: 20vw;
+    min-width: 35vw;
     min-height: 17vw;
 }
 #pag-login .container-left{
+    background: rgb(22,26,66);
+    background: linear-gradient(to left,rgba(46,54,128,1)50%, rgb(32, 39, 112) 100%);
     width: 70%;
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: white;
 }
 .container-login .top-login{
     padding: 2vw;
@@ -57,21 +45,21 @@
     margin-bottom: 1vw;
 }
 .container-login .top-login input{
-    border: 1px solid rgb(228, 228, 228);
+    border: 1px solid rgba(63, 88, 180, 0.116);
     margin-top: 0px;
     padding: 20px;
-    border-bottom: 4px solid #F66B6B;
-    height: 2vw;
+    border-bottom: 3px solid rgb(63, 89, 180,1);
+    height: 3vw;
     margin-bottom: 1vw;
 }
 .container-login .top-login small{
+    font-size: 18px;
     font-weight: bolder;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 .container-login .top-login #entrar{
+    background-color: #0093ee;
     border: none;
-    background: rgb(246,107,107);
-    background: linear-gradient(0deg, rgba(246,107,107,1) 0%, rgba(246,46,46,1) 100%);
     color: white;
     cursor: pointer;
     justify-content: center;
@@ -97,13 +85,81 @@
 .criarConta{
     justify-content: center;
     padding: 20px;
-    background-color: #F66B6B;
     flex-wrap: nowrap;
     display: flex;
 }
 .criarConta a{
-    color: white;
+    color: rgb(63, 89, 180,1);
     text-decoration: none;
     font-style: normal;
     padding-left: 1vw;
+}
+/*SIGNUP*/
+.container-login .top-login span{
+    color: #e24b48 ;
+}
+.container-login .top-login p{
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+@media(max-width:1000px){
+    #pag-login .container-left{
+        display: none;
+    }
+    #pag-login .container-login{
+        margin: 0 auto;
+        padding: 4vw;
+    }
+    #pag-login .container-login h1{
+        margin-top: 8vw;
+        font-size: 20px;
+    }
+    #pag-login .container-login h3{
+        font-size: 20px;
+    }
+    #pag-login .container-login .criarConta{
+        align-items: center;
+    }
+    #pag-login .container-login p{
+        font-size: 15px;
+        margin-top: 20px;
+    }
+}
+@media(max-width:1000px){
+    #pag-login .container-left{
+        display: none;
+    }
+    #pag-login .container-login .login-user{
+        padding: 0vw;
+        margin: 0 !important;
+    }
+    #pag-login .container-login{
+        width: 90%;
+    }
+    #pag-login .container-login h1{
+        margin-bottom: 5vw;
+        font-size: 30px;
+    }
+    #pag-login .container-login h3{
+        font-size: 20px;
+    }
+    #pag-login .container-login small{
+        font-size: 15px;
+        margin-top: 20px;
+    }
+    #pag-login .container-login .top-login button{
+        margin-top: 1vw;
+        padding: 20px 30px;
+    }
+    #pag-login .container-login .criarConta{
+        margin-top: 10vw;
+        text-align: center;
+        display: block;
+    }
+    #pag-login .container-login #criarConta{
+        font-size: 15px;
+        padding: 0;
+        margin: 0;
+    }
 }

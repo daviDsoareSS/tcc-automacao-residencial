@@ -1,4 +1,6 @@
 *{
+    overflow-x: hidden;
+    overflow-y: hidden;
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
@@ -12,7 +14,6 @@
     margin-top: -6vw;
     
 }*/
-
 /*TELA DE LOGIN*/
 #pag-login{
     width: 100vw;
@@ -28,8 +29,6 @@
     min-height: 17vw;
 }
 #pag-login .container-left{
-    background: rgb(22,26,66);
-    background: linear-gradient(to left,rgba(46,54,128,1)50%, rgb(32, 39, 112) 100%);
     width: 70%;
     height: 100%;
     margin: 0;

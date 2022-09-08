@@ -14,8 +14,11 @@
     </style>
 </head>
 <body id="pag-login">
+    <div class="container-left">
+        <img src="img/1.gif" alt="" width="50%">
+    </div>
     <form class="container-login" action="entrada-login.php" method="post">
-        <div class="top-login">
+    <div class="top-login">
         <h1>LOGIN</h1>
         <small>Email:</small>
         <input type="text" name="email" id="" required>

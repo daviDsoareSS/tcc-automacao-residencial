@@ -11,3 +11,10 @@ async function registerSW(){
         }
     }
 }
+
+/* Modal */
+    setTimeout(function openModal(){
+        const modal = document.querySelector('modal');
+        modal.style.display = 'block';
+        console.log('Ola mundo');
+},2000);

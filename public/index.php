@@ -4,6 +4,8 @@
 ?>
 <title>4House -Página inicial</title>
   <body>
+  <div class="modal">
+  </div>
   <span class="circle">
     <svg height="52vw" width="10vw">
       </svg>

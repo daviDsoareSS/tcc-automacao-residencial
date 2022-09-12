@@ -15,7 +15,7 @@
 </head>
 <body id="pag-login">
     <div class="container-left">
-    <img src="img/login/background-login.png" alt="" height="100%" width="100%">
+    <img src="img/login/background-login.png" alt="" height="100%" w7uy'1    idth="100%">
     </div>
     <form class="container-login" action="entrada-login.php" method="post">
     <div class="top-login login-user">

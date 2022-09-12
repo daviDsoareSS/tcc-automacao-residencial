@@ -103,10 +103,14 @@
     font-size: 18px;
 }
 @media(max-width:1000px){
+    #pag-login{
+        overflow-y: auto;
+    }
     #pag-login .container-left{
         display: none;
     }
     #pag-login .container-login{
+        width: 90%;
         margin: 0 auto;
         padding: 4vw;
     }
@@ -133,8 +137,8 @@
         padding: 0vw;
         margin: 0 !important;
     }
-    #pag-login .container-login{
-        width: 90%;
+    #pag-login .container-login.signup{
+        padding-top: 30vw;
     }
     #pag-login .container-login h1{
         margin-bottom: 5vw;

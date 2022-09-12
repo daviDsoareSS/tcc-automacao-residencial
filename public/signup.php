@@ -20,7 +20,7 @@
     <div class="container-left">
         <img src="img/login/background-login.png" alt="" height="100%" width="100%">
     </div>
-    <form class="container-login" action="acesso.php" method="post">
+    <form class="container-login signup" action="acesso.php" method="post">
     <div class="top-login">
     <div class="container-message-user">    
     <?php 

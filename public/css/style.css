@@ -269,6 +269,9 @@ footer{
     background: linear-gradient(90deg,  rgb(51, 24, 81) 0%, rgba(63,89,180,1) 100%);
 }
 @media(max-width:1000px){
+    body,html{
+        overflow-x: hidden;
+    }
     nav .form-inline{
         margin-left: 0vw;
         display: flex;
@@ -296,10 +299,14 @@ footer{
         z-index: -999;
         margin: 0 ;
         padding: 0;
-        top: -100vw;
-        left: -100vw;
+        top: -60vw;
+        left: 0%;
         position: absolute;
         clip-path: circle(50% at 50% 50%);
+    }
+    .circle svg{
+        width: 100vw !important;
+        height: 320vw !important;
     }
     .circle svg{
         background: rgb(63, 89, 180,1);

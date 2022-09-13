@@ -15,8 +15,7 @@
   <div class="modal">
   </div>
   <span class="circle">
-    <svg height="52vw" width="10vw">
-      </svg>
+    <svg height="52vw" width="10vw"></svg>
   </span>
       <main>
         <div class="container-main">

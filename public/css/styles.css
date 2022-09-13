@@ -21,8 +21,8 @@
     left:0;
     right:0;
     bottom:0;
-    background-color:#0093ee ; /* cor do background que vai ocupar o body */
-    z-index:999; /* z-index para jogar para frente e sobrepor tudo */
+    background: #0093ee;
+    z-index:999999999; /* z-index para jogar para frente e sobrepor tudo */
 }
 #preloader .inner {
     position: absolute;

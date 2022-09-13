@@ -4,6 +4,14 @@
 ?>
 <title>4House -Página inicial</title>
   <body>
+      <!-- início do preloader -->
+  <div id="preloader">
+    <div class="inner">
+       <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
+       <img src="img/gif/1490.gif" alt="">
+    </div>
+</div>
+<!-- fim do preloader --> 
   <div class="modal">
   </div>
   <span class="circle">
@@ -124,5 +132,6 @@
       <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="script/js.js" defer></script>
+    <script src="script/preloader.js" defer></script>
 </body>
 </html>

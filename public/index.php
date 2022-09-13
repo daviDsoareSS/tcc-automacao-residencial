@@ -18,7 +18,7 @@
                 <small>Serviços para automatizar seu lar</small>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis exercitationem amet dicta possimus, a voluptates facere esse nihil corporis delectus adipisci officiis maiores ex nobis aperiam autem reiciendis, cupiditate distinctio!
                 Autem qui enim voluptas vel deleniti nobis et placeat.</p>
-                <a href="signup.php"><button>Venha conhecer</button></a>
+                <a href="signup.php"><button onclick="$crisp.push(['do', 'session:reset']);";>Venha conhecer</button></a>
             </div>
         </div>
       </main>

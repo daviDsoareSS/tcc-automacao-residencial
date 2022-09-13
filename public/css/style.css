@@ -1,15 +1,22 @@
 *{
     font-family: 'Poppins', sans-serif;
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body,html{
-    overflow-x: hidden;
-
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
 }
-
+  
+body::-webkit-scrollbar-track {
+    background: #003f66c7;        /* color of the tracking area */
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: #1c2247;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 30px solid #1c2247;  /* creates padding around scroll thumb */
+}
 /* ini: Preloader */ 
 #preloader {
     position:fixed;
@@ -18,7 +25,7 @@ body,html{
     right:0;
     bottom:0;
     background-color:#0093ee ; /* cor do background que vai ocupar o body */
-    z-index:999; /* z-index para jogar para frente e sobrepor tudo */
+    z-index:999999; /* z-index para jogar para frente e sobrepor tudo */
 }
 #preloader .inner {
     position: absolute;
@@ -28,7 +35,7 @@ body,html{
 }
 /* end: Preloader */
 .modalCadastro{
-    z-index: 999999999;
+    z-index: 999;
     width: 40vw;
     height: 40vw;
     background-color: #91b3fa;
@@ -267,7 +274,7 @@ footer{
         display: flex;
     }
     .navbar-nav{
-        z-index: 9999999999999999;
+        z-index: 9999;
         text-align: center;
     }
     .navbar-nav a{

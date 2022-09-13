@@ -5,14 +5,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-/*#pag-login{
-    font-family: 'Lato', sans-serif;
-    min-height: 60vw;
-    display: flex;
-    align-items: center;
-    margin-top: -6vw;
-    
-}*/
+
 /*TELA DE LOGIN*/
 /* ini: Preloader */ 
 #preloader {
@@ -22,7 +15,7 @@
     right:0;
     bottom:0;
     background: #0093ee;
-    z-index:999999999; /* z-index para jogar para frente e sobrepor tudo */
+    z-index:99999999; /* z-index para jogar para frente e sobrepor tudo */
 }
 #preloader .inner {
     position: absolute;

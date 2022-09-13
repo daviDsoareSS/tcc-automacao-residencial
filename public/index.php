@@ -71,7 +71,7 @@
       </div>
       <span id="content-line"></span>
       </section>
-      <article>
+      <article id="sobre">
         <div class="container-article primary-img-article">
           <img src="img/section/equipamentos-automacao-residencial 1.jpg" alt="" width="50%">
           <div class="container-article-text">

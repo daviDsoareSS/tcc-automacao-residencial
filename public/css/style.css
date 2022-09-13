@@ -68,12 +68,27 @@ nav .navbar-brand{
 }
 nav .nav-item {
     margin-left: 2vw !important;
-    font-weight: bolder;
+    font-weight: bold;
     color: rgb(0, 0, 0) !important;
+}
+nav .nav-item a:hover{
+    color: #fe7062;
 }
 nav .form-inline{
     margin-left: 10vw;
     display: flex;
+}
+.navbar-nav hr{
+    display: none;
+}
+.form-inline button{
+    border: none !important;
+    color: white !important;
+    background-color: #0093ee;
+}
+.form-inline button:hover{
+    transition: 0.5s;
+    background-color:#003f66;
 }
 main{
     margin-left: 10vw;
@@ -250,6 +265,25 @@ footer{
     nav .form-inline{
         margin-left: 0vw;
         display: flex;
+    }
+    .navbar-nav{
+        z-index: 9999999999999999;
+        text-align: center;
+    }
+    .navbar-nav a{
+        font-size: 20px;
+        color: white;
+        
+    }
+    .navbar-nav hr{
+        display: block;
+        border: 2px solid #1c2247;
+    }
+    .dropdown-menu a{
+        color: black;
+    }
+    .form-inline input{
+        height: 100%;
     }
     .circle {
         z-index: -999;

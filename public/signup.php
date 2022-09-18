@@ -35,7 +35,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Inter:wght@700&family=Lato&display=swap');
     </style>
 </head>
-<body id="pag-login">
+<body id="pag-login" class="pag-signup">
 <!-- início do preloader -->
   <div id="preloader">
     <div class="inner">
@@ -69,11 +69,17 @@
          
         <p>Digite seu nome e sobrenome<span>*</span></p>
             <input style="height: 10px;" type="text" name="nome" id="nomeUser" placeholder="Digite nome e sobrenome" required>
-        <p>Digite sua data de nascimento <span>*</span></p>
+        <p>Digite sua data de nascimento<span>*</span></p>
             <input style="height: 10px;" type="date" name="dataNasc" id="dataNasc" placeholder="*somente números" required>
-       
+            <div class="container-sexo">
+                <p>Sexo<span>*</span></p>
+                    <input style="height: 10px;" class="sexo-user" type="radio" name="sexoUser" id="sexoMasculino" value="masculino" checked="check">
+                        <label for="sexoMasculino">Masculino</label>
+                    <input style="height: 10px;" class="sexo-user" type="radio" name="sexoUser" id="sexoFeminino" value="feminino">
+                        <label for="sexoFeminino">Feminino</label>           
+            </div>
             <p>Digite um email <span>*</span></p>
-                <input style="height: 10px;" class="form-control" type="text" name="email" id="email" placeholder="ex. joao@gmail.com">
+                <input style="height: 10px;" class="form-control" type="text" name="email" id="email" placeholder="ex. joao@gmail.com">        
             <p><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12.804 9c1.038-1.793 2.977-3 5.196-3 3.311 0 6 2.689 6 6s-2.689 6-6 6c-2.219 0-4.158-1.207-5.196-3h-3.804l-1.506-1.503-1.494 1.503-1.48-1.503-1.52 1.503-3-3.032 2.53-2.968h10.274zm7.696 1.5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5z"/></svg> Insira uma senha <span>*</span></p>
                 <input style="height: 10px;" class="form-control" type="password" name="senha" id="senha">
             <p><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12.804 9c1.038-1.793 2.977-3 5.196-3 3.311 0 6 2.689 6 6s-2.689 6-6 6c-2.219 0-4.158-1.207-5.196-3h-3.804l-1.506-1.503-1.494 1.503-1.48-1.503-1.52 1.503-3-3.032 2.53-2.968h10.274zm7.696 1.5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5z"/></svg> Confirme sua senha <span>*</span></p>

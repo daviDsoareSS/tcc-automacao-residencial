@@ -1,4 +1,8 @@
 <?php
+  include('protect.php');
+?>
+
+<?php
   //NAV-BAR
   include 'includes/nav-bar.php';
 ?>
@@ -18,6 +22,30 @@
     <svg height="52vw" width="10vw"></svg>
   </span>
       <main>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="container-login" action="entrada-login.php" method="post">
+          <strong><small>Email:</small></strong><br>
+          <input type="text" name="email" id="" required><br>
+          <strong><small>Senha:</small></strong><br>
+          <input type="password" name="senha" required>
+          <hr>
+          <a href="signup.php"><button type="button" class="btn btn-secondary">Não tenho conta</button></a>
+          <a href="index.php"><button type="submit" class="btn btn-primary">Entrar</button></a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
         <div class="container-main">
             <img src="img/main/save.png" alt="">
             <div class="text-main">
@@ -25,7 +53,7 @@
                 <small>Serviços para automatizar seu lar</small>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis exercitationem amet dicta possimus, a voluptates facere esse nihil corporis delectus adipisci officiis maiores ex nobis aperiam autem reiciendis, cupiditate distinctio!
                 Autem qui enim voluptas vel deleniti nobis et placeat.</p>
-                <a href="signup.php"><button>Venha conhecer</button></a>
+                <a href=""><button>Venha conhecer</button></a>
             </div>
         </div>
       </main>
@@ -34,38 +62,38 @@
         <h3>Mais prestados</h3>
         <div class="container-cards">
         <div class="container-section">
-          <img src="img/section/equipamentos-automacao-residencial 1.jpg" alt="" width="400vw">
+          <img src="img/section/ambientacao.png" alt="" width="400vw">
           <h2>Ambientação</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt est quibusdam repellendus recusandae provident pariatur atque saepe possimus placeat!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href=""><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
-          <img src="img/section/equipamentos-automacao-residencial 1.jpg" alt="" width="400vw">
+          <img src="img/section/portao-eletrico.png" alt="" width="400vw">
           <h2>Portão elétrico</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem nobis dignissimos dolor explicabo numquam atque soluta molestias culpa expedita sit animi ratione eaque, eius, laboriosam labore deleniti quibusdam ut magni!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href=""><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
-          <img src="img/section/equipamentos-automacao-residencial 1.jpg" alt="" width="400vw">
+          <img src="img/section/sensor-de-proximidade.png" alt="" width="400vw">
           <h2>Sensor de proximidade</h2>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod sequi repellendus voluptas. Est similique consectetur doloribus mollitia magni adipisci nisi ea at nostrum, quas alias inventore dolor voluptates quo unde.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href=""><span class="leia">... Leia mais</span></a></p>
         </div>
       </div>
       <!--Mais serviços-->
       <button id="btn-veja-todos-servicos" type="button" data-toggle="collapse" data-target="#mostrar-servicos" aria-controls="mostrar-servicos" aria-expanded="false" aria-label="Toggle navigation">Veja todos</button>
       <div class="collapse container-cards" id="mostrar-servicos">
         <div class="container-section">
-          <img src="img/section/equipamentos-automacao-residencial 1.jpg" alt="" width="400vw">
+          <img src="img/section/ambientacao.png" alt="" width="400vw">
           <h2>Ambientação</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt est quibusdam repellendus recusandae provident pariatur atque saepe possimus placeat!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href=""><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
-          <img src="img/section/equipamentos-automacao-residencial 1.jpg" alt="" width="400vw">
+          <img src="img/section/portao-eletrico.png" alt="" width="400vw">
           <h2>Portão elétrico</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem nobis dignissimos dolor explicabo numquam atque soluta molestias culpa expedita sit animi ratione eaque, eius, laboriosam labore deleniti quibusdam ut magni!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href=""><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
-          <img src="img/section/equipamentos-automacao-residencial 1.jpg" alt="" width="400vw">
+          <img src="img/section/sensor-de-proximidade.png" alt="" width="400vw">
           <h2>Sensor de proximidade</h2>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod sequi repellendus voluptas. Est similique consectetur doloribus mollitia magni adipisci nisi ea at nostrum, quas alias inventore dolor voluptates quo unde.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href=""><span class="leia">... Leia mais</span></a></p>
         </div>
       </div>
       <span id="content-line"></span>

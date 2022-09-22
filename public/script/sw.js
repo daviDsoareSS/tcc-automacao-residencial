@@ -1,13 +1,13 @@
-const cacheName = 'polaroid'
+const cacheName = '4House'
 
 self.addEventListener('install', function(event){
     event.waitUntil(
         caches.open(cacheName).then(function (cache){
             cache.addAll([
                 '/public/',
-                '/index.html',
-                '/manifest.webmanifest',
-                '/script/js.js' 
+                'public/index.php',
+                'public/manifest.webmanifest',
+                'public/script/js.js' 
             ])
         })
     )

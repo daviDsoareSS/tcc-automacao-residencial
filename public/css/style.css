@@ -81,21 +81,44 @@ nav .nav-item {
 nav .nav-item a:hover{
     color: #fe7062;
 }
-nav .form-inline{
-    margin-left: 10vw;
-    display: flex;
-}
 .navbar-nav hr{
     display: none;
 }
-.form-inline button{
-    border: none !important;
-    color: white !important;
+.dropdown-menu .navbar-search{
+    padding: 1vw 2vw;
+}
+.dropdown-menu .navbar-search input{
+    margin-bottom: 0.7vw;
+    padding: 5px 5px;
+    width: 280px;
+}
+.dropdown-menu .navbar-search button{
+    color: #102c3d;
+    font-weight: bolder;
+    padding: 5px 40px;
+    border: NONE;
     background-color: #0093ee;
 }
-.form-inline button:hover{
-    transition: 0.5s;
-    background-color:#003f66;
+.navbar-collapse .session-user{
+    text-align: center !important;
+    margin-left: 16vw;
+    display: flex;
+}
+.navbar-collapse .session-user li{
+    position: absolute !important;
+    list-style: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.navbar-collapse .session-user li .nav-link{
+    color: #fe7062;
+}
+.navbar-collapse .session-user svg{
+    position: relative;
+    float: right;
+    display: flex;
+    margin-left: 9vw;
 }
 main{
     margin-left: 10vw;
@@ -159,14 +182,19 @@ section .container-cards{
     display: grid;
     grid-template-columns: repeat(3,1fr);
 }
-
+section .container-cards .container-section a{
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 18px;
+    color: #0093ee !important;
+}
 section .container-section{
     text-align: center;
     margin: 1vw;
 }
 section .container-section img{
     clip-path: circle();
-    width: 50%;
+    width: 20%;
 }
 section .container-section h2{
     font-weight: bolder;
@@ -174,6 +202,7 @@ section .container-section h2{
     margin-top: 1.5vw;
     margin-bottom: 1vw;
 }
+
 section #btn-veja-todos-servicos{
     color: rgb(19, 15, 74);
     border: none;

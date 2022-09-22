@@ -5,16 +5,10 @@ window.addEventListener('load', ()=>{
 async function registerSW(){
     if('serviceWorker' in navigator){
         try{
-            await navigator.serviceWorker.register('./sw.js')
+            await navigator.serviceWorker.register('script/sw.js')
         } catch(e){
             console.log(`SW registration failed`);
         }
     }
 }
 
-/* Modal */
-    setTimeout(function openModal(){
-        const modal = document.querySelector('modal');
-        modal.style.display = 'block';
-        console.log('Ola mundo');
-},2000);

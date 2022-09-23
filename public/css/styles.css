@@ -24,34 +24,51 @@
     transform: translate(-50%, -50%);  
 }
 /* end: Preloader */
-#pag-login{
+
+/*pagina de login*/
+.pag-login{
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
 }
-
+/*pagina de cadastro*/
+#pag-login{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.signup{
+    margin: 0 !important;
+    margin-top: 100vw;
+    min-width: 50vw;
+    min-height: 45vw;
+}
 .container-login{
     margin: 20vw;
     min-width: 35vw;
     min-height: 17vw;
 }
-#pag-login .container-left{
+.pag-login .left-login{
     width: 70%;
     height: 100%;
     margin: 0;
     padding: 0;
 }
 .container-login .top-login{
-    padding: 2vw;
+    padding-top: 5vw;
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
 .container-login .top-login h1{
+    font-size: 25px;
+    font-weight: bolder;
     margin-bottom: 1vw;
 }
 .container-login .top-login input{
@@ -61,6 +78,17 @@
     border-bottom: 3px solid rgb(63, 89, 180,1);
     height: 3vw;
     margin-bottom: 1vw;
+}
+.container-login .top-login .group-tel{
+    gap: 1vw;
+    width: 100%;
+    display: flex;
+}
+.container-login .top-login .group-tel label{
+    display:block;
+}
+.container-login .top-login .group-tel #telUser{
+    width: 100%;
 }
 .signup .top-login .container-sexo label{
     margin-right: 2vw;
@@ -95,6 +123,7 @@
     color: #353b50;
     font-size: 16px;
 }
+
 .criarConta{
     justify-content: center;
     padding: 20px;
@@ -114,7 +143,7 @@
 .container-login .top-login p{
     margin-bottom: 10px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 14px;
 }
 @media(max-width:1000px){
     #pag-login{

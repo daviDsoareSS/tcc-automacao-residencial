@@ -32,7 +32,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Inter:wght@700&family=Lato&display=swap');
     </style>
 </head>
-<body id="pag-login">
+<body id="pag-login" class="pag-login">
 <!-- início do preloader -->
   <div id="preloader">
     <div class="inner">
@@ -41,7 +41,7 @@
     </div>
   </div>
 <!-- fim do preloader --> 
-    <div class="container-left">
+    <div class="container-left left-login">
     <img src="img/login/background-login.png" alt="" height="100%" w7uy'1    idth="100%">
     </div>
     <form class="container-login" action="entrada-login.php" method="post">

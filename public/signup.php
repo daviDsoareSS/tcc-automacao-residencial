@@ -30,6 +30,8 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">  
     <!--FIM FAVICON-->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Inter:wght@700&family=Lato&display=swap');
@@ -44,9 +46,6 @@
     </div>
   </div>
 <!-- fim do preloader --> 
-    <div class="container-left">
-        <img src="img/login/background-login.png" alt="" height="100%" width="100%">
-    </div>
     <form class="container-login signup" action="acesso.php" method="post">
     <div class="top-login">
     <div class="container-message-user">    
@@ -78,6 +77,32 @@
                     <input style="height: 10px;" class="sexo-user" type="radio" name="sexoUser" id="sexoFeminino" value="feminino">
                         <label for="sexoFeminino">Feminino</label>           
             </div>
+                <p>Telefone<span>*</span></p>
+                <div class="group-tel">
+                    <input style="height: 10px;" type="text" name="telUser" id="telUser" placeholder="Telefone 1">
+                    <input style="height: 10px;" type="text" name="telUser" id="telUser" placeholder="Telefone 2 (opcional)">
+                </div>
+                <div class="form-group">
+                    <h4>Endereço</h4>
+                    <p>CEP</p>
+                    <label for="cep">CEP <span>*</span></label>
+                    <input type="text" class="form-control" maxlength="9" id="cep" placeholder="ex. 00000-000">
+                </div>
+                <div class="form-group">
+                    <label for="logradouro">Rua</label>
+                    <input type="text" class="form-control" id="logradouro">
+                </div>
+                <div class="form-group">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" class="form-control" id="bairro">
+                </div>
+                <div class="form-group">
+                    <label for="localidade">Cidade</label>
+                    <input type="text" class="form-control" id="localidade">
+                </div>
+                
+              
+           
             <p>Digite um email <span>*</span></p>
                 <input style="height: 10px;" class="form-control" type="text" name="email" id="email" placeholder="ex. joao@gmail.com">        
             <p><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12.804 9c1.038-1.793 2.977-3 5.196-3 3.311 0 6 2.689 6 6s-2.689 6-6 6c-2.219 0-4.158-1.207-5.196-3h-3.804l-1.506-1.503-1.494 1.503-1.48-1.503-1.52 1.503-3-3.032 2.53-2.968h10.274zm7.696 1.5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5z"/></svg> Insira uma senha <span>*</span></p>
@@ -90,13 +115,14 @@
                     unset($_SESSION['senhas_iguais']);
                 }
             ?>
-            <a href="login.php"><button id="entrar" type="submit">CRIAR CONTA</button></a>
-
+        <a href="login.php"><button id="entrar" type="submit">CRIAR CONTA</button></a>
         <div class="criarConta">
             <h3>Já tem uma conta?</h3>
             <a href="login.php"><strong><h4 id="login" style="color: rgb(63, 89, 180,1);">REALIZAR LOGIN</h4></strong></a>
         </div>
     </form>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <script src="script/preloader.js" defer></script>
 </body>
 </html>

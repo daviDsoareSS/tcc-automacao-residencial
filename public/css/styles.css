@@ -45,7 +45,7 @@
 .signup{
     margin: 0 !important;
     margin-top: 100vw;
-    min-width: 50vw;
+    min-width: 60vw;
     min-height: 45vw;
 }
 .container-login{
@@ -72,25 +72,45 @@
     margin-bottom: 1vw;
 }
 .container-login .top-login input{
-    border: 1px solid rgba(63, 88, 180, 0.116);
+    background-color: rgb(245, 245, 245);
+    border: none !important;
     margin-top: 0px;
     padding: 20px;
-    border-bottom: 3px solid rgb(63, 89, 180,1);
     height: 3vw;
     margin-bottom: 1vw;
 }
-.container-login .top-login .group-tel{
+.container-login .top-login .form-group{
     gap: 1vw;
     width: 100%;
+    margin-top: 1vw;
     display: flex;
 }
-.container-login .top-login .group-tel label{
-    display:block;
+.container-login .top-login .form-group label{
+    font-weight: bolder;
+    font-size: 12px;
 }
-.container-login .top-login .group-tel #telUser{
+.container-login .top-login .form-group input,.form-control::placeholder{
+    font-size: 13px !important;
+}
+.container-login .top-login .form-group input{
+    width: 43%;
+}
+.container-login .top-login .form-group #telUser{
     width: 100%;
 }
+.container-login .top-login .form-group #bairro{
+    width: 92%;
+}
+.container-login .top-login .form-group #localidade{
+    width: 62%;
+}
+.container-login .top-login .form-group #numero-casa{
+    width: 23%;
+}
+
 .signup .top-login .container-sexo label{
+    font-size: 14px;
+    font-weight: bold;
     margin-right: 2vw;
 }
 .container-login .top-login small{
@@ -98,6 +118,7 @@
     font-weight: bolder;
     margin-bottom: 10px;
 }
+
 .container-login .top-login #entrar{
     background-color: #0093ee;
     border: none;
@@ -130,10 +151,16 @@
     flex-wrap: nowrap;
     display: flex;
 }
-.criarConta a{
+.criarConta h3{
+    font-size: 15px;
+    font-weight: bold;
+}
+.criarConta a,h4{
+    margin: 0 !important;
     color: rgb(63, 89, 180,1);
     text-decoration: none;
-    font-style: normal;
+    font-size: 15px;
+    font-style: bolder !important;
     padding-left: 1vw;
 }
 /*SIGNUP*/

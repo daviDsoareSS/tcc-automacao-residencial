@@ -6,7 +6,7 @@
   //NAV-BAR
   include 'includes/nav-bar.php';
 ?>
-<title>4House -Página inicial</title>
+<title>Página inicial | 4House</title>
   <body>
       <!-- início do preloader -->
   <div id="preloader">
@@ -53,7 +53,7 @@
                 <small>Serviços para automatizar seu lar</small>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis exercitationem amet dicta possimus, a voluptates facere esse nihil corporis delectus adipisci officiis maiores ex nobis aperiam autem reiciendis, cupiditate distinctio!
                 Autem qui enim voluptas vel deleniti nobis et placeat.</p>
-                <a href=""><button>Venha conhecer</button></a>
+                <a href="sobre.php"><button>Venha conhecer</button></a>
             </div>
         </div>
       </main>
@@ -152,13 +152,6 @@
     //FOOTER
     include 'includes/footer.php';
   ?>
-      <!-- JavaScript Bundle with Popper -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-      <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <script src="script/js.js" defer></script>
-    <script src="script/preloader.js" defer></script>
+    
 </body>
 </html>

@@ -160,7 +160,7 @@
 
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    <a class="text-white" href="index.html"><img src="img/logo/logo-4house.png" width="100px" alt=""></a>
+    <a class="text-white" href="index.php"><img src="img/logo/logo-4house.png" width="100px" alt=""></a>
   </div>
   <!-- Copyright -->
 </footer>

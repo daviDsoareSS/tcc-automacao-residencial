@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4House -Criar conta</title>
+    <title>Criar conta | 4House</title>
     <link rel="icon" type="image/png" sizes="16x16"  href="img/favicon/favicon-16x16.png">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
@@ -69,46 +69,45 @@
         <p>Digite seu nome e sobrenome<span>*</span></p>
             <input style="height: 10px;" type="text" name="nome" id="nomeUser" placeholder="Digite nome e sobrenome" required>
         <p>Digite sua data de nascimento<span>*</span></p>
-            <input style="height: 10px;" type="date" name="dataNasc" id="dataNasc" placeholder="*somente números" required>
+            <input style="height: 10px;" type="date" name="dataNasc" id="dataNasc" required>
             <div class="container-sexo">
                 <p>Sexo<span>*</span></p>
                     <input style="height: 10px;" class="sexo-user" type="radio" name="sexoUser" id="sexoMasculino" value="masculino" checked="check">
                         <label for="sexoMasculino">Masculino</label>
                     <input style="height: 10px;" class="sexo-user" type="radio" name="sexoUser" id="sexoFeminino" value="feminino">
-                        <label for="sexoFeminino">Feminino</label>           
+                        <label for="sexoFeminino">Feminino</label>  
+                    <input style="height: 10px;" class="sexo-user" type="radio" name="sexoUser" id="sexoIndefinido" value="sexoIndefinido">
+                        <label for="sexoIndefinido">Prefiro não dizer</label>           
             </div>
                 <p>Telefone<span>*</span></p>
-                <div class="group-tel">
+                <div class="form-group">
                     <input style="height: 10px;" type="text" name="telUser" id="telUser" placeholder="Telefone 1">
                     <input style="height: 10px;" type="text" name="telUser" id="telUser" placeholder="Telefone 2 (opcional)">
                 </div>
+                <p>Endereço<span>*</span></p>
                 <div class="form-group">
-                    <h4>Endereço</h4>
-                    <p>CEP</p>
-                    <label for="cep">CEP <span>*</span></label>
-                    <input type="text" class="form-control" maxlength="9" id="cep" placeholder="ex. 00000-000">
-                </div>
-                <div class="form-group">
-                    <label for="logradouro">Rua</label>
-                    <input type="text" class="form-control" id="logradouro">
+                    <label for="cep">CEP</label>
+                    <input style="height: 10px;" type="text" name="cep" id="cep" placeholder="ex.0000-000">
+                    <label for="rua">Rua</label>
+                    <input style="height: 10px;" type="text" name="rua" id="logradouro" placeholder="Rua">
                 </div>
                 <div class="form-group">
                     <label for="bairro">Bairro</label>
-                    <input type="text" class="form-control" id="bairro">
+                    <input style="height: 10px;" type="text" id="bairro">
                 </div>
                 <div class="form-group">
                     <label for="localidade">Cidade</label>
-                    <input type="text" class="form-control" id="localidade">
+                    <input style="height: 10px;" type="text" id="localidade">
+                    <label for="numero">Nº</label>
+                    <input style="height: 10px;" type="text" id="numero-casa">
                 </div>
                 
-              
-           
             <p>Digite um email <span>*</span></p>
-                <input style="height: 10px;" class="form-control" type="text" name="email" id="email" placeholder="ex. joao@gmail.com">        
+                <input style="height: 10px;" type="text" name="email" id="email" placeholder="">       
             <p><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12.804 9c1.038-1.793 2.977-3 5.196-3 3.311 0 6 2.689 6 6s-2.689 6-6 6c-2.219 0-4.158-1.207-5.196-3h-3.804l-1.506-1.503-1.494 1.503-1.48-1.503-1.52 1.503-3-3.032 2.53-2.968h10.274zm7.696 1.5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5z"/></svg> Insira uma senha <span>*</span></p>
-                <input style="height: 10px;" class="form-control" type="password" name="senha" id="senha">
+                <input style="height: 10px;" type="password" name="senha" id="senha">
             <p><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12.804 9c1.038-1.793 2.977-3 5.196-3 3.311 0 6 2.689 6 6s-2.689 6-6 6c-2.219 0-4.158-1.207-5.196-3h-3.804l-1.506-1.503-1.494 1.503-1.48-1.503-1.52 1.503-3-3.032 2.53-2.968h10.274zm7.696 1.5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5z"/></svg> Confirme sua senha <span>*</span></p>
-                <input style="height: 10px;" class="form-control" type="password" name="senha2" id="senha2">
+                <input style="height: 10px;" type="password" name="senha2" id="senha2">
                 <?php
                 if(isset($_SESSION['senhas_iguais'])){
                     echo($_SESSION['senhas_iguais']);
@@ -118,11 +117,12 @@
         <a href="login.php"><button id="entrar" type="submit">CRIAR CONTA</button></a>
         <div class="criarConta">
             <h3>Já tem uma conta?</h3>
-            <a href="login.php"><strong><h4 id="login" style="color: rgb(63, 89, 180,1);">REALIZAR LOGIN</h4></strong></a>
+            <a href="login.php"><h4 id="login" style="font-size:16px;font-weight:bolder;">REALIZAR LOGIN</h4></a>
         </div>
     </form>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <script src="script/preloader.js" defer></script>
+    <script src="script/js.js" defer></script>
 </body>
 </html>

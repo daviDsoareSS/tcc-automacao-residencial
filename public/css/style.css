@@ -17,6 +17,9 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;       /* roundness of the scroll thumb */
     border: 30px solid #1c2247;  /* creates padding around scroll thumb */
 }
+
+
+
 /* ini: Preloader */ 
 #preloader {
     position:fixed;
@@ -85,19 +88,23 @@ nav .nav-item a:hover{
     display: none;
 }
 .dropdown-menu .navbar-search{
-    padding: 1vw 2vw;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
 }
 .dropdown-menu .navbar-search input{
     margin-bottom: 0.7vw;
     padding: 5px 5px;
-    width: 280px;
+    width: 250px;
 }
 .dropdown-menu .navbar-search button{
-    color: #102c3d;
+    color: white;
     font-weight: bolder;
     padding: 5px 40px;
-    border: NONE;
-    background-color: #0093ee;
+    border: 5px solid #e86a5f;
+    border-radius: 10px;
+    background-color: #fe7062;
 }
 .navbar-collapse .session-user{
     text-align: center !important;
@@ -297,6 +304,175 @@ footer{
     background: rgb(63, 89, 180,1);
     background: linear-gradient(90deg,  rgb(51, 24, 81) 0%, rgba(63,89,180,1) 100%);
 }
+
+/*PÁGINA PERFIL*/
+.pag-perfil{ /*<-- BODY     */
+    background-color: #102c3d !important;
+}
+.pag-perfil nav .nav-item a{
+    color: white !important;
+}
+.pag-perfil nav .dropdown-menu .dropdown-item{
+    color: black !important;
+}
+.pag-perfil main{
+    display: grid;
+    margin-top: 4vw;
+    grid-template-columns: repeat(2, 1fr);
+}
+.pag-perfil .card-perfil{
+    min-height: 15vw;
+    height:15vw;
+    width: 20vw;
+    border-radius: 10px;
+    background-color: white;
+}
+.pag-perfil .card-perfil h5{
+    font-weight: bolder;
+}
+.pag-perfil .card-perfil ul{  
+    padding: 1vw;
+}
+
+.pag-perfil .card-perfil ul a{
+    color: black;
+    text-decoration: none;
+}
+.pag-perfil .card-perfil ul .selected{
+    color: #fe7062;
+    font-weight: bolder;
+}
+.pag-perfil .card-perfil ul span{
+    background: #0093ee;
+    border: 3px solid #0093ee;
+    margin-right: 10px;
+}
+.pag-perfil .card-perfil ul li{
+    cursor: pointer;
+    font-size: 15px;
+    list-style: none;
+}
+.pag-perfil .container-dados-pessoais{
+    white-space: nowrap;
+    margin-right: 30vw;
+    padding-left: 0 !important;    
+}
+.pag-perfil .container-dados-pessoais span{
+    border: 3px solid #fe7062;
+    background: #fe7062;
+    margin-right: 10px;
+}
+.pag-perfil .container-dados-pessoais h2{
+    color: white;
+}
+.pag-perfil .container-dados-pessoais ul{
+    color: white;
+    margin-top: 2vw;
+    padding-left: 0;
+}
+.pag-perfil .container-dados-pessoais ul p{
+    border: none;
+    border-bottom: 3px solid #061a27;
+    padding: 5px;
+}
+.pag-perfil .container-dados-pessoais ul li{
+    margin-bottom: 1vw;
+    list-style: none;
+}
+.pag-perfil .container-dados-pessoais .dados-user{
+    margin-left: 1vw;
+    padding: 2px;
+    border-radius: 5px;
+}
+.pag-faq h4{
+    margin-bottom: 1vw;
+    padding: 0;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18px;
+    margin-top: 2vw;    
+    font-weight: bolder;
+}
+.pag-faq .circle{
+    display: none;
+}
+.pag-faq main{
+    margin: 0 30vw;
+}
+.pag-faq article{
+    margin: 0 20vw;
+}
+.pag-faq main .container-perguntas{
+    border: 1px solid rgba(220, 220, 220, 0.813);
+    padding: 1.2vw;
+    margin-bottom: 1vw;
+}
+.pag-faq main .container-perguntas h3{
+    margin-bottom: 1vw;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18px;
+}
+.pag-faq main .container-perguntas p{
+    font-size: 14px;
+}
+.pag-faq main h4{
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18px;
+    margin-top: 2vw;    
+}
+.pag-faq main small{
+    justify-content: center;
+    display: flex;
+    font-size: 13px;
+    color: rgb(121, 121, 121);
+}
+.pag-faq main hr{
+    margin-top: 5vw;
+}
+.pag-faq main .opcoes-faq{
+    margin-top: 1vw;
+    justify-content: center;
+    display: flex;
+}
+.pag-faq main .opcoes-faq svg{
+    color: #0093ee;
+    margin-right: 1vw;
+}
+.pag-faq main .opcoes-faq p{
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 1vw;
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: bolder;
+    color: #6e7a83;
+    border: 1px solid rgba(220, 220, 220, 0.813);
+}
+.pag-faq main span{
+    font-weight: bolder;
+    margin-left: 5px;
+}
+.pag-faq article{
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.pag-faq article .container-social{
+    margin-left: 1vw;
+    padding: 1vw 2vw;
+    border: 1px solid rgba(220, 220, 220, 0.813);
+}
+.pag-faq article .container-social svg{
+    margin-bottom: 0.8vw;
+}
+.pag-faq footer{
+    margin-top: 10vw;
+}
 @media(max-width:1000px){
     body,html{
         overflow-x: hidden;
@@ -310,7 +486,8 @@ footer{
         text-align: center;
     }
     .navbar-nav a{
-        font-size: 20px;
+        font-size: 17px;
+        font-weight: 200;
         color: white;
         
     }
@@ -321,8 +498,20 @@ footer{
     .dropdown-menu a{
         color: black;
     }
-    .form-inline input{
-        height: 100%;
+    .dropdown-menu .navbar-search{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 2vw;
+    }
+    .dropdown-menu .navbar-search input{
+        margin-bottom: 3vw;
+    }
+    .navbar-collapse .session-user{
+        margin-bottom: 15vw;
+    }
+    .navbar-collapse .session-user svg{
+        margin-left: 45vw;
     }
     .circle {
         z-index: -999;
@@ -395,6 +584,68 @@ footer{
         display: grid;
         grid-template-columns: repeat(1,1fr);
         gap: 1vw;
+    }
+    /*PÁGINA PERFIL*/
+    .pag-perfil main{
+        margin-left: 5vw;
+        display: grid;
+        margin-top: 4vw;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .pag-perfil .card-perfil{
+        white-space: nowrap;
+        padding: 2vw;
+        height: 90%;
+        width: 50% !important;
+        margin-bottom: 10vw;
+    }
+    .pag-perfil .card-perfil ul{
+        padding: 1vw;
+    }
+    .pag-perfil .container-dados-pessoais .endereco{
+        font-size: 14px;
+        
+    }
+    .pag-perfil .container-dados-pessoais .dados-user{
+        word-break: break-all;
+        display: block;
+    }
+    /*PÁGINA FAQ PERGUNTAS*/
+    .pag-faq .circle{
+        display: block;
+    }
+    .pag-faq .circle svg{
+        display: block;
+        background: #102c3d !important;
+    }
+    .pag-faq main{
+        margin: 0 10vw;
+    }
+    .pag-faq main .container-perguntas{
+        background-color: white;
+        border: 1px solid rgb(230, 230, 230);
+        padding: 4vw;
+        margin-bottom: 2vw;
+    }
+    .pag-faq main .container-perguntas h3{
+        font-size: 16px;
+        margin-bottom: 3vw;
+    }
+    .pag-faq main .opcoes-faq{
+        background-color: white;
+        margin-top: 3vw;
+        justify-content: center;
+        display: block;
+    }
+    .pag-faq article{
+        margin: 5vw;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .pag-faq article .container-social{
+        background-color: white;
+        margin-bottom: 3vw;
+        padding: 8vw;
+        width: 100% !important;
     }
 }
 @keyframes animation{

@@ -21,7 +21,7 @@
   <span class="circle">
     <svg height="52vw" width="10vw"></svg>
   </span>
-      <main>
+<main>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -51,8 +51,11 @@
             <div class="text-main">
                 <strong><h1>Automação residencial</h1></strong>
                 <small>Serviços para automatizar seu lar</small>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis exercitationem amet dicta possimus, a voluptates facere esse nihil corporis delectus adipisci officiis maiores ex nobis aperiam autem reiciendis, cupiditate distinctio!
-                Autem qui enim voluptas vel deleniti nobis et placeat.</p>
+                <p>
+                A solução que você precisa para tornar sua casa mais segura e inteligente.
+                Contratando nossos serviços você terá a interação total da sua casa em apenas um toque no seu celular.
+                Irá facilitar tarefas que dependiam só de você, de acordo com as suas necessidades e vontades.
+                <i>A Casa do Futuro</i> pode estar a apenas um clique de você.</p>
                 <a href="sobre.php"><button>Venha conhecer</button></a>
             </div>
         </div>
@@ -118,14 +121,14 @@
                 <small>+1500 clientes satisfeitos</small>
               </div>
               <div class="card">
-                <img src="img/article/cards/global.png" alt="">
-                <p>São Paulo-SP</p>
-                <small>Zona leste</small>
+                <img src="img/article/cards/premio.png" alt="">
+                <p>Eleito</p>
+                <small><i>Melhor empresa<br> no ramo 2021</i></small>
               </div>
               <div class="card">
-                <img src="img/article/cards/global.png" alt="">
-                <p>São Paulo-SP</p>
-                <small>Zona leste</small>
+                <img src="img/article/cards/sustentabilidade.png" alt="">
+                <p>Sustentabilidade</p>
+                <small>Prevervação do meio ambiente</small>
               </div>
             </div>
           </div>
@@ -133,18 +136,15 @@
       </article>
       <figure>
         <div class="card-figure first">
-          <img src="img/section/card-1.png" alt="">
-          <h3>Serviços</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod vero libero, odio laborum perferendis deleniti eligendi aliquid ad? Error distinctio voluptates quod omnis dolor tempora autem iusto? Iste, facilis!</p>
       </div>
       <div class="card-figure second">
-          <img src="img/section/card-2.png" alt="">
-          <h3>FAQ</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod vero libero, odio laborum perferendis deleniti eligendi aliquid ad? Error distinctio voluptates quod omnis dolor tempora autem iusto? Iste, facilis!</p>
       </div>
       <div class="card-figure three">
-          <img src="img/section/card-3.png" alt="">
-          <h3>Redes Sociais</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod vero libero, odio laborum perferendis deleniti eligendi aliquid ad? Error distinctio voluptates quod omnis dolor tempora autem iusto? Iste, facilis!</p>
+      </div>
+      <div class="card-figure four">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod vero libero, odio laborum perferendis deleniti eligendi aliquid ad? Error distinctio voluptates quod omnis dolor tempora autem iusto? Iste, facilis!</p>
       </div>
       </figure>

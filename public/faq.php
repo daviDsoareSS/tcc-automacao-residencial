@@ -9,18 +9,25 @@
 <title>Perguntas frequentes | 4House</title>
 
 <body class="pag-faq">
+<div id="preloader">
+    <div class="inner">
+       <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
+       <img src="img/gif/1490.gif" alt="">
+    </div>
+</div>
 <span class="circle">
     <svg height="52vw" width="10vw"></svg>
 </span>
     <main>
         <div class="container-perguntas">
             <h3>Por que preciso fornecer meus dados pessoais ao fazer o registro?</h3>
-            <p>O fornecimento correto dos seus dados pessoais é pré-requisito para que você possa aproveitar todas as nossas ofertas e nossos produtos.
-            Nós precisamos desses dados por razões legais e de segurança, como por exemplo para verificar se você atingiu a idade mínima necessária para utilizar as ofertas da Latinbets (idade mínima de 18 anos).</p>
+            <p>O fornecimento correto dos seus dados pessoais é pré-requisito para que você possa aproveitar todas as nossas ofertas e nossos serviços.
+            Nós precisamos desses dados por razões legais e de segurança, como por exemplo para verificar se você atingiu a idade mínima necessária para utilizar as ofertas da <i>4House</i> idade mínima de 18 anos).</p>
         </div>
         <div class="container-perguntas">
-            <h3>Lorem Ipsum</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium exercitationem nesciunt dignissimos pariatur! Omnis reprehenderit sed totam atque porro, harum doloremque illo pariatur, dicta veniam quisquam officiis amet asperiores similique?</p>
+            <h3>Quais regiões a 4House presta serviço?</h3>
+            <p>No momento a 4House presta serviço apenas para as regiões de São Paulo, mas futuramente pretendemos ampliar a zona de atendimentos.
+            Agradecemos a compreensão 4House agradece</p>
         </div>
         <div class="container-perguntas">
             <h3>Lorem Ipsum</h3>

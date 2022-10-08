@@ -30,12 +30,12 @@
             Agradecemos a compreensão 4House agradece</p>
         </div>
         <div class="container-perguntas">
-            <h3>Lorem Ipsum</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium exercitationem nesciunt dignissimos pariatur! Omnis reprehenderit sed totam atque porro, harum doloremque illo pariatur, dicta veniam quisquam officiis amet asperiores similique?</p>
+            <h3>Não tive um retorno dos atendentes.</h3>
+            <p>Se por algum motivo alguns de nossos atendentes não retornar, pedimos a compreensão, pois devem estar em alguma linha de atendimento, mas logo você será atendido e seu problema será resolvido.</p>
         </div>
         <div class="container-perguntas">
-            <h3>Lorem Ipsum</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium exercitationem nesciunt dignissimos pariatur! Omnis reprehenderit sed totam atque porro, harum doloremque illo pariatur, dicta veniam quisquam officiis amet asperiores similique?</p>
+            <h3>Onde visualizo meus serviços contratados?</h3>
+            <p>Logo após finalizar a conversa com um de nossos atendentes, será adicionado em seu perfil o número de protocolo e as informações do serviço contratado, como data de agendamento e horário por exemplo. Siga o caminho: <i>Meu Perfil > Meus dados > Serviços contratados</i></p>
         </div>
         <div class="container-perguntas">
             <h3>Lorem Ipsum</h3>

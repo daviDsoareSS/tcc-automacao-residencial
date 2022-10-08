@@ -48,7 +48,7 @@ body::-webkit-scrollbar-thumb {
     transform: translate(-50%,-50%);
     display: none;
 }
-.circle {
+.circle{
     z-index: -999;
     margin: 0 ;
     padding: 0;
@@ -80,6 +80,9 @@ nav .nav-item {
     margin-left: 2vw !important;
     font-weight: bold;
     color: rgb(0, 0, 0) !important;
+}
+nav .nav-item img{
+   display: none;
 }
 nav .nav-item a:hover{
     color: #fe7062;
@@ -317,6 +320,10 @@ figure .card-figure .card-cliente small{
 footer{
     background: rgb(63, 89, 180,1);
     background: linear-gradient(90deg,  rgb(51, 24, 81) 0%, rgba(63,89,180,1) 100%);
+}
+.list-unstyled a{
+    font-style: normal;
+    text-decoration: none !important;
 }
 
 /*PÁGINA PERFIL*/
@@ -556,13 +563,17 @@ footer{
     }
     .navbar-nav{
         z-index: 9999;
-        text-align: center;
     }
     .navbar-nav a{
         font-size: 17px;
-        font-weight: 200;
-        color: white;
+        font-weight: bolder;
+        color: #061a27;
         
+    }
+    nav .nav-item img{
+        display: inline-block;
+        margin-right: 2.5vw;
+        width: 5vw;
     }
     .navbar-nav hr{
         display: block;
@@ -578,6 +589,7 @@ footer{
         padding: 2vw;
     }
     .dropdown-menu .navbar-search input{
+        text-align: center;
         margin-bottom: 3vw;
     }
     .navbar-collapse .session-user{
@@ -651,6 +663,18 @@ footer{
     }
     article .container-article .container-article-text .cards img{
         width: 20vw;
+    }
+    article .container-article .container-article-text .cards small{
+        margin-bottom: 5vw;
+    }
+    #text-figure{
+        color: #061a27;
+        font-size: 35px;
+        font-weight: bolder;
+        margin: 8vw 10vw;
+    }
+    #text-figure strong{
+        font-size: 35px;
     }
     figure{
         margin: 10vw !important;
@@ -738,6 +762,16 @@ footer{
         display: grid;
         grid-template-columns: repeat(1,1fr);
     }
+    .pag-sensor-proximidade main .container-text-sensor-proximidade h1{
+       font-size: 25px;
+       font-weight: bolder;
+    }
+    .pag-sensor-proximidade main .container-text-sensor-proximidade p{
+        width: 100%;
+        font-size: 20px;
+        margin-bottom: 10vw;
+
+    }
     .pag-sensor-proximidade main .container-text-sensor-proximidade .cards-sensor-proximidade .cards{
         margin-bottom: 5vw;
         padding: 10vw;
@@ -747,6 +781,9 @@ footer{
         width: 15vw;
         height: 15vw;
         margin: 2vw;
+    }
+    .pag-sensor-proximidade footer{
+        padding-top: 200vw;
     }
 }
 @keyframes animation{

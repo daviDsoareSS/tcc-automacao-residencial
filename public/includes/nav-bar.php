@@ -37,6 +37,30 @@
     <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="ba3d4d34-ed87-48b9-9a7d-2d7f532b4699";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
   </head>
 <body>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="container-login" action="entrada-login.php" method="post">
+          <strong><small>Email:</small></strong><br>
+          <input type="text" name="email" id="" required><br>
+          <strong><small>Senha:</small></strong><br>
+          <input type="password" name="senha" required>
+          <hr>
+          <a href="signup.php"><button type="button" class="btn btn-secondary">Não tenho conta</button></a>
+          <a href="index.php"><button type="submit" class="btn btn-primary">Entrar</button></a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
     <nav class="navbar navbar-expand-lg ">
         <a class="navbar-brand" href="index.php"><img src="img/logo/logo-4house.png" width="200vw" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,12 +70,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="index.php">Inicio</a>
+              <a class="nav-link" href="index.php"><img src="img/navbar/home.png" alt="">Inicio</a>
               <hr>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Serviços
+              <img src="img/navbar/services.png" alt="">Serviços
               </a>
               <hr>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -61,11 +85,11 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#sobre">Sobre</a>
+              <a class="nav-link" href="#sobre"><img src="img/navbar/sobre.png" alt="">Sobre</a>
               <hr>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="faq.php">Fale Conosco</a>
+              <a class="nav-link" href="faq.php"><img src="img/navbar/contato.png" alt="">Fale Conosco</a>
               <hr>
             </li>
               <li class="nav-item dropdown">

@@ -553,6 +553,70 @@ footer{
     font-weight: bold;
     color: #a667f8;
 }
+.pag-portao-eletrico,.pag-sensor-proximidade footer{
+    margin-top: 20vw;
+}
+/*PAGINA PORTÃO ELETRICO*/
+.pag-portao-eletrico main{
+    text-align: justify;
+    display: flex;
+}
+.pag-portao-eletrico main img{
+    border-radius: 20px;
+    height: 35vw;
+}
+.pag-portao-eletrico main .container-text-portao-eletrico{
+    padding: 4vw;
+}
+.pag-portao-eletrico main .container-text-portao-eletrico h1{
+    font-weight: bolder;
+}
+.pag-portao-eletrico main .container-text-portao-eletrico p{
+    font-size: 20px;
+}
+.pag-portao-eletrico main .container-text-portao-eletrico .cards-portao-eletrico{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.pag-portao-eletrico main .container-text-portao-eletrico #contrate-servico{
+    margin-top: 1vw;
+    padding: 1vw 2vw;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background:  #ff7063d6;
+}
+.pag-portao-eletrico main .container-text-portao-eletrico #contrate-servico:hover{
+    color: #000000;
+    background-color: #ee3929d6;
+    padding: 1vw 3vw;
+    transition: 1s;
+}
+.pag-portao-eletrico main .container-text-portao-eletrico .cards-portao-eletrico .cards{
+    text-align: center;
+    background-color: #fc5c4d;
+    width: 12vw;
+    padding: 2vw 3vw;
+    border-radius: 15px;
+}
+.pag-portao-eletrico main .container-text-portao-eletrico .cards-portao-eletrico .cards img{
+    width: 3vw;
+    height: 3vw;
+}
+.pag-portao-eletrico main .container-text-portao-eletrico .cards-portao-eletrico .cards p{
+    color: white;
+    font-weight: bolder;
+    font-size: 18px;
+    margin: 5px;
+    margin-top: 10px !important;
+}
+.pag-portao-eletrico main .container-text-portao-eletrico .cards-portao-eletrico .cards small{
+    font-size: 15px;
+    font-weight: bold;
+    color: #2e1715;
+}
 @media(max-width:1000px){
     body,html{
         overflow-x: hidden;
@@ -784,6 +848,44 @@ footer{
     }
     .pag-sensor-proximidade footer{
         padding-top: 200vw;
+    }
+    /*PÁGINA PORTAO ELÉTRICO*/
+    .pag-portao-eletrico main{
+        display: block;
+    }
+    .pag-portao-eletrico main img{
+        width: 100%;
+        height: 80vw;
+        object-fit: cover;
+    }
+    .pag-portao-eletrico main .container-text-portao-eletrico #contrate-servico{
+        padding: 3vw 4vw;
+        display: flex;
+        margin: 0 auto;
+    }
+    .pag-portao-eletrico main .container-text-portao-eletrico .cards-portao-eletrico{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .pag-portao-eletrico main .container-text-portao-eletrico h1{
+       font-size: 25px;
+       font-weight: bolder;
+    }
+    .pag-portao-eletrico main .container-text-portao-eletrico p{
+        width: 100%;
+        font-size: 20px;
+        margin-bottom: 10vw;
+
+    }
+    .pag-portao-eletrico main .container-text-portao-eletrico .cards-portao-eletrico .cards{
+        margin-bottom: 5vw;
+        padding: 10vw;
+        width: 100%;
+    }
+    .pag-portao-eletrico main .container-text-portao-eletrico .cards-portao-eletrico .cards img{
+        width: 15vw;
+        height: 15vw;
+        margin: 2vw;
     }
 }
 @keyframes animation{

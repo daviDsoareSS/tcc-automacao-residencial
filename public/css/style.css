@@ -220,11 +220,12 @@ section #btn-veja-todos-servicos{
 }
 #content-line{
     display: block;
-    margin-bottom: 20px !important;
+    margin-bottom: 2vw !important;
     margin: 0 auto;
     width: 12vw;
     border-radius: 20px;
-    border: 5px solid #fe7062 ;
+    border: 5px solid #061a27;
+    background-color: #061a27;
 }
 article{
     margin-left: 0vw;
@@ -269,30 +270,49 @@ article .container-article .container-article-text .cards .card{
 article .container-article .container-article-text .cards img{
     width: 3vw;
 }
+#text-figure{
+    color: #061a27;
+    font-size: 34px;
+    font-weight: bolder;
+    margin: 5vw 10vw;
+}
+#text-figure strong{
+    font-size: 50px;
+}
 figure{
-    margin: 10vw !important;
+    margin: 5vw 10vw 10vw !important;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     background-color: white;
     gap: 1vw;
 }
 figure .card-figure{
-    text-align: center;
     color: white;
-    background-color: #91b3fa;
+    border: 1px solid #061a27;
+    background-color: #ffffff;
     font-size: 20px;
     font-weight: bolder;
     padding: 2vw;
     border-radius: 15px;
 }
+figure .card-figure:hover{
+ 
+}
 figure .card-figure img{
     margin-bottom: 1vw;
-    width: 5vw;
+    width: 2vw;
 }
 figure .card-figure p{
+    color: #061a27;
     margin-top: 1vw;
     font-size: 16px;
     font-weight: normal;
+}
+figure .card-figure .card-cliente small{
+    color: #0093ee;
+    font-weight: bold;
+    float: right;
+    
 }
 footer{
     background: rgb(63, 89, 180,1);
@@ -465,6 +485,67 @@ footer{
 .pag-faq footer{
     margin-top: 10vw;
 }
+/*PÁGINA SENSOR DE PROXIMIDADE*/
+.pag-sensor-proximidade main{
+    text-align: justify;
+    display: flex;
+}
+.pag-sensor-proximidade main img{
+    border-radius: 20px;
+    height: 35vw;
+}
+.pag-sensor-proximidade main .container-text-sensor-proximidade{
+    padding: 4vw;
+}
+.pag-sensor-proximidade main .container-text-sensor-proximidade h1{
+    font-weight: bolder;
+}
+.pag-sensor-proximidade main .container-text-sensor-proximidade p{
+    font-size: 20px;
+}
+.pag-sensor-proximidade main .container-text-sensor-proximidade .cards-sensor-proximidade{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.pag-sensor-proximidade main .container-text-sensor-proximidade #contrate-servico{
+    margin-top: 1vw;
+    padding: 1vw 2vw;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background:  rgba(63,89,180,1);
+}
+.pag-sensor-proximidade main .container-text-sensor-proximidade #contrate-servico:hover{
+    color: #a667f8;
+    background-color: #1c2247;
+    padding: 1vw 3vw;
+    transition: 1s;
+}
+.pag-sensor-proximidade main .container-text-sensor-proximidade .cards-sensor-proximidade .cards{
+    text-align: center;
+    background-color: #1c2247;
+    width: 12vw;
+    padding: 2vw 3vw;
+    border-radius: 15px;
+}
+.pag-sensor-proximidade main .container-text-sensor-proximidade .cards-sensor-proximidade .cards img{
+    width: 3vw;
+    height: 3vw;
+}
+.pag-sensor-proximidade main .container-text-sensor-proximidade .cards-sensor-proximidade .cards p{
+    color: white;
+    font-weight: bolder;
+    font-size: 18px;
+    margin: 5px;
+    margin-top: 10px !important;
+}
+.pag-sensor-proximidade main .container-text-sensor-proximidade .cards-sensor-proximidade .cards small{
+    font-size: 15px;
+    font-weight: bold;
+    color: #a667f8;
+}
 @media(max-width:1000px){
     body,html{
         overflow-x: hidden;
@@ -581,6 +662,9 @@ footer{
         padding: 8vw 10vw;
         margin-bottom: 3vw;
     }
+    figure .card-figure img{
+        width: 6vw;
+    }
     /*PÁGINA PERFIL*/
     .pag-perfil main{
         margin-left: 5vw;
@@ -635,6 +719,34 @@ footer{
         margin-bottom: 3vw;
         padding: 8vw;
         width: 100% !important;
+    }
+    /*PÁGINA SENSOR DE PROXIMIDADE*/
+    .pag-sensor-proximidade main{
+        display: block;
+    }
+    .pag-sensor-proximidade main img{
+        width: 100%;
+        height: 80vw;
+        object-fit: cover;
+    }
+    .pag-sensor-proximidade main .container-text-sensor-proximidade #contrate-servico{
+        padding: 3vw 4vw;
+        display: flex;
+        margin: 0 auto;
+    }
+    .pag-sensor-proximidade main .container-text-sensor-proximidade .cards-sensor-proximidade{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .pag-sensor-proximidade main .container-text-sensor-proximidade .cards-sensor-proximidade .cards{
+        margin-bottom: 5vw;
+        padding: 10vw;
+        width: 100%;
+    }
+    .pag-sensor-proximidade main .container-text-sensor-proximidade .cards-sensor-proximidade .cards img{
+        width: 15vw;
+        height: 15vw;
+        margin: 2vw;
     }
 }
 @keyframes animation{

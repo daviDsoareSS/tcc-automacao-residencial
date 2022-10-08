@@ -72,12 +72,12 @@
         <div class="container-section">
           <img src="img/section/portao-eletrico.png" alt="" width="400vw">
           <h2>Portão elétrico</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href=""><span class="leia">... Leia mais</span></a></p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href="portao-eletrico.php"><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
           <img src="img/section/sensor-de-proximidade.png" alt="" width="400vw">
           <h2>Sensor de proximidade</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href=""><span class="leia">... Leia mais</span></a></p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href="sensor-proximidade.php"><span class="leia">... Leia mais</span></a></p>
         </div>
       </div>
       <!--Mais serviços-->
@@ -133,20 +133,41 @@
             </div>
           </div>
        </div>
+       <h4 id="text-figure"><strong>Veja oque nossos</strong><br> clientes acham sobre nós</h4>
       </article>
       <figure>
         <div class="card-figure first">
+          <img src="img/figure/aspas.png" alt="">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod vero libero, odio laborum perferendis deleniti eligendi aliquid ad? Error distinctio voluptates quod omnis dolor tempora autem iusto? Iste, facilis!</p>
-      </div>
+            <div class="card-cliente">
+              <img src="img/figure/user.png" alt="">
+              <small>David Soares Silva</small>
+            </div>
+        </div>
       <div class="card-figure second">
+          <img src="img/figure/aspas.png" alt="">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod vero libero, odio laborum perferendis deleniti eligendi aliquid ad? Error distinctio voluptates quod omnis dolor tempora autem iusto? Iste, facilis!</p>
-      </div>
+            <div class="card-cliente">
+              <img src="img/figure/user.png" alt="">
+              <small>David Soares Silva</small>
+            </div>
+        </div>
       <div class="card-figure three">
+          <img src="img/figure/aspas.png" alt="">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod vero libero, odio laborum perferendis deleniti eligendi aliquid ad? Error distinctio voluptates quod omnis dolor tempora autem iusto? Iste, facilis!</p>
-      </div>
+            <div class="card-cliente">
+              <img src="img/figure/user.png" alt="">
+              <small>David Soares Silva</small>
+            </div>
+        </div>
       <div class="card-figure four">
+          <img src="img/figure/aspas.png" alt="">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod vero libero, odio laborum perferendis deleniti eligendi aliquid ad? Error distinctio voluptates quod omnis dolor tempora autem iusto? Iste, facilis!</p>
-      </div>
+            <div class="card-cliente">
+              <img src="img/figure/user.png" alt="">
+              <small>David Soares Silva</small>
+            </div>
+        </div>
       </figure>
   <?php
     //FOOTER

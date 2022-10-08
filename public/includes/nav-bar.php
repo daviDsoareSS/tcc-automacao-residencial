@@ -55,13 +55,13 @@
               </a>
               <hr>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>   
+                <a class="dropdown-item" href="portao-eletrico.php">Portão elétrico</a>
+                <a class="dropdown-item" href="#">Ambientação</a>
+                <a class="dropdown-item" href="sensor-proximidade.php">Sensor de proximidade</a>   
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="sobre.php">Sobre</a>
+              <a class="nav-link" href="#sobre">Sobre</a>
               <hr>
             </li>
             <li class="nav-item">
@@ -83,13 +83,13 @@
           </ul>
           <div class="session-user">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Meu perfil</a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Meu perfil</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="perfil.php"><?php if(!isset($_SESSION['nome'])){echo "<a class='dropdown-item' href='login.php'>Login</a>";}else echo($_SESSION['nome'])."(Meus dados)";?></a>
                 <a class="dropdown-item btn-primary" data-toggle="modal" data-target="#exampleModal">Trocar de conta</a>
+                <a class="dropdown-item" href="logout.php">Sair</a>
               </div>
               </li>
-            <a href="logout.php"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16 9v-4l8 7-8 7v-4h-8v-6h8zm-16-7v20h14v-2h-12v-16h12v-2h-14z"/></svg></a>
           </div>
         </div>
       </nav>

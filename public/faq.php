@@ -22,7 +22,7 @@
         <div class="container-perguntas">
             <h3>Por que preciso fornecer meus dados pessoais ao fazer o registro?</h3>
             <p>O fornecimento correto dos seus dados pessoais é pré-requisito para que você possa aproveitar todas as nossas ofertas e nossos serviços.
-            Nós precisamos desses dados por razões legais e de segurança, como por exemplo para verificar se você atingiu a idade mínima necessária para utilizar as ofertas da <i>4House</i> idade mínima de 18 anos).</p>
+            Nós precisamos desses dados por razões legais e de segurança, como por exemplo para verificar se você atingiu a idade mínima necessária para utilizar as ofertas da <i>4House.</i></p>
         </div>
         <div class="container-perguntas">
             <h3>Quais regiões a 4House presta serviço?</h3>

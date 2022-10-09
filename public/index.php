@@ -112,34 +112,34 @@
       <figure>
         <div class="card-figure first">
           <img src="img/figure/aspas.png" alt="">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod vero libero, odio laborum perferendis deleniti eligendi aliquid ad? Error distinctio voluptates quod omnis dolor tempora autem iusto? Iste, facilis!</p>
+          <p>Amei o serviço, minha casa já tinha sido furtada diversas vezes, depois que contratei o serviço de vocês eu e minha família nos sentimos mais seguros. Contratei o portão elétrico e esse mês irei contratar mais serviços, super recomendooo!!</p>
             <div class="card-cliente">
-              <img src="img/figure/user.png" alt="">
-              <small>David Soares Silva</small>
+              <img class="foto-user" src="img/figure/user1.png" alt="">
+              <small>Amanda Ribeiro Silva</small>
             </div>
         </div>
       <div class="card-figure second">
           <img src="img/figure/aspas.png" alt="">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod vero libero, odio laborum perferendis deleniti eligendi aliquid ad? Error distinctio voluptates quod omnis dolor tempora autem iusto? Iste, facilis!</p>
+          <p>Automatizei toda a minha casa, após a contratação dos serviços eu sinto que minha rotina se tornou mais dinâmica, meus vizinhos já contrataram serviços por minha indicação!</p>
             <div class="card-cliente">
-              <img src="img/figure/user.png" alt="">
-              <small>David Soares Silva</small>
+              <img class="foto-user" src="img/figure/user2.png" alt="">
+              <small>Julio César Santos</small>
             </div>
         </div>
       <div class="card-figure three">
           <img src="img/figure/aspas.png" alt="">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod vero libero, odio laborum perferendis deleniti eligendi aliquid ad? Error distinctio voluptates quod omnis dolor tempora autem iusto? Iste, facilis!</p>
+          <p>Sem dúvidas a melhor empresa no ramo da automação residencial, atendimento super dinâmico e objetivo sem falar dos serviços de alta qualidade ,muito topp mesmo.</p>
             <div class="card-cliente">
-              <img src="img/figure/user.png" alt="">
-              <small>David Soares Silva</small>
+              <img class="foto-user" src="img/figure/user3.jpg" alt="">
+              <small>Martha Costa Santana</small>
             </div>
         </div>
       <div class="card-figure four">
           <img src="img/figure/aspas.png" alt="">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quod vero libero, odio laborum perferendis deleniti eligendi aliquid ad? Error distinctio voluptates quod omnis dolor tempora autem iusto? Iste, facilis!</p>
+          <p>Sou cliente da empresa a 2 anos e nunca tive problemas, os atendentes são super prestativos e educados. Espero que vocês ampliem a zona de prestação de serviços, pois tenho parentes que também querem automatizar suas casas com a 4House.</p>
             <div class="card-cliente">
-              <img src="img/figure/user.png" alt="">
-              <small>David Soares Silva</small>
+              <img class="foto-user" src="img/figure/user4.jpg" alt="">
+              <small>João Miguel Souza</small>
             </div>
         </div>
       </figure>

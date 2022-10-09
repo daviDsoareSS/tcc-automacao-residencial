@@ -4,6 +4,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-image: url(../img/body/background-circuit.png) !important;
+    background-position: fixed !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-image: opacity;
+}
 body::-webkit-scrollbar {
     width: 12px;               /* width of the entire scrollbar */
 }
@@ -290,6 +297,7 @@ figure{
     gap: 1vw;
 }
 figure .card-figure{
+    position: relative;
     color: white;
     border: 1px solid #061a27;
     background-color: #ffffff;
@@ -305,13 +313,28 @@ figure .card-figure img{
     margin-bottom: 1vw;
     width: 2vw;
 }
+figure .card-figure .foto-user{
+    clip-path: circle();
+    margin-bottom: 1vw;
+    width: 3vw;
+}
 figure .card-figure p{
     color: #061a27;
     margin-top: 1vw;
+    margin-bottom: 4vw;
     font-size: 16px;
+    font-style: italic;
     font-weight: normal;
 }
+figure .card-figure .card-cliente{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+}
 figure .card-figure .card-cliente small{
+    margin-left: 1vw;
     color: #0093ee;
     font-weight: bold;
     float: right;
@@ -328,7 +351,7 @@ footer{
 
 /*PÁGINA PERFIL*/
 .pag-perfil{ /*<-- BODY     */
-    background-color: #102c3d !important;
+    background-color: #e3eafd !important;
 }
 .pag-perfil nav .nav-item a{
     color: white !important;
@@ -374,13 +397,15 @@ footer{
     list-style: none;
 }
 .pag-perfil .container-dados-pessoais{
+    background-color: #061a27;
+    padding: 2vw;
+    border-radius: 15px;
     white-space: nowrap;
-    margin-right: 30vw;
-    padding-left: 0 !important;    
+    margin-right: 30vw;   
 }
 .pag-perfil .container-dados-pessoais span{
-    border: 3px solid #fe7062;
-    background: #fe7062;
+    border: 5px solid #202f38;
+    background: #202f38;
     margin-right: 10px;
 }
 .pag-perfil .container-dados-pessoais h2{
@@ -553,7 +578,10 @@ footer{
     font-weight: bold;
     color: #a667f8;
 }
-.pag-portao-eletrico,.pag-sensor-proximidade footer{
+.pag-portao-eletrico footer{
+    margin-top: 20vw;
+}
+.pag-sensor-proximidade footer{
     margin-top: 20vw;
 }
 /*PAGINA PORTÃO ELETRICO*/
@@ -620,6 +648,13 @@ footer{
 @media(max-width:1000px){
     body,html{
         overflow-x: hidden;
+    }
+    body{
+        background-image: url(../img/body/background-circuit.png) !important;
+        background-position: fixed !important;
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+        background-image: opacity;
     }
     nav .form-inline{
         margin-left: 0vw;
@@ -753,6 +788,13 @@ footer{
     figure .card-figure img{
         width: 6vw;
     }
+    figure .card-figure p{
+        margin-bottom: 12vw;
+    }
+    figure .card-figure .foto-user{
+        width: 10vw;
+    }
+    
     /*PÁGINA PERFIL*/
     .pag-perfil main{
         margin-left: 5vw;

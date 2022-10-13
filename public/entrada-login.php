@@ -31,7 +31,8 @@
             header("Location: index.php");
         
         }else {
-            echo "Falha no login , verifique as informações inseridas.";
+            $_SESSION['usuario_invalido']= "<p style='color:red';>Usuário não encontrado!</p>";
+            header("Location: login.php");
         }
     }
 }

@@ -38,6 +38,14 @@
     </style>
 </head>
 <body id="pag-login" class="pag-signup">
+    <!-- Small modal -->
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <center><img src="img/gif/modal.gif" width="35px" alt=""></center>
+    </div>
+  </div>
+</div>
 <!-- início do preloader -->
   <div id="preloader">
     <div class="inner">
@@ -46,7 +54,7 @@
     </div>
   </div>
 <!-- fim do preloader --> 
-    <form class="container-login signup" action="acesso.php" method="post">
+    <form class="container-login signup" action="acesso.php" method="post" id="form">
     <div class="top-login">
     <div class="container-message-user">    
     <?php 
@@ -81,9 +89,10 @@
             </div>
                 <p>Telefone<span>*</span></p>
                 <div class="form-group">
-                    <input style="height: 10px;" type="text" name="telUser" id="telUser" placeholder="Telefone 1">
+                    <input class="number" style="height: 10px;" type="text" name="telUser" id="telUser" placeholder="Telefone 1">
                     <input style="height: 10px;" type="text" name="telUser" id="telUser" placeholder="Telefone 2 (opcional)">
                 </div>
+                <span id="numberValid"></span>
                 <p>Endereço<span>*</span></p>
                 <div class="form-group">
                     <label for="cep">CEP</label>
@@ -103,8 +112,9 @@
                 </div>
                 
             <p>Digite um email <span>*</span></p>
-                <input style="height: 10px;" type="text" name="email" id="email" placeholder="">       
-            <p><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12.804 9c1.038-1.793 2.977-3 5.196-3 3.311 0 6 2.689 6 6s-2.689 6-6 6c-2.219 0-4.158-1.207-5.196-3h-3.804l-1.506-1.503-1.494 1.503-1.48-1.503-1.52 1.503-3-3.032 2.53-2.968h10.274zm7.696 1.5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5z"/></svg> Insira uma senha <span>*</span></p>
+                <input class="email" style="height: 10px;" type="text" name="email" id="email" placeholder="">       
+            <span id="textValidate"></span>
+                <p><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12.804 9c1.038-1.793 2.977-3 5.196-3 3.311 0 6 2.689 6 6s-2.689 6-6 6c-2.219 0-4.158-1.207-5.196-3h-3.804l-1.506-1.503-1.494 1.503-1.48-1.503-1.52 1.503-3-3.032 2.53-2.968h10.274zm7.696 1.5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5z"/></svg> Insira uma senha <span>*</span></p>
                 <input style="height: 10px;" type="password" name="senha" id="senha">
             <p><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12.804 9c1.038-1.793 2.977-3 5.196-3 3.311 0 6 2.689 6 6s-2.689 6-6 6c-2.219 0-4.158-1.207-5.196-3h-3.804l-1.506-1.503-1.494 1.503-1.48-1.503-1.52 1.503-3-3.032 2.53-2.968h10.274zm7.696 1.5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5z"/></svg> Confirme sua senha <span>*</span></p>
                 <input style="height: 10px;" type="password" name="senha2" id="senha2">
@@ -114,15 +124,19 @@
                     unset($_SESSION['senhas_iguais']);
                 }
             ?>
-        <a href="login.php"><button id="entrar" type="submit">CRIAR CONTA</button></a>
+        <a href="login.php"><button id="entrar" type="submit"  data-toggle="modal" data-target=".bd-example-modal-sm">CRIAR CONTA</button></a>
         <div class="criarConta">
             <h3>Já tem uma conta?</h3>
             <a href="login.php"><h4 id="login" style="font-size:16px;font-weight:bolder;">REALIZAR LOGIN</h4></a>
         </div>
     </form>
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <script src="script/preloader.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="script/js.js" defer></script>
+    <script src="script/preloader.js" defer></script>
 </body>
 </html>

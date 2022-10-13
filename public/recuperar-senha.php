@@ -1,5 +1,6 @@
 <?php
     session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -7,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | 4House</title>
+    <title>Recuperar senha | 4House</title>
     <link rel="icon" type="image/png" sizes="16x16"  href="img/favicon/favicon-16x16.png">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
@@ -47,25 +48,25 @@
     <div class="container-left left-login">
     <img src="img/login/background-login.png" alt="" height="100%" width="100%">
     </div>
-    <form class="container-login" action="entrada-login.php" method="post" id="form">
+    <form class="container-login" action="confirmar-usuario.php" method="post" id="form">
     <div class="top-login login-user">
-        <h1>LOGIN</h1>  
+        
+        <h1>RECUPERE SUA SENHA</h1>
+        <small>Email:</small>
         <?php
             if(isset($_SESSION['usuario_invalido'])){
                 echo($_SESSION['usuario_invalido']);
                 unset($_SESSION['usuario_invalido']);
             }
         ?>
-        <small>Email:</small>
         <input type="text" name="email" id="email" required>
-        <small>Senha:</small>
-        <input type="password" name="senha" required>
-        <a href="index.php"><button id="entrar" type="submit">ENTRAR</button></a>
+        <small id="textRecuperar">Digite o email para prosseguir</small>
+        <a href="index.php"><button id="entrar" type="submit">Avançar</button></a>
         <a href="recuperar-senha.php"><h3 id="recuperar-senha">Esqueceu a senha?</h3></a>
         </div>
         <div class="criarConta">
-            <h3>É novo por aqui?</h3>
-            <a href="signup.php"><strong><h4 id="criar-conta">CRIAR CONTA</h4></strong></a>
+            <h3>Já tem uma conta?</h3>
+            <a href="login.php"><strong><h4 id="criar-conta">REALIZAR LOGIN</h4></strong></a>
         </div>
     </form>
     <script src="script/preloader.js" defer></script>

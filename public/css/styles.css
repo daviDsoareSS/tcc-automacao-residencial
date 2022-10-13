@@ -44,7 +44,7 @@
 }
 .signup{
     margin: 0 !important;
-    margin-top: 100vw;
+    margin-top: 40vw;
     min-width: 60vw;
     min-height: 45vw;
 }
@@ -118,7 +118,26 @@
     font-weight: bolder;
     margin-bottom: 10px;
 }
-
+.signup .top-login .telValid{
+    border: 3px solid rgb(136, 255, 136) !important;
+    border-radius: 10px;
+}
+.signup .top-login .telInvalid{
+    border: 3px solid rgb(255, 89, 89) !important;
+    border-radius: 10px;
+}
+.signup .top-login .valid{
+    border: 3px solid rgb(136, 255, 136) !important;
+    border-radius: 10px;
+}
+.signup .top-login .invalid{
+    border: 3px solid rgb(255, 89, 89) !important;
+    border-radius: 10px;
+}
+.signup .top-login #textValidate{
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
 .container-login .top-login #entrar{
     background-color: #0093ee;
     border: none;
@@ -162,6 +181,12 @@
     font-size: 15px;
     font-style: bolder !important;
     padding-left: 1vw;
+}
+#textRecuperar{
+    color: #0093ee;
+    font-size: 15px;
+    font-weight: bolder;
+    font-style: italic;
 }
 /*SIGNUP*/
 .container-login .top-login span{
@@ -234,5 +259,9 @@
         font-size: 15px;
         padding: 0;
         margin: 0;
+    }
+
+    .signup{
+        margin-top: 0 !important;
     }
 }

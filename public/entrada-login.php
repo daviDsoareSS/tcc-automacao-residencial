@@ -12,8 +12,8 @@
         $senha = mysqli_real_escape_string($conn,trim(base64_encode($_POST['senha'])));
         
         $sql = "SELECT u.idUser, u.nome, u.email, u.dataNasc, u.sexo, e.endereco, e.numero, e.cep, e.bairro, e.cidade FROM users u
-                JOIN endereco e ON e.idUser = u.idUser
-                WHERE email = '$email' AND senha= '$senha'";
+                JOIN endereco e ON e.idEndereco = u.idEndereco
+                WHERE u.email = '$email' AND u.senha= '$senha'";
         $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
 
         $quantidade = $result->num_rows;

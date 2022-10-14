@@ -51,6 +51,9 @@
         $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
         $idUser = $result;
 
+        $sql = "SELECT * FROM endereco";
+        $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
+
         $sql = "INSERT INTO endereco (idEndereco, endereco, numero, cep, bairro, cidade, idUser) VALUES (DEFAULT, '$endereco', '$numero', '$cep', '$bairro', '$cidade', '$idUSer')";
         $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
 

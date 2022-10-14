@@ -54,10 +54,10 @@
         $sql = "SELECT * FROM endereco";
         $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
 
-        $sql = "INSERT INTO endereco (idEndereco, endereco, numero, cep, bairro, cidade, idUser) VALUES (DEFAULT, '$endereco', '$numero', '$cep', '$bairro', '$cidade', '$idUSer')";
+        $sql = "INSERT INTO endereco (idEndereco, endereco, numero, cep, bairro, cidade, idUser) VALUES (DEFAULT, '$endereco', '$numero', '$cep', '$bairro', '$cidade', '$idUser')";
         $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
 
-        header("Location: /login.php");
+        header("Location: login.php");
     }
 
     else if(empty($nome) || empty($email) || 

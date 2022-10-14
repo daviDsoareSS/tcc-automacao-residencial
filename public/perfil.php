@@ -39,8 +39,8 @@
                 ?>
                 <li>Idade:<span class="dados-user"><?php echo $resultado->format( '%Y anos' );?></span></li>
                 <li>Sexo:<span class="dados-user"><?php echo($_SESSION['sexoUser']);?></span></li>
-                <li>Cidade:<span class="dados-user">São Paulo -SP</span></li>
-                <li>Endereço:<span class="dados-user endereco">Rua Recife,Vila Seabra Nº30 - 08180-425</span></li>
+                <li>Cidade:<span class="dados-user"><?php echo($_SESSION['cidade']);?></span></li>
+                <li>Endereço:<span class="dados-user endereco"><?php echo($_SESSION['endereco']);?>,<?php echo($_SESSION['bairro']);?> Nº<?php echo($_SESSION['numero']);?> - <?php echo($_SESSION['cep']);?></span></li>
                 <li></li>
                 <li></li>
             </ul>

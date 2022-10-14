@@ -11,7 +11,9 @@
         $email = mysqli_real_escape_string($conn,trim($_POST['email']));
         $senha = mysqli_real_escape_string($conn,trim(base64_encode($_POST['senha'])));
         
-        $sql = "SELECT * FROM users WHERE email = '$email' AND senha= '$senha'";
+        $sql = "SELECT u.idUser, u.nome, u.email, u.dataNasc, u.sexo, e.endereco, e.numero, e.cep, e.bairro, e.cidade FROM users u
+                JOIN endereco e ON e.idUser = u.idUser
+                WHERE email = '$email' AND senha= '$senha'";
         $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
 
         $quantidade = $result->num_rows;
@@ -26,7 +28,13 @@
             $_SESSION['nome'] = $user['nome'];
             $_SESSION['email'] = $user['email'];
             $_SESSION['dataNasc'] = $user['dataNasc'];
-            $_SESSION['sexoUser'] = $user['sexoUser'];
+            $_SESSION['sexoUser'] = $user['sexo'];
+
+            $_SESSION['endereco'] = $user['endereco'];
+            $_SESSION['numero'] = $user['numero'];
+            $_SESSION['cep'] = $user['cep'];
+            $_SESSION['bairro'] = $user['bairro'];
+            $_SESSION['cidade'] = $user['cidade'];
 
             $sql = "UPDATE users SET ultimoAcesso = '$dataUltimoAcesso' WHERE email = '$email' AND senha= '$senha'";
             $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);

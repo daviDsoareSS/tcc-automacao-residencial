@@ -306,9 +306,6 @@ figure .card-figure{
     padding: 2vw;
     border-radius: 15px;
 }
-figure .card-figure:hover{
- 
-}
 figure .card-figure img{
     margin-bottom: 1vw;
     width: 2vw;
@@ -344,9 +341,6 @@ figure .card-figure .card-cliente small{
 footer{
     background: rgb(63, 89, 180,1);
     background: linear-gradient(-90deg,  rgb(19, 15, 74) 0%, rgb(75, 103, 201) 100%);
-}
-footer small{
-
 }
 .list-unstyled a{
     font-style: normal;

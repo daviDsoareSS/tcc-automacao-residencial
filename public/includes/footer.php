@@ -19,9 +19,7 @@
   <div class="container p-4">
     <section class="mb-4">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-        eum harum corrupti dicta, aliquam sequi voluptate quas.
+        A 4House está disposta a te ajudar em prol do seu conforto e segurança, deixando o trabalho pesado para nós. Estamos no mercado em torno de 3 anos, procurando sempre ampliar nossos atendimentos. São mais de 50 funcionários circulando por toda a grande São Paulo trazendo a técnologia para dentro da sua residência.
       </p>
     </section>
     <!-- Section: Text -->
@@ -50,10 +48,30 @@
           </ul>
         </div>
         <!--Grid column-->
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Redes Sociais</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <small>Email</small>
+              <a href="forhousecompany@gmail.com" class="text-white">forhousecompany@gmail.com</a>
+            </li>
+            <li>
+              <small>Twitter</small>
+              <a href="#!" class="text-white">fourhousecompany</a>
+            </li>
+            <li>
+              <small>Instagram</small>
+              <a href="#!" class="text-white">@fourhousecompany</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
 
         <!--Grid column-->
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
+          <h5 class="text-uppercase">Redes Sociais</h5>
 
           <ul class="list-unstyled mb-0">
             <li>
@@ -71,31 +89,9 @@
           </ul>
         </div>
         <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
-
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-white">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 4</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
+         <!--Grid column-->
+         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Redes Sociais</h5>
 
           <ul class="list-unstyled mb-0">
             <li>
@@ -122,7 +118,7 @@
 
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    <a class="text-white" href="index.php"><img src="img/logo/logo-4house.png" width="100px" alt=""></a>
+    <a class="text-white" href="index.php"><img src="img/logo/logo-4house.png" width="150px" alt="Logo 4House"></a>
   </div>
   <!-- Copyright -->
 </footer>

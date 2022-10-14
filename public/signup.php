@@ -38,7 +38,7 @@
     </style>
 </head>
 <body id="pag-login" class="pag-signup">
-    <!-- Small modal -->
+        
 <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
@@ -55,6 +55,8 @@
   </div>
 <!-- fim do preloader --> 
     <form class="container-login signup" action="acesso.php" method="post" id="form">
+    <img class="logo" src="img/logo/logo-4house.png" alt="">
+    <!-- Small modal -->
     <div class="top-login">
     <div class="container-message-user">    
     <?php 

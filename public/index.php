@@ -12,7 +12,7 @@
   <div id="preloader">
     <div class="inner">
        <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
-       <img src="img/gif/1490.gif" alt="">
+       <img src="img/gif/1490.gif" alt="preloader">
     </div>
 </div>
 <!-- fim do preloader --> 
@@ -21,7 +21,7 @@
   </span>
 <main>
         <div class="container-main">
-            <img src="img/main/save.png" alt="">
+            <img src="img/main/save.png" alt="Vetor Técnologia">
             <div class="text-main">
                 <strong><h1>Automação residencial</h1></strong>
                 <small>Serviços para automatizar seu lar</small>
@@ -39,17 +39,17 @@
         <h3>Mais prestados</h3>
         <div class="container-cards">
         <div class="container-section">
-          <img src="img/section/ambientacao.png" alt="" width="400vw">
+          <img src="img/section/ambientacao.png" alt="Ícone ambientação" width="400vw">
           <h2>Ambientação</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href=""><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
-          <img src="img/section/portao-eletrico.png" alt="" width="400vw">
+          <img src="img/section/portao-eletrico.png" alt="Ícone portão elétrico" width="400vw">
           <h2>Portão elétrico</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href="portao-eletrico.php"><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
-          <img src="img/section/sensor-de-proximidade.png" alt="" width="400vw">
+          <img src="img/section/sensor-de-proximidade.png" alt="Ícone sensor de proximidade" width="400vw">
           <h2>Sensor de proximidade</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href="sensor-proximidade.php"><span class="leia">... Leia mais</span></a></p>
         </div>
@@ -58,17 +58,17 @@
       <button id="btn-veja-todos-servicos" type="button" data-toggle="collapse" data-target="#mostrar-servicos" aria-controls="mostrar-servicos" aria-expanded="false" aria-label="Toggle navigation">Veja todos</button>
       <div class="collapse container-cards" id="mostrar-servicos">
         <div class="container-section">
-          <img src="img/section/ambientacao.png" alt="" width="400vw">
+          <img src="img/section/ambientacao.png" alt="Ícone ambientação" width="400vw">
           <h2>Ambientação</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href=""><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
-          <img src="img/section/portao-eletrico.png" alt="" width="400vw">
+          <img src="img/section/portao-eletrico.png" alt="Ícone portão elétrico" width="400vw">
           <h2>Portão elétrico</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href=""><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
-          <img src="img/section/sensor-de-proximidade.png" alt="" width="400vw">
+          <img src="img/section/sensor-de-proximidade.png" alt="Ícone sensor de proximidade" width="400vw">
           <h2>Sensor de proximidade</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href=""><span class="leia">... Leia mais</span></a></p>
         </div>

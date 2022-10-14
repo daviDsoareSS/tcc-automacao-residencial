@@ -48,6 +48,9 @@
     min-width: 60vw;
     min-height: 45vw;
 }
+.logo{
+    display: none;
+}
 .container-login{
     margin: 20vw;
     min-width: 35vw;
@@ -222,6 +225,10 @@
     #pag-login .container-login p{
         font-size: 15px;
         margin-top: 20px;
+    }
+    .logo{
+        display: block;
+        width: 30vw;
     }
 }
 @media(max-width:1000px){

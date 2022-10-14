@@ -3,17 +3,17 @@
     include_once('conexao.php');
     
     $nome = mysqli_real_escape_string($conn, trim($_POST['nome']));
-    $dataNasc = $_POST['dataNasc'];
-    $sexo = $_POST['sexoUser'];
+    $dataNasc = mysqli_real_escape_string($conn,trim($_POST['dataNasc']));
+    $sexo = mysqli_real_escape_string($conn,trim($_POST['sexoUser']));
     $email = mysqli_real_escape_string($conn,trim($_POST['email']));
     $senha = mysqli_real_escape_string($conn,trim(base64_encode($_POST['senha'])));
     $senha2 = mysqli_real_escape_string($conn,trim(base64_encode($_POST['senha2'])));
     
-    $cep = $_POST['cep'];
-    $endereco = $_POST['endereco'];
-    $bairro = $_POST['bairro'];
-    $cidade = $_POST['cidade'];
-    $numero = $_POST['numero-casa'];
+    $cep = mysqli_real_escape_string($conn,trim($_POST['cep']));
+    $endereco = mysqli_real_escape_string($conn,trim($_POST['endereco']));
+    $bairro = mysqli_real_escape_string($conn,trim($_POST['bairro']));
+    $cidade = mysqli_real_escape_string($conn,trim($_POST['cidade']));
+    $numero = mysqli_real_escape_string($conn,trim($_POST['numero-casa']));
 
     /*$dataCriacaoConta = DATE_FORMAT(NOW($dataCriacaoConta),'%Y-%m-%d %h:%i:%s');*/
     
@@ -41,36 +41,57 @@
         header('Location:signup.php');
         exit;
     }
+    echo "data1 ".$dataCriacaoConta."<br>";
 
-    $sql = "INSERT INTO users VALUES (DEFAULT, '$nome','$dataNasc','$sexo','$email','$senha','$dataCriacaoConta', $dataUltimoAcesso)";
+    echo "data2 ".$dataUltimoAcesso."<br>";
+    echo "nome ".$nome."<br>";
+    echo "dataNasc ".$dataNasc."<br>";
+    echo "sexo ".$sexo."<br>";
+    echo "email ".$email."<br>";
+    echo "senha ".$senha."<br>";
+    echo "senha2 ".$senha2."<br>";
     
-    if ($conn->query($sql) === TRUE) {
+    echo "cep".$cep."<br>";
+    echo "endereço ".$endereco."<br>";
+    echo "bairro ".$bairro."<br>";
+    echo "cidade ".$cidade."<br>";
+    echo "numero ".$numero."<br>";
+
+
+    
+    
+    if (empty($nome) || empty($email) || empty($senha) || empty($dataNasc) || empty($senha2)){
+        $_SESSION['campos_vazios'] = "<p style='color:red';>Campos obrigatórios.</p>";
+        header('Location:signup.php');
+        exit;
+    }else{
         $_SESSION['status_cadastro'] = "<p style='color:green';>Usuário cadastrado com sucesso.</p>";
+        
+        $sql = "INSERT INTO users VALUES (DEFAULT, '$nome','$dataNasc','$sexo','$email','$senha','$dataCriacaoConta', $dataUltimoAcesso)";
+        $result = $conn->query($sql);
 
         $sql = "SELECT idUser FROM users WHERE email = '$email' AND senha= '$senha'";
         $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
-        $idUser = $result;
 
-        $sql = "SELECT * FROM endereco";
-        $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
+        while($row = $result->fetch_assoc()) {
+            $idUser = $row['idUser'];
+        }
 
         $sql = "INSERT INTO endereco (idEndereco, endereco, numero, cep, bairro, cidade, idUser) VALUES (DEFAULT, '$endereco', '$numero', '$cep', '$bairro', '$cidade', '$idUser')";
         $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
 
-        header("Location: login.php");
+        echo "<h1>".$idUser."</h1>";
 
-    }else if (empty($nome) || empty($email) || empty($senha) || empty($dataNasc) || empty($senha2)){
-        $_SESSION['campos_vazios'] = "<p style='color:red';>Campos obrigatórios.</p>";
+        //header("Location: login.php");
+
+    }/*else{
         header('Location:signup.php');
-        exit;
-    }
-    else{
-        header('Location:signup.php');
-    }
+    }*/
     
     $conn->close();
-    header('Location: login.php');
     exit;
+
+
 ?>
        
 

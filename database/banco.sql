@@ -1,5 +1,5 @@
 DROP DATABASE forHouse;    
-CREATE DATABASE forHouse;
+CREATE DATABASE forhouse;
 
 DROP TABLE users;
 CREATE TABLE users(
@@ -18,7 +18,7 @@ CREATE TABLE endereco(
     idEndereco serial PRIMARY KEY NOT NULL,
     endereco varchar(255) NOT NULL,
     numero varchar(7),
-    cep varchar(10),
+    cep varchar(50),
     bairro varchar(225),
     cidade varchar(225), 
     idUser int NOT NULL REFERENCES users(idUser)

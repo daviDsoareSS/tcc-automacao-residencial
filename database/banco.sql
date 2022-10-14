@@ -10,8 +10,7 @@ CREATE TABLE users(
     email varchar(100) NOT NULL,
     senha varchar(100) NOT NULL,
     dataCriacaoConta DATETIME, 
-    ultimoAcesso DATETIME,
-    
+    ultimoAcesso DATETIME
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE endereco;

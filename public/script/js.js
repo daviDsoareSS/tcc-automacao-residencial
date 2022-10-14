@@ -98,7 +98,7 @@ function formata(data) {
 
 const campo = document.querySelector('#dataNasc');
 
-window.addEventListener('DOMContentLoaded', function() {
+/*window.addEventListener('DOMContentLoaded', function() {
     var data = new Date(); // data de hoje
     
     // 60 anos atrás
@@ -117,8 +117,8 @@ campo.addEventListener('input', () => {
 });
 
 // se tentar submeter o form com data fora do intervalo, mostra o erro
-campo.addEventListener('invalid', () => {
+/*campo.addEventListener('invalid', () => {
     campo.setCustomValidity('Você precisa ter mais de 18 anos de idade');
-});
+});*/
 
 /*FINAL VALIDAÇÃO DE DATA DE NASCIMENTO*/

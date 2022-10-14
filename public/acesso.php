@@ -9,6 +9,12 @@
     $senha = mysqli_real_escape_string($conn,trim(base64_encode($_POST['senha'])));
     $senha2 = mysqli_real_escape_string($conn,trim(base64_encode($_POST['senha2'])));
     
+    $cep = $_POST['cep'];
+    $endereco = $_POST['endereco'];
+    $bairro = $_POST['bairro'];
+    $cidade = $_POST['cidade'];
+    $numero = $_POST['numero-casa'];
+
     /*$dataCriacaoConta = DATE_FORMAT(NOW($dataCriacaoConta),'%Y-%m-%d %h:%i:%s');*/
     
     //$senha = base64_encode($senha); 
@@ -18,6 +24,7 @@
     //$result=$conn->query($verificaData);
 
     $dataCriacaoConta = date('Y/m/d H:i');
+    $dataUltimoAcesso = date('Y/m/d H:i');
 
     $verificaUser = "select count(*) as total from users where email='$email'";
     $result = mysqli_query($conn,$verificaUser);
@@ -35,10 +42,18 @@
         exit;
     }
 
-    $sql = "INSERT INTO users VALUES (DEFAULT, '$nome','$dataNasc','$sexo','$email','$senha','$dataCriacaoConta')";
+    $sql = "INSERT INTO users VALUES (DEFAULT, '$nome','$dataNasc','$sexo','$email','$senha','$dataCriacaoConta', $dataUltimoAcesso)";
     
     if ($conn->query($sql) === TRUE) {
         $_SESSION['status_cadastro'] = "<p style='color:green';>Usuário cadastrado com sucesso.</p>";
+
+        $sql = "SELECT idUser FROM users WHERE email = '$email' AND senha= '$senha'";
+        $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
+        $idUser = $result;
+
+        $sql = "INSERT INTO endereco (idEndereco, endereco, numero, cep, bairro, cidade, idUser) VALUES (DEFAULT, '$endereco', '$numero', '$cep', '$bairro', '$cidade', '$idUSer')";
+        $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
+
         header("Location: /login.php");
     }
 

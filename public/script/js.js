@@ -85,3 +85,40 @@ number.addEventListener("keyup", ()=>{
     }
 })
 /*FINAL Validador de telefone */
+
+/*VALIDAÇÃO DE DATA DE NASCIMENTO*/
+
+function pad(valor) { // completa com zeros à esquerda, caso necessário
+    return valor.toString().padStart(2, '0');
+}
+
+function formata(data) {
+    return `${data.getFullYear()}-${pad(data.getMonth() + 1)}-${pad(data.getDate())}`;
+}
+
+const campo = document.querySelector('#dataNasc');
+
+window.addEventListener('DOMContentLoaded', function() {
+    var data = new Date(); // data de hoje
+    
+    // 60 anos atrás
+    data.setFullYear(data.getFullYear() - 60);
+    campo.min = formata(data);
+
+    // 18 anos atrás
+    data.setFullYear(data.getFullYear() - 18);
+    campo.max = formata(data);
+});
+
+// mensagens de validação
+campo.addEventListener('input', () => {
+  campo.setCustomValidity('');
+  campo.checkValidity();
+});
+
+// se tentar submeter o form com data fora do intervalo, mostra o erro
+campo.addEventListener('invalid', () => {
+    campo.setCustomValidity('Você precisa ter mais de 18 anos de idade');
+});
+
+/*FINAL VALIDAÇÃO DE DATA DE NASCIMENTO*/

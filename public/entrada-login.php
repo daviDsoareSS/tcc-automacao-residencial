@@ -28,6 +28,9 @@
             $_SESSION['dataNasc'] = $user['dataNasc'];
             $_SESSION['sexoUser'] = $user['sexoUser'];
 
+            $sql = "UPDATE users SET ultimoAcesso = '$dataUltimoAcesso' WHERE email = '$email' AND senha= '$senha'";
+            $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
+
             header("Location: index.php");
         
         }else {

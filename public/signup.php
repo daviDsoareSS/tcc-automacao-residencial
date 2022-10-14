@@ -80,6 +80,7 @@
             <input style="height: 10px;" type="text" name="nome" id="nomeUser" placeholder="Digite nome e sobrenome" required>
         <p>Digite sua data de nascimento<span>*</span></p>
             <input style="height: 10px;" type="date" name="dataNasc" id="dataNasc" required>
+           
             <div class="container-sexo">
                 <p>Sexo<span>*</span></p>
                     <input style="height: 10px;" class="sexo-user" type="radio" name="sexoUser" id="sexoMasculino" value="masculino" checked="check">
@@ -100,17 +101,17 @@
                     <label for="cep">CEP</label>
                     <input style="height: 10px;" type="text" name="cep" id="cep" placeholder="ex.0000-000">
                     <label for="rua">Rua</label>
-                    <input style="height: 10px;" type="text" name="rua" id="logradouro" placeholder="Rua">
+                    <input style="height: 10px;" type="text" name="endereco" id="logradouro" placeholder="Rua">
                 </div>
                 <div class="form-group">
                     <label for="bairro">Bairro</label>
-                    <input style="height: 10px;" type="text" id="bairro">
+                    <input style="height: 10px;" type="text" name="bairro" id="bairro">
                 </div>
                 <div class="form-group">
                     <label for="localidade">Cidade</label>
-                    <input style="height: 10px;" type="text" id="localidade">
+                    <input style="height: 10px;" type="text" name="cidade" id="localidade">
                     <label for="numero">Nº</label>
-                    <input style="height: 10px;" type="text" id="numero-casa">
+                    <input style="height: 10px;" type="text" name="numero-casa" id="numero-casa">
                 </div>
                 
             <p>Digite um email <span>*</span></p>

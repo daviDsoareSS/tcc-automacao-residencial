@@ -11,7 +11,7 @@
         $email = mysqli_real_escape_string($conn,trim($_POST['email']));
         $senha = mysqli_real_escape_string($conn,trim(base64_encode($_POST['senha'])));
         
-        $sql = "SELECT u.idUser, u.nome, u.email, u.dataNasc, u.sexo, e.endereco, e.numero, e.cep, e.bairro, e.cidade FROM users u
+        $sql = "SELECT u.idUser, u.nome, u.email, u.sexo, e.endereco, e.numero, e.cep, e.bairro, e.cidade FROM users u
                 JOIN endereco e ON e.idEndereco = u.idEndereco
                 WHERE u.email = '$email' AND u.senha= '$senha'";
         $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
@@ -27,7 +27,7 @@
             $_SESSION['id'] = $user['idUser'];
             $_SESSION['nome'] = $user['nome'];
             $_SESSION['email'] = $user['email'];
-            $_SESSION['dataNasc'] = $user['dataNasc'];
+           
             $_SESSION['sexoUser'] = $user['sexo'];
 
             $_SESSION['endereco'] = $user['endereco'];

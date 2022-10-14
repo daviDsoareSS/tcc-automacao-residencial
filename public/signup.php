@@ -79,7 +79,7 @@
         <p>Digite seu nome e sobrenome<span>*</span></p>
             <input style="height: 10px;" type="text" name="nome" id="nomeUser" placeholder="Digite nome e sobrenome" required>
         <p>Digite sua data de nascimento<span>*</span></p>
-            <input style="height: 10px;" type="date" name="dataNasc" id="dataNasc">
+            <!--<input style="height: 10px;" type="date" name="dataNasc" id="dataNasc" min="1950-01-01" max="2018-01-01" required>-->
            
             <div class="container-sexo">
                 <p>Sexo<span>*</span></p>

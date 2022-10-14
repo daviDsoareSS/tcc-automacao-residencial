@@ -61,7 +61,7 @@
     }
 
     else if(empty($nome) || empty($email) || 
-    empty($senha) || empty($dataNasc) || empty($senha2)){
+    empty($senha) || empty($senha2)){
         $_SESSION['campos_vazios'] = "<p style='color:red';>Campos obrigatórios.</p>";
         header('Location:signup.php');
         exit;

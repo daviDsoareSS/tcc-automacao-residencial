@@ -1,0 +1,98 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #F4F4F4;
+    display: grid;
+    grid-template-areas: 
+    "sidebar header header"
+    "sidebar main main"
+    "sidebar main main";
+}
+header{
+    padding-left: 10% !important;
+    padding: 2vw;
+    position: relative;
+    width: 100%;
+    grid-area: header;
+    
+}
+header .container-right-header{
+    float: right;
+    position:relative;
+}
+.sidebar{
+    z-index: 99999999;
+    position: fixed;
+    padding: 2vw 2vw;
+    width: 20%;
+    height: 70vw;
+    grid-area: sidebar;
+    background-color: #4244E6;
+}
+.sidebar nav{
+    margin-bottom: 3vw;
+    width: 10vw;
+}
+.sidebar nav img{
+    width: 10vw;
+}
+.sidebar .container-sidebar ul{
+    padding-left: 0 !important;
+    color: white;
+    list-style: none;
+}
+.sidebar .container-sidebar ul li{
+    
+    margin-bottom: 1vw;
+}
+.sidebar .container-sidebar ul li:hover{
+    color: #FE7265;
+}
+
+main{
+    border-top: 1px solid rgba(128, 128, 128, 0.259);
+    padding-left: 10% !important;
+    padding: 2vw;
+    position: relative;
+    height: 60vw;
+    width: 100%;
+    padding: ;
+    grid-area: main;
+ 
+}
+main .top-main{
+    padding: 1vw 1.5vw;
+    border: 1px solid rgba(128, 128, 128, 0.259);
+    width: 100%;
+}
+main .top-main form{
+    display: flex;
+}
+main .top-main form button{
+    border: none;
+    color: white;
+    padding: 10px;
+    background-color: #416dff;
+}
+main .top-main .form-control{ 
+    width: 30%;
+}
+main .container-main{
+
+    border: 1px solid rgba(128, 128, 128, 0.259);
+}
+main .container-main table {
+    border: 1px solid rgba(128, 128, 128, 0.259);
+    width: 100%;
+}
+main .container-main table th, td {
+    padding: 10px;
+}
+
+main .agenda{
+    width: 30px;
+}

@@ -83,17 +83,17 @@
            
             <div class="container-sexo">
                 <p>Sexo<span>*</span></p>
-                    <input style="height: 10px;" class="sexo-user" type="radio" name="sexoUser" id="sexoMasculino" value="masculino" checked="check">
+                    <input style="height: 10px;" class="sexo-user" type="radio" name="sexoUser" id="sexoMasculino" value="Masculino" checked="check">
                         <label for="sexoMasculino">Masculino</label>
-                    <input style="height: 10px;" class="sexo-user" type="radio" name="sexoUser" id="sexoFeminino" value="feminino">
+                    <input style="height: 10px;" class="sexo-user" type="radio" name="sexoUser" id="sexoFeminino" value="Feminino">
                         <label for="sexoFeminino">Feminino</label>  
                     <input style="height: 10px;" class="sexo-user" type="radio" name="sexoUser" id="sexoIndefinido" value="sexoIndefinido">
                         <label for="sexoIndefinido">Prefiro não dizer</label>           
             </div>
                 <p>Telefone<span>*</span></p>
                 <div class="form-group">
-                    <input class="number" style="height: 10px;" type="text" name="telUser" id="telUser" placeholder="Telefone 1">
-                    <input style="height: 10px;" type="text" name="telUser" id="telUser" placeholder="Telefone 2 (opcional)">
+                    <input class="number" style="height: 10px;" type="text" name="tel1" id="telUser" placeholder="Telefone 1">
+                    <input style="height: 10px;" type="text" name="telUser" id="tel2" placeholder="Telefone 2 (opcional)">
                 </div>
                 <span id="numberValid"></span>
                 <p>Endereço<span>*</span></p>

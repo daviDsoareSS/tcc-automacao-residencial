@@ -20,10 +20,17 @@ header{
     grid-area: header;
     
 }
+header .container-header h1{
+    font-weight: bolder;
+}
+header .container-header {
+    justify-content: center;
+}
 header .container-right-header{
     float: right;
     position:relative;
 }
+
 .sidebar{
     z-index: 99999999;
     position: fixed;
@@ -60,7 +67,6 @@ main{
     position: relative;
     height: 60vw;
     width: 100%;
-    padding: ;
     grid-area: main;
  
 }
@@ -95,4 +101,51 @@ main .container-main table th, td {
 
 main .agenda{
     width: 30px;
+}
+
+.pag-agendamento{
+    display: flex;
+}
+
+.pag-agendamento .container-dados-usuario{
+    margin-right: 6vw;
+}
+.pag-agendamento h2{
+    margin-bottom: 2vw;
+    font-weight: bolder;
+}
+.pag-agendamento .container-dados-usuario p{
+    font-weight: bold;
+}
+.pag-agendamento .container-dados-usuario small{
+    font-weight: bold;
+    color: #4244E6;
+}
+.pag-agendamento .container-agendamento{
+    margin-left: 4vw;
+   
+}
+.pag-agendamento .container-agendamento label{
+    font-weight: bolder;
+   
+}
+.pag-agendamento .container-agendamento .form-group{
+    margin-top: 1vw;
+   
+}
+.pag-agendamento .container-agendamento .form-group .container-endereco form input{
+    width: 100%;
+}
+.pag-agendamento .container-agendamento .form-group label{
+    margin-top: 1vw;
+   
+}
+.pag-agendamento form .button-agendar{
+    background-color: #416dff;
+    margin-top: 1vw;
+    border: 2px solid #4244E6;
+    border-radius: 10px;
+    padding: 8px 25px;
+    color: white;
+    
 }

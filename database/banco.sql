@@ -1,6 +1,10 @@
 DROP DATABASE forHouse;    
 CREATE DATABASE forhouse;
 
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
 DROP TABLE users;
 CREATE TABLE users(
     idUser serial PRIMARY KEY NOT NULL, 
@@ -23,3 +27,5 @@ CREATE TABLE endereco(
     cidade varchar(225), 
     idUser int NOT NULL REFERENCES users(idUser)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE 

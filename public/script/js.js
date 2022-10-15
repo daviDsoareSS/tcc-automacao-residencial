@@ -98,6 +98,11 @@ function formata(data) {
 
 const campo = document.querySelector('#dataNasc');
 
+
+
+
+
+
 /*window.addEventListener('DOMContentLoaded', function() {
     var data = new Date(); // data de hoje
     

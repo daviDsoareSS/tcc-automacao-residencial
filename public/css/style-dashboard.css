@@ -31,7 +31,7 @@ header .container-right-header{
     width: 20%;
     height: 70vw;
     grid-area: sidebar;
-    background-color: #4244E6;
+    background-color: #4245e6;
 }
 .sidebar nav{
     margin-bottom: 3vw;
@@ -69,10 +69,10 @@ main .top-main{
     border: 1px solid rgba(128, 128, 128, 0.259);
     width: 100%;
 }
-main .top-main form{
+main .top-main{
     display: flex;
 }
-main .top-main form button{
+main .top-main button{
     border: none;
     color: white;
     padding: 10px;

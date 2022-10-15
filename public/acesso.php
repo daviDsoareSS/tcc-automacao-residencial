@@ -23,6 +23,7 @@
     //$row = mysqli_fetch_assoc($result);
     //$result=$conn->query($verificaData);
 
+    date_default_timezone_set('America/Sao_Paulo');
     $dataCriacaoConta = date('Y/m/d H:i');
     $dataUltimoAcesso = date('Y/m/d H:i');
 
@@ -41,36 +42,19 @@
         header('Location:signup.php');
         exit;
     }
-    echo "data1 ".$dataCriacaoConta."<br>";
-
-    echo "data2 ".$dataUltimoAcesso."<br>";
-    echo "nome ".$nome."<br>";
-    echo "dataNasc ".$dataNasc."<br>";
-    echo "sexo ".$sexo."<br>";
-    echo "email ".$email."<br>";
-    echo "senha ".$senha."<br>";
-    echo "senha2 ".$senha2."<br>";
     
-    echo "cep".$cep."<br>";
-    echo "endereço ".$endereco."<br>";
-    echo "bairro ".$bairro."<br>";
-    echo "cidade ".$cidade."<br>";
-    echo "numero ".$numero."<br>";
 
-
+    $sql = "INSERT INTO users VALUES (DEFAULT, '$nome','$dataNasc','$sexo','$email','$senha','$dataCriacaoConta', '$dataUltimoAcesso')";
     
     
     if (empty($nome) || empty($email) || empty($senha) || empty($dataNasc) || empty($senha2)){
         $_SESSION['campos_vazios'] = "<p style='color:red';>Campos obrigatórios.</p>";
         header('Location:signup.php');
         exit;
-    }else{
-        $_SESSION['status_cadastro'] = "<p style='color:green';>Usuário cadastrado com sucesso.</p>";
-        
-        $sql = "INSERT INTO users VALUES (DEFAULT, '$nome','$dataNasc','$sexo','$email','$senha','$dataCriacaoConta', $dataUltimoAcesso)";
-        $result = $conn->query($sql);
+    }else  if ($conn->query($sql) === TRUE){
 
         $sql = "SELECT idUser FROM users WHERE email = '$email' AND senha= '$senha'";
+
         $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
 
         while($row = $result->fetch_assoc()) {
@@ -78,11 +62,12 @@
         }
 
         $sql = "INSERT INTO endereco (idEndereco, endereco, numero, cep, bairro, cidade, idUser) VALUES (DEFAULT, '$endereco', '$numero', '$cep', '$bairro', '$cidade', '$idUser')";
+
         $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
 
-        echo "<h1>".$idUser."</h1>";
+        $_SESSION['status_cadastro'] = "<p style='color:green';>Usuário cadastrado com sucesso.</p>";
 
-        //header("Location: login.php");
+        header("Location: login.php");
 
     }/*else{
         header('Location:signup.php');

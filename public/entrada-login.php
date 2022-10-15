@@ -36,6 +36,9 @@
             $_SESSION['bairro'] = $user['bairro'];
             $_SESSION['cidade'] = $user['cidade'];
 
+            date_default_timezone_set('America/Sao_Paulo');
+            $dataUltimoAcesso =  date('Y/m/d H:i');
+
             $sql = "UPDATE users SET ultimoAcesso = '$dataUltimoAcesso' WHERE email = '$email' AND senha= '$senha'";
             $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
 

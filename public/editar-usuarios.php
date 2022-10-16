@@ -78,7 +78,7 @@
                                 echo "<td data-title='Email'>".$user_data['email']."</td>";
                                 echo "<td data-title='Nome'>".$user_data['nome']."</td>";
                                 echo "<td data-title='DataNasc'>".$user_data['dataNasc']."</td>";
-                                echo "<td data-title='DataCriacaoConta'>".$user_data['dataCriacaoConta']."</td>";
+                                echo "<td data-title='Inicio da conta'>".$user_data['dataCriacaoConta']."</td>";
                                 echo "<td data-title='Editar usuário'><a href='editar-usuarios.php?id=$user_data[idUser]'><img src='img/dashboard/icon/editar.png'class='agenda'></a></td>";
                             echo "</tr>";     
                         }

@@ -27,7 +27,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Agendamento | 4House</title>
     <link rel="stylesheet" href="css/style-dashboard.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,18 +36,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>  
-    <header>
-        <div class="container-header">
-            <h1>Dashboard</h1>
-            <small>Acesso restrito</small>
-        </div>
-        <div class="container-right-header">
-            <p>Atendente: <strong>David Soares Silva</strong></p>
-        </div>
-    </header>
     <?php
-    include_once('includes/sidebar.php');
+        include_once('includes/header-dashboard.php');
     ?>
+    <div class="sidebar">
+        <nav>
+            <a href="dashboard.php"><img src="img/logo/logo-4house.png" alt="logo 4house"></a>
+        </nav>
+        <div class="container-sidebar">
+            <ul>
+                <a href="dashboard.php"><li class="selected">Interface</li></a>
+                <a href="editar-usuarios.php"><li class="">Editar usuários</li></a>
+                <a href="dashboard.php"><li class="">Deletar usuários</li></a>
+            </ul>    
+        </div>
+    </div>
     <main class="pag-agendamento">
         <div class="container-dados-usuario">
             <h2>Dados usuário</h2>
@@ -92,16 +95,16 @@
                             </div>
                             <div class="form-group">
                                 <label for="bairro">Bairro</label>
-                                <input class="form-control type="text" name="bairro" id="bairro">
+                                <input class="form-control type="text" name="bairro" id="bairro" placeholder="Bairro">
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputCity">Cidade</label>
-                                    <input type="text" class="form-control" name="cidade" id="localidade">
+                                    <input type="text" class="form-control" name="cidade" id="localidade" placeholder="Cidade">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputEstado">Número</label>
-                                    <input class="form-control" type="text" name="numero-casa" id="numero-casa">
+                                    <input class="form-control" type="text" name="numero-casa" id="numero-casa" placeholder="Nº">
                                 </div>
                         </div>
                 </div>

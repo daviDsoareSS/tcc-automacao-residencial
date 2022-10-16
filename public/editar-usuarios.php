@@ -23,7 +23,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | 4House</title>
+    <title>Editar usuários | 4House</title>
     <link rel="stylesheet" href="css/style-dashboard.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,8 +41,8 @@
         </nav>
         <div class="container-sidebar">
             <ul>
-                <a href="dashboard.php"><li class="selected">Interface</li></a>
-                <a href="editar-usuarios.php"><li class="">Editar usuários</li></a>
+                <a href="dashboard.php"><li class="">Interface</li></a>
+                <a href="editar-usuarios.php"><li class="selected">Editar usuários</li></a>
                 <a href="deletar-usuarios.php"><li class="">Deletar usuários</li></a>
             </ul>    
         </div>
@@ -67,7 +67,7 @@
                     <th>Nome</th>
                     <th>Data de nascimento</th>
                     <th>Data de criação da conta</th>
-                    <th>Agendar</th>
+                    <th>Editar</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -79,7 +79,7 @@
                                 echo "<td data-title='Nome'>".$user_data['nome']."</td>";
                                 echo "<td data-title='DataNasc'>".$user_data['dataNasc']."</td>";
                                 echo "<td data-title='DataCriacaoConta'>".$user_data['dataCriacaoConta']."</td>";
-                                echo "<td data-title='Agendar serviço'><a href='agendamento.php?id=$user_data[idUser]'><svg class='agenda' clip-rule='evenodd' fill-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='m21 4c0-.478-.379-1-1-1h-16c-.62 0-1 .519-1 1v16c0 .621.52 1 1 1h16c.478 0 1-.379 1-1zm-3 11.25c0 .414-.336.75-.75.75h-4.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h4.5c.414 0 .75.336.75.75zm-11.772-.537c-.151-.135-.228-.321-.228-.509 0-.375.304-.682.683-.682.162 0 .324.057.455.173l.746.665 1.66-1.815c.136-.147.319-.221.504-.221.381 0 .684.307.684.682 0 .163-.059.328-.179.459l-2.116 2.313c-.134.147-.319.222-.504.222-.162 0-.325-.057-.455-.173zm11.772-2.711c0 .414-.336.75-.75.75h-4.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h4.5c.414 0 .75.336.75.75zm-11.772-1.613v.001c-.151-.135-.228-.322-.228-.509 0-.376.304-.682.683-.682.162 0 .324.057.455.173l.746.664 1.66-1.815c.136-.147.319-.221.504-.221.381 0 .684.308.684.682 0 .164-.059.329-.179.46l-2.116 2.313c-.134.147-.319.221-.504.221-.162 0-.325-.057-.455-.173zm11.772-1.639c0 .414-.336.75-.75.75h-4.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h4.5c.414 0 .75.336.75.75z' fill-rule='nonzero'/></svg></a></td>";
+                                echo "<td data-title='Editar usuário'><a href='editar-usuarios.php?id=$user_data[idUser]'><img src='img/dashboard/icon/editar.png'class='agenda'></a></td>";
                             echo "</tr>";     
                         }
                     ?>

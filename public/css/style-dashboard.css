@@ -13,9 +13,10 @@ body{
     "sidebar main main";
 }
 header{
-    padding-left: 10% !important;
+    padding-left: 0% !important;
     padding: 2vw;
     position: relative;
+    display: flex;
     width: 100%;
     grid-area: header;
     
@@ -23,20 +24,37 @@ header{
 header .container-header h1{
     font-weight: bolder;
 }
-header .container-header {
-    justify-content: center;
+header .container-header small{
+    font-style: italic;
+    color: #416dff;
 }
 header .container-right-header{
     float: right;
     position:relative;
+    margin-left: 45vw;
 }
-
+header .container-right-header p{
+    color: #FE7265;
+    font-weight: bold;
+}
+header .container-right-header strong{
+    color: black;
+    font-weight: bolder;
+    font-size: 18px;
+}
+header .container-right-header a{
+    text-decoration: none;
+}
+header .container-right-header small{
+    color: rgb(50, 95, 240);
+    font-weight: bolder;
+    font-size: 18px;
+}
 .sidebar{
     z-index: 99999999;
-    position: fixed;
     padding: 2vw 2vw;
-    width: 20%;
-    height: 70vw;
+    width: 80%;
+    height: 100%;
     grid-area: sidebar;
     background-color: #4245e6;
 }
@@ -47,13 +65,21 @@ header .container-right-header{
 .sidebar nav img{
     width: 10vw;
 }
+.sidebar a{
+    text-decoration: none;
+    color: white;
+}
 .sidebar .container-sidebar ul{
     padding-left: 0 !important;
     color: white;
     list-style: none;
 }
+.sidebar .container-sidebar ul .selected{
+    color: #09092f;
+    font-weight: bolder;
+    font-size: 19px;
+}
 .sidebar .container-sidebar ul li{
-    
     margin-bottom: 1vw;
 }
 .sidebar .container-sidebar ul li:hover{
@@ -61,12 +87,11 @@ header .container-right-header{
 }
 
 main{
-    border-top: 1px solid rgba(128, 128, 128, 0.259);
-    padding-left: 10% !important;
+    padding-left: 0% !important;
     padding: 2vw;
     position: relative;
     height: 60vw;
-    width: 100%;
+    min-width: 100% !important;
     grid-area: main;
  
 }
@@ -78,11 +103,21 @@ main .top-main{
 main .top-main{
     display: flex;
 }
+main .top-main label{
+    margin-left: 2vw;
+    margin-right: 1vw;
+    align-items: center;
+    display: flex;
+}
 main .top-main button{
     border: none;
     color: white;
     padding: 10px;
     background-color: #416dff;
+}
+main .top-main select{
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.38);
 }
 main .top-main .form-control{ 
     width: 30%;
@@ -96,6 +131,7 @@ main .container-main table {
     width: 100%;
 }
 main .container-main table th, td {
+    position: relative;
     padding: 10px;
 }
 
@@ -148,4 +184,124 @@ main .agenda{
     padding: 8px 25px;
     color: white;
     
+}
+@media(max-width:1000px){
+    body{
+        background-color: #F4F4F4;
+        display: grid;
+        grid-template-areas: 
+        "sidebar sidebar sidebar"
+        "header header header"
+        "main main main";
+    }
+    header{
+        display: block;
+        text-align: left;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 6vw;
+        height: 40vw;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.493);
+    }
+    header .container-header{
+        display: flex;
+    }
+    header .container-header small{
+        margin-left: 3vw;
+        display: flex;
+        align-items: center;
+    }
+    header .container-right-header{
+        float: left;
+        position:relative;
+        margin-left: 0 !important;
+    }
+    .sidebar{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .sidebar ul{
+        margin-top: 2vw;
+    }
+    .sidebar ul li{
+        padding-bottom: 3vw;
+        margin-left: 4vw;
+    }
+    .sidebar nav {
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .sidebar nav img{
+       width: 30vw;
+
+    }
+    main,header{
+        padding-left: 4vw !important;
+        padding-right: 4vw !important;
+    }
+    main .container-main table tr, td {
+        border-bottom: 1px solid gray;
+        display: block;
+        text-align: right;
+    }
+    main .container-main table td:before{
+        
+        content: attr(data-title);
+        position: absolute;
+        left: 10px;
+        display: block;
+        font-weight: bolder;
+    }
+    
+    main .container-main table{
+        border: none;
+    }
+    main .container-main table thead{
+        display: none;
+    }
+    main .container-main tr {
+        border: 1px solid rgba(128, 128, 128, 0.259);
+        margin-bottom: 10px;
+        display: block;
+    }
+    main .container-main table tr, td {
+        display: block;
+    }
+    main .top-main{
+        display: block;
+    }
+    main .top-main .form-control{
+        width: 100%;
+    }
+    main .top-main button{
+        border-radius: 5px;
+        margin: 2vw 0vw 2vw;
+        width: 100%;
+        
+    }
+    .pag-agendamento{
+        display: block;
+    }
+    .pag-agendamento h2{
+        margin-top: 5vw !important;
+        margin-bottom: 5vw !important;
+    }
+    .pag-agendamento .container-agendamento{
+        margin-top: 20vw;
+        margin-left: 0vw;
+       
+    }
+    .pag-agendamento .container-agendamento label{
+        margin-bottom: 3vw;
+    }
+    .pag-agendamento .form-group input{
+        display: block;
+    }
+    .pag-agendamento form .button-agendar{
+        margin-top: 4vw;
+        width: 100%;
+    }
 }

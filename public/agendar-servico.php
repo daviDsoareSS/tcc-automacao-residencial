@@ -83,7 +83,7 @@
         $idEndereco = $row['idEndereco'];
         // Peguei o id do Endereço
 
-        $sql = "INSERT INTO agendamento VALUES (DEFAULT, '$dataAgendamento', '$horaAgendamento', '$statusServico', '$idUser', '$idEndereco', '1', '$idServico')";
+        $sql = "INSERT INTO agendamento VALUES (DEFAULT, '$dataAgendamento', '$horaAgendamento', '$statusServico', '$idUser', '$idEndereco', '4', '$idServico')";
 
         $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);  
         

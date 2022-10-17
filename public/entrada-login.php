@@ -1,5 +1,6 @@
 <?php
     include("conexao.php");
+    session_start();
     
     if(isset($_POST['email']) || isset($_POST['senha'])){
         if(strlen($_POST['email'])== 0){
@@ -13,7 +14,7 @@
         
         $sql="SELECT u.idUser, u.nome, u.email, u.dataNasc, u.sexo, e.endereco, e.numero, e.cep, e.bairro, e.cidade FROM users u
                 JOIN endereco e ON e.idUser = u.idUser
-                WHERE u.email = '$email' AND u.senha= '$senha'";
+                WHERE u.email = '$email' AND u.senha= '$senha' AND MIN(idEndereco)";
         $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
 
         $quantidade = $result->num_rows;
@@ -24,7 +25,7 @@
             if(!isset($_SESSION)){
                 session_start();
             }
-            $_SESSION['id'] = $user['idUser'];
+            $_SESSION['idUser'] = $user['idUser'];
             $_SESSION['nome'] = $user['nome'];
             $_SESSION['email'] = $user['email'];
             $_SESSION['dataNasc'] = $user['dataNasc'];

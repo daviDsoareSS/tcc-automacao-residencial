@@ -1,23 +1,26 @@
 <?php
     include_once('conexao.php');
+    session_start();
     
     if(!empty($_GET['id'])){
 
         $idUser = $_GET['id'];
-        $sqlSelect = "SELECT * FROM users WHERE idUser= $idUser";
-        $sqlSelectEndereco = "SELECT * FROM endereco WHERE idUser= $idUser";
+        $_SESSION['idUser'] = $idUser; 
+        $sqlSelect = "SELECT * FROM users WHERE idUser= '$idUser'";
+        $sqlSelectEndereco = "SELECT * FROM endereco WHERE idUser= '$idUser'";
         $result = $conn->query($sqlSelect);
         $resultEndereco = $conn->query($sqlSelectEndereco);
-        
+
+      
 
         if($result->num_rows > 0){
             $user_data = mysqli_fetch_assoc($result);
-            $user_data_endereco = mysqli_fetch_assoc($resultEndereco);
             
-        }
-        else{
+        }else{
             header("Location: dashboard.php");
         }
+    }else{
+        echo "<h1>Você precisa estar logado para acessar essa página</h1>";
     }
     
 ?>
@@ -54,44 +57,87 @@
     <main class="pag-agendamento">
         <div class="container-dados-usuario">
             <h2>Dados usuário</h2>
-            <p>Nome:<?php echo "<small>"."  ".$user_data['nome']."</small>"?></p>
-            <p>Email:<?php echo "<small>"."  ".$user_data['email']."</small>"?></p>
-            <p>Data de nascimento:<?php echo "<small>"."  ".$user_data['dataNasc']."</small>"?></p>
-            <p>Sexo:<?php echo "<small>"."  ".$user_data['sexo']."</small>"?></p>
+            <p>Nome: <small><?php echo $_SESSION['nome']?> </small></p>
+            <p>Email: <small><?php echo $_SESSION['email']?> </small></p>
+            <p>Data de nascimento: <small><?php echo $_SESSION['dataNasc']?> </small></p>
+            <p>Sexo: <small><?php echo $_SESSION['sexo']?> </small></p>
             <!-- <p>Telefone 1:<?php echo "<small>"."  ".$user_data['tel1']."</small>"?></p>
             <p>Telefone 2<i>(opcional)</i>:<?php echo "<small>"."  ".$user_data['tel2']."</small>"?></p> -->
-            <p>Endereço:<?php echo "<small>"."  ".$user_data_endereco['endereco']."</small>"?>,<?php echo "<small>".$user_data_endereco['bairro']."</small>"?> Nº<?php echo "<small>"."  ".$user_data_endereco['numero']."</small>"?> - <?php echo "<small>".$user_data_endereco['cep']."</small>"?></p>
+            <p>Endereço:<?php echo "<small>"."  ".$_SESSION['endereco']."</small>"?>,<?php echo "<small>".$_SESSION['bairro']."</small>"?> Nº<?php echo "<small>"."  ".$_SESSION['numero']."</small>"?> - <?php echo "<small>".$_SESSION['cep']."</small>"?></p>
             <p>Serviços contratados:
-                <?php 
-                    
-                ?>
+            
+            
+
+            <?php 
+
+                $idUser = $_SESSION['idUser'];
+
+                $sql = "SELECT s.nomeServico, a.dataAgendamento, a.statusServico, e.endereco, e.numero, e.cep, e.bairro FROM agendamento a 
+                        JOIN servico s ON s.idServico = a.idServico
+                        JOIN endereco e ON e.idEndereco = a.idEndereco
+                        WHERE  a.idUser = '$idUser'";
+
+                $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
+
+
+                $i = 1;
+                while($row = mysqli_fetch_array($result)){
+
+            ?>
+
+            <ul>
+                <p><?php echo $i; ?>º</p>
+                <li>Nome do serviço:<span class="dados-user nome-servico"><?php echo $row['nomeServico']; ?></span></li>
+                <li>Data agendada:<span class="dados-user data-agendada"><?php echo $row['dataAgendamento']; ?></span></li>
+                <li>Status serviço:<span class="dados-user status-servico"><?php echo $row['statusServico']; ?></span></li>
+                <li>Endereço:<span class="dados-user endereco"><?php echo $row['endereco']; ?>,<?php echo $row['bairro']; ?> Nº<?php echo $row['numero']; ?> - <?php echo $row['cep']; ?></span></li>
+            </ul>
+
+            <?php
+                    $i++;
+                }
+            ?>
+
+
             </p>
         </div>
-        <form class="container-agendamento" action="#">
+        <form class="container-agendamento" action="agendar-servico.php" method="POST">
             <h2>Agendar serviço</h2>
             <label for="input-servicos">Serviço</label>
-            <select class="custom-select" id="input-servicos" required>
+            <select class="custom-select" id="input-servicos" name="servico" required>
                 <option selected>Escolha o serviço...</option>
                 <option value="portao-eletrico">Portão Elétrico</option>
                 <option value="ambientacao">Ambientação</option>
                 <option value="sensor-de-proximidade">Sensor de proximidade</option>
             </select>
             <div class="form-group">
+
                 <label for="">Endereço</label><br>
-                <input type="radio" id="endereco-cadastrado" name="endereco" value="<?php echo "<small>"."  ".$user_data_endereco['endereco']."</small>"?>,<?php echo "<small>".$user_data_endereco['bairro']."</small>"?> Nº<?php echo "<small>"."  ".$user_data_endereco['numero']."</small>"?> - <?php echo "<small>".$user_data_endereco['cep']."</small>"?>" checked="check"
+
+                <input type="radio" id="endereco-cadastrado" name="endereco" value="<?php echo $_SESSION['endereco'].", ".$_SESSION['bairro']." Nº".$_SESSION['numero']." - ".$_SESSION['cep']?>" checked="check"
                 data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true">
-                <label for="endereco-cadastrado">Endereço cadastrado<br><small><i><?php echo "<small>"."  ".$user_data_endereco['endereco']."</small>"?>,<?php echo "<small>".$user_data_endereco['bairro']."</small>"?> Nº<?php echo "<small>"."  ".$user_data_endereco['numero']."</small>"?> - <?php echo "<small>".$user_data_endereco['cep']."</small>"?></i></small></label><br>
+
+                <label for="endereco-cadastrado">
+                    Endereço cadastrado<br>
+                    <small><i><small>
+                        <?php 
+                            echo $_SESSION['endereco'].", ".$_SESSION['bairro']." Nº".$_SESSION['numero']." - ".$_SESSION['cep'];
+                        ?>
+                    </small></i></small>
+                </label><br>
+
                 <input type="radio" id="outro-endereco" name="endereco" value="outro-endereco"
                 class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-controls="collapseExample">
                 <label for="outro-endereco">Outro endereço</label><br>
+
             </div>
                 <div class="container-endereco">
                         <div class="collapse" id="collapseExample">
                             <div class="form-group">
                                 <label for="cep">CEP</label>
-                                <input type="text" class="form-control" id="cep" placeholder="ex. 0000-000">
+                                <input type="text" class="form-control" id="cep" name="cep" placeholder="ex. 0000-000">
                                 <label for="rua">Rua</label>
-                                <input type="text" class="form-control" name="endereco" id="logradouro" placeholder="Rua">
+                                <input type="text" class="form-control" name="logradouro" id="logradouro" placeholder="Rua">
                             </div>
                             <div class="form-group">
                                 <label for="bairro">Bairro</label>
@@ -110,17 +156,27 @@
                 </div>
                 <div class="form-group">
                     <label for="data-agendamento">Data do agendamento</label>
-                    <input type="date" min="2022-10-15" max="2024-01-01">
+                    <input type="date" min="2022-10-15" max="2024-01-01" name="dataAgendamento">
                     <br>
                     <label for="horario-agendamento">Horário do agendamento</label>
-                    <input type="time">
+                    <input type="time" name="horaAgendamento" min="09:00" max="18:00">
                 </div>
                 <div class="form-group">
                     <label for="tel1">Telefone</label>
 
-                    <input class="form-control" type="text"></option>
+                    <input class="form-control" type="text" name="tel"></option>
                 </div>
                 <button class="button-agendar" type="submit">Agendar</button>
+
+                <?php
+
+                    if(isset($_SESSION['agendamento_invalido'])){
+                        echo($_SESSION['agendamento_invalido']);
+                        unset($_SESSION['agendamento_invalido']);
+                    }
+
+                ?>
+
         </form>
     </main>
     <script src="script/js.js" defer></script>

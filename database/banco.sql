@@ -7,19 +7,29 @@ SET time_zone = "+00:00";
 
 DROP TABLE users;
 CREATE TABLE users(
-    idUser serial PRIMARY KEY NOT NULL, 
+    idUser int(11) NOT NULL, 
     nome varchar(100) NOT NULL,
     dataNasc DATE NOT NULL,
     sexo varchar(9) NOT NULL,
+    telefone1 varchar(15) NOT NULL,
+    telefone2 varchar(15),
     email varchar(100) NOT NULL,
     senha varchar(100) NOT NULL,
     dataCriacaoConta DATETIME, 
     ultimoAcesso DATETIME
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+ALTER TABLE users
+  ADD PRIMARY KEY (idUser);
+
+ALTER TABLE users
+  MODIFY idUser int(11) NOT NULL AUTO_INCREMENT;
+
+/*-------------------------------------------------------*/
+
 DROP TABLE endereco;
 CREATE TABLE endereco(
-    idEndereco serial PRIMARY KEY NOT NULL,
+    idEndereco int(11) NOT NULL,
     endereco varchar(255) NOT NULL,
     numero varchar(7),
     cep varchar(50),
@@ -28,4 +38,66 @@ CREATE TABLE endereco(
     idUser int NOT NULL REFERENCES users(idUser)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE 
+ALTER TABLE endereco
+  ADD PRIMARY KEY (idEndereco);
+
+ALTER TABLE endereco
+  MODIFY idEndereco int(11) NOT NULL AUTO_INCREMENT;
+
+/*-------------------------------------------------------*/
+
+CREATE TABLE servico(
+    idServico int(11) NOT NULL,
+    nomeServico varchar(225)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE servico
+  ADD PRIMARY KEY (idServico);
+
+ALTER TABLE servico
+  MODIFY idServico int(11) NOT NULL AUTO_INCREMENT;
+
+/*-------------------------------------------------------*/
+
+CREATE TABLE tecnico(
+    idTecnico int(11) NOT NULL,
+    nome varchar(100) NOT NULL 
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE tecnico
+  ADD PRIMARY KEY (idTecnico);
+
+ALTER TABLE tecnico
+  MODIFY idTecnico int(11) NOT NULL AUTO_INCREMENT;
+
+
+/*-------------------------------------------------------*/
+
+DROP TABLE agendamento;
+
+CREATE TABLE agendamento(
+    idAgendamento int(11) NOT NULL,
+    dataAgendamento DATE NOT NULL,
+    horaAgendamento TIME NOT NULL,
+    statusServico varchar(11),
+    idUser int NOT NULL REFERENCES users(idUser),
+    idEndereco int NOT NULL REFERENCES endereco(idEndereco),
+    idTecnico int NOT NULL REFERENCES tecnico(idTecnico),
+    idServico int NOT NULL REFERENCES servico(idServico)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE agendamento
+  ADD PRIMARY KEY (idAgendamento);
+
+ALTER TABLE agendamento
+  MODIFY idAgendamento int(11) NOT NULL AUTO_INCREMENT;
+
+INSERT INTO agendamento VALUES (DEFAULT, 'Juãozin da ZL');
+
+/*-------------------------------------------------------*/
+
+INSERT INTO tecnico VALUES (DEFAULT, 'Juãozin da ZL');
+
+INSERT INTO servico VALUES (DEFAULT, 'portao-eletrico'),
+(DEFAULT, 'ambientacao'),
+(DEFAULT, 'sensor-de-proximidade');

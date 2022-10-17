@@ -8,7 +8,8 @@
     $email = mysqli_real_escape_string($conn,trim($_POST['email']));
     $senha = mysqli_real_escape_string($conn,trim(base64_encode($_POST['senha'])));
     $senha2 = mysqli_real_escape_string($conn,trim(base64_encode($_POST['senha2'])));
-    
+    $tel1 = mysqli_real_escape_string($conn,trim(base64_encode($_POST['tel1'])));
+    $tel2 = mysqli_real_escape_string($conn,trim(base64_encode($_POST['tel2'])));
     $cep = mysqli_real_escape_string($conn,trim($_POST['cep']));
     $endereco = mysqli_real_escape_string($conn,trim($_POST['endereco']));
     $bairro = mysqli_real_escape_string($conn,trim($_POST['bairro']));
@@ -43,15 +44,15 @@
         exit;
     }
     
-
-    $sql = "INSERT INTO users VALUES (DEFAULT, '$nome','$dataNasc','$sexo','$email','$senha','$dataCriacaoConta', '$dataUltimoAcesso')";
-    
-    
     if (empty($nome) || empty($email) || empty($senha) || empty($dataNasc) || empty($senha2)){
         $_SESSION['campos_vazios'] = "<p style='color:red';>Campos obrigatórios.</p>";
         header('Location:signup.php');
         exit;
-    }else  if ($conn->query($sql) === TRUE){
+    }else{
+
+        $sql = "INSERT INTO users VALUES (DEFAULT, '$nome','$dataNasc','$sexo', '$tel1', '$tel2','$email','$senha','$dataCriacaoConta', '$dataUltimoAcesso')";
+
+        $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
 
         $sql = "SELECT idUser FROM users WHERE email = '$email' AND senha= '$senha'";
 

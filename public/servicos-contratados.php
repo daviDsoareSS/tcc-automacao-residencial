@@ -1,5 +1,6 @@
 <?php
   include('protect.php');
+  include_once('conexao.php');
 ?>
 
 <?php
@@ -26,20 +27,36 @@
         </div>
         <div class="container-dados-pessoais">
             <h2><span></span>Serviços contratados</h2>
+
+            <?php 
+
+            $idUser = $_SESSION['idUser'];
+
+                $sql = "SELECT s.nomeServico, a.dataAgendamento, a.statusServico, e.endereco, e.numero, e.cep, e.bairro FROM agendamento a 
+                        JOIN servico s ON s.idServico = a.idServico
+                        JOIN endereco e ON e.idEndereco = a.idEndereco
+                        WHERE  a.idUser = '$idUser'";
+
+                $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
+
+
+                $i = 1;
+                while($row = mysqli_fetch_array($result)){
+
+            ?>
+
             <ul>
-                <p>01</p>
-                <li>Nome do serviço:<span class="dados-user nome-servico">Portão elétrico</span></li>
-                <li>Data agendada:<span class="dados-user data-agendada">01/10/2022</span></li>
-                <li>Status serviço:<span class="dados-user status-servico">Pendente</span></li>
-                <li>Endereço:<span class="dados-user endereco">Rua Recife,Vila Seabra Nº30 - 08180-425</span></li>
+                <p><?php echo $i; ?>º</p>
+                <li>Nome do serviço:<span class="dados-user nome-servico"><?php echo $row['nomeServico']; ?></span></li>
+                <li>Data agendada:<span class="dados-user data-agendada"><?php echo $row['dataAgendamento']; ?></span></li>
+                <li>Status serviço:<span class="dados-user status-servico"><?php echo $row['statusServico']; ?></span></li>
+                <li>Endereço:<span class="dados-user endereco"><?php echo $row['endereco']; ?>,<?php echo $row['bairro']; ?> Nº<?php echo $row['numero']; ?> - <?php echo $row['cep']; ?></span></li>
             </ul>
-            <ul>
-                <p>02</p>
-                <li>Nome do serviço:<span class="dados-user nome-servico">Sensor de proximidade</span></li>
-                <li>Data agendada:<span class="dados-user data-agendada">22/09/2022</span></li>
-                <li>Status serviço:<span class="dados-user status-servico">Finalizado</span></li>
-                <li>Endereço:<span class="dados-user endereco">Rua Sócrates,Vila Seabra Nº1035 - 08180-430</span></li>
-            </ul>
+
+            <?php
+                    $i++;
+                }
+            ?>
         </div>
     </main>
 </body>

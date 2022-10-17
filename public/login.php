@@ -48,20 +48,20 @@
     <img src="img/login/background-login.png" alt="" height="100%" width="100%">
     </div>
     <form class="container-login" action="entrada-login.php" method="post" id="form">
-    <div class="top-login login-user">
-        <h1>LOGIN</h1>  
-        <?php
-            if(isset($_SESSION['usuario_invalido'])){
-                echo($_SESSION['usuario_invalido']);
-                unset($_SESSION['usuario_invalido']);
-            }
-        ?>
-        <small>Email:</small>
-        <input type="text" name="email" id="email" required>
-        <small>Senha:</small>
-        <input type="password" name="senha" required>
-        <a href="index.php"><button id="entrar" type="submit">ENTRAR</button></a>
-        <a href="recuperar-senha.php"><h3 id="recuperar-senha">Esqueceu a senha?</h3></a>
+        <div class="top-login login-user">
+            <h1>LOGIN</h1>  
+            <?php
+                if(isset($_SESSION['usuario_invalido'])){
+                    echo($_SESSION['usuario_invalido']);
+                    unset($_SESSION['usuario_invalido']);
+                }
+            ?>
+            <small>Email:</small>
+            <input type="text" name="email" id="email" required>
+            <small>Senha:</small>
+            <input type="password" name="senha" required>
+            <a href="index.php"><button id="entrar" type="submit">ENTRAR</button></a>
+            <a href="recuperar-senha.php"><h3 id="recuperar-senha">Esqueceu a senha?</h3></a>
         </div>
         <div class="criarConta">
             <h3>É novo por aqui?</h3>

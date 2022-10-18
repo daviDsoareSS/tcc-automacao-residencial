@@ -46,6 +46,7 @@ ALTER TABLE endereco
 
 /*-------------------------------------------------------*/
 
+drop table servico;
 CREATE TABLE servico(
     idServico int(11) NOT NULL,
     nomeServico varchar(225)
@@ -59,6 +60,7 @@ ALTER TABLE servico
 
 /*-------------------------------------------------------*/
 
+drop table tecnico;
 CREATE TABLE tecnico(
     idTecnico int(11) NOT NULL,
     nome varchar(100) NOT NULL 

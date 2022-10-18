@@ -71,7 +71,9 @@
                 </tr>
                 </thead>
                 <tbody>
+
                     <?php
+                    
                         while($user_data = mysqli_fetch_assoc($result)){
                             echo "<tr>";
                                 echo "<td data-title='id'>".$user_data['idUser']."</td>";

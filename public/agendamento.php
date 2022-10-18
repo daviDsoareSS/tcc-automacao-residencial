@@ -1,26 +1,24 @@
 <?php
     include_once('conexao.php');
     session_start();
-    
     if(!empty($_GET['id'])){
 
         $idUser = $_GET['id'];
-        $_SESSION['idUser'] = $idUser; 
-        $sqlSelect = "SELECT * FROM users WHERE idUser= '$idUser'";
-        $sqlSelectEndereco = "SELECT * FROM endereco WHERE idUser= '$idUser'";
+        $_SESSION['idUser'] = $idUser;
+        $sqlSelect = "SELECT * FROM users WHERE idUser= $idUser";
+        $sqlSelectEndereco = "SELECT * FROM endereco WHERE idUser= $idUser";
         $result = $conn->query($sqlSelect);
         $resultEndereco = $conn->query($sqlSelectEndereco);
-
-      
+        
 
         if($result->num_rows > 0){
             $user_data = mysqli_fetch_assoc($result);
+            $user_data_endereco = mysqli_fetch_assoc($resultEndereco);
             
-        }else{
+        }
+        else{
             header("Location: dashboard.php");
         }
-    }else{
-        echo "<h1>Você precisa estar logado para acessar essa página</h1>";
     }
     
 ?>
@@ -57,20 +55,18 @@
     <main class="pag-agendamento">
         <div class="container-dados-usuario">
             <h2>Dados usuário</h2>
-            <p>Nome: <small><?php echo $_SESSION['nome']?> </small></p>
-            <p>Email: <small><?php echo $_SESSION['email']?> </small></p>
-            <p>Data de nascimento: <small><?php echo $_SESSION['dataNasc']?> </small></p>
-            <p>Sexo: <small><?php echo $_SESSION['sexo']?> </small></p>
+            <p>Nome:<?php echo "<small>"."  ".$user_data['nome']."</small>"?></p>
+            <p>Email:<?php echo "<small>"."  ".$user_data['email']."</small>"?></p>
+            <p>Data de nascimento:<?php echo "<small>"."  ".$user_data['dataNasc']."</small>"?></p>
+            <p>Sexo:<?php echo "<small>"."  ".$user_data['sexo']."</small>"?></p>
             <!-- <p>Telefone 1:<?php echo "<small>"."  ".$user_data['tel1']."</small>"?></p>
             <p>Telefone 2<i>(opcional)</i>:<?php echo "<small>"."  ".$user_data['tel2']."</small>"?></p> -->
-            <p>Endereço:<?php echo "<small>"."  ".$_SESSION['endereco']."</small>"?>,<?php echo "<small>".$_SESSION['bairro']."</small>"?> Nº<?php echo "<small>"."  ".$_SESSION['numero']."</small>"?> - <?php echo "<small>".$_SESSION['cep']."</small>"?></p>
+            <p>Endereço:<?php echo "<small>"."  ".$user_data_endereco['endereco']."</small>"?>,<?php echo "<small>".$user_data_endereco['bairro']."</small>"?> Nº<?php echo "<small>"."  ".$user_data_endereco['numero']."</small>"?> - <?php echo "<small>".$user_data_endereco['cep']."</small>"?></p>
             <p>Serviços contratados:
             
             
 
-            <?php 
-
-                $idUser = $_SESSION['idUser'];
+            <?php
 
                 $sql = "SELECT s.nomeServico, a.dataAgendamento, a.statusServico, e.endereco, e.numero, e.cep, e.bairro FROM agendamento a 
                         JOIN servico s ON s.idServico = a.idServico
@@ -111,25 +107,23 @@
                 <option value="sensor-de-proximidade">Sensor de proximidade</option>
             </select>
             <div class="form-group">
+                
+            <label for="">Endereço</label><br>
+            
+            <input type="radio" id="endereco-cadastrado" name="endereco" value="<?php echo $user_data_endereco['endereco'].", ".$user_data_endereco['bairro']." Nº".$user_data_endereco['numero']." - ".$user_data_endereco['cep']?>" checked="check" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true">
 
-                <label for="">Endereço</label><br>
-
-                <input type="radio" id="endereco-cadastrado" name="endereco" value="<?php echo $_SESSION['endereco'].", ".$_SESSION['bairro']." Nº".$_SESSION['numero']." - ".$_SESSION['cep']?>" checked="check"
-                data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true">
-
-                <label for="endereco-cadastrado">
-                    Endereço cadastrado<br>
-                    <small><i><small>
-                        <?php 
-                            echo $_SESSION['endereco'].", ".$_SESSION['bairro']." Nº".$_SESSION['numero']." - ".$_SESSION['cep'];
-                        ?>
-                    </small></i></small>
-                </label><br>
-
-                <input type="radio" id="outro-endereco" name="endereco" value="outro-endereco"
-                class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-controls="collapseExample">
+                
+            <label for="endereco-cadastrado">
+                Endereço cadastrado<br>
+                
+                <small><i>
+                    <?php echo $user_data_endereco['endereco'].", ".$user_data_endereco['bairro']." Nº".$user_data_endereco['numero']." - ".$user_data_endereco['cep']?>
+                </i></small>
+            </label><br>
+            
+            <input type="radio" id="outro-endereco" name="endereco" value="outro-endereco" class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-controls="collapseExample">
+                
                 <label for="outro-endereco">Outro endereço</label><br>
-
             </div>
                 <div class="container-endereco">
                         <div class="collapse" id="collapseExample">

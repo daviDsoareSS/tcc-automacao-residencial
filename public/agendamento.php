@@ -97,14 +97,29 @@
 
             </p>
         </div>
+
+        
+
         <form class="container-agendamento" action="agendar-servico.php" method="POST">
             <h2>Agendar serviço</h2>
             <label for="input-servicos">Serviço</label>
             <select class="custom-select" id="input-servicos" name="servico" required>
-                <option selected>Escolha o serviço...</option>
-                <option value="portao-eletrico">Portão Elétrico</option>
-                <option value="ambientacao">Ambientação</option>
-                <option value="sensor-de-proximidade">Sensor de proximidade</option>
+
+            <?php
+
+                $sql = "SELECT * FROM servico;";
+
+                $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
+
+                $i = 1;
+                while($row = mysqli_fetch_array($result)){
+
+                    echo "<option value='$row[idServico]'>$row[nomeServico]</option>";
+                    $i++;
+                }
+
+            ?>
+
             </select>
             <div class="form-group">
                 

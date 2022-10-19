@@ -9,7 +9,7 @@
                 echo "<p>Preencha o campo senha.</p>";
         }
     else{
-        
+
         $email = mysqli_real_escape_string($conn,trim($_POST['email']));
         $senha = mysqli_real_escape_string($conn,trim(base64_encode($_POST['senha'])));
         
@@ -20,7 +20,7 @@
 
         $quantidade = $result->num_rows;
 
-        if($quantidade == 1){ 
+        if($quantidade >= 1){ 
             $user = $result->fetch_assoc();
             
             if(!isset($_SESSION)){

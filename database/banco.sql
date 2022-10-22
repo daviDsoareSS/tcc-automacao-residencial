@@ -100,6 +100,6 @@ INSERT INTO agendamento VALUES (DEFAULT, 'Juãozin da ZL');
 
 INSERT INTO tecnico VALUES (DEFAULT, 'Juãozin da ZL');
 
-INSERT INTO servico VALUES (DEFAULT, 'portao-eletrico'),
-(DEFAULT, 'ambientacao'),
-(DEFAULT, 'sensor-de-proximidade');
+INSERT INTO servico VALUES (DEFAULT, 'Portão Elétrico'),
+(DEFAULT, 'Ambientação'),
+(DEFAULT, 'Sensor de Proximidade');

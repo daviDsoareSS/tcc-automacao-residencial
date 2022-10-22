@@ -21,7 +21,7 @@
     }
 
 
-    $nomeServico = mysqli_real_escape_string($conn, trim($_POST['servico']));
+    $idServico = mysqli_real_escape_string($conn, trim($_POST['servico']));
     $endereco = mysqli_real_escape_string($conn, trim($_POST['endereco']));
     $cep = mysqli_real_escape_string($conn, trim($_POST['cep']));
     $logradouro = mysqli_real_escape_string($conn, trim($_POST['logradouro']));
@@ -31,23 +31,10 @@
     $dataAgendamento = mysqli_real_escape_string($conn, trim($_POST['dataAgendamento']));
     $horaAgendamento = mysqli_real_escape_string($conn, trim($_POST['horaAgendamento']));
     $tel = mysqli_real_escape_string($conn, trim($_POST['tel']));
-
+ 
     $statusServico = "Pendente";
 
     $valorTeste = $user_data_endereco['endereco'].", ".$user_data_endereco['bairro']." Nº".$user_data_endereco['numero']." - ".$user_data_endereco['cep'];
-
-    // Pegando o id so Serviço que o usuário escolheu na tel a agendamento.php 
-    $sql = "SELECT idServico FROM servico WHERE nomeServico = '$nomeServico'";
-
-    $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
-
-    if($result->num_rows > 0){
-         $row = mysqli_fetch_assoc($result);
-    }
-
-    $idServico = $row['idServico'];
-
-    // Peguei o id do Serviço
 
     if(empty($cep) && empty($logradouro) && empty($bairro) && empty($cidade) && empty($numeroCasa)){
         
@@ -76,8 +63,6 @@
 
         echo "Serviço agendado com sucesso";
 
-        header("Location: servicos-contratados.php");
-
     }else if($endereco == "outro-endereco" && !empty($cep) && !empty($logradouro) && !empty($bairro) && !empty($cidade) && !empty($numeroCasa)){
 
         $sql = "INSERT INTO endereco VALUES (DEFAULT, '$logradouro', '$numeroCasa', '$cep', '$bairro', '$cidade', '$idUser')";
@@ -102,8 +87,6 @@
         $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);  
         
         echo "Serviço agendado com sucesso";
-
-        header("Location: servicos-contratados.php");
 
     }else{
 

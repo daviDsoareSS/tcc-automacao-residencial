@@ -61,7 +61,8 @@
 
         $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
 
-        echo "Serviço agendado com sucesso";
+        $_SESSION['servico_agendado'] = "<p style='color:green';>Serviço agendado com sucesso.</p>";
+        header("Location: agendamento.php?id=$idUser");  
 
     }else if($endereco == "outro-endereco" && !empty($cep) && !empty($logradouro) && !empty($bairro) && !empty($cidade) && !empty($numeroCasa)){
 
@@ -86,7 +87,9 @@
 
         $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);  
         
-        echo "Serviço agendado com sucesso";
+        $_SESSION['servico_agendado'] = "<p style='color:green';>Serviço agendando com dasdadsucesso.</p>";
+
+        
 
     }else{
 

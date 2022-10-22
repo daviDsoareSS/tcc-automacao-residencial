@@ -54,7 +54,7 @@ header .container-right-header small{
     z-index: 99999999;
     padding: 2vw 2vw;
     width: 80%;
-    height: 100%;
+    height: 1000%;
     grid-area: sidebar;
     background-color: #4245e6;
 }
@@ -153,9 +153,30 @@ main .agenda{
 .pag-agendamento .container-dados-usuario p{
     font-weight: bold;
 }
-.pag-agendamento .container-dados-usuario small{
+.pag-agendamento .container-dados-usuario strong{
     font-weight: bold;
-    color: #4244E6;
+    background-color: #416dff;
+    color: white;
+    padding: 5px;
+    justify-content: center;
+    display: flex;
+}
+.pag-agendamento .container-dados-usuario small{
+    font-weight: normal;
+    color: #416dff;
+}
+.pag-agendamento .container-dados-usuario ul {
+    border-bottom: 2px solid gainsboro;
+    padding-left: 0 !important;
+}
+.pag-agendamento .container-dados-usuario ul li{
+    font-weight: bolder;
+    list-style: none;
+}
+.pag-agendamento .container-dados-usuario ul span{
+    font-weight: normal;
+    color: rgb(94, 94, 94);
+    list-style: none;
 }
 .pag-agendamento .container-agendamento{
     margin-left: 4vw;
@@ -219,7 +240,7 @@ main .agenda{
     .sidebar{
         display: block;
         width: 100%;
-        height: 100%;
+        height: 100% !important;
     }
     .sidebar ul{
         margin-top: 2vw;

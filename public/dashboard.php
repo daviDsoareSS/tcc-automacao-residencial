@@ -27,9 +27,6 @@
     <link rel="stylesheet" href="css/style-dashboard.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <!-- CSS BOOTSTRAP only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>  
     <?php
@@ -49,7 +46,7 @@
     </div>
     <main>
         <div class="top-main">      
-              <input type="search" class="form-control" id="pesquisa-usuarios" >  
+              <input type="search" class="form-control" id="pesquisa-usuarios" placeholder="Pesquisar usuário...">  
               <button onclick="searchData()">Procurar</button>    
               <label for="option">Filtrar</label>
               <select name="filtro" id="filtro">

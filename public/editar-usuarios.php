@@ -98,7 +98,7 @@
         });
 
         function searchData(){   
-            window.location = 'dashboard.php?search='+ search.value;
+            window.location = 'editar-usuarios.php?search='+ search.value;
         }
     </script>
 </body>

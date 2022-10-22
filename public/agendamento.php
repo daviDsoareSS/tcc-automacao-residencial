@@ -54,6 +54,12 @@
     </div>
     <main class="pag-agendamento">
         <div class="container-dados-usuario">
+            <?php
+                if(isset($_SESSION['servico_agendado'])){
+                    echo($_SESSION['servico_agendado']);
+                    unset($_SESSION['servico_agendado']);
+                }
+            ?>
             <h2>Dados usuário</h2>
             <p>Nome:<?php echo "<small>"."  ".$user_data['nome']."</small>"?></p>
             <p>Email:<?php echo "<small>"."  ".$user_data['email']."</small>"?></p>
@@ -62,12 +68,10 @@
             <!-- <p>Telefone 1:<?php echo "<small>"."  ".$user_data['tel1']."</small>"?></p>
             <p>Telefone 2<i>(opcional)</i>:<?php echo "<small>"."  ".$user_data['tel2']."</small>"?></p> -->
             <p>Endereço:<?php echo "<small>"."  ".$user_data_endereco['endereco']."</small>"?>,<?php echo "<small>".$user_data_endereco['bairro']."</small>"?> Nº<?php echo "<small>"."  ".$user_data_endereco['numero']."</small>"?> - <?php echo "<small>".$user_data_endereco['cep']."</small>"?></p>
-            <p>Serviços contratados:
             
-            
+            <p><strong>Serviços contratados:</strong>
 
             <?php
-
                 $sql = "SELECT s.nomeServico, a.dataAgendamento, a.statusServico, e.endereco, e.numero, e.cep, e.bairro FROM agendamento a 
                         JOIN servico s ON s.idServico = a.idServico
                         JOIN endereco e ON e.idEndereco = a.idEndereco
@@ -80,25 +84,20 @@
                 while($row = mysqli_fetch_array($result)){
 
             ?>
-
             <ul>
-                <p><?php echo $i; ?>º</p>
-                <li>Nome do serviço:<span class="dados-user nome-servico"><?php echo $row['nomeServico']; ?></span></li>
-                <li>Data agendada:<span class="dados-user data-agendada"><?php echo $row['dataAgendamento']; ?></span></li>
-                <li>Status serviço:<span class="dados-user status-servico"><?php echo $row['statusServico']; ?></span></li>
-                <li>Endereço:<span class="dados-user endereco"><?php echo $row['endereco']; ?>,<?php echo $row['bairro']; ?> Nº<?php echo $row['numero']; ?> - <?php echo $row['cep']; ?></span></li>
+                <p><?php echo $i; ?>º Serviço</p>
+                <li>Nome do serviço: <span class="dados-user nome-servico"><?php echo $row['nomeServico']; ?></span></li>
+                <li>Data agendada: <span class="dados-user data-agendada"><?php echo $row['dataAgendamento']; ?></span></li>
+                <li>Status serviço: <span class="dados-user status-servico"><?php echo $row['statusServico']; ?></span></li>
+                <li>Endereço: <span class="dados-user endereco"><?php echo $row['endereco']; ?>,<?php echo $row['bairro']; ?> Nº<?php echo $row['numero']; ?> - <?php echo $row['cep']; ?></span></li>
+                <br>
             </ul>
-
             <?php
                     $i++;
                 }
             ?>
-
-
             </p>
         </div>
-
-        
 
         <form class="container-agendamento" action="agendar-servico.php" method="POST">
             <h2>Agendar serviço</h2>

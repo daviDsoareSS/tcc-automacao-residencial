@@ -32,6 +32,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>  
+<!--DELETAR USUARIO -->
+<!-- <a href='deletar-usuarios.php?id=$user_data[idUser]'> -->
+
     <?php
         include_once('includes/header-dashboard.php');
     ?>
@@ -48,6 +51,26 @@
         </div>
     </div>
     <main>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Deletar usuário</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border:none !important;">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Tem certeza que deseja excluir o usuário <?php ?></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary" style="background-color:red !important; border:none !important;">Excluir</button>
+      </div>
+    </div>
+  </div>
+</div>
         <div class="top-main">      
               <input type="search" class="form-control" id="pesquisa-usuarios" >  
               <button onclick="searchData()">Procurar</button>    
@@ -79,7 +102,7 @@
                                 echo "<td data-title='Nome'>".$user_data['nome']."</td>";
                                 echo "<td data-title='DataNasc'>".$user_data['dataNasc']."</td>";
                                 echo "<td data-title='Inicio da conta'>".$user_data['dataCriacaoConta']."</td>";
-                                echo "<td data-title='Deletar usuário'><a href='deletar-usuarios.php?id=$user_data[idUser]'><img src='img/dashboard/icon/delete.png'class='agenda'></a></td>";
+                                echo "<td data-title='Deletar usuário'><img src='img/dashboard/icon/delete.png' class='agenda' data-toggle='modal' data-target='#exampleModalCenter' style='cursor:pointer;'></td>";
                             echo "</tr>";     
                         }
                     ?>
@@ -98,7 +121,7 @@
         });
 
         function searchData(){   
-            window.location = 'dashboard.php?search='+ search.value;
+            window.location = 'deletar-usuarios.php?search='+ search.value;
         }
     </script>
 </body>

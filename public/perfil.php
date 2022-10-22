@@ -11,17 +11,14 @@
 </head>
 <body class="pag-perfil">
     <main>
-        <div class="card-perfil">
-            <ul>
-                <h5>Meu perfil</h5>
-                <hr id="hr-top-card">
-                <a href="perfil.php"><li class="opcoes-card selected"><span></span>Dados pessoais</li></a>
-                <hr>
-                <a href="servicos-contratados.php"><li class="opcoes-card"><span></span>Serviços contratados</li></a>
-                <hr>
-                <a href="#"><li class="opcoes-card"><span></span>Lorem Ipsum</li></a>
-                <hr>
-                <a href="#"><li class="opcoes-card"><span></span>Lorem Ipsum</li></a>
+        <div class="card" style="width: 18rem; height: 12rem;">
+            <div class="card-header">
+                Meus dados
+            </div>
+            <ul class="list-group list-group-flush">
+                <a href="perfil.php"><li class="list-group-item selected">Informaçôes pessoais</li></a>
+                <a href="servicos-contratados.php"><li class="list-group-item">Serviços contratados</li></a>
+                <a href=""><li class="list-group-item">Vestibulum at eros</li></a>
             </ul>
         </div>
         <div class="container-dados-pessoais">
@@ -43,6 +40,10 @@
                 <li>Endereço:<span class="dados-user endereco"><?php echo($_SESSION['endereco']);?>,<?php echo($_SESSION['bairro']);?> Nº<?php echo($_SESSION['numero']);?> - <?php echo($_SESSION['cep']);?></span></li>
                 <li></li>
                 <li></li>
+                <div class="button-card">
+                    <button class="editar-usuario" type="submit">Editar</button>
+                    <button class="deletar-usuario" type="submit">Excluir conta</button>
+                </div>
             </ul>
         </div>
     </main>

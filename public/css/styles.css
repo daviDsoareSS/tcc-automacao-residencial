@@ -1,6 +1,6 @@
 *{
     overflow-x: hidden;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -57,10 +57,43 @@
     min-height: 17vw;
 }
 .pag-login .left-login{
+    overflow-y: hidden;
     width: 70%;
     height: 100%;
     margin: 0;
     padding: 0;
+}
+.pag-login .left-login .text-left-login{
+    top: 10vw;
+    padding: 2vw;
+    width: 25vw;
+    min-height: 17vw;
+    position: absolute;
+}
+.pag-login .left-login .text-left-login h1{
+    overflow-y: hidden;
+    line-height: 1.2;
+    color: white;
+    font-size: 70px;
+    font-weight: bolder;
+}
+.pag-login .left-login .text-left-login strong{
+    display: block;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+}
+.pag-login .left-login .text-left-login p{
+    margin-bottom: 10px;
+    margin-top: 20px;
+    color: #d6efff;
+    font-weight: normal;
+}
+.pag-login .left-login .text-left-login small{
+    top: 100px;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
 }
 .container-login .top-login{
     padding-top: 5vw;
@@ -75,6 +108,7 @@
     margin-bottom: 1vw;
 }
 .container-login .top-login input{
+    font-size: 12px;
     background-color: rgb(245, 245, 245);
     border: none !important;
     margin-top: 0px;
@@ -96,6 +130,7 @@
     font-size: 13px !important;
 }
 .container-login .top-login .form-group input{
+    font-size: 12px;
     width: 43%;
 }
 .container-login .top-login .form-group #telUser{
@@ -117,7 +152,7 @@
     margin-right: 2vw;
 }
 .container-login .top-login small{
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bolder;
     margin-bottom: 10px;
 }
@@ -154,6 +189,32 @@
     margin: 0 auto;
     margin-bottom: 1vw;
 }
+.container-login .top-login .form-group-email input{
+    font-weight: bolder;
+    width: 100%;
+    padding-left: 60px !important;
+    position: relative;
+}
+.container-login .top-login .form-group-email svg{
+    width: 20px;
+    margin-left: 20px !important;
+    margin-top: 15px;
+    z-index: 50;
+    position: absolute;
+}
+.container-login .top-login .form-group-password input{
+    font-weight: bolder;
+    width: 100%;
+    padding-left: 60px !important;
+    position: relative;
+}
+.container-login .top-login .form-group-password svg{
+    width: 20px;
+    margin-left: 20px !important;
+    margin-top: 15px;
+    z-index: 50;
+    position: absolute;
+}
 .container-login .top-login a{
     color: white;
     text-decoration: none;
@@ -185,6 +246,20 @@
     font-style: bolder !important;
     padding-left: 1vw;
 }
+.container-login hr{
+    margin-top: 2vw;
+   
+}
+.entrada-administrador{
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 2vw;
+
+}
+.container-login a{
+    text-decoration: none;
+    color: #0093ee;
+}
 #textRecuperar{
     color: #0093ee;
     font-size: 15px;
@@ -204,9 +279,7 @@
     #pag-login{
         overflow-y: auto;
     }
-    #pag-login .container-left{
-        display: none;
-    }
+   
     #pag-login .container-login{
         width: 90%;
         margin: 0 auto;

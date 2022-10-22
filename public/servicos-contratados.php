@@ -12,18 +12,15 @@
 </head>
 <body class="pag-perfil">
     <main>
-        <div class="card-perfil">
-            <ul>
-                <h5>Meu perfil</h5>
-                <hr>
-                <a href="perfil.php"><li class="opcoes-card"><span></span>Dados pessoais</li></a>
-                <hr>
-                <a href="servicos-contratados.php"><li class="opcoes-card selected"><span></span>Serviços contratados</li></a>
-                <hr>
-                <a href="#"><li class="opcoes-card"><span></span>Lorem Ipsum</li></a>
-                <hr>
-                <a href="#"><li class="opcoes-card"><span></span>Lorem Ipsum</li></a>
-            </ul>
+        <div class="card" style="width: 18rem; height: 12rem;">
+            <div class="card-header">
+                Meus dados
+            </div>
+                <ul class="list-group list-group-flush">
+                    <a href="perfil.php"><li class="list-group-item">Informaçôes pessoais</li></a>
+                    <a href="servicos-contratados.php"><li class="list-group-item selected">Serviços contratados</li></a>
+                    <a href=""><li class="list-group-item">Vestibulum at eros</li></a>
+                </ul>
         </div>
         <div class="container-dados-pessoais">
             <h2><span></span>Serviços contratados</h2>
@@ -46,7 +43,7 @@
             ?>
 
             <ul>
-                <p><?php echo $i; ?>º</p>
+                <p><?php echo $i; ?>º Serviço</p>
                 <li>Nome do serviço:<span class="dados-user nome-servico"><?php echo $row['nomeServico']; ?></span></li>
                 <li>Data agendada:<span class="dados-user data-agendada"><?php echo $row['dataAgendamento']; ?></span></li>
                 <li>Status serviço:<span class="dados-user status-servico"><?php echo $row['statusServico']; ?></span></li>

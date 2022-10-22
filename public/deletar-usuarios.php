@@ -72,7 +72,7 @@
   </div>
 </div>
         <div class="top-main">      
-              <input type="search" class="form-control" id="pesquisa-usuarios" >  
+              <input type="search" class="form-control" id="pesquisa-usuarios" placeholder="Pesquisar usuário...">  
               <button onclick="searchData()">Procurar</button>    
               <label for="option">Filtrar</label>
               <select name="filtro" id="filtro">

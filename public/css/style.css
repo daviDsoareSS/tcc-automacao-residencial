@@ -352,7 +352,8 @@ footer{
 
 /*PÁGINA PERFIL*/
 .pag-perfil{ /*<-- BODY     */
-    background-color: #e3eafd !important;
+    background-image: none;
+    background-color: #91b3fa !important;
 }
 .pag-perfil nav .nav-item a{
     color: white !important;
@@ -365,55 +366,36 @@ footer{
     margin-top: 4vw;
     grid-template-columns: repeat(2, 1fr);
 }
-.pag-perfil .card-perfil{
-    min-height: 15vw;
-    height:15vw;
-    width: 20vw;
-    border-radius: 10px;
-    background-color: white;
-}
-.pag-perfil .card-perfil h5{
-    font-weight: bolder;
-}
-.pag-perfil .card-perfil ul{  
-    padding: 1vw;
-}
 
-.pag-perfil .card-perfil ul a{
+.pag-perfil .card ul a{
     color: black;
     text-decoration: none;
 }
-.pag-perfil .card-perfil ul .selected{
-    color: #fe7062;
+.pag-perfil .card ul .selected{
+    color: #0093ee !important;
     font-weight: bolder;
 }
-.pag-perfil .card-perfil ul span{
-    background: #0093ee;
-    border: 3px solid #0093ee;
-    margin-right: 10px;
-}
-.pag-perfil .card-perfil ul li{
-    cursor: pointer;
-    font-size: 15px;
-    list-style: none;
-}
+
 .pag-perfil .container-dados-pessoais{
-    background-color: #061a27;
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background-color: white;
+    margin-right: 20vw;
     padding: 2vw;
     border-radius: 15px;
     white-space: nowrap;
-    margin-right: 30vw;   
+    
 }
-.pag-perfil .container-dados-pessoais span{
-    border: 5px solid #202f38;
-    background: #202f38;
-    margin-right: 10px;
-}
+
 .pag-perfil .container-dados-pessoais h2{
-    color: white;
+    font-weight: bolder;
+    color: #061a27;
 }
 .pag-perfil .container-dados-pessoais ul{
-    color: white;
+    color: #061a27;
     margin-top: 2vw;
     padding-left: 0;
 }
@@ -423,8 +405,25 @@ footer{
     padding: 5px;
 }
 .pag-perfil .container-dados-pessoais ul li{
+    color: #0093ee;
+    font-weight: bolder;
     margin-bottom: 1vw;
     list-style: none;
+}
+.pag-perfil .container-dados-pessoais span{
+    margin-right: 10px;
+    color: black;
+    font-weight: 500;
+}
+.pag-perfil .container-dados-pessoais .button-card button{
+    border: none;
+    padding: 5px 15px;
+}
+.pag-perfil .container-dados-pessoais .button-card .editar-usuario{
+    background-color: #0093ee;
+}
+.pag-perfil .container-dados-pessoais .button-card .deletar-usuario{
+    background-color: red;
 }
 .pag-perfil .container-dados-pessoais .dados-user{
     margin-left: 1vw;
@@ -656,6 +655,20 @@ footer{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+.pag-login-atendente #voltar{
+    width: 40px ;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    margin: 30px;
+}
+.pag-login-admin #voltar{
+    width: 40px ;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    margin: 30px;
 }
 .pag-login-admin .container-login-admin .top-login{
     margin-bottom: 1.5vw;

@@ -46,9 +46,18 @@
         </nav>
         <div class="container-sidebar">
             <ul>
-                <a href="dashboard.php"><li class="selected">Interface</li></a>
-                <a href="editar-usuarios.php"><li class="">Editar usuários</li></a>
-                <a href="dashboard.php"><li class="">Deletar usuários</li></a>
+                <a href="dashboard.php"><img src="img/dashboard/icon/home.png" alt=""><li class="selected">Interface</li></a>
+                <a href="editar-usuarios.php"><img src="img/dashboard/icon/edit.png" alt=""><li class="">Editar usuários</li></a>
+                <a href="deletar-usuarios.php"><img src="img/dashboard/icon/apagar.png" alt=""><li class="">Deletar usuários</li></a>
+            </ul>    
+        </div>
+        <div class="container-sidebar-opcoes-admin">
+            <hr>
+            <ul>
+                <p>*Acesso exclusivo</p>
+                <a href="dashboard.php"><li class="">Dados atendentes</li></a>
+                <a href="editar-usuarios.php"><li class="">Editar atendentes</li></a>
+                <a href="deletar-usuarios.php"><li class="">Deletar atendentes</li></a>
             </ul>    
         </div>
     </div>
@@ -164,15 +173,15 @@
                 </div>
                 <div class="form-group">
                     <label for="data-agendamento">Data do agendamento</label>
-                    <input type="date" min="2022-10-15" max="2024-01-01" name="dataAgendamento">
+                    <input type="date" min="2022-10-15" max="2024-01-01" name="dataAgendamento" required>
                     <br>
                     <label for="horario-agendamento">Horário do agendamento</label>
-                    <input type="time" name="horaAgendamento" min="09:00" max="18:00">
+                    <input type="time" name="horaAgendamento" min="09:00" max="18:00" required>
                 </div>
                 <div class="form-group">
                     <label for="tel1">Telefone</label>
 
-                    <input class="form-control" type="text" name="tel"></option>
+                    <input class="form-control" type="text" name="tel" required></option>
                 </div>
                 <button class="button-agendar" type="submit">Agendar</button>
 

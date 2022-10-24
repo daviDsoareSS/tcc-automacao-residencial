@@ -40,18 +40,18 @@
         <div class="container-cards">
         <div class="container-section">
           <img src="img/section/ambientacao.png" alt="Ícone ambientação" width="400vw">
-          <h2>Ambientação</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href=""><span class="leia">... Leia mais</span></a></p>
+          <h2>Iluminação</h2>
+          <p>Pode programar a iluminação da sua casa com apenas um toque, controlar a intensidade das luzes, fazer uma sincronização com cores, e como economia de energia pode<a href=""><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
           <img src="img/section/portao-eletrico.png" alt="Ícone portão elétrico" width="400vw">
-          <h2>Portão elétrico</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href="portao-eletrico.php"><span class="leia">... Leia mais</span></a></p>
+          <h2>Portão eletrônico</h2>
+          <p>Considerado bem mais seguro que os portões convencionais, os portões e portas eletrônicas, trazem também um conforto maior em dias de chuva, por exemplo, em que não<a href="portao-eletrico.php"><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
           <img src="img/section/sensor-de-proximidade.png" alt="Ícone sensor de proximidade" width="400vw">
           <h2>Sensor de proximidade</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href="sensor-proximidade.php"><span class="leia">... Leia mais</span></a></p>
+          <p>Para trazer mais agilidade junto a segurança ao chegar, as cancelas de entrada do condomínio são programadas com o sensor de proximidade e as luzes dos postes também<a href="sensor-proximidade.php"><span class="leia">... Leia mais</span></a></p>
         </div>
       </div>
       <!--Mais serviços-->
@@ -59,20 +59,50 @@
       <div class="collapse container-cards" id="mostrar-servicos">
         <div class="container-section">
           <img src="img/section/ambientacao.png" alt="Ícone ambientação" width="400vw">
-          <h2>Ambientação</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href=""><span class="leia">... Leia mais</span></a></p>
+          <h2>Sensor de fumaça</h2>
+          <p>Para sua maior segurança todas as instalações possuem o sensor de fumaça para caso seja identificado algum sinal de fogo emitir um alarme para que o ambiente seja evacuado.<a href=""><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
           <img src="img/section/portao-eletrico.png" alt="Ícone portão elétrico" width="400vw">
-          <h2>Portão elétrico</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href=""><span class="leia">... Leia mais</span></a></p>
+          <h2>Controle de TV</h2>
+          <p>Com essa função você pode programar o que quer assistir, horário ou um tempo definido para desligar.<a href=""><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
           <img src="img/section/sensor-de-proximidade.png" alt="Ícone sensor de proximidade" width="400vw">
-          <h2>Sensor de proximidade</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora nemo aliquam rerum nihil commodi eveniet sunt soluta eum! Nesciunt es<a href=""><span class="leia">... Leia mais</span></a></p>
+          <h2>Som</h2>
+          <p>Nossas instalações te proporcionam o controle de som ambiente, podendo ser programadas situações para que elas sejam usadas, por exemplo, uma festa em casa pede um som<a href=""><span class="leia">... Leia mais</span></a></p>
         </div>
+      <div class="container-section">
+          <img src="img/section/ambientacao.png" alt="Ícone ambientação" width="400vw">
+          <h2>Cortinas</h2>
+          <p>Para trazer mais agilidade pode ser definido um horário para que as cortinas e persianas se abram ao amanhecer e se fechem ao anoitecer, ao chegar em casa com apenas um.<a href=""><span class="leia">... Leia mais</span></a></p>
       </div>
+      <div class="container-section">
+          <img src="img/section/ambientacao.png" alt="Ícone ambientação" width="400vw">
+          <h2>Ar condicionado</h2>
+          <p>Para mais conforto você define em qual temperatura deseja cada cômodo ou pode programar a temperatura do ar de acordo com a temperatura do ambiente, por exemplo se<a href=""><span class="leia">... Leia mais</span></a></p>
+      </div>
+      <div class="container-section">
+          <img src="img/section/ambientacao.png" alt="Ícone ambientação" width="400vw">
+          <h2>Controle de camêras</h2>
+          <p>Para sua segurança apenas pelo seu celular você tem acesso as câmeras de todos os cômodos da sua casa e das áreas comuns do condomínio, as câmeras possuem visão noturna<a href=""><span class="leia">... Leia mais</span></a></p>
+        </div>
+        <div class="container-section">
+          <img src="img/section/ambientacao.png" alt="Ícone ambientação" width="400vw">
+          <h2>Alarmes</h2>
+          <p>Para segurança geral, os alarmes são acionados, caso alguém entre no ambiente sem desabilitar o alarme, ele é acionado e só pode ser desligado com a senha pré-definida.<a href=""><span class="leia">... Leia mais</span></a></p>
+        </div>
+        <div class="container-section">
+          <img src="img/section/ambientacao.png" alt="Ícone ambientação" width="400vw">
+          <h2>Fechadura eletrônica</h2>
+          <p>Como principal característica ela tem a segurança para fechamento de portas, ao ser travada ela só pode ser desbloqueada novamente por quem possui o acesso autorizado.<a href=""><span class="leia">... Leia mais</span></a></p>
+        </div>
+        <div class="container-section">
+          <img src="img/section/ambientacao.png" alt="Ícone ambientação" width="400vw">
+          <h2>Áudio e vídeo home theater(Cinema em casa)</h2>
+          <p>Essa funcionalidade é ideal para o conforto e lazer, para as salas de TV, sala de lazer ou até mesmo sala de cinema, como quiser chamar, fazemos toda a programação<a href=""><span class="leia">... Leia mais</span></a></p>
+        </div>
+        </div>
       <span id="content-line"></span>
       </section>
       <article id="sobre">

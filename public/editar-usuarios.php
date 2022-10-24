@@ -32,6 +32,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>  
+<div id="preloader">
+    <div class="inner">
+       <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
+       <img src="img/gif/dashboard.gif" alt="preloader">
+    </div>
+</div>    
     <?php
         include_once('includes/header-dashboard.php');
     ?>
@@ -41,9 +47,18 @@
         </nav>
         <div class="container-sidebar">
             <ul>
-                <a href="dashboard.php"><li class="">Interface</li></a>
-                <a href="editar-usuarios.php"><li class="selected">Editar usuários</li></a>
-                <a href="deletar-usuarios.php"><li class="">Deletar usuários</li></a>
+                <a href="dashboard.php"><img src="img/dashboard/icon/home.png" alt=""><li class="">Interface</li></a>
+                <a href="editar-usuarios.php"><img src="img/dashboard/icon/edit.png" alt=""><li class="selected">Editar usuários</li></a>
+                <a href="deletar-usuarios.php"><img src="img/dashboard/icon/apagar.png" alt=""><li class="">Deletar usuários</li></a>
+            </ul>    
+        </div>
+        <div class="container-sidebar-opcoes-admin">
+            <hr>
+            <ul>
+                <p>*Acesso exclusivo</p>
+                <a href="dashboard.php"><li class="">Dados atendentes</li></a>
+                <a href="editar-usuarios.php"><li class="">Editar atendentes</li></a>
+                <a href="deletar-usuarios.php"><li class="">Deletar atendentes</li></a>
             </ul>    
         </div>
     </div>
@@ -79,7 +94,7 @@
                                 echo "<td data-title='Nome'>".$user_data['nome']."</td>";
                                 echo "<td data-title='DataNasc'>".$user_data['dataNasc']."</td>";
                                 echo "<td data-title='Inicio da conta'>".$user_data['dataCriacaoConta']."</td>";
-                                echo "<td data-title='Editar usuário'><a href='editar-usuarios.php?id=$user_data[idUser]'><img src='img/dashboard/icon/editar.png'class='agenda'></a></td>";
+                                echo "<td data-title='Editar usuário'><a href='editando-usuario.php?id=$user_data[idUser]'><img src='img/dashboard/icon/editar.png'class='agenda'></a></td>";
                             echo "</tr>";     
                         }
                     ?>

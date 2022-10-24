@@ -28,7 +28,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
-<body>  
+<body>
+<!-- início do preloader -->
+  <div id="preloader">
+    <div class="inner">
+       <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
+       <img src="img/gif/dashboard.gif" alt="preloader">
+    </div>
+</div>
+<!-- fim do preloader -->   
     <?php
         include_once('includes/header-dashboard.php');
     ?>
@@ -38,9 +46,18 @@
         </nav>
         <div class="container-sidebar">
             <ul>
-                <a href="dashboard.php"><li class="selected">Interface</li></a>
-                <a href="editar-usuarios.php"><li class="">Editar usuários</li></a>
-                <a href="deletar-usuarios.php"><li class="">Deletar usuários</li></a>
+                <a href="dashboard.php"><img src="img/dashboard/icon/home.png" alt=""><li class="selected">Interface</li></a>
+                <a href="editar-usuarios.php"><img src="img/dashboard/icon/edit.png" alt=""><li class="">Editar usuários</li></a>
+                <a href="deletar-usuarios.php"><img src="img/dashboard/icon/apagar.png" alt=""><li class="">Deletar usuários</li></a>
+            </ul>    
+        </div>
+        <div class="container-sidebar-opcoes-admin">
+            <hr>
+            <ul>
+                <p>*Acesso exclusivo</p>
+                <a href="dashboard.php"><li class="">Dados atendentes</li></a>
+                <a href="editar-usuarios.php"><li class="">Editar atendentes</li></a>
+                <a href="deletar-usuarios.php"><li class="">Deletar atendentes</li></a>
             </ul>    
         </div>
     </div>

@@ -12,6 +12,22 @@ body{
     "sidebar main main"
     "sidebar main main";
 }
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#ffffff ; /* cor do background que vai ocupar o body */
+    z-index:9999999999999999999999; /* z-index para jogar para frente e sobrepor tudo */
+}
+#preloader .inner {
+    position: absolute;
+    top: 50%; /* centralizar a parte interna do preload (onde fica a animação)*/
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+/* end: Preloader */
 header{
     padding-left: 0% !important;
     padding: 2vw;
@@ -51,7 +67,7 @@ header .container-right-header small{
     font-size: 18px;
 }
 .sidebar{
-    z-index: 99999999;
+    z-index: 9999;
     padding: 2vw 2vw;
     width: 80%;
     height: 1000%;
@@ -70,21 +86,65 @@ header .container-right-header small{
     color: white;
 }
 .sidebar .container-sidebar ul{
+    display: flex;
+    flex-direction: column;
     padding-left: 0 !important;
     color: white;
     list-style: none;
 }
 .sidebar .container-sidebar ul .selected{
-    color: #09092f;
+    color: #FE7265;
     font-weight: bolder;
     font-size: 19px;
 }
 .sidebar .container-sidebar ul li{
-    margin-bottom: 1vw;
+    margin-bottom: 1.5vw;
+    margin-left: 0.5vw;
+    display: inline-flex;
+ 
 }
-.sidebar .container-sidebar ul li:hover{
+.sidebar .container-sidebar ul a:hover{
     color: #FE7265;
 }
+.sidebar .container-sidebar img{
+    margin-bottom: 8px;
+    width: 1vw;
+}
+/*FIM SIDEBAR*/
+.sidebar .container-sidebar-opcoes-admin hr{
+    border: 1px solid white;
+    background-color: white;
+}
+.sidebar .container-sidebar-opcoes-admin p{
+    color: #05051d;
+    font-weight: bolder;
+}
+.sidebar .container-sidebar-opcoes-admin ul{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0 !important;
+    color: white;
+    list-style: none;
+}
+.sidebar .container-sidebar-opcoes-admin ul .selected{
+    color: #09092f;
+    font-weight: bolder;
+}
+.sidebar .container-sidebar-opcoes-admin ul li{
+    font-size: 13px;
+    margin-bottom: 0.5vw;
+    margin-left: 0.5vw;
+    display: inline-flex;
+ 
+}
+.sidebar .container-sidebar-opcoes-admin ul a:hover{
+    color: #FE7265;
+}
+.sidebar .container-sidebar-opcoes-admin img{
+    margin-bottom: 8px;
+    width: 1vw;
+}
+
 
 main{
     padding-left: 0% !important;
@@ -146,7 +206,10 @@ main .agenda{
 .pag-agendamento .container-dados-usuario{
     margin-right: 6vw;
 }
+
 .pag-agendamento h2{
+    border-left: 5px solid #416dff;
+    padding-left: 8px;
     margin-bottom: 2vw;
     font-weight: bolder;
 }
@@ -204,7 +267,47 @@ main .agenda{
     border-radius: 10px;
     padding: 8px 25px;
     color: white;
-    
+}
+/* PÁGINA EDITANDO USUARIO  */
+.pag-editando-usuario .container-editar-usuario{
+    width: 30rem;
+}
+.pag-editando-usuario .container-editar-usuario h1{
+    border-left: 5px solid #416dff;
+    padding-left: 5px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.pag-editando-usuario .container-editar-usuario .form-group label{
+    font-weight: bolder;
+}
+.pag-editando-usuario .container-editar-usuario .form-group select{
+    font-weight: bold;
+    color: rgb(67, 67, 67);
+    border-radius: 3px;
+    border: 1px solid #05051d !important;
+    padding: 8px;
+    margin-bottom: 0.5vw;
+    width: 100%;
+}
+.pag-editando-usuario .container-editar-usuario .form-group input{
+    font-weight: bold;
+    color: rgb(67, 67, 67);
+    border: 1px solid #05051d !important;
+    border-radius: 3px;
+    border: none;
+    padding: 8px;
+    display: block;
+    margin-bottom: 0.5vw;
+    width: 100%;
+}
+.pag-editando-usuario .container-editar-usuario .form-button input{
+    cursor: pointer;
+    padding: 5px 30px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid #3084dd;
+    background-color: #3798ff;
 }
 @media(max-width:1000px){
     body{
@@ -216,13 +319,12 @@ main .agenda{
         "main main main";
     }
     header{
+        z-index: 999999;
+        border-radius: 30px 30px 0px 0px;
+        padding: 5vw;
+        background-color: white;
         display: block;
-        text-align: left;
-        justify-content: center;
-        margin: 0 auto;
-        margin-top: 6vw;
-        height: 40vw;
-        border-bottom: 1px solid rgba(128, 128, 128, 0.493);
+        height: 45vw;
     }
     header .container-header{
         display: flex;
@@ -238,9 +340,10 @@ main .agenda{
         margin-left: 0 !important;
     }
     .sidebar{
+        text-align: center;
         display: block;
         width: 100%;
-        height: 100% !important;
+        height: 120% !important;
     }
     .sidebar ul{
         margin-top: 2vw;
@@ -248,6 +351,9 @@ main .agenda{
     .sidebar ul li{
         padding-bottom: 3vw;
         margin-left: 4vw;
+    }
+    .sidebar .container-sidebar img{
+        width: 4vw;
     }
     .sidebar nav {
         justify-content: center;
@@ -324,5 +430,12 @@ main .agenda{
     .pag-agendamento form .button-agendar{
         margin-top: 4vw;
         width: 100%;
+    }
+    .pag-editando-usuario .container-editar-usuario{
+        width: 100%;
+    }
+    .pag-editando-usuario .container-editar-usuario .form-button input{
+        margin-top: 2vw;
+        margin-bottom: 10vw;
     }
 }

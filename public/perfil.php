@@ -11,7 +11,7 @@
 </head>
 <body class="pag-perfil">
     <main>
-        <div class="card" style="width: 18rem; height: 12rem;">
+        <div class="card" style="width: 18rem; height: 10.6rem;">
             <div class="card-header">
                 Meus dados
             </div>

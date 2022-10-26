@@ -1,7 +1,7 @@
 <?php
     include_once('conexao.php');
 
-    if(isset($_POST['nome'])){
+    if(isset($_POST['update'])){
 
         $id = $_POST['id'];
         $nome = $_POST['nome'];

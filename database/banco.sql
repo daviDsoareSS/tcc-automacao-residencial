@@ -49,7 +49,8 @@ ALTER TABLE endereco
 drop table servico;
 CREATE TABLE servico(
     idServico int(11) NOT NULL,
-    nomeServico varchar(225)
+    nomeServico varchar(225),
+    urlServico varchar(100)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 ALTER TABLE servico
@@ -98,7 +99,37 @@ INSERT INTO agendamento VALUES (DEFAULT, 'Juãozin da ZL');
 
 /*-------------------------------------------------------*/
 
-INSERT INTO tecnico VALUES (DEFAULT, 'Juãozin da ZL');
+CREATE TABLE atendente(
+  idAtendente int(11) NOT NULL,
+  nome varchar(225),
+  email varchar(100) NOT NULL,
+  senha varchar(100) NOT NULL,
+
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE atendente
+  ADD PRIMARY KEY (idAgendamento);
+
+ALTER TABLE atendente
+  MODIFY idAtendente int(11) NOT NULL AUTO_INCREMENT;
+
+/*-------------------------------------------------------*/
+
+CREATE TABLE administrador(
+  idAdministrador int(11) NOT NULL,
+  nome varchar(225),
+  email varchar(100) NOT NULL,
+  senha varchar(100) NOT NULL,
+  
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE administrador
+  ADD PRIMARY KEY (idAdministrador);
+
+ALTER TABLE administrador
+  MODIFY idAdministrador int(11) NOT NULL AUTO_INCREMENT;
+
+/*-------------------------------------------------------*/
 
 INSERT INTO servico VALUES (DEFAULT, 'Portão Elétrico'),
 (DEFAULT, 'Ambientação'),

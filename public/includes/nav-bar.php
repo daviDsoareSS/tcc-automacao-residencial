@@ -1,5 +1,6 @@
 <?php
   include('protect.php');
+  include_once('conexao.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -79,9 +80,23 @@
               </a>
               <hr>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="portao-eletrico.php">Portão elétrico</a>
-                <a class="dropdown-item" href="#">Ambientação</a>
-                <a class="dropdown-item" href="sensor-proximidade.php">Sensor de proximidade</a>   
+               
+                <?php
+
+                  $sql = "SELECT * FROM servico;";
+
+                  $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
+
+                  $i = 1;
+                  while($row = mysqli_fetch_array($result)){
+
+                    echo "<a class='dropdown-item' href='$row[urlServico].php'>$row[nomeServico]</a>";
+
+                    $i++;
+                  }
+
+                ?>
+                 
               </div>
             </li>
             <li class="nav-item">

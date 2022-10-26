@@ -5,12 +5,28 @@
     include_once('conexao.php');
     
 
-    if(!empty($_GET['search']))
-    {
+    if(!empty($_GET['search'])){
+
         $data = $_GET['search'];
+        $filtro = $_GET["#filtro"];
+
+        if($filtro == "todos-usuarios"){
+
+            $sql = "SELECT * FROM  users WHERE idUser LIKE '%$data%' or nome LIKE '%$data%' or email LIKE '%$data%'";
+
+        }else if($filtro == "ordem-crescente"){
+
+            $sql = "SELECT * FROM  users WHERE idUser LIKE '%$data%' or nome LIKE '%$data%' or email LIKE '%$data%' ORDER BY idUser ASC";
+
+        }else if($filtro == "ordem-decrescente"){
+
+            $sql = "SELECT * FROM  users WHERE idUser LIKE '%$data%' or nome LIKE '%$data%' or email LIKE '%$data%' ORDER BY idUser DESC";
+
+        }
+
         $sql = "SELECT * FROM  users WHERE idUser LIKE '%$data%' or nome LIKE '%$data%' or email LIKE '%$data%' ORDER BY idUser DESC";
-    }
-    else{
+
+    }else{
         $sql = "SELECT * FROM  users ORDER BY idUser DESC";
     }
    
@@ -32,12 +48,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>  
+    
 <div id="preloader">
     <div class="inner">
-       <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
+     <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! --> 
        <img src="img/gif/dashboard.gif" alt="preloader">
     </div>
 </div>    
+
     <?php
         include_once('includes/header-dashboard.php');
     ?>
@@ -63,15 +81,19 @@
         </div>
     </div>
     <main>
+
         <div class="top-main">      
-              <input type="search" class="form-control" id="pesquisa-usuarios" placeholder="Pesquisar usuário...">  
-              <button onclick="searchData()">Procurar</button>    
-              <label for="option">Filtrar</label>
-              <select name="filtro" id="filtro">
+            
+            <input type="search" class="form-control" id="pesquisa-usuarios" placeholder="Pesquisar usuário...">  
+            <button onclick="searchData()">Procurar</button>    
+            <label for="option">Filtrar</label>
+            <select name="filtro" id="filtro">
+
                 <option value="todos-usuarios">Todos</option>
                 <option value="ordem-crescente">Ordem crescente</option>
-                <option value="ordem-decrescente">Ordem decrescente</option>
-              </select>    
+                <option value="ordem-decrescente" selected>Ordem decrescente</option>
+            
+            </select>    
         </div>
         <div class="container-main">
             <table border="1">
@@ -95,7 +117,7 @@
                                 echo "<td data-title='DataNasc'>".$user_data['dataNasc']."</td>";
                                 echo "<td data-title='Inicio da conta'>".$user_data['dataCriacaoConta']."</td>";
                                 echo "<td data-title='Editar usuário'><a href='editando-usuario.php?id=$user_data[idUser]'><img src='img/dashboard/icon/editar.png'class='agenda'></a></td>";
-                            echo "</tr>";     
+                            echo "</tr>";
                         }
                     ?>
                 </tbody>
@@ -105,6 +127,8 @@
     <script>
         /*SISTEMA DE BUSCA NO DASHBOARD*/
         const search = document.getElementById('pesquisa-usuarios');
+        const filtro = document.getElementByID('filtro');
+        const opcaoValor = filtro.options[filtro.selectedIndex].value;
         
         search.addEventListener("keydown", function(event){
             if(event.key === "Enter"){

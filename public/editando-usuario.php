@@ -71,14 +71,15 @@
     </div>
     <main>
         <form method="post" class="container-editar-usuario" action="atualizar-usuario.php">
+            
             <h1>Editar usuário</h1>
             <div class="form-group">
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" value="<?php echo $nome?>">
+                <input type="text" name="nome" id="nome" value="<?php echo $nome?>">
             </div> 
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="text" id="email" value="<?php echo $email?>">
+                <input type="text" name="email" id="email" value="<?php echo $email?>">
             </div>
             <div class="form-group">
                 <label for="dataNasc">Data de nascimento</label>

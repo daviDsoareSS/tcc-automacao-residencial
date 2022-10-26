@@ -103,8 +103,7 @@ CREATE TABLE atendente(
   idAtendente int(11) NOT NULL,
   nome varchar(225),
   email varchar(100) NOT NULL,
-  senha varchar(100) NOT NULL,
-
+  senha varchar(100) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 ALTER TABLE atendente
@@ -119,8 +118,7 @@ CREATE TABLE administrador(
   idAdministrador int(11) NOT NULL,
   nome varchar(225),
   email varchar(100) NOT NULL,
-  senha varchar(100) NOT NULL,
-  
+  senha varchar(100) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 ALTER TABLE administrador

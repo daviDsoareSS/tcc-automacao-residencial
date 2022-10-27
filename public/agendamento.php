@@ -6,10 +6,10 @@
         $idUser = $_GET['id'];
         $_SESSION['idUser'] = $idUser;
         $sqlSelect = "SELECT * FROM users WHERE idUser= $idUser";
-        $sqlSelectEndereco = "SELECT * FROM endereco WHERE idUser= $idUser";
+        $sqlSelectEndereco = "SELECT * FROM endereco WHERE idUser = $idUser";
         $result = $conn->query($sqlSelect);
+        mysqli_set_charset($conn,'utf8');
         $resultEndereco = $conn->query($sqlSelectEndereco);
-        
 
         if($result->num_rows > 0){
             $user_data = mysqli_fetch_assoc($result);
@@ -70,13 +70,14 @@
                 }
             ?>
             <h2>Dados usuário</h2>
-            <p>Nome:<?php echo "<small>"."  ".$user_data['nome']."</small>"?></p>
-            <p>Email:<?php echo "<small>"."  ".$user_data['email']."</small>"?></p>
-            <p>Data de nascimento:<?php echo "<small>"."  ".$user_data['dataNasc']."</small>"?></p>
-            <p>Sexo:<?php echo "<small>"."  ".$user_data['sexo']."</small>"?></p>
+            <p>Nome<?php echo "<small>"."  ".$user_data['nome']."</small>"?></p>
+            <p>Email<?php echo "<small>"."  ".$user_data['email']."</small>"?></p>
+            <p>Data de nascimento<?php  $data_timestamp = strtotime($user_data['dataNasc']);echo "<small>"."  ".$data_brasileira = date("d/m/Y",$data_timestamp)
+            ."</small>"?></p>
+            <p>Sexo<?php echo "<small>"."  ".$user_data['sexo']."</small>"?></p>
             <!-- <p>Telefone 1:<?php echo "<small>"."  ".$user_data['tel1']."</small>"?></p>
             <p>Telefone 2<i>(opcional)</i>:<?php echo "<small>"."  ".$user_data['tel2']."</small>"?></p> -->
-            <p>Endereço:<?php echo "<small>"."  ".$user_data_endereco['endereco']."</small>"?>,<?php echo "<small>".$user_data_endereco['bairro']."</small>"?> Nº<?php echo "<small>"."  ".$user_data_endereco['numero']."</small>"?> - <?php echo "<small>".$user_data_endereco['cep']."</small>"?></p>
+            <p>Endereço<?php echo "<small>"."  ".$user_data_endereco['endereco']." , ".$user_data_endereco['bairro']." , ".$user_data_endereco['cep']."- Nº ".$user_data_endereco['numero']?></p>
             
             <p><strong>Serviços contratados:</strong>
 
@@ -94,12 +95,12 @@
 
             ?>
             <ul>
-                <p><?php echo $i; ?>º Serviço</p>
-                <li>Nome do serviço: <span class="dados-user nome-servico"><?php echo $row['nomeServico']; ?></span></li>
-                <li>Data agendada: <span class="dados-user data-agendada"><?php echo $row['dataAgendamento']; ?></span></li>
-                <li>Status serviço: <span class="dados-user status-servico"><?php echo $row['statusServico']; ?></span></li>
-                <li>Endereço: <span class="dados-user endereco"><?php echo $row['endereco']; ?>,<?php echo $row['bairro']; ?> Nº<?php echo $row['numero']; ?> - <?php echo $row['cep']; ?></span></li>
-                <br>
+                <small><?php echo $i; ?>º Serviço</small>
+                <span class="dados-user nome-servico"><?php echo $row['nomeServico']; ?></span>
+                <li>Data agendada <span class="dados-user data-agendada"><?php echo $row['dataAgendamento']; ?></span></li>
+                <li>Horário agendado <span class="dados-user hora-agendada"><?php echo $row['dataAgendamento']; ?></span></li>
+                <span class="dados-user status-servico"><?php echo $row['statusServico']; ?></span>
+                <li>Endereço <span class="dados-user endereco"><?php echo $row['endereco']; ?> , <?php echo $row['bairro']; ?> Nº<?php echo $row['numero']; ?> - <?php echo $row['cep']; ?></span></li>
             </ul>
             <?php
                     $i++;

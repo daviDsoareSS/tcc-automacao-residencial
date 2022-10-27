@@ -6,7 +6,7 @@ $password = "8aea5597";
 $database = "heroku_acd6119eb0eb682";
 
 $conn = mysqli_connect($servername, $username, $password, $database) or die("Falha ao conectar ao banco de dados: ".$conn->error) ;
-
+mysqli_set_charset($conn,'utf8');
 // $servername = "localhost";
 // $username = "root";
 // $password = "";

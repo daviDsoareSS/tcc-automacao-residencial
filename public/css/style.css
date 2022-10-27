@@ -353,10 +353,10 @@ footer{
 /*PÁGINA PERFIL*/
 .pag-perfil{ /*<-- BODY     */
     background-image: none;
-    background-color: #91b3fa !important;
+    background-color: #ffffff !important;
 }
 .pag-perfil nav .nav-item a{
-    color: white !important;
+    color: rgb(0, 0, 0) !important;
 }
 .pag-perfil nav .dropdown-menu .dropdown-item{
     color: black !important;
@@ -375,43 +375,77 @@ footer{
     color: #0093ee !important;
     font-weight: bolder;
 }
-
-.pag-perfil .container-dados-pessoais{
+.pag-perfil .container-dados-pessoais .container-servicos-contratados ul{
+    position: relative;
+    color: #061a27;
+    padding-left: 0;
     width: 35rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
     background-color: white;
+    border: 2px solid gainsboro;
     margin-right: 20vw;
     padding: 2vw;
-    border-radius: 15px;
+    border-radius: 5px;
     white-space: nowrap;
     
 }
-
+.pag-perfil .container-dados-pessoais .container-servicos-contratados ul:hover{
+    box-shadow: 5px 7px 15px rgb(187, 187, 187);
+    transition: 0.4s;
+}
+.pag-perfil .informacoes-user{
+    position: relative;
+    color: #061a27;
+    padding-left: 0;
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background-color: white;
+    border: 2px solid gainsboro;
+    margin-right: 20vw;
+    padding: 2vw;
+    border-radius: 5px;
+    white-space: nowrap;
+}
 .pag-perfil .container-dados-pessoais h2{
+    border-left: 5px solid #416dff;
+    padding-left: 8px;
+    margin-bottom: 2vw;
     font-weight: bolder;
     color: #061a27;
 }
-.pag-perfil .container-dados-pessoais ul{
-    color: #061a27;
-    margin-top: 2vw;
-    padding-left: 0;
+.pag-perfil .container-dados-pessoais ul .nome-servico{
+    margin-left: 0 !important;
+    color: black;
+    font-weight: bolder;
+    font-size: 22px;
 }
-.pag-perfil .container-dados-pessoais ul p{
-    border: none;
-    border-bottom: 3px solid #061a27;
+.pag-perfil .container-dados-pessoais ul .status-servico{
+    margin: 15px;
+    background-color: #e86a5f;
+    color: white;
     padding: 5px;
+    position: absolute;
 }
 .pag-perfil .container-dados-pessoais ul li{
-    color: #0093ee;
-    font-weight: bolder;
+    color: rgb(100, 100, 100);
+    font-weight: normal;
     margin-bottom: 1vw;
     list-style: none;
 }
+
 .pag-perfil .container-dados-pessoais span{
-    margin-right: 10px;
+    color: black;
+    float: right;
+}
+.pag-perfil .container-dados-pessoais .status-servico{
+    top: 0;
+    right: 0;
     color: black;
     font-weight: 500;
 }

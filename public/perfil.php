@@ -21,7 +21,7 @@
                 <a href=""><li class="list-group-item">Vestibulum at eros</li></a>
             </ul>
         </div>
-        <div class="container-dados-pessoais">
+        <div class="container-dados-pessoais informacoes-user">
             <h2><span></span>Dados pessoais</h2>
             <ul>
                 <li>Email:<span class="dados-user"><?php echo($_SESSION['email']);?></span></li>

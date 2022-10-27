@@ -97,7 +97,7 @@
             <ul>
                 <small><?php echo $i; ?>º Serviço</small>
                 <span class="dados-user nome-servico"><?php echo $row['nomeServico']; ?></span>
-                <li>Data agendada <span class="dados-user data-agendada"><?php echo $row['dataAgendamento']; ?></span></li>
+                <li>Data agendada <span class="dados-user data-agendada"><?php $data_agendamento = strtotime($row['dataAgendamento']); echo $data_brasileira = date("d/m/Y",$data_agendamento); ?></span></li>
                 <li>Horário agendado <span class="dados-user hora-agendada"><?php echo $row['dataAgendamento']; ?></span></li>
                 <span class="dados-user status-servico"><?php echo $row['statusServico']; ?></span>
                 <li>Endereço <span class="dados-user endereco"><?php echo $row['endereco']; ?> , <?php echo $row['bairro']; ?> Nº<?php echo $row['numero']; ?> - <?php echo $row['cep']; ?></span></li>

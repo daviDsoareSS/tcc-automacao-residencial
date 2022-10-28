@@ -58,47 +58,47 @@
       <button id="btn-veja-todos-servicos" type="button" data-toggle="collapse" data-target="#mostrar-servicos" aria-controls="mostrar-servicos" aria-expanded="false" aria-label="Toggle navigation">Veja todos</button>
       <div class="collapse container-cards" id="mostrar-servicos">
         <div class="container-section">
-          <img src="img/section/ambientacao.png" alt="Ícone ambientação" width="400vw">
+          <img src="img/section/sensor-de-fumaca.png" alt="Ícone ambientação" width="400vw">
           <h2>Sensor de fumaça</h2>
           <p>Para sua maior segurança todas as instalações possuem o sensor de fumaça para caso seja identificado algum sinal de fogo emitir um alarme para que o ambiente seja evacuado.<a href=""><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
-          <img src="img/section/portao-eletrico.png" alt="Ícone portão elétrico" width="400vw">
+          <img src="img/section/controle-de-tv.png" alt="Ícone portão elétrico" width="400vw">
           <h2>Controle de TV</h2>
           <p>Com essa função você pode programar o que quer assistir, horário ou um tempo definido para desligar.<a href=""><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
-          <img src="img/section/sensor-de-proximidade.png" alt="Ícone sensor de proximidade" width="400vw">
+          <img src="img/section/som.png" alt="Ícone sensor de proximidade" width="400vw">
           <h2>Som</h2>
           <p>Nossas instalações te proporcionam o controle de som ambiente, podendo ser programadas situações para que elas sejam usadas, por exemplo, uma festa em casa pede um som<a href=""><span class="leia">... Leia mais</span></a></p>
         </div>
       <div class="container-section">
-          <img src="img/section/ambientacao.png" alt="Ícone ambientação" width="400vw">
+          <img src="img/section/cortinas.png" alt="Ícone ambientação" width="400vw">
           <h2>Cortinas</h2>
           <p>Para trazer mais agilidade pode ser definido um horário para que as cortinas e persianas se abram ao amanhecer e se fechem ao anoitecer, ao chegar em casa com apenas um.<a href=""><span class="leia">... Leia mais</span></a></p>
       </div>
       <div class="container-section">
-          <img src="img/section/ambientacao.png" alt="Ícone ambientação" width="400vw">
+          <img src="img/section/ar-condicionado.png" alt="Ícone ambientação" width="400vw">
           <h2>Ar condicionado</h2>
           <p>Para mais conforto você define em qual temperatura deseja cada cômodo ou pode programar a temperatura do ar de acordo com a temperatura do ambiente, por exemplo se<a href=""><span class="leia">... Leia mais</span></a></p>
       </div>
       <div class="container-section">
-          <img src="img/section/ambientacao.png" alt="Ícone ambientação" width="400vw">
+          <img src="img/section/camera-seguranca.png" alt="Ícone ambientação" width="400vw">
           <h2>Controle de camêras</h2>
           <p>Para sua segurança apenas pelo seu celular você tem acesso as câmeras de todos os cômodos da sua casa e das áreas comuns do condomínio, as câmeras possuem visão noturna<a href=""><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
-          <img src="img/section/ambientacao.png" alt="Ícone ambientação" width="400vw">
+          <img src="img/section/alarmes.png" alt="Ícone ambientação" width="400vw">
           <h2>Alarmes</h2>
           <p>Para segurança geral, os alarmes são acionados, caso alguém entre no ambiente sem desabilitar o alarme, ele é acionado e só pode ser desligado com a senha pré-definida.<a href=""><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
-          <img src="img/section/ambientacao.png" alt="Ícone ambientação" width="400vw">
+          <img src="img/section/fechadura-eletronica.png" alt="Ícone ambientação" width="400vw">
           <h2>Fechadura eletrônica</h2>
           <p>Como principal característica ela tem a segurança para fechamento de portas, ao ser travada ela só pode ser desbloqueada novamente por quem possui o acesso autorizado.<a href=""><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
-          <img src="img/section/ambientacao.png" alt="Ícone ambientação" width="400vw">
+          <img src="img/section/home-theater.png" alt="Ícone ambientação" width="400vw">
           <h2>Áudio e vídeo home theater(Cinema em casa)</h2>
           <p>Essa funcionalidade é ideal para o conforto e lazer, para as salas de TV, sala de lazer ou até mesmo sala de cinema, como quiser chamar, fazemos toda a programação<a href=""><span class="leia">... Leia mais</span></a></p>
         </div>
@@ -111,8 +111,7 @@
           <div class="container-article-text">
             <small>Um pouco de nós</small>
             <h3>Sobre nós</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis delectus sed commodi accusamus facilis exercitationem sequi aliquid, quam harum architecto adipisci nesciunt hic, tenetur neque consectetur ipsa impedit ullam aspernatur.
-            Facilis sequi nihil debitis nam reprehenderit ut repudiandae. Aperiam asperiores excepturi fuga ex, illo saepe amet accusantium dolorem nam necessitatibus cupiditate tenetur quaerat maxime tempora facilis, iure vel. Odit, odio!</p>
+            <p>Nós somos uma empresa que partiu de uma ideia de 4 pessoas, o qual originou o nome 4House. Para explicar melhor, house seria sobre o serviço que prestamos em relação a automação residencial, onde melhoramos a segurança com câmeras, alarmes e afins, e também visamos um maior conforto com a automatização dos ambientes em que mais usamos na nossa casa, buscando mais praticidade e funcionalidade.</p>
             <div class="cards">
               <div class="card">
                 <img src="img/article/cards/global.png" alt="">
@@ -166,7 +165,7 @@
         </div>
       <div class="card-figure four">
           <img src="img/figure/aspas.png" alt="">
-          <p>Sou cliente da empresa a 2 anos e nunca tive problemas, os atendentes são super prestativos e educados. Espero que vocês ampliem a zona de prestação de serviços, pois tenho parentes que também querem automatizar suas casas com a 4House.</p>
+          <p>Sou cliente da empresa há pouco mais de um ano e nunca tive problemas, os atendentes são super prestativos e educados. Espero que vocês ampliem a zona de prestação de serviços, pois tenho parentes que também querem automatizar suas casas com a 4House.</p>
             <div class="card-cliente">
               <img class="foto-user" src="img/figure/user4.jpg" alt="">
               <small>João Miguel Souza</small>

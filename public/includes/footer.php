@@ -14,12 +14,12 @@
     <!--FIM CSS BOOTSTRAP only -->
   </head>
 <body>
-<footer class="text-center text-white">
+<footer class="text-white">
   <!-- Grid container -->
   <div class="container p-4">
     <section class="mb-4">
       <p>
-        A 4House está disposta a te ajudar em prol do seu conforto e segurança, deixando o trabalho pesado para nós. Estamos no mercado em torno de 3 anos, procurando sempre ampliar nossos atendimentos. São mais de 50 funcionários circulando por toda a grande São Paulo trazendo a técnologia para dentro da sua residência.
+        A 4House está disposta a te ajudar em prol do seu conforto e segurança, deixando o trabalho pesado para nós. Estamos no mercado em torno de 2 anos, procurando sempre ampliar nossos atendimentos. São mais de 50 funcionários circulando por toda a grande São Paulo trazendo a técnologia para dentro da sua residência.
       </p>
     </section>
     <!-- Section: Text -->
@@ -32,7 +32,7 @@
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
           <h5 class="text-uppercase">Institucional</h5>
 
-          <ul class="list-unstyled mb-0">
+          <ul class="list-unstyled">
             <li>
               <a href="sobre.php" class="text-white">Sobre a 4House</a>
             </li>
@@ -53,16 +53,14 @@
           <h5 class="text-uppercase">Redes Sociais</h5>
 
           <ul class="list-unstyled mb-0">
+            <br>
             <li>
-              <small>Email</small>
               <a href="forhousecompany@gmail.com" class="text-white">forhousecompany@gmail.com</a>
             </li>
             <li>
-              <small>Twitter</small>
               <a href="#!" class="text-white">fourhousecompany</a>
             </li>
             <li>
-              <small>Instagram</small>
               <a href="#!" class="text-white">@fourhousecompany</a>
             </li>
           </ul>

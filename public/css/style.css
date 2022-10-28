@@ -342,11 +342,17 @@ footer{
     background: rgb(63, 89, 180,1);
     background: linear-gradient(-90deg,  rgb(19, 15, 74) 0%, rgb(75, 103, 201) 100%);
 }
+footer h5{
+    float: left;
+}
 .list-unstyled a{
-    font-style: normal;
+    font-style: normal !important;
+    float: left;
     text-decoration: none !important;
 }
 .list-unstyled small{
+    display: block;
+    float: left;
     color: #e86a5f !important;
 }
 

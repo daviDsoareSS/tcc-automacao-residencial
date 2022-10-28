@@ -69,7 +69,8 @@
             </div>
             <div class="form-group-password">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M18 10v-4c0-3.313-2.687-6-6-6s-6 2.687-6 6v4h-3v14h18v-14h-3zm-10 0v-4c0-2.206 1.794-4 4-4s4 1.794 4 4v4h-8z"/></svg>
-                <input type="password" name="senha" placeholder="Password" required >
+                <input type="password" id="senha" name="senha" placeholder="Password" required >
+                <img id="eyeSvg" onclick="eyeCLick()" src="img/input-senha/eye-open.svg" alt="">
             </div>
             <a href="index.php"><button id="entrar" type="submit">ENTRAR</button></a>
             <a href="recuperar-senha.php"><h3 id="recuperar-senha">Esqueceu a senha?</h3></a>
@@ -82,6 +83,27 @@
         <a href="login-adm.html"><p class="entrada-administrador">Entrar como administrador</p></a>
     </form>
     <script src="script/preloader.js" defer></script>
-    <script src="js.js"></script>
+    <script>
+        const passwordInput = document.getElementById("senha");
+        const eyeSvg= document.getElementById("eyeSvg");
+
+        function eyeCLick(){
+            let inputTypeIsPassword = passwordInput.type == "password"
+
+            if (inputTypeIsPassword){
+                showPassword();
+            } else if(passwordInput.type == "text"){
+                hidePassword();
+            }   
+        }
+        function showPassword(){
+            passwordInput.setAttribute("type", "text");
+            eyeSvg.setAttribute("src", "img/input-senha/eye-closed.svg")
+        }
+        function hidePassword(){
+            passwordInput.setAttribute("type", "password");
+            eyeSvg.setAttribute("src", "img/input-senha/eye-open.svg")
+        }
+    </script>
 </body>
 </html>

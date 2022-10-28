@@ -98,7 +98,30 @@ function formata(data) {
 
 const campo = document.querySelector('#dataNasc');
 
+// FUNCTION MOSTRAR SENHA 
 
+const passwordInput = document.getElementById("senha");
 
+const eyeSvg= document.getElementById("eyeSvg");
+
+function eyeCLick(){
+    let inputTypeIsPassword = passwordInput.type == "password"
+
+    if (inputTypeIsPassword){
+        showPassword();
+    } else if(passwordInput.type == "text"){
+        hidePassword();
+    }   
+}
+
+function showPassword(){
+    passwordInput.setAttribute("type", "text");
+    eyeSvg.setAttribute("src", "img/input-senha/eye-closed.svg")
+}
+
+function hidePassword(){
+    passwordInput.setAttribute("type", "password");
+    eyeSvg.setAttribute("src", "img/input-senha/eye-open.svg")
+}
 
 

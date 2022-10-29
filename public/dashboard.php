@@ -59,15 +59,7 @@
             </ul>    
         </div>
 
-        <?php
-
-            if($_SESSION['usuario']=="Administrador"){
-
-            }
-
-        ?>
-
-        <div class="container-sidebar-opcoes-admin">
+        <div class="container-sidebar-opcoes-admin" id="opcoes-admin">
             <hr>
             <ul>
                 <p>*Acesso exclusivo</p>
@@ -137,6 +129,18 @@
             window.location = 'dashboard.php?search='+search.value +'&filtro=' + opcaoValor;
             
         }
+    
+        /*SISTEMA DE IDENTIFICAÇÃO DO ADMINISTRADOR OU ATENDENTE*/
+        const usuario = "<?php echo $_SESSION['usuario']; ?>"
+
+        if(usuario == "Administrador"){
+            
+            document.getElementById('opcoes-admin').style.visibility = "visible";
+
+        }else{
+            document.getElementById('opcoes-admin').style.visibility = "hidden";
+        }
+
     </script>
 </body>
 </html>

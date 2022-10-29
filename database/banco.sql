@@ -107,7 +107,7 @@ CREATE TABLE atendente(
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 ALTER TABLE atendente
-  ADD PRIMARY KEY (idAgendamento);
+  ADD PRIMARY KEY (idAtendente);
 
 ALTER TABLE atendente
   MODIFY idAtendente int(11) NOT NULL AUTO_INCREMENT;

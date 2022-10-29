@@ -26,10 +26,11 @@
                 if(!isset($_SESSION)){
                     session_start();
                 }
+
                 $_SESSION['idAtendente'] = $user['idAtendente'];
                 $_SESSION['nome'] = $user['nome'];
                 $_SESSION['email'] = $user['email'];
-                
+                $_SESSION['usuario'] = "Atendente";
 
                 header("Location: dashboard.php");
             

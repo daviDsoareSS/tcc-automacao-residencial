@@ -58,6 +58,15 @@
                 <a href="deletar-usuarios.php"><img src="img/dashboard/icon/apagar.png" alt=""><li class="">Deletar usuários</li></a>
             </ul>    
         </div>
+
+        <?php
+
+            if($_SESSION['usuario']=="Administrador"){
+
+            }
+
+        ?>
+
         <div class="container-sidebar-opcoes-admin">
             <hr>
             <ul>

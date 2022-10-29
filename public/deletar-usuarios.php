@@ -1,17 +1,23 @@
-
 <?php
-    session_start();
 
     include_once('conexao.php');
-    
 
-    if(!empty($_GET['search']))
-    {
-        $data = $_GET['search'];
-        $sql = "SELECT * FROM  users WHERE idUser LIKE '%$data%' or nome LIKE '%$data%' or email LIKE '%$data%' ORDER BY idUser DESC";
+    session_start();
+
+    $filtro = $_GET['filtro'];
+
+    if(empty($_GET['filtro'])){
+        $filtro = "DESC";
     }
-    else{
-        $sql = "SELECT * FROM  users ORDER BY idUser DESC";
+
+    if(!empty($_GET['search'])){
+
+        $data = $_GET['search'];
+        
+        $sql = "SELECT * FROM  users WHERE idUser LIKE '%$data%' or nome LIKE '%$data%' or email LIKE '%$data%' ORDER BY idUser $filtro";
+
+    }else{
+        $sql = "SELECT * FROM  users ORDER BY idUser $filtro";
     }
    
 
@@ -32,15 +38,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>  
-<!-- início do preloader -->
-<div id="preloader">
-    <div class="inner">
-       <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
-       <img src="img/gif/dashboard.gif" alt="preloader">
+    <!-- início do preloader -->
+    <div id="preloader">
+        <div class="inner">
+        <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
+        <img src="img/gif/dashboard.gif" alt="preloader">
+        </div>
     </div>
-</div>
-<!--DELETAR USUARIO -->
-<!-- <a href='deletar-usuarios.php?id=$user_data[idUser]'> -->
+    <!--DELETAR USUARIO -->
+    <!-- <a href='deletar-usuarios.php?id=$user_data[idUser]'> -->
 
     <?php
         include_once('includes/header-dashboard.php');
@@ -67,35 +73,35 @@
         </div>
     </div>
     <main>
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Deletar usuário</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border:none !important;">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Tem certeza que deseja excluir o usuário <?php ?></p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary" style="background-color:red !important; border:none !important;">Excluir</button>
-      </div>
-    </div>
-  </div>
-</div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Deletar usuário</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border:none !important;">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Tem certeza que deseja excluir o usuário <?php ?></p>
+                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary" style="background-color:red !important; border:none !important;">Excluir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="top-main">      
-              <input type="search" class="form-control" id="pesquisa-usuarios" placeholder="Pesquisar usuário...">  
-              <button onclick="searchData()">Procurar</button>    
-              <label for="option">Filtrar</label>
-              <select name="filtro" id="filtro">
-                <option value="todos-usuarios">Todos</option>
-                <option value="ordem-crescente">Ordem crescente</option>
-                <option value="ordem-decrescente">Ordem decrescente</option>
-              </select>    
+            <input type="search" class="form-control" id="pesquisa-usuarios" placeholder="Pesquisar usuário...">  
+            <button onclick="searchData()">Procurar</button>    
+            <label for="option">Filtrar</label>
+            <select name="filtro" id="filtro">
+                <option value="DESC">Todos</option>
+                <option value="ASC">Ordem crescente</option>
+                <option value="DESC">Ordem decrescente</option>
+            </select>    
         </div>
         <div class="container-main">
             <table border="1">
@@ -123,13 +129,13 @@
                         }
                     ?>
                 </tbody>
-             </table>
+                </table>
         </div>
     </main>
     <script>
         /*SISTEMA DE BUSCA NO DASHBOARD*/
         const search = document.getElementById('pesquisa-usuarios');
-        
+        const filtro = document.getElementById('filtro');
         search.addEventListener("keydown", function(event){
             if(event.key === "Enter"){
                 searchData();
@@ -137,7 +143,11 @@
         });
 
         function searchData(){   
-            window.location = 'deletar-usuarios.php?search='+ search.value;
+
+            opcaoValor = filtro.options[filtro.selectedIndex].value;
+    
+            window.location = 'deletar-usuarios.php?search='+search.value +'&filtro=' + opcaoValor;
+            
         }
     </script>
 </body>

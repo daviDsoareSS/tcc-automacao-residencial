@@ -1,9 +1,9 @@
 <?php
 
+    include_once('conexao.php');
+
     session_start();
 
-    include_once('conexao.php');
-    
     $filtro = $_GET['filtro'];
 
     if(empty($_GET['filtro'])){
@@ -23,6 +23,7 @@
 
     $result = $conn->query($sql);
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -121,7 +122,6 @@
         });
 
         function searchData(){   
-            
 
             opcaoValor = filtro.options[filtro.selectedIndex].value;
     

@@ -342,21 +342,27 @@ footer{
     background: rgb(63, 89, 180,1);
     background: linear-gradient(-90deg,  rgb(19, 15, 74) 0%, rgb(75, 103, 201) 100%);
 }
+footer h5{
+    float: left;
+}
 .list-unstyled a{
-    font-style: normal;
+    font-style: normal !important;
+    float: left;
     text-decoration: none !important;
 }
 .list-unstyled small{
+    display: block;
+    float: left;
     color: #e86a5f !important;
 }
 
 /*PÁGINA PERFIL*/
 .pag-perfil{ /*<-- BODY     */
     background-image: none;
-    background-color: #91b3fa !important;
+    background-color: #ffffff !important;
 }
 .pag-perfil nav .nav-item a{
-    color: white !important;
+    color: rgb(0, 0, 0) !important;
 }
 .pag-perfil nav .dropdown-menu .dropdown-item{
     color: black !important;
@@ -375,43 +381,77 @@ footer{
     color: #0093ee !important;
     font-weight: bolder;
 }
-
-.pag-perfil .container-dados-pessoais{
+.pag-perfil .container-dados-pessoais .container-servicos-contratados ul{
+    position: relative;
+    color: #061a27;
+    padding-left: 0;
     width: 35rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
     background-color: white;
+    border: 2px solid gainsboro;
     margin-right: 20vw;
     padding: 2vw;
-    border-radius: 15px;
+    border-radius: 5px;
     white-space: nowrap;
     
 }
-
+.pag-perfil .container-dados-pessoais .container-servicos-contratados ul:hover{
+    box-shadow: 5px 7px 15px rgb(187, 187, 187);
+    transition: 0.4s;
+}
+.pag-perfil .informacoes-user{
+    position: relative;
+    color: #061a27;
+    padding-left: 0;
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background-color: white;
+    border: 2px solid gainsboro;
+    margin-right: 20vw;
+    padding: 2vw;
+    border-radius: 5px;
+    white-space: nowrap;
+}
 .pag-perfil .container-dados-pessoais h2{
+    border-left: 5px solid #416dff;
+    padding-left: 8px;
+    margin-bottom: 2vw;
     font-weight: bolder;
     color: #061a27;
 }
-.pag-perfil .container-dados-pessoais ul{
-    color: #061a27;
-    margin-top: 2vw;
-    padding-left: 0;
+.pag-perfil .container-dados-pessoais ul .nome-servico{
+    margin-left: 0 !important;
+    color: black;
+    font-weight: bolder;
+    font-size: 22px;
 }
-.pag-perfil .container-dados-pessoais ul p{
-    border: none;
-    border-bottom: 3px solid #061a27;
+.pag-perfil .container-dados-pessoais ul .status-servico{
+    margin: 15px;
+    background-color: #e86a5f;
+    color: white;
     padding: 5px;
+    position: absolute;
 }
 .pag-perfil .container-dados-pessoais ul li{
-    color: #0093ee;
-    font-weight: bolder;
+    color: rgb(100, 100, 100);
+    font-weight: normal;
     margin-bottom: 1vw;
     list-style: none;
 }
+
 .pag-perfil .container-dados-pessoais span{
-    margin-right: 10px;
+    color: black;
+    float: right;
+}
+.pag-perfil .container-dados-pessoais .status-servico{
+    top: 0;
+    right: 0;
     color: black;
     font-weight: 500;
 }
@@ -692,7 +732,7 @@ footer{
     flex-direction: column;
     margin: 0 auto;
 }
-.pag-login-admin .container-login-admin .main-login input{
+.pag-login-admin .container-login-admin .main-login .form-group-email input{
     font-weight: bold;
     border-radius: 7px;
     padding: 18px 40px;
@@ -703,15 +743,41 @@ footer{
     height: 30px;
     margin-bottom: 10px;
     display: block;
-}
-.pag-login-admin .container-login-admin .main-login svg{
+} 
+.pag-login-admin .container-login-admin .main-login .form-group-email svg{
     margin-top: 5px;
     position: absolute;
     width: 15px;
     margin-left: 12px;
     z-index: 50;
 }
-
+.pag-login-admin .container-login-admin .main-login .form-group-password input{
+    font-weight: bold;
+    border-radius: 7px;
+    padding: 18px 40px;
+    padding-left: 35px;
+    position: relative;
+    border: 2px solid black;
+    width: 350px;
+    height: 30px;
+    margin-bottom: 10px;
+    display: block;
+} 
+.pag-login-admin .container-login-admin .main-login .form-group-password svg{
+    margin-top: 5px;
+    position: absolute;
+    width: 15px;
+    margin-left: 12px;
+    z-index: 50;
+}
+.pag-login-admin .container-login-admin .main-login .form-group-password img{
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 10px;
+    right: 0;
+    width: 30px;
+    position: absolute;
+}
 .pag-login-admin .container-login-admin .main-login button{
     cursor: pointer;
     color: black;

@@ -83,7 +83,7 @@
             </div>
             <div class="form-group">
                 <label for="dataNasc">Data de nascimento</label>
-                <input type="date" id="dataNasc" value="<?php echo $dataNasc?>">
+                <input type="date" name="dataNasc" id="dataNasc" value="<?php echo $dataNasc?>">
             </div>
             <div class="form-group">
                 <label for="sexoUser">Sexo</label>
@@ -95,19 +95,19 @@
             </div>
             <div class="form-group">
                 <label for="telefone1">Telefone</label>
-                <input type="text" id="telefone1" value="<?php echo $telefone1?>">
+                <input type="text" name="telefone1" id="telefone1" value="<?php echo $telefone1?>">
             </div>
             <div class="form-group">
                 <label for="cep">CEP</label>
-                <input type="text" id="cep" value="<?php echo $cep?>">
+                <input type="text" name="cep" id="cep" value="<?php echo $cep?>">
                 <label for="rua">Rua</label>
-                <input type="text" id="rua" value="<?php echo $rua?>">
+                <input type="text" name="rua" id="rua" value="<?php echo $rua?>">
             </div>
             <div class="form-group">
                 <label for="bairro">Bairro</label>
-                <input type="text" id="bairro" value="<?php echo $bairro?>">
+                <input type="text" name="bairro" id="bairro" value="<?php echo $bairro?>">
                 <label for="numeroCasa">Nº</label>
-                <input type="text" id="numeroCasa" value="<?php echo $numero?>">
+                <input type="text" name="numero" id="numeroCasa" value="<?php echo $numero?>">
             </div>
         </div>
         <div class="form-button">

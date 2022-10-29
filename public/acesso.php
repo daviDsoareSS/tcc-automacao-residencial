@@ -58,6 +58,8 @@
 
         $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
 
+        mysqli_set_charset($conn,'utf8');
+        
         while($row = $result->fetch_assoc()) {
             $idUser = $row['idUser'];
         }

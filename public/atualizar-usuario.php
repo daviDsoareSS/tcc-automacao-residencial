@@ -15,12 +15,12 @@
         $cidade = $_POST['cidade'];
         $numero = $_POST['numero'];
 
-        $sqlUpdate = "UPDATE users SET nome='$nome',email='$email'  WHERE idUser='$id'";
+        $sqlUpdate = "UPDATE users SET nome='$nome', dataNasc='$dataNasc',sexo='$sexo',telefone1='$tel1',email='$email' WHERE idUser='$id'";
 
         $result = $conn->query($sqlUpdate);
     }
     else{
-        echo "deu merda";
+        echo "Não foi possível realizar alterações, tente novamente.";
     }
     header("Location: editar-usuarios.php");
 ?>

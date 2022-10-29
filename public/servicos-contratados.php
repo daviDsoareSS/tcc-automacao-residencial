@@ -10,7 +10,7 @@
 
 <title>Serviços contratados | 4House</title>
 </head>
-<body class="pag-perfil">
+<body class="pag-perfil servicos-contratados">
     <main>
         <div class="card" style="width: 18rem; height: 12rem;">
             <div class="card-header">
@@ -23,37 +23,39 @@
                 </ul>
         </div>
         <div class="container-dados-pessoais">
-            <h2><span></span>Serviços contratados</h2>
+            <h2>Serviços contratados</h2> 
+            <div class="container-servicos-contratados">
+                <?php 
 
-            <?php 
+                $idUser = $_SESSION['idUser'];
 
-            $idUser = $_SESSION['idUser'];
+                    $sql = "SELECT s.nomeServico, a.dataAgendamento, a.statusServico, e.endereco, e.numero, e.cep, e.bairro FROM agendamento a 
+                            JOIN servico s ON s.idServico = a.idServico
+                            JOIN endereco e ON e.idEndereco = a.idEndereco
+                            WHERE  a.idUser = '$idUser'";
 
-                $sql = "SELECT s.nomeServico, a.dataAgendamento, a.statusServico, e.endereco, e.numero, e.cep, e.bairro FROM agendamento a 
-                        JOIN servico s ON s.idServico = a.idServico
-                        JOIN endereco e ON e.idEndereco = a.idEndereco
-                        WHERE  a.idUser = '$idUser'";
-
-                $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
+                    $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
 
 
-                $i = 1;
-                while($row = mysqli_fetch_array($result)){
+                    $i = 1;
+                    while($row = mysqli_fetch_array($result)){
 
-            ?>
+                ?>
 
-            <ul>
-                <p><?php echo $i; ?>º Serviço</p>
-                <li>Nome do serviço:<span class="dados-user nome-servico"><?php echo $row['nomeServico']; ?></span></li>
-                <li>Data agendada:<span class="dados-user data-agendada"><?php echo $row['dataAgendamento']; ?></span></li>
-                <li>Status serviço:<span class="dados-user status-servico"><?php echo $row['statusServico']; ?></span></li>
-                <li>Endereço:<span class="dados-user endereco"><?php echo $row['endereco']; ?>,<?php echo $row['bairro']; ?> Nº<?php echo $row['numero']; ?> - <?php echo $row['cep']; ?></span></li>
-            </ul>
+                <ul>
+                    <small><?php echo $i; ?>º Serviço</small>
+                    <span class="dados-user nome-servico"><?php echo $row['nomeServico']; ?></span>
+                    <hr>
+                    <li>Data agendada<span class="dados-user data-agendada"><?php echo $row['dataAgendamento']; ?></span></li>
+                    <span class="dados-user status-servico"><?php echo $row['statusServico']; ?></span>
+                    <li>Endereço<span class="dados-user endereco"><?php echo $row['endereco']; ?>,<?php echo $row['bairro']; ?> Nº<?php echo $row['numero']; ?> - <?php echo $row['cep']; ?></span></li>
+                </ul>
 
-            <?php
-                    $i++;
-                }
-            ?>
+                <?php
+                        $i++;
+                    }
+                ?>
+            </div>
         </div>
     </main>
 </body>

@@ -108,7 +108,8 @@
     margin-bottom: 1vw;
 }
 .container-login .top-login input{
-    font-size: 12px;
+
+    font-size: 15px;
     background-color: rgb(245, 245, 245);
     border: none !important;
     margin-top: 0px;
@@ -132,6 +133,28 @@
 .container-login .top-login .form-group input{
     font-size: 12px;
     width: 43%;
+}
+.container-login .top-login .form-password input{
+    width: 100%;
+}
+.container-login .top-login .form-password img{
+    cursor: pointer;
+    margin-top: 8px;
+    margin-right: 10px;
+    right: 0;
+    width: 22px;
+    position: absolute;
+}
+.container-login .top-login .form-password2 input{
+    width: 100%;
+}
+.container-login .top-login .form-password2 img{
+    cursor: pointer;
+    margin-top: 8px;
+    margin-right: 10px;
+    right: 0;
+    width: 22px;
+    position: absolute;
 }
 .container-login .top-login .form-group #telUser{
     width: 100%;
@@ -215,6 +238,14 @@
     z-index: 50;
     position: absolute;
 }
+.container-login .top-login .form-group-password img{
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 10px;
+    right: 0;
+    width: 30px;
+    position: absolute;
+}
 .container-login .top-login a{
     color: white;
     text-decoration: none;
@@ -223,6 +254,7 @@
 .container-login .top-login h3{
     text-align: center;
 }
+
 .container-login .top-login #recuperar-senha{
     color: #353b50;
     font-size: 16px;

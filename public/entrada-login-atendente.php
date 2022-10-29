@@ -1,4 +1,5 @@
 <?php
+
     include("conexao.php");
     session_start();
     
@@ -36,9 +37,6 @@
                 $_SESSION['usuario_invalido']= "<p style='color:red';>Usuário não encontrado!</p>";
                 header("Location: login-atendente.html");
             }
-
-
-
         }
     }
 

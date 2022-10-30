@@ -4,10 +4,10 @@
 
     session_start();
 
-    $filtro = $_GET['filtro'];
-
     if(empty($_GET['filtro'])){
         $filtro = "DESC";
+    }else{
+        $filtro = $_GET['filtro'];
     }
 
     if(!empty($_GET['search'])){

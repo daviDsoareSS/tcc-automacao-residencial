@@ -4,10 +4,12 @@
 
     session_start();
 
-    $filtro = $_GET['filtro'];
+    
 
     if(empty($_GET['filtro'])){
         $filtro = "DESC";
+    }else{
+        $filtro = $_GET['filtro'];
     }
 
     if(!empty($_GET['search'])){
@@ -126,7 +128,7 @@
 
             opcaoValor = filtro.options[filtro.selectedIndex].value;
     
-            window.location = 'dashboard.php?search='+search.value +'&filtro=' + opcaoValor;
+            window.location = 'editar-usuarios.php?search='+search.value +'&filtro=' + opcaoValor;
             
         }
     

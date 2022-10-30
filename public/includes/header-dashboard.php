@@ -3,10 +3,6 @@
     include('protect.php');
     include_once('conexao.php');
 
-    session_start();
-
-
-
 ?>
 
 <head>

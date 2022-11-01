@@ -18,6 +18,11 @@
         $sqlUpdate = "UPDATE users SET nome='$nome', dataNasc='$dataNasc',sexo='$sexo',telefone1='$tel1',email='$email' WHERE idUser='$id'";
 
         $result = $conn->query($sqlUpdate);
+
+        $sqlUpdate = "UPDATE endereco SET endereco='$rua', numero='$numero', cep='$cep', bairro='$bairro', cidade='$cidade'  WHERE idUser='$id'";
+
+        $result = $conn->query($sqlUpdate);
+
     }
     else{
         echo "Não foi possível realizar alterações, tente novamente.";

@@ -1,57 +1,59 @@
 <?php
+
     include("conexao.php");
     session_start();
     
     if(isset($_POST['email']) || isset($_POST['senha'])){
+        
         if(strlen($_POST['email'])== 0){
             echo "<p>Preencha o campo email.</p>";
         }else if(strlen($_POST['senha'])== 0){
                 echo "<p>Preencha o campo senha.</p>";
-        }
-    else{
+        }else{
 
-        $email = mysqli_real_escape_string($conn,trim($_POST['email']));
-        $senha = mysqli_real_escape_string($conn,trim(base64_encode($_POST['senha'])));
-        
-        $sql="SELECT u.idUser, u.nome, u.email, u.dataNasc, u.sexo, e.endereco, e.numero, e.cep, e.bairro, e.cidade FROM users u
-                JOIN endereco e ON e.idUser = u.idUser
-                WHERE u.email = '$email' AND u.senha= '$senha'";
-        $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
-
-        $quantidade = $result->num_rows;
-
-        if($quantidade >= 1){ 
-            $user = $result->fetch_assoc();
+            $email = mysqli_real_escape_string($conn,trim($_POST['email']));
+            $senha = mysqli_real_escape_string($conn,trim(base64_encode($_POST['senha'])));
             
-            if(!isset($_SESSION)){
-                session_start();
-            }
-            $_SESSION['idUser'] = $user['idUser'];
-            $_SESSION['nome'] = $user['nome'];
-            $_SESSION['email'] = $user['email'];
-            $_SESSION['dataNasc'] = $user['dataNasc'];
-            $_SESSION['sexoUser'] = $user['sexo'];
-
-            $_SESSION['endereco'] = $user['endereco'];
-            $_SESSION['numero'] = $user['numero'];
-            $_SESSION['cep'] = $user['cep'];
-            $_SESSION['bairro'] = $user['bairro'];
-            $_SESSION['cidade'] = $user['cidade'];
-
-            date_default_timezone_set('America/Sao_Paulo');
-            $dataUltimoAcesso =  date('Y/m/d H:i');
-
-            $sql = "UPDATE users SET ultimoAcesso = '$dataUltimoAcesso' WHERE email = '$email' AND senha= '$senha'";
+            $sql="SELECT u.idUser, u.nome, u.email, u.dataNasc, u.sexo, e.endereco, e.numero, e.cep, e.bairro, e.cidade FROM users u
+                    JOIN endereco e ON e.idUser = u.idUser
+                    WHERE u.email = '$email' AND u.senha = '$senha'";
             $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
 
-            header("Location: index.php");
-        
-        }else {
-            $_SESSION['usuario_invalido']= "<p style='color:red';>Usuário não encontrado!</p>";
-            header("Location: login.php");
+            $quantidade = $result->num_rows;
+
+            if($quantidade >= 1){ 
+                $user = $result->fetch_assoc();
+                
+                if(!isset($_SESSION)){
+                    session_start();
+                }
+                
+                $_SESSION['idUser'] = $user['idUser'];
+                $_SESSION['nome'] = $user['nome'];
+                $_SESSION['email'] = $user['email'];
+                $_SESSION['dataNasc'] = $user['dataNasc'];
+                $_SESSION['sexoUser'] = $user['sexo'];
+
+                $_SESSION['endereco'] = $user['endereco'];
+                $_SESSION['numero'] = $user['numero'];
+                $_SESSION['cep'] = $user['cep'];
+                $_SESSION['bairro'] = $user['bairro'];
+                $_SESSION['cidade'] = $user['cidade'];
+
+                date_default_timezone_set('America/Sao_Paulo');
+                $dataUltimoAcesso =  date('Y/m/d H:i');
+
+                $sql = "UPDATE users SET ultimoAcesso = '$dataUltimoAcesso' WHERE email = '$email' AND senha= '$senha'";
+                $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
+
+                header("Location: index.php");
+            
+            }else{
+                $_SESSION['usuario_invalido']= "<p style='color:red';>Usuário não encontrado!</p>";
+                header("Location: login.php");
+            }
         }
     }
-}
 
 
 

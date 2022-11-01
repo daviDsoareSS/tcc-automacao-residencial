@@ -77,7 +77,6 @@ ALTER TABLE tecnico
 /*-------------------------------------------------------*/
 
 DROP TABLE agendamento;
-
 CREATE TABLE agendamento(
     idAgendamento int(11) NOT NULL,
     dataAgendamento DATE NOT NULL,
@@ -95,10 +94,9 @@ ALTER TABLE agendamento
 ALTER TABLE agendamento
   MODIFY idAgendamento int(11) NOT NULL AUTO_INCREMENT;
 
-INSERT INTO agendamento VALUES (DEFAULT, 'Juãozin da ZL');
-
 /*-------------------------------------------------------*/
 
+DROP TABLE atendente;
 CREATE TABLE atendente(
   idAtendente int(11) NOT NULL,
   nome varchar(225),
@@ -107,13 +105,14 @@ CREATE TABLE atendente(
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 ALTER TABLE atendente
-  ADD PRIMARY KEY (idAgendamento);
+  ADD PRIMARY KEY (idAtendente);
 
 ALTER TABLE atendente
   MODIFY idAtendente int(11) NOT NULL AUTO_INCREMENT;
 
 /*-------------------------------------------------------*/
 
+DROP TABLE administrador;
 CREATE TABLE administrador(
   idAdministrador int(11) NOT NULL,
   nome varchar(225),
@@ -129,6 +128,6 @@ ALTER TABLE administrador
 
 /*-------------------------------------------------------*/
 
-INSERT INTO servico VALUES (DEFAULT, 'Portão Elétrico'),
-(DEFAULT, 'Ambientação'),
-(DEFAULT, 'Sensor de Proximidade');
+INSERT INTO servico VALUES (DEFAULT, 'Portão Elétrico', 'portao-eletrico'),
+(DEFAULT, 'Ambientação', 'ambientacao'),
+(DEFAULT, 'Sensor de Proximidade', 'sensor-proximidade');

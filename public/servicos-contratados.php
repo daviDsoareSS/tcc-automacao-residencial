@@ -29,7 +29,7 @@
 
                 $idUser = $_SESSION['idUser'];
 
-                    $sql = "SELECT s.nomeServico, a.dataAgendamento, a.statusServico, e.endereco, e.numero, e.cep, e.bairro FROM agendamento a 
+                    $sql = "SELECT s.nomeServico, a.dataAgendamento, a.horaAgendamento, a.statusServico, e.endereco, e.numero, e.cep, e.bairro FROM agendamento a 
                             JOIN servico s ON s.idServico = a.idServico
                             JOIN endereco e ON e.idEndereco = a.idEndereco
                             WHERE  a.idUser = '$idUser'";
@@ -47,6 +47,7 @@
                     <span class="dados-user nome-servico"><?php echo $row['nomeServico']; ?></span>
                     <hr>
                     <li>Data agendada<span class="dados-user data-agendada"><?php echo $row['dataAgendamento']; ?></span></li>
+                    <li>Horário agendado<span class="dados-user hora-agendada"><?php echo $row['horaAgendamento']; ?></span></li>
                     <span class="dados-user status-servico"><?php echo $row['statusServico']; ?></span>
                     <li>Endereço<span class="dados-user endereco"><?php echo $row['endereco']; ?>,<?php echo $row['bairro']; ?> Nº<?php echo $row['numero']; ?> - <?php echo $row['cep']; ?></span></li>
                 </ul>

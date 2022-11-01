@@ -1,26 +1,9 @@
 <?php
-  include('protect.php');
-?>
-
-<?php
   //NAV-BAR
   include 'includes/nav-bar.php';
 ?>
-<title>Sensor de proximidade | 4House</title>
+<title>Portão Elétrico | 4House</title>
 <body class="pag-portao-eletrico">
-<!-- início do preloader -->
-  <div id="preloader">
-    <div class="inner">
-       <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
-       <img src="img/gif/1490.gif" alt="">
-    </div>
-</div>
-<!-- fim do preloader --> 
-<div class="modal">
-</div>
-  <span class="circle">
-    <svg height="52vw" width="10vw"></svg>
-  </span>
 <main>
     <img src="img/servicos/portao-eletrico/main/portao-eletrico.png" alt="">
     <div class="container-text-portao-eletrico">

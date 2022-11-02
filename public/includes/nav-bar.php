@@ -1,5 +1,4 @@
 <?php
-  include('protect.php');
   include_once('conexao.php');
 ?>
 <!DOCTYPE html>
@@ -38,6 +37,17 @@
     <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="ba3d4d34-ed87-48b9-9a7d-2d7f532b4699";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
   </head>
 <body>
+      <!-- início do preloader -->
+        <div id="preloader">
+    <div class="inner">
+       <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
+       <img src="img/gif/1490.gif" alt="preloader">
+    </div>
+</div>
+<span class="circle">
+  <svg height="52vw" width="10vw"></svg>
+</span>
+<!-- fim do preloader --> 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">

@@ -9,15 +9,6 @@
 <title>Perguntas frequentes | 4House</title>
 
 <body class="pag-faq">
-<div id="preloader">
-    <div class="inner">
-       <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
-       <img src="img/gif/1490.gif" alt="">
-    </div>
-</div>
-<span class="circle">
-    <svg height="52vw" width="10vw"></svg>
-</span>
     <main>
         <div class="container-perguntas">
             <h3>Por que preciso fornecer meus dados pessoais ao fazer o registro?</h3>
@@ -37,12 +28,9 @@
             <h3>Onde visualizo meus serviços contratados?</h3>
             <p>Logo após finalizar a conversa com um de nossos atendentes, será adicionado em seu perfil o número de protocolo e as informações do serviço contratado, como data de agendamento e horário por exemplo. Siga o caminho: <i>Meu Perfil > Meus dados > Serviços contratados</i></p>
         </div>
-        <div class="container-perguntas">
-            <h3>Lorem Ipsum</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium exercitationem nesciunt dignissimos pariatur! Omnis reprehenderit sed totam atque porro, harum doloremque illo pariatur, dicta veniam quisquam officiis amet asperiores similique?</p>
-        </div>
+        
         <hr>
-        <h4>Não encontrou oque procurava?</h4>
+        <h4>Não encontrou o que procurava?</h4>
         <small>Converse ou envie um email para <span>4House</span></small>
         <div class="opcoes-faq">
             <p onclick="$crisp.push(['do', 'chat:open'])"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 1c-6.338 0-12 4.226-12 10.007 0 2.05.739 4.063 2.047 5.625l-1.993 6.368 6.946-3c1.705.439 3.334.641 4.864.641 7.174 0 12.136-4.439 12.136-9.634 0-5.812-5.701-10.007-12-10.007zm0 1c6.065 0 11 4.041 11 9.007 0 4.922-4.787 8.634-11.136 8.634-1.881 0-3.401-.299-4.946-.695l-5.258 2.271 1.505-4.808c-1.308-1.564-2.165-3.128-2.165-5.402 0-4.966 4.935-9.007 11-9.007zm-5 7.5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm5 0c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm5 0c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5z"/></svg>Conversar com o chat</p></a>

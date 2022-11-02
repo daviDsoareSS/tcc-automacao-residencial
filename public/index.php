@@ -4,18 +4,13 @@
   include 'includes/nav-bar.php';
 ?>
 <title>Página inicial | 4House</title>
-  <body>
-      <!-- início do preloader -->
-  <div id="preloader">
-    <div class="inner">
-       <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
-       <img src="img/gif/1490.gif" alt="preloader">
-    </div>
-</div>
-<!-- fim do preloader --> 
-  <span class="circle">
-    <svg height="52vw" width="10vw"></svg>
-  </span>
+<body>
+<!-- <div class="modal-container">
+  <div class="modal-conteudo">
+      <img src="img/logo/logo-4house.png" alt="" width="200px">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem reiciendis dolor eos fugit, voluptatum tempora rerum ipsa nam veritatis adipisci iusto aliquid quaerat quisquam ea, ratione minima obcaecati nobis quas!</p>
+  </div>
+</div> -->
 <main>
         <div class="container-main">
             <img src="img/main/save.png" alt="Vetor Técnologia">

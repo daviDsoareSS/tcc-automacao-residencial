@@ -8,19 +8,6 @@
 ?>
 <title>Sensor de proximidade | 4House</title>
 <body class="pag-sensor-proximidade">
-<!-- início do preloader -->
-  <div id="preloader">
-    <div class="inner">
-       <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
-       <img src="img/gif/1490.gif" alt="">
-    </div>
-</div>
-<!-- fim do preloader --> 
-<div class="modal">
-</div>
-  <span class="circle">
-    <svg height="52vw" width="10vw"></svg>
-  </span>
 <main>
     <img src="img/servicos/sensor-proximidade/main/banner-sensor.png" alt="">
     <div class="container-text-sensor-proximidade">

@@ -101,52 +101,45 @@
                 </thead>
                 <tbody>
                     <?php
-                    
-                        $i=0;
                         while($user_data = mysqli_fetch_assoc($result)){
-
-                    ?>
-                            
-                            <tr id="cliente<?php echo$i ?>" style="border: 10px solid black;">
-                                <td data-title='id'><?php echo $user_data['idUser'] ?></td>
-                                <td data-title='Email'><?php echo $user_data['email'] ?></td>
-                                <td data-title='Nome'><?php echo $user_data['nome'] ?></td>
-                                <td data-title='DataNasc'><?php echo $user_data['dataNasc'] ?></td>
-                                <td data-title='Inicio da conta'><?php echo $user_data['dataCriacaoConta'] ?></td>
-                                <td data-title='Deletar usuário' class='btnDelet' onclick="deletBtn()"><img src='img/dashboard/icon/delete.png' class='agenda' data-toggle='modal' data-target='#exampleModalCenter' style='cursor:pointer;'></td>
-                            </tr>     
-                            
-                    <?php 
-
-                            $i++;
-                        }
-
+            
+                            echo "<tr>"; 
+                                echo "<td data-title='id'>".$user_data['idUser']."</td>";
+                                echo "<td data-title='Email'>".$user_data['email']."</td>";
+                                echo "<td data-title='Nome'>".$user_data['nome']."</td>";
+                                echo "<td data-title='DataNasc'>".$user_data['dataNasc']."</td>";
+                                echo "<td data-title='Inicio da conta'>".$user_data['dataCriacaoConta']."</td>";
+                                echo "<td data-title='Deletar usuário'><a href='deletando-usuario.php?id=$user_data[idUser]'><img src='img/dashboard/icon/delete.png' class='agenda' data-toggle='modal' data-target='#exampleModalCenter' style='cursor:pointer;'></a></td>";
+                                                          
+                        
+                        //    echo"<div class='modal fade' id='exampleModalCenter' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>
+                        //             <div class='modal-dialog modal-dialog-centered' role='document'>
+                        //                 <div class='modal-content'>
+                        //                     <div class='modal-header'>
+                        //                         <h5 class='modal-title' id='exampleModalLongTitle'>Deletar usuário</h5>
+                        //                         <button type='button' class='close' data-dismiss='modal' aria-label='Close' style='border:none !important;'>
+                        //                         <span aria-hidden='true'>&times;</span>
+                        //                         </button>
+                        //                     </div>
+                        //                 <div class='modal-body'>
+                        //                     <p>Tem certeza que deseja excluir o usuário?</p>
+                        //                 </div>
+                        //                     <div class='modal-footer'>
+                        //                         <button type='button' class='btn btn-secondary' data-dismiss='modal'>Fechar</button>
+                        //                         <a href='deletando-usuario.php?id=$user_data[idUser]'><button type='button' class='btn btn-primary' style='background-color:red !important; border:none !important;'>Excluir</button></a>
+                        //                     </div>
+                        //                 </div>
+                        //             </div>
+                        //         </div> ";
+                                echo "</tr>";   
+                        }                     
                     ?>    
-                    
                 </tbody>
             </table>
         </div>
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Deletar usuário</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border:none !important;">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>Tem certeza que deseja excluir o usuário <?php //echo $nome; ?></p>
-                </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary" style="background-color:red !important; border:none !important;">Excluir</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
 
     </main>
     <script>
@@ -177,34 +170,7 @@
         }else{
             document.getElementById('opcoes-admin').style.visibility = "hidden";
         }
-
-/*-------------------------------------------------------------------------------------------------*/
         
-        
-        function deletBtn(){
-            let i;
-        
-            let btnDelet = document.getElementsByClassName("btnDelet");
-
-            for(i=0; i<btnDelet.length; i++){
-                btnDelet[i].parentElement.style.backgroundColor = "green";
-            }
-
-            const cliente = document.getElementsByClassName("btnDelet")[1].parentElement.id;
-
-            alert(cliente);
-
-        }
-
-        /*
-
-        $(document).ready(function() {
-            $(document.getElementById('btnDelet')).parent().css({
-                "background-color": "green",
-                "border": "2px solid green"
-            });
-        });
-*/
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

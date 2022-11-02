@@ -1,8 +1,9 @@
 <?php
-
+    include_once('protect.php');
+    
     include_once('conexao.php');
 
-    session_start();
+    
 
     if(empty($_GET['filtro'])){
         $filtro = "DESC";

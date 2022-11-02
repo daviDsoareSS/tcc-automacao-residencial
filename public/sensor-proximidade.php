@@ -1,8 +1,4 @@
 <?php
-  include('protect.php');
-?>
-
-<?php
   //NAV-BAR
   include 'includes/nav-bar.php';
 ?>

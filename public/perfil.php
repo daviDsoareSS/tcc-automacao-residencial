@@ -1,5 +1,9 @@
 
 <?php
+  include('protect-user.php');
+?>
+
+<?php
   //NAV-BAR
   include 'includes/nav-bar.php';
 ?>

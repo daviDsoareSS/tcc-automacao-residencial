@@ -5,15 +5,16 @@
 ?>
 <title>Página inicial | 4House</title>
 <body>
-<!-- <div class="modal-container">
+<!-- <div class="modal-container mostrar" id="modal-pergunta">
   <div class="modal-conteudo">
+      <button class="fechar">x</button>
       <img src="img/logo/logo-4house.png" alt="" width="200px">
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem reiciendis dolor eos fugit, voluptatum tempora rerum ipsa nam veritatis adipisci iusto aliquid quaerat quisquam ea, ratione minima obcaecati nobis quas!</p>
   </div>
-</div> -->
+</div>  -->
 <main>
         <div class="container-main">
-            <img src="img/main/save.png" alt="Vetor Técnologia">
+            <img src="img/main/save.png" alt="Vetor Técnologia" class="image">
             <div class="text-main">
                 <strong><h1>Automação residencial</h1></strong>
                 <small>Serviços para automatizar seu lar</small>
@@ -168,6 +169,28 @@
     //FOOTER
     include 'includes/footer.php';
   ?>
+  <script>
+    // MODAL INDEX.PHP//
+
+    // function iniciaModal(modalID) {
+		// 	if(localStorage.fechaModal !== modalID) {
+		// 		const modal = document.getElementById(modalID);
+		// 		if(modal) {
+		// 			modal.classList.add('mostrar');
+		// 			modal.addEventListener('click', (e) => {
+		// 				if(e.target.id == modalID || e.target.className == 'fechar') {
+		// 					modal.classList.remove('mostrar');
+		// 					localStorage.fechaModal = modalID;
+		// 				}
+		// 			});
+		// 		}
+		// 	}
+		// }
+
+		
+    // iniciaModal('modal-pergunta');
+		
     
+  </script>
 </body>
 </html>

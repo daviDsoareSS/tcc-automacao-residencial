@@ -12,8 +12,7 @@
     <img src="img/servicos/sensor-proximidade/main/banner-sensor.png" alt="">
     <div class="container-text-sensor-proximidade">
         <h1>Sensor de proximidade</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptas excepturi facere necessitatibus iusto rerum laboriosam soluta aliquam maiores eum, voluptatum optio sapiente, asperiores veritatis vitae ullam animi totam suscipit?
-        Optio cupiditate nobis labore, numquam necessitatibus recusandae sed, laboriosam quaerat illo dolore est! Consequuntur, reiciendis laborum libero architecto alias numquam ipsum minus laboriosam cumque? Accusantium aperiam cupiditate iure sit rem?</p>
+        <p>Para trazer mais agilidade junto a segurança ao chegar, as cancelas de entrada do condomínio são programadas com o sensor de proximidade e as luzes dos postes também, ao identificar o carro previamente cadastrado ela já é aberta e as luzes acendem para sua passagem, sem precisar aguardar o porteiro te reconhecer e abrir para você chegar em casa.</p>
         <div class="cards-sensor-proximidade">
             <div class="cards">
                 <img src="img/servicos/sensor-proximidade/main/seguranca.png" alt="">

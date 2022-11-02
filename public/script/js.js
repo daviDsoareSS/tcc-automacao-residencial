@@ -123,5 +123,11 @@ function hidePassword(){
     passwordInput.setAttribute("type", "password");
     eyeSvg.setAttribute("src", "img/input-senha/eye-open.svg")
 }
+// MODAL INDEX.PHP//
 
+function iniciaModal(modalID){
+    const modal = document.getElementById(modalID);
+    console.log(modal);
+}
 
+iniciaModal('modal-pergunta')

@@ -2,14 +2,13 @@
   //NAV-BAR
   include 'includes/nav-bar.php';
 ?>
-<title>Portão Elétrico | 4House</title>
+<title>Portão Eletrônico | 4House</title>
 <body class="pag-portao-eletrico">
 <main>
     <img src="img/servicos/portao-eletrico/main/portao-eletrico.png" alt="">
     <div class="container-text-portao-eletrico">
-        <h1>Portão elétrico</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptas excepturi facere necessitatibus iusto rerum laboriosam soluta aliquam maiores eum, voluptatum optio sapiente, asperiores veritatis vitae ullam animi totam suscipit?
-        Optio cupiditate nobis labore, numquam necessitatibus recusandae sed, laboriosam quaerat illo dolore est! Consequuntur, reiciendis laborum libero architecto alias numquam ipsum minus laboriosam cumque? Accusantium aperiam cupiditate iure sit rem?</p>
+        <h1>Portão eletrônico</h1>
+        <p>Considerado bem mais seguro que os portões convencionais, os portões e portas eletrônicas, trazem também um conforto maior em dias de chuva, por exemplo, em que não será necessário descer do carro para entrar em casa.</p>
         <div class="cards-portao-eletrico">
             <div class="cards">
                 <img src="img/servicos/sensor-proximidade/main/seguranca.png" alt="">

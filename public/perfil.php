@@ -1,6 +1,3 @@
-<?php
-  include('protect.php');
-?>
 
 <?php
   //NAV-BAR

@@ -1,5 +1,5 @@
 <?php
-    include_once('protect.php');
+    include_once('protect-adm.php');
     
     include_once('conexao.php');
 
@@ -64,9 +64,7 @@
             <hr>
             <ul>
                 <p>*Acesso exclusivo</p>
-                <a href="dashboard.php"><li class="">Dados atendentes</li></a>
-                <a href="editar-usuarios.php"><li class="">Editar atendentes</li></a>
-                <a href="deletar-usuarios.php"><li class="">Deletar atendentes</li></a>
+                <a href="dados-atendentes.php"><li class="">Dados atendentes</li></a>               
             </ul>    
         </div>
     </div>
@@ -125,7 +123,7 @@
 
         function searchData(){   
 
-            opcaoValor = filtro.options[filtro.selectedIndex].value;
+            const opcaoValor = filtro.options[filtro.selectedIndex].value;
     
             window.location = 'dashboard.php?search='+search.value +'&filtro=' + opcaoValor;
             

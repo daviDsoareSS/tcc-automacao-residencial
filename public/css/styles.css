@@ -66,6 +66,7 @@
 .pag-login .left-login .text-left-login{
     top: 10vw;
     padding: 2vw;
+    min-width: 20vw;
     width: 25vw;
     min-height: 17vw;
     position: absolute;
@@ -101,38 +102,50 @@
     display: flex;
     flex-direction: column;
 }
-
 .container-login .top-login h1{
     font-size: 25px;
     font-weight: bolder;
-    margin-bottom: 1vw;
+    margin-bottom: 2vw;
 }
 .container-login .top-login input{
-
+    border: 1px solid rgba(128, 128, 128, 0.38) !important;
+    border-radius: 5px;
     font-size: 15px;
     background-color: rgb(245, 245, 245);
-    border: none !important;
     margin-top: 0px;
     padding: 20px;
     height: 3vw;
     margin-bottom: 1vw;
 }
 .container-login .top-login .form-group{
-    gap: 1vw;
     width: 100%;
     margin-top: 1vw;
     display: flex;
 }
-.container-login .top-login .form-group label{
-    font-weight: bolder;
+.container-login .top-login .group-tel{
+    gap: 1vw;
+}
+.container-login .top-login label{
+    width: 20%;
+    font-weight: bolder !important;
     font-size: 12px;
 }
 .container-login .top-login .form-group input,.form-control::placeholder{
     font-size: 13px !important;
 }
+.container-login .top-login .form-group #cep,#localidade{
+    margin-right: 2vw;
+}
+.container-login .top-login .form-group #label-bairro{
+    width: 12%;
+}
+.container-login .top-login .form-group #localidade{
+    margin-left: 1.5vw;
+}
 .container-login .top-login .form-group input{
+    border: 1px solid rgba(128, 128, 128, 0.38) !important;
     font-size: 12px;
-    width: 43%;
+    width: 100% !important;
 }
 .container-login .top-login .form-password input{
     width: 100%;
@@ -156,23 +169,12 @@
     width: 22px;
     position: absolute;
 }
-.container-login .top-login .form-group #telUser{
-    width: 100%;
-}
-.container-login .top-login .form-group #bairro{
-    width: 92%;
-}
-.container-login .top-login .form-group #localidade{
-    width: 62%;
-}
-.container-login .top-login .form-group #numero-casa{
-    width: 23%;
-}
-
-.signup .top-login .container-sexo label{
-    font-size: 14px;
-    font-weight: bold;
-    margin-right: 2vw;
+.signup .top-login .container-sexo select{
+    border-radius: 5px;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid rgba(128, 128, 128, 0.38);
+    padding: 5px 15px;
+    margin-bottom: 1.5vw;
 }
 .container-login .top-login small{
     font-size: 14px;
@@ -181,19 +183,15 @@
 }
 .signup .top-login .telValid{
     border: 3px solid rgb(136, 255, 136) !important;
-    border-radius: 10px;
 }
 .signup .top-login .telInvalid{
     border: 3px solid rgb(255, 89, 89) !important;
-    border-radius: 10px;
 }
 .signup .top-login .valid{
     border: 3px solid rgb(136, 255, 136) !important;
-    border-radius: 10px;
 }
 .signup .top-login .invalid{
     border: 3px solid rgb(255, 89, 89) !important;
-    border-radius: 10px;
 }
 .signup .top-login #textValidate{
     margin-top: 0 !important;
@@ -202,6 +200,7 @@
 .container-login .top-login #entrar{
     background-color: #0093ee;
     border: none;
+    border-radius: 5px;
     color: white;
     cursor: pointer;
     justify-content: center;
@@ -270,9 +269,10 @@
     font-size: 15px;
     font-weight: bold;
 }
-.criarConta a,h4{
+
+.criarConta h4{
+    color: #e24b48;
     margin: 0 !important;
-    color: rgb(63, 89, 180,1);
     text-decoration: none;
     font-size: 15px;
     font-style: bolder !important;
@@ -280,7 +280,6 @@
 }
 .container-login hr{
     margin-top: 2vw;
-   
 }
 .entrada-administrador{
     text-align: center;
@@ -311,7 +310,6 @@
     #pag-login{
         overflow-y: auto;
     }
-   
     #pag-login .container-login{
         width: 90%;
         margin: 0 auto;
@@ -331,12 +329,25 @@
         font-size: 15px;
         margin-top: 20px;
     }
+    #pag-login .container-login .form-group{
+        display: block;
+    }
+    .container-login .top-login .form-group #localidade{
+        margin-left: 0vw !important;
+    }
+    #pag-login .container-login .form-group label{
+        display: block;
+    }
+    #pag-login .container-login .form-group input{
+        width: 100% !important;
+    }
+    .signup .top-login .container-sexo select{
+        width: 100%;
+    }
     .logo{
         display: block;
         width: 30vw;
     }
-}
-@media(max-width:1000px){
     #pag-login .container-left{
         display: none;
     }
@@ -351,6 +362,9 @@
         margin-bottom: 5vw;
         font-size: 30px;
     }
+    #pag-login .container-login input{
+        margin-bottom: 2vw;
+    }
     #pag-login .container-login h3{
         font-size: 20px;
     }
@@ -359,8 +373,19 @@
         margin-top: 20px;
     }
     #pag-login .container-login .top-login button{
-        margin-top: 1vw;
-        padding: 20px 30px;
+        margin-top: 2vw;
+        margin-bottom: 6vw;
+        padding: 8px !important;
+    }
+    .container-login .top-login .form-group-password svg{
+        margin-top: 7px !important;
+    }
+    .container-login .top-login .form-group-email svg{
+        margin-top: 7px !important;    
+    }
+    .container-login .top-login .form-group-password img{
+        position: absolute;
+        margin-top: 7px !important;
     }
     #pag-login .container-login .criarConta{
         margin-top: 10vw;

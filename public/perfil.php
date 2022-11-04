@@ -2,7 +2,8 @@
   //NAV-BAR
   include 'includes/nav-bar.php';
 ?>
-
+<!DOCTYPE html>
+<html lang="pt-br">
 <title>Meu perfil | 4House</title>
 </head>
 <body class="pag-perfil">

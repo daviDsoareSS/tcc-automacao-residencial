@@ -3,7 +3,7 @@
     session_start();
   }
 
-  if(!isset($_SESSION['idAdministrador']) && !isset($_SESSION['idAtendente']) ){
-    die("Você precisa estar logado <p><a href=\"login-adm.html\">Acessar página de login</a></p>");
+  if(!isset($_SESSION['nome'])){
+    die("Você precisa estar logado <p><a href=\"login.php\">Acessar página de login</a></p>");
   }
 ?>

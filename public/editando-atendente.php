@@ -1,39 +1,30 @@
 <?php
-    include_once('protect-adm.php');
+    include_once('protect-adm.php'); 
 
     include_once('conexao.php');
-
+    
     if(!empty($_GET['id'])){
 
-        $idUser = $_GET['id'];
+        $idAtendente = $_GET['id'];
        
-        $sqlSelect = "SELECT * FROM users WHERE idUser= $idUser";
-        $sqlSelectEndereco = "SELECT * FROM endereco WHERE idUser= $idUser";
+        $sqlSelect = "SELECT * FROM atendente WHERE idAtendente= $idAtendente";
         $result = $conn->query($sqlSelect);
-        $resultEndereco = $conn->query($sqlSelectEndereco);
         
 
         if($result->num_rows > 0){
-            while ( $user_data = mysqli_fetch_assoc($result) AND $user_data_endereco = mysqli_fetch_assoc($resultEndereco)){
+            while ($user_data = mysqli_fetch_assoc($result)){
                 
-                /*TABELA USERS*/ 
-                $id = $user_data['idUser'];
+                /*TABELA Atendentes*/ 
+                $id = $user_data['idAtendente'];
                 $nome = $user_data['nome'];
-                $email = $user_data['email'];
-                $dataNasc = $user_data['dataNasc'];
-                $sexo = $user_data['sexo'];
-                $telefone1 = $user_data['telefone1'];
-                /*TABELA ENDEREÇOS*/
-                $rua = $user_data_endereco['endereco'];
-                $numero = $user_data_endereco['numero'];
-                $cep = $user_data_endereco['cep'];
-                $bairro = $user_data_endereco['bairro'];
-                $cidade = $user_data_endereco['cidade'];
+                $email = $user_data['email'];               
+                $senha = $user_data['senha'];               
+
             }
            
         }
         else{
-            header("Location: dashboard.php");
+            header("Location: dados-atendentes.php");
         }
     }
 ?>
@@ -57,7 +48,7 @@
         <div class="container-sidebar">
             <ul>
                 <a href="dashboard.php"><img src="img/dashboard/icon/home.png" alt=""><li class="">Interface</li></a>
-                <a href="editar-usuarios.php"><img src="img/dashboard/icon/edit.png" alt=""><li class="selected">Editar usuários</li></a>
+                <a href="editar-usuarios.php"><img src="img/dashboard/icon/edit.png" alt=""><li class="">Editar usuários</li></a>
                 <a href="deletar-usuarios.php"><img src="img/dashboard/icon/apagar.png" alt=""><li class="">Deletar usuários</li></a>
             </ul>    
         </div>
@@ -65,14 +56,14 @@
             <hr>
             <ul>
                 <p>*Acesso exclusivo</p>
-                <a href="dados-atendentes.php"><li class="">Dados atendentes</li></a>
+                <a href="dashboard.php"><li class="selected">Dados atendentes</li></a>            
             </ul>    
         </div>
     </div>
     <main>
-        <form method="post" class="container-editar-usuario" action="atualizar-usuario.php">
+        <form method="post" class="container-editar-usuario" action="atualiza-atendente.php">
             
-            <h1>Editar usuário</h1>
+            <h1>Editar atendente</h1>
             <div class="form-group">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" value="<?php echo $nome?>">
@@ -82,34 +73,10 @@
                 <input type="text" name="email" id="email" value="<?php echo $email?>">
             </div>
             <div class="form-group">
-                <label for="dataNasc">Data de nascimento</label>
-                <input type="date" name="dataNasc" id="dataNasc" value="<?php echo $dataNasc?>">
+                <label for="senha">Senha</label>
+                <input type="text" name="senha" id="senha" value="<?php echo $senha?>">
             </div>
-            <div class="form-group">
-                <label for="sexoUser">Sexo</label>
-                <select name="sexoUser" id="sexoUser" value="<?php echo $sexo?>">
-                    <option value="Masculino" <?php echo $sexo == 'Masculino' ? 'selected' : '' ?>>Masculino</option>
-                    <option value="Feminino" <?php echo $sexo == 'Feminino' ? 'selected' : '' ?>>Feminino</option>
-                    <option value="Prefiro não dizer" <?php echo $sexo == 'Prefiro não dizer' ? 'selected' : '' ?>>Prefiro não dizer</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="telefone1">Telefone</label>
-                <input type="text" name="telefone1" id="telefone1" value="<?php echo $telefone1?>">
-            </div>
-            <div class="form-group">
-                <label for="cep">CEP</label>
-                <input type="text" name="cep" id="cep" value="<?php echo $cep?>">
-                <label for="rua">Rua</label>
-                <input type="text" name="rua" id="logradouro" value="<?php echo $rua?>">
-            </div>
-            <div class="form-group">
-                <label for="bairro">Bairro</label>
-                <input type="text" name="bairro" id="bairro" value="<?php echo $bairro?>">
-                <label for="numeroCasa">Nº</label>
-                <input type="text" name="numero" id="numeroCasa" value="<?php echo $numero?>">
-            </div>
-        
+         
             <div class="form-button">
                 <input type="hidden" name="id" value="<?php echo $id?>">
                 <input type="submit" name="update" id="update" value="Salvar alterações">

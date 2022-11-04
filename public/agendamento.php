@@ -1,6 +1,8 @@
 <?php
+    include_once('protect-adm.php');
+        
     include_once('conexao.php');
-    session_start();
+
     if(!empty($_GET['id'])){
 
         $idUser = $_GET['id'];
@@ -51,13 +53,11 @@
                 <a href="deletar-usuarios.php"><img src="img/dashboard/icon/apagar.png" alt=""><li class="">Deletar usuários</li></a>
             </ul>    
         </div>
-        <div class="container-sidebar-opcoes-admin">
+        <div class="container-sidebar-opcoes-admin" id="opcoes-admin">
             <hr>
             <ul>
                 <p>*Acesso exclusivo</p>
-                <a href="dashboard.php"><li class="">Dados atendentes</li></a>
-                <a href="editar-usuarios.php"><li class="">Editar atendentes</li></a>
-                <a href="deletar-usuarios.php"><li class="">Deletar atendentes</li></a>
+                <a href="dados-atendentes.php"><li class="">Dados atendentes</li></a>
             </ul>    
         </div>
     </div>
@@ -198,5 +198,16 @@
         </form>
     </main>
     <script src="script/js.js" defer></script>
+    <script>
+        const usuario = "<?php echo $_SESSION['usuario']; ?>"
+
+        if(usuario == "Administrador"){
+            
+            document.getElementById('opcoes-admin').style.visibility = "visible";
+
+        }else{
+            document.getElementById('opcoes-admin').style.visibility = "hidden";
+        }
+    </script>
 </body>
 </html>

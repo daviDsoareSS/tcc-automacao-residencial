@@ -130,8 +130,9 @@ header .container-right-header small{
     list-style: none;
 }
 .sidebar .container-sidebar-opcoes-admin ul .selected{
-    color: #09092f;
+    color: #FE7265;
     font-weight: bolder;
+    font-size: 15px;
 }
 .sidebar .container-sidebar-opcoes-admin ul li{
     font-size: 13px;

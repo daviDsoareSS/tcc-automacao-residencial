@@ -33,9 +33,9 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">  
     <!--FIM FAVICON-->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Inter:wght@700&family=Lato&display=swap');
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body id="pag-login" class="pag-signup">
         
@@ -83,15 +83,14 @@
            
             <div class="container-sexo">
                 <p>Sexo<span>*</span></p>
-                    <input style="height: 10px;" class="sexo-user" type="radio" name="sexoUser" id="sexoMasculino" value="Masculino" checked="check">
-                        <label for="sexoMasculino">Masculino</label>
-                    <input style="height: 10px;" class="sexo-user" type="radio" name="sexoUser" id="sexoFeminino" value="Feminino">
-                        <label for="sexoFeminino">Feminino</label>  
-                    <input style="height: 10px;" class="sexo-user" type="radio" name="sexoUser" id="sexoIndefinido" value="sexoIndefinido">
-                        <label for="sexoIndefinido">Prefiro não dizer</label>           
+                    <select name="sexoUser" id="sexoUser">
+                        <option name="sexoUser" value="Masculino">Masculino</option>
+                        <option name="sexoUser" value="Feminino">Feminino</option>
+                        <option name="sexoUser" value="Prefiro não dizer">Prefiro não dizer</option>
+                    </select>          
             </div>
                 <p>Telefone<span>*</span></p>
-                <div class="form-group">
+                <div class="form-group group-tel">
                     <input class="number" style="height: 10px;" type="text" name="tel1" id="telUser" placeholder="Telefone 1">
                     <input style="height: 10px;" type="text" name="telUser" id="tel2" placeholder="Telefone 2 (opcional)">
                 </div>
@@ -104,7 +103,7 @@
                     <input style="height: 10px;" type="text" name="endereco" id="logradouro" placeholder="Rua">
                 </div>
                 <div class="form-group">
-                    <label for="bairro">Bairro</label>
+                    <label for="bairro" id="label-bairro">Bairro</label>
                     <input style="height: 10px;" type="text" name="bairro" id="bairro" placeholder="Bairro">
                 </div>
                 <div class="form-group">

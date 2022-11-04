@@ -3,8 +3,9 @@
   //NAV-BAR
   include 'includes/nav-bar.php';
 ?>
+<!DOCTYPE html>
+<html lang="pt-br">
 <title>Perguntas frequentes | 4House</title>
-
 <body class="pag-faq">
     <main>
         <div class="container-perguntas">

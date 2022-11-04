@@ -2,6 +2,9 @@
   //NAV-BAR
   include 'includes/nav-bar.php';
 ?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
 <title>Portão Eletrônico | 4House</title>
 <body class="pag-portao-eletrico">
 <main>

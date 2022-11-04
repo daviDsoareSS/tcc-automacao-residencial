@@ -841,9 +841,10 @@ footer{
 }
 .pag-login-admin .container-login-admin .main-login button{
     cursor: pointer;
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: bolder;
-    background-color: #91b3fa;
+    background-color: #0093ee;
+    border: none;
     border-radius: 7px;
     margin-top: 10px;
     padding: 5px 20px;
@@ -916,9 +917,10 @@ footer{
 }
 .pag-login-atendente .container-login-admin .main-login button{
     cursor: pointer;
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: bolder;
-    background-color: #58bffe;
+    background-color: #0093ee;
+    border: none;
     border-radius: 7px;
     margin-top: 10px;
     padding: 5px 20px;
@@ -1214,6 +1216,47 @@ footer{
         width: 15vw;
         height: 15vw;
         margin: 2vw;
+    }
+    .pag-login-admin #voltar{
+        margin-top: 20px;
+        left: 0 !important;
+    }
+    .pag-login-atendente #voltar{
+        margin-top: 20px;
+        left: 0 !important;
+    }
+    .pag-login-admin{
+        margin: 10vw 0vw 0vw 0vw;
+    }
+    .pag-login-admin .container-login-admin .top-login small{
+        font-size: 18px;
+        margin-bottom: 5vw;
+    }  
+    .pag-login-admin .container-login-admin .main-login button{
+        padding: 7px;
+    }
+    .pag-login-admin .container-login-admin .footer-login{
+        margin-top: 4vw;
+    }
+    .pag-login-admin .container-login-admin .footer-login a{
+        font-size: 14px;
+    }   
+    /* PAGINA LOGIN ATENDENTE */
+    .pag-login-atendente{
+        margin: 10vw 0vw 0vw 0vw;
+    }
+    .pag-login-atendente .container-login-admin .top-login small{
+        font-size: 18px;
+        margin-bottom: 5vw;
+    }  
+    .pag-login-atendente .container-login-admin .main-login button{
+        padding: 7px;
+    }
+    .pag-login-atendente .container-login-admin .footer-login{
+        margin-top: 4vw;
+    }
+    .pag-login-atendente .container-login-admin .footer-login a{
+        font-size: 14px;
     }
     footer{
         text-align: center;       

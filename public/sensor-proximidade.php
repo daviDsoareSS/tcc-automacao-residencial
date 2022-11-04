@@ -2,6 +2,8 @@
   //NAV-BAR
   include 'includes/nav-bar.php';
 ?>
+<!DOCTYPE html>
+<html lang="pt-br">
 <title>Sensor de proximidade | 4House</title>
 <body class="pag-sensor-proximidade">
 <main>

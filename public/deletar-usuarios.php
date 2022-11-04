@@ -1,8 +1,8 @@
 <?php
-
+    include_once('protect-adm.php');
+    
     include_once('conexao.php');
 
-    session_start();
 
     if(empty($_GET['filtro'])){
         $filtro = "DESC";
@@ -29,7 +29,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | 4House</title>
+    <title>Deletar Usuários | 4House</title>
     <link rel="stylesheet" href="css/style-dashboard.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,9 +69,7 @@
             <hr>
             <ul>
                 <p>*Acesso exclusivo</p>
-                <a href="dashboard.php"><li class="">Dados atendentes</li></a>
-                <a href="editar-usuarios.php"><li class="">Editar atendentes</li></a>
-                <a href="deletar-usuarios.php"><li class="">Deletar atendentes</li></a>
+                <a href="dados-atendentes.php"><li class="">Dados atendentes</li></a>          
             </ul>    
         </div>
     </div>
@@ -154,7 +152,7 @@
 
         function searchData(){   
 
-            opcaoValor = filtro.options[filtro.selectedIndex].value;
+            const opcaoValor = filtro.options[filtro.selectedIndex].value;
     
             window.location = 'deletar-usuarios.php?search='+search.value +'&filtro=' + opcaoValor;
             

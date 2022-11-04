@@ -1,6 +1,6 @@
 <?php
     include_once('conexao.php');
-    session_start();
+    
     if(!empty($_GET['id'])){
 
         $idUser = $_GET['id'];

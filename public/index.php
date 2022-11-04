@@ -3,6 +3,8 @@
   //NAV-BAR
   include 'includes/nav-bar.php';
 ?>
+<!DOCTYPE html>
+<html lang="pt-br">
 <title>Página inicial | 4House</title>
 <body>
 <!-- <div class="modal-container mostrar" id="modal-pergunta">

@@ -2,12 +2,13 @@
   include('protect.php');
   include_once('conexao.php');
 ?>
-
 <?php
   //NAV-BAR
   include 'includes/nav-bar.php';
 ?>
 
+<!DOCTYPE html>
+<html lang="pt-br">
 <title>Serviços contratados | 4House</title>
 </head>
 <body class="pag-perfil servicos-contratados">

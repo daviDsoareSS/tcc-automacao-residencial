@@ -34,7 +34,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
-<body>
+<body class="pag-dados-atendentes">
 <!-- início do preloader -->
   <div id="preloader">
     <div class="inner">
@@ -78,6 +78,7 @@
             </select>    
         </div>
         <div class="container-main">
+            <h2 id="text-atendentes">Atendentes 4House</h2>
             <table border="1">
                 <thead>
                 <tr>

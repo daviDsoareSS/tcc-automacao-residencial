@@ -10,7 +10,7 @@
         $email = $_POST['email'];
         $tel1 = $_POST['telefone1'];
         $cep = $_POST['cep'];
-        $rua = $_POST['endereco'];
+        $rua = $_POST['rua'];
         $bairro = $_POST['bairro'];
         $cidade = $_POST['cidade'];
         $numero = $_POST['numero'];

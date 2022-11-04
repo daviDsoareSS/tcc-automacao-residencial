@@ -347,6 +347,12 @@ main .agenda{
     border: 2px solid #3084dd;
     background-color: #3798ff;
 }
+.pag-dados-atendentes #text-atendentes{
+    border-left: 5px solid #416dff;
+    padding-left: 8px;
+    margin: 1.5vw;
+    font-weight: bolder;
+}
 @media(max-width:1000px){
     body{
         background-color: #F4F4F4;
@@ -483,5 +489,8 @@ main .agenda{
     .pag-editando-usuario .container-editar-usuario .form-button input{
         margin-top: 2vw;
         margin-bottom: 10vw;
+    }
+    .pag-dados-atendentes #text-atendentes{
+        margin: 3vw;       
     }
 }

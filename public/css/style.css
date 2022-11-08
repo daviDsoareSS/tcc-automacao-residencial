@@ -433,7 +433,10 @@ footer{
     margin-top: 4vw;
     grid-template-columns: repeat(2, 1fr);
 }
-
+.pag-perfil .card ul li{
+    padding: 1vw;
+    border: none !important;
+}
 .pag-perfil .card ul a{
     color: black;
     text-decoration: none;
@@ -466,18 +469,51 @@ footer{
 .pag-perfil .informacoes-user{
     position: relative;
     color: #061a27;
-    padding-left: 0;
-    width: 35rem;
+    width: 50rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
     background-color: white;
     border: 2px solid gainsboro;
-    margin-right: 20vw;
+    margin-right: 10vw;
     padding: 2vw;
     border-radius: 5px;
-    white-space: nowrap;
+   
+}
+.pag-perfil .informacoes-user .top-informacoes{
+    display: flex;
+}
+.pag-perfil .informacoes-user .top-informacoes .text-top{
+    align-self: center; 
+}
+.pag-perfil .informacoes-user .top-informacoes img{
+    width: 150px;
+    clip-path: circle();
+    object-fit: cover;
+}
+.pag-perfil .informacoes-user .top-informacoes h3{
+    font-weight: bolder;
+    font-size: 30px;
+}
+.pag-perfil .informacoes-user .top-informacoes small{
+    display: block !important;
+    font-size: 15px;
+
+}
+.pag-perfil .informacoes-user .main-informacoes{
+    margin-left: 4vw;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.pag-perfil .informacoes-user .main-informacoes li{
+    text-align: center;
+    display: block;
+    
+}
+.pag-perfil .informacoes-user .main-informacoes span{
+    display: block;
+    text-align: right;
+
 }
 .pag-perfil .container-dados-pessoais h2{
     border-left: 5px solid #416dff;
@@ -506,10 +542,6 @@ footer{
     list-style: none;
 }
 
-.pag-perfil .container-dados-pessoais span{
-    color: black;
-    float: right;
-}
 .pag-perfil .container-dados-pessoais .status-servico{
     top: 0;
     right: 0;

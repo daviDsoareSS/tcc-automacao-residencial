@@ -8,8 +8,8 @@
 <title>Meu perfil | 4House</title>
 </head>
 <body class="pag-perfil">
-    <main>
-        <div class="card" style="width: 18rem; height: 10.6rem;">
+    <main class="session-perfil">
+        <div class="card" style="width: 18rem; height: 100%; min-heigh: 10.8rem;">
             <div class="card-header">
                 Meus dados
             </div>
@@ -22,8 +22,13 @@
         <div class="container-dados-pessoais informacoes-user">
             <h2><span></span>Dados pessoais</h2>
             <ul>
-                <li>Email:<span class="dados-user"><?php echo($_SESSION['email']);?></span></li>
-                <li>Nome completo:<span class="dados-user"><?php echo($_SESSION['nome']);?></span></li>
+                <div class="top-informacoes">
+                    <img src="img/figure/user1.png" alt="">
+                    <div class="text-top">
+                        <h3 class="dados-user"><?php echo($_SESSION['nome']);?></h3>
+                        <small class="dados-user"><?php echo($_SESSION['email']);?></small>
+                    </div>
+                </div>
                 <!--Função para calcular idade do usuário-->
                 <?php
                  //FUNÇÃO CALCULAR IDADE DO USUARIO
@@ -32,9 +37,11 @@
                   $resultado = $data->diff(new DateTime( date('Y-m-d')));
                  //FIM FUNÇÃO
                 ?>
-                <li>Idade:<span class="dados-user"><?php echo $resultado->format( '%Y anos' );?></span></li>
-                <li>Sexo:<span class="dados-user"><?php echo($_SESSION['sexoUser']);?></span></li>
-                <li>Cidade:<span class="dados-user"><?php echo($_SESSION['cidade']);?></span></li>
+                <div class="main-informacoes">
+                    <li>Idade<span class="dados-user"><?php echo $resultado->format( '%Y anos' );?></span></li>
+                    <li>Sexo<span class="dados-user"><?php echo($_SESSION['sexoUser']);?></span></li>
+                    <li>Cidade<span class="dados-user"><?php echo($_SESSION['cidade']);?></span></li>
+                </div>
                 <li>Endereço:<span class="dados-user endereco"><?php echo($_SESSION['endereco']);?>,<?php echo($_SESSION['bairro']);?> Nº<?php echo($_SESSION['numero']);?> - <?php echo($_SESSION['cep']);?></span></li>
                 <li></li>
                 <li></li>

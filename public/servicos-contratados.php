@@ -1,5 +1,4 @@
 <?php
-  include('protect.php');
   include_once('conexao.php');
 ?>
 <?php

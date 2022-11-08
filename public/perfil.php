@@ -1,6 +1,7 @@
 <?php
   //NAV-BAR
   include 'includes/nav-bar.php';
+  
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

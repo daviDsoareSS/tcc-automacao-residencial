@@ -1,6 +1,6 @@
 <?php
     include_once('conexao.php');
-
+    session_start();
     $idUser = $_SESSION['idUser'];
 
     $sqlSelect = "SELECT * FROM users WHERE idUser= $idUser";

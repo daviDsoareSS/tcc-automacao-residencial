@@ -480,6 +480,16 @@ footer{
     border-radius: 5px;
    
 }
+.pag-perfil .informacoes-user ul li{
+    font-size: 18px !important;
+    font-weight: bolder !important;
+    color: #061a27 !important;
+}
+.pag-perfil .informacoes-user span{
+    font-size: 14px !important;
+
+    font-weight: normal;
+}
 .pag-perfil .informacoes-user .top-informacoes{
     display: flex;
 }
@@ -501,20 +511,20 @@ footer{
 
 }
 .pag-perfil .informacoes-user .main-informacoes{
-    margin-left: 4vw;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-}
-.pag-perfil .informacoes-user .main-informacoes li{
-    text-align: center;
-    display: block;
-    
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 1.5vw;
+    margin-top: 1vw;
 }
 .pag-perfil .informacoes-user .main-informacoes span{
+    font-weight: normal;
     display: block;
-    text-align: right;
-
+    margin-left: 0 !important;
 }
+.pag-perfil .informacoes-user .endereco{
+    margin-left: 1.5vw;
+}
+
 .pag-perfil .container-dados-pessoais h2{
     border-left: 5px solid #416dff;
     padding-left: 8px;
@@ -547,6 +557,9 @@ footer{
     right: 0;
     color: black;
     font-weight: 500;
+}
+.pag-perfil .container-dados-pessoais .button-card{
+    float: right;
 }
 .pag-perfil .container-dados-pessoais .button-card button{
     border: none;

@@ -39,12 +39,11 @@
                 ?>
                 <div class="main-informacoes">
                     <li>Idade<span class="dados-user"><?php echo $resultado->format( '%Y anos' );?></span></li>
+                    <li>Telefone<span class="dados-user"><?php echo($_SESSION['telefone1']);?></span></li>
                     <li>Sexo<span class="dados-user"><?php echo($_SESSION['sexoUser']);?></span></li>
-                    <li>Cidade<span class="dados-user"><?php echo($_SESSION['cidade']);?></span></li>
+                    <li>Cidade<span class="dados-user"><?php echo($_SESSION['cidade']);?></span></li>                    
                 </div>
-                <li>Endereço:<span class="dados-user endereco"><?php echo($_SESSION['endereco']);?>,<?php echo($_SESSION['bairro']);?> Nº<?php echo($_SESSION['numero']);?> - <?php echo($_SESSION['cep']);?></span></li>
-                <li></li>
-                <li></li>
+                    <li class="endereco">Endereço -<span class="dados-user"><?php echo($_SESSION['endereco']);?>,<?php echo($_SESSION['bairro']);?> Nº<?php echo($_SESSION['numero']);?> - <?php echo($_SESSION['cep']);?></span></li>   
                 <div class="button-card">
                     <button class="editar-usuario" type="submit">Editar</button>
                     <button class="deletar-usuario" type="submit">Excluir conta</button>

@@ -28,6 +28,6 @@
         echo "Não foi possível realizar alterações, tente novamente.";
     }
     
-    header("Location: editar-usuarios.php");
+    header("Location: perfil.php");
 
 ?>

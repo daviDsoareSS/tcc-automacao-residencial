@@ -253,8 +253,8 @@ article .container-article .container-article-text{
 }
 article .container-article .container-article-text small{
     text-align: center;
-    color: #fe6f6298;
-    font-weight: lighter;
+    color: #fe6f62;
+    font-weight: bolder;
 }
 article .container-article .container-article-text h3{
     font-weight: bolder;
@@ -406,6 +406,9 @@ footer{
     background: rgb(63, 89, 180,1);
     background: linear-gradient(-90deg,  rgb(19, 15, 74) 0%, rgb(75, 103, 201) 100%);
 }
+footer a{
+    text-decoration: none !important;
+}
 .text-principal{
     font-size: 25px !important;
     color: #f36a5e;
@@ -492,14 +495,14 @@ footer{
 }
 .pag-perfil .informacoes-user .top-informacoes{
     display: flex;
+    margin-left: 0.9vw;
 }
 .pag-perfil .informacoes-user .top-informacoes .text-top{
     align-self: center; 
 }
 .pag-perfil .informacoes-user .top-informacoes img{
-    width: 150px;
-    clip-path: circle();
-    object-fit: cover;
+    width: 120px;
+    
 }
 .pag-perfil .informacoes-user .top-informacoes h3{
     font-weight: bolder;
@@ -524,7 +527,32 @@ footer{
 .pag-perfil .informacoes-user .endereco{
     margin-left: 1.5vw;
 }
-
+.pag-perfil .container-dados-pessoais .button-card{
+    float: right;
+}
+.pag-perfil .container-dados-pessoais .button-card button{
+    margin-left: 0.5vw;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-weight: bolder;
+    padding: 7px 15px;
+}
+.pag-perfil .container-dados-pessoais .button-card button:hover{
+    transition: 0.8s;
+}
+.pag-perfil .container-dados-pessoais .button-card .editar-usuario{
+    background-color: #0093ee;
+}
+.pag-perfil .container-dados-pessoais .button-card .editar-usuario:hover{
+    background-color: #014976;
+}
+.pag-perfil .container-dados-pessoais .button-card .deletar-usuario:hover{
+    background-color: red;
+}
+.pag-perfil .container-dados-pessoais .button-card .deletar-usuario{
+    background-color: rgb(221, 48, 48);
+}
 .pag-perfil .container-dados-pessoais h2{
     border-left: 5px solid #416dff;
     padding-left: 8px;
@@ -557,19 +585,6 @@ footer{
     right: 0;
     color: black;
     font-weight: 500;
-}
-.pag-perfil .container-dados-pessoais .button-card{
-    float: right;
-}
-.pag-perfil .container-dados-pessoais .button-card button{
-    border: none;
-    padding: 5px 15px;
-}
-.pag-perfil .container-dados-pessoais .button-card .editar-usuario{
-    background-color: #0093ee;
-}
-.pag-perfil .container-dados-pessoais .button-card .deletar-usuario{
-    background-color: red;
 }
 .pag-perfil .container-dados-pessoais .dados-user{
     margin-left: 1vw;

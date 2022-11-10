@@ -45,12 +45,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editando usuário | 4House</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style-dashboard.css">
 </head>
-<body class="pag-editando-usuario">
+<body class="pag-editando-usuario pag-edit-me">
+    <a href="perfil.php"><img src="img/tela-login-admin/seta.png" alt="Voltar"></a>
     <main>
-        <form method="post" class="container-editar-usuario" action="atualiza-me.php">
-            
+        <form method="post" class="container-editar-usuario" action="atualiza-me.php">         
             <h1>Editar usuário</h1>
             <div class="form-group">
                 <label for="nome">Nome</label>

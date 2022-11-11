@@ -591,6 +591,66 @@ footer a{
     padding: 2px;
     border-radius: 5px;
 }
+/* PAGINA EDIT-ME */
+.pag-editando-usuario{
+    background-position: center center;
+    background-size: contain;
+    justify-content: center;
+    padding: 3vw !important;
+    display: flex;
+}
+.pag-editando-usuario .voltar-desktop{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 40px;
+    margin: 2vw;
+}
+.pag-editando-usuario main .voltar{
+    display: none;
+}
+.pag-editando-usuario .container-editar-usuario{
+    width: 30rem;
+}
+.pag-editando-usuario .container-editar-usuario h1{
+    border-left: 5px solid #416dff;
+    padding-left: 5px;
+    margin-bottom: 1.5vw;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.pag-editando-usuario .container-editar-usuario .form-group label{
+    font-weight: bolder;
+}
+.pag-editando-usuario .container-editar-usuario .form-group select{
+    font-weight: bold;
+    color: rgb(67, 67, 67);
+    border-radius: 3px;
+    border: 1px solid #05051d !important;
+    padding: 8px;
+    margin-bottom: 0.5vw;
+    width: 100%;
+}
+.pag-editando-usuario .container-editar-usuario .form-group input{
+    font-weight: bold;
+    color: rgb(67, 67, 67);
+    border: 1px solid #05051d !important;
+    border-radius: 3px;
+    border: none;
+    padding: 8px;
+    display: block;
+    margin-bottom: 0.5vw;
+    width: 100%;
+}
+.pag-editando-usuario .container-editar-usuario .form-button input{
+    cursor: pointer;
+    padding: 5px 30px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid #3084dd;
+    background-color: #3798ff;
+}
 .pag-faq h4{
     margin-bottom: 1vw;
     padding: 0;
@@ -1145,20 +1205,51 @@ footer a{
     
     /*PÁGINA PERFIL*/
     .pag-perfil main{
-        margin-left: 5vw;
+        gap: 2vw;
+        margin: 3vw;
         display: grid;
         margin-top: 4vw;
         grid-template-columns: repeat(1, 1fr);
     }
-    .pag-perfil .card-perfil{
-        white-space: nowrap;
-        padding: 2vw;
-        height: 90%;
-        width: 50% !important;
-        margin-bottom: 10vw;
+    .pag-perfil main .card{
+        width: 100% !important;
+        justify-content: center;
     }
-    .pag-perfil .card-perfil ul{
-        padding: 1vw;
+    .pag-perfil main .card .list-group{
+        padding: 5vw;
+
+    }
+    .pag-perfil main .card .list-group a{
+        margin-bottom: 2vw;
+    }
+    .pag-perfil .session-perfil .informacoes-user{
+        text-align: center;
+        padding: 5vw;
+        width: 100%;
+    }
+    .pag-perfil .session-perfil .informacoes-user h2{
+        text-align: left;
+        font-size: 16px;
+    }
+    .pag-perfil .session-perfil .informacoes-user ul{
+        padding: 0 !important;
+    }
+    .pag-perfil .session-perfil .informacoes-user .top-informacoes{
+        margin-top: 3vw;
+        display: block;
+    }
+    .pag-perfil .session-perfil .informacoes-user .top-informacoes img{
+        width: 100px;
+    }
+    .pag-perfil .session-perfil .informacoes-user .top-informacoes h3{
+        margin: 0;
+        font-size: 18px;
+    }
+    .pag-perfil .session-perfil .informacoes-user .main-informacoes{
+        margin-top: 3vw;
+    }
+    .pag-perfil .session-perfil .informacoes-user .button-card{
+        margin-top: 6vw;
     }
     .pag-perfil .container-dados-pessoais .endereco{
         font-size: 14px;
@@ -1168,6 +1259,40 @@ footer a{
         word-break: break-all;
         display: block;
     }
+    /* PAGINA EDIT-ME */
+    .pag-editando-usuario{
+        background-position: center;
+        background-size: contain !important;
+    }
+    .pag-editando-usuario .voltar-desktop{
+        margin-bottom: 5vw;
+        margin: 4vw;
+    }
+    .pag-editando-usuario main{
+        margin-top: 15vw;
+        display: block;
+        width: 100%;
+        padding: 3vw;
+    }
+    .pag-editando-usuario .form-group input{
+        margin-bottom: 3.3vw !important;
+        width: 70% !important;
+    }
+    .pag-editando-usuario .form-group select{
+        margin-bottom: 3.3vw !important;
+        width: 70% !important;
+        display: block;
+    }
+    .pag-editando-usuario .form-button input{
+        width: 70% !important;
+        margin-top: 4vw;
+
+    }
+    /* PÁGINA SERVIÇOS CONTRATADOS */
+    .servicos-contratados .card{
+        width: 10% !important;
+    }
+    
     /*PÁGINA FAQ PERGUNTAS*/
     .pag-faq main{
         margin: 0 10vw;

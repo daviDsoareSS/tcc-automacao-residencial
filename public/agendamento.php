@@ -4,19 +4,23 @@
     include_once('conexao.php');
 
     if(!empty($_GET['id'])){
-
+        mysqli_set_charset($conn,'utf8');
         $idUser = $_GET['id'];
         $_SESSION['idUser'] = $idUser;
+
         $sqlSelect = "SELECT * FROM users WHERE idUser= $idUser";
-        $sqlSelectEndereco = "SELECT * FROM endereco WHERE idUser = $idUser";
         $result = $conn->query($sqlSelect);
-        mysqli_set_charset($conn,'utf8');
+        
+        $sqlSelectEndereco = "SELECT * FROM endereco WHERE idUser = $idUser";
         $resultEndereco = $conn->query($sqlSelectEndereco);
+
+        $sqlAgendamento = "SELECT * FROM agendamento";
+        $resultAgendamento = $conn->query($sqlAgendamento);
 
         if($result->num_rows > 0){
             $user_data = mysqli_fetch_assoc($result);
             $user_data_endereco = mysqli_fetch_assoc($resultEndereco);
-            
+            $user_data_agendamento = mysqli_fetch_assoc($resultAgendamento);
         }
         else{
             header("Location: dashboard.php");
@@ -173,8 +177,12 @@
                         </div>
                 </div>
                 <div class="form-group">
+                     <?php
+                     
+                        echo "Datas Disponíveis:". $user_data_agendamento['dataAgendamento']. "<br>";
+                    ?>
                     <label for="data-agendamento">Data do agendamento</label>
-                    <input type="date" min="2022-10-15" max="2024-01-01" name="dataAgendamento" required>
+                    <input type="date" min='<?php echo date("Y-m-d");?>' max="2024-01-01" name="dataAgendamento" required>
                     <br>
                     <label for="horario-agendamento">Horário do agendamento</label>
                     <input type="time" name="horaAgendamento" min="09:00" max="18:00" required>

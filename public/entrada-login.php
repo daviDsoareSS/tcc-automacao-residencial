@@ -29,18 +29,8 @@
                 }
                 
                 $_SESSION['idUser'] = $user['idUser'];
-                $_SESSION['nome'] = $user['nome'];
-                $_SESSION['email'] = $user['email'];
                 $_SESSION['dataNasc'] = $user['dataNasc'];
-                $_SESSION['sexoUser'] = $user['sexo'];
-                $_SESSION['telefone1'] = $user['telefone1'];
-
-                $_SESSION['endereco'] = $user['endereco'];
-                $_SESSION['numero'] = $user['numero'];
-                $_SESSION['cep'] = $user['cep'];
-                $_SESSION['bairro'] = $user['bairro'];
-                $_SESSION['cidade'] = $user['cidade'];
-
+    
                 date_default_timezone_set('America/Sao_Paulo');
                 $dataUltimoAcesso =  date('Y/m/d H:i');
 

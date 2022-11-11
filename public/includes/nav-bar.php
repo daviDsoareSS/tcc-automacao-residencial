@@ -164,7 +164,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Meu perfil</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="perfil.php"><?php if(!isset($_SESSION['nome'])){echo "<a class='dropdown-item' href='login.php'>Login</a>";}else echo $nome."(Meus dados)";?></a>
+                <a class="dropdown-item" href="perfil.php"><?php if(!isset($_SESSION['idUser'])){echo "<a class='dropdown-item' href='login.php'>Login</a>";}else echo $nome."(Meus dados)";?></a>
                 <a class="dropdown-item btn-primary" data-toggle="modal" data-target="#exampleModal">Trocar de conta</a>
                 <a class="dropdown-item" href="logout.php">Sair</a>
               </div>

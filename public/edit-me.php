@@ -48,10 +48,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style-dashboard.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="pag-editando-usuario pag-edit-me">
-    <a href="perfil.php"><img src="img/tela-login-admin/seta.png" alt="Voltar"></a>
+    <a href="perfil.php"><img class="voltar-desktop" src="img/tela-login-admin/seta-editar.png" alt="Voltar"></a>
     <main>
         <form method="post" class="container-editar-usuario" action="atualiza-me.php">         
             <h1>Editar usuário</h1>

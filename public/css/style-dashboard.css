@@ -517,4 +517,15 @@ main .agenda{
     .pag-dados-atendentes #text-atendentes{
         margin: 3vw;       
     }
+    /* PÁGINA EDIT-ME */
+    .pag-edit-me{ 
+        justify-content: left;
+    }
+    .pag-edit-me main{
+        width: 100% !important;
+    }
+    .pag-edit-me form {
+        width: 100% !important;
+    }
+    
 }

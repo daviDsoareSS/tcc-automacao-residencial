@@ -5,12 +5,12 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<title>Sensor de proximidade | 4House</title>
+<title>Ambientação | 4House</title>
 <body class="servicos">
     <main>
     <div class="container-text">
-        <h1>Sensor de<br>Proximidade</h1>
-        <p>Considerado bem mais seguro que os portões convencionais, os portões e portas eletrônicas, trazem também um conforto maior em dias de chuva, por exemplo, em que não será necessário descer do carro para entrar em casa.</p>
+        <h1>Ambientação</h1>
+        <p>Pode programar a iluminação da sua casa com apenas um toque, controlar a intensidade das luzes, fazer uma sincronização com cores, e como economia de energia pode ser programado horários do dia para elas serem apagadas totalmente.</p>
         <div class="cards-servicos">
             <div class="cards">
                 <p>Nivel de segurança</p>

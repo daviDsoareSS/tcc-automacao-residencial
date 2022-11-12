@@ -7,7 +7,7 @@
 <html lang="pt-br">
 <title>Ambientação | 4House</title>
 <body class="servicos">
-    <main>
+    <main class="ambientacao">
     <div class="container-text">
         <h1>Ambientação</h1>
         <p>Pode programar a iluminação da sua casa com apenas um toque, controlar a intensidade das luzes, fazer uma sincronização com cores, e como economia de energia pode ser programado horários do dia para elas serem apagadas totalmente.</p>

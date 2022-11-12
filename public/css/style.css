@@ -746,12 +746,52 @@ footer a{
 
 /*PAGINAS SERVIÇOS*/
 .servicos main{
+    padding: 3vw;
     background-image: url(../img/servicos/portao-eletrico/portao.png);
     background-position: right !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-image: opacity;
 }
+.servicos .ambientacao{
+    background-image: url(../img/servicos/ambientacao/iluminacao.png);
+}
+.servicos .sensor-de-proximidade{
+    background-image: url(../img/servicos/sensor-proximidade/sensor-de-proximidade.png);
+    background-position: right !important;
+    background-repeat: no-repeat !important;
+    background-size: 70% !important;
+    background-image: opacity;
+}
+.servicos .sensor-de-fumaca{
+    background-image: url(../img/servicos/sensor-de-fumaca/sensor-de-fumaca.png);
+}
+.servicos .controle-de-tv{
+    background-image: url(../img/servicos/controle-de-tv/controle-de-tv.png);
+}
+.servicos .som{
+    background-image: url(../img/servicos/som/som.png);
+}
+.servicos .cortinas{
+    background-image: url(../img/servicos/cortinas/cortinas.png);
+    background-size: 70% !important;
+}
+.servicos .ar-condicionado{
+    background-image: url(../img/servicos/ar-condicionado/ar-condicionado.png);
+}
+.servicos .controle-de-cameras{
+    background-image: url(../img/servicos/controle-de-cameras/controle-de-cameras.png);
+}
+.servicos .alarmes{
+    background-image: url(../img/servicos/alarmes/alarmes.png);
+}
+.servicos .fechadura-eletronica{
+    background-image: url(../img/servicos/fechadura-eletronica/fechadura.png);
+}
+.servicos .audio-video{
+    background-image: url(../img/servicos/audio-video/audio-video.png);
+}
+
 .servicos .container-text{
     z-index: 9999;
 }
@@ -763,7 +803,7 @@ footer a{
 .servicos .container-text p{
     width: 40%;
     text-align: justify;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: lighter;
     color: rgb(32, 32, 32);
 }

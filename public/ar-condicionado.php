@@ -5,12 +5,12 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<title>Sensor de proximidade | 4House</title>
+<title>Ar condicionado | 4House</title>
 <body class="servicos">
-    <main class="sensor-de-proximidade">
+    <main class="ar-condicionado">
     <div class="container-text">
-        <h1>Sensor de<br>Proximidade</h1>
-        <p>Para trazer mais agilidade junto a segurança ao chegar, as cancelas de entrada do condomínio são programadas com o sensor de proximidade e as luzes dos postes também, ao identificar o carro previamente cadastrado ela já é aberta e as luzes acendem para sua passagem, sem precisar aguardar o porteiro te reconhecer e abrir para você chegar em casa.</p>
+        <h1>Ar<br>Condicionado</h1>
+        <p>Para mais conforto você define em qual temperatura deseja cada cômodo ou pode programar a temperatura do ar de acordo com a temperatura do ambiente, por exemplo se estiver um dia muito quente ele já é programado para estar com o ar condicionado mais fresco.</p>
         <div class="cards-servicos">
             <div class="cards">
                 <p>Nivel de segurança</p>

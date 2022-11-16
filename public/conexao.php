@@ -1,9 +1,9 @@
 <?php
 
-$servername = "us-cdbr-east-06.cleardb.net";
-$username = "b503ee8da3dc11";
-$password = "8aea5597";
-$database = "heroku_acd6119eb0eb682";
+$servername = "fourhouse-server-flexible.mysql.database.azure.com";
+$username = "CloudSA8cf60b08";
+$password = "David12304$";
+$database = "fourhouse-db";
 
 $conn = mysqli_connect($servername, $username, $password, $database) or die("Falha ao conectar ao banco de dados: ".$conn->error) ;
 mysqli_set_charset($conn,'utf8');

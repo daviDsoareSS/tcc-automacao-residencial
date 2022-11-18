@@ -1,5 +1,6 @@
 #AZURE MySQL Connect
 
+database= fourhouse_db
 hostname= fourhouse-db.ceplxgrj0xpi.us-east-1.rds.amazonaws.com 
 username= daviDsoareSS
 password= David12304$ 

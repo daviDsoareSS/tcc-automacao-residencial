@@ -150,14 +150,18 @@ nav .nav-item a:hover{
     justify-content: center;
     align-items: center;
 }
+.container-modal-services.fechar{
+    display: none;
+}
 .container-modal-services span{
+    cursor: pointer;
     margin: 2vw;
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 20px;
-    font-weight: bolder;
-    color: black;
+}
+.container-modal-services span svg{
+    width: 30px;
 }
 .modal-services{
     position: relative;

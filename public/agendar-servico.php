@@ -1,18 +1,18 @@
 <?php
     include_once('conexao.php');
-
+    session_start();
     $idUser = $_SESSION['idUser'];
 
     $sqlSelect = "SELECT * FROM users WHERE idUser= $idUser";
-    $sqlSelectEndereco = "SELECT * FROM endereco WHERE idUser= $idUser";
     $result = $conn->query($sqlSelect);
+    $sqlSelectEndereco = "SELECT * FROM endereco WHERE idUser= $idUser";
     $resultEndereco = $conn->query($sqlSelectEndereco);
-    
+  
 
     if($result->num_rows > 0){
         $user_data = mysqli_fetch_assoc($result);
         $user_data_endereco = mysqli_fetch_assoc($resultEndereco);
-        
+      
     }
     else{
         header("Location: dashboard.php");
@@ -56,7 +56,8 @@
         $statusServico = "Pendente";
 
         $sql = "INSERT INTO agendamento VALUES (DEFAULT, '$dataAgendamento', '$horaAgendamento', '$statusServico', '$idUser', '$idEndereco', '1', '$idServico')";
-
+        
+        
         $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
 
         $_SESSION['servico_agendado'] = "<p style='color:green';>Serviço agendado com sucesso.</p>";
@@ -86,7 +87,6 @@
         $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);  
         
         $_SESSION['servico_agendado'] = "<p style='color:green';>Serviço agendando com dasdadsucesso.</p>";
-
         
 
     }else{

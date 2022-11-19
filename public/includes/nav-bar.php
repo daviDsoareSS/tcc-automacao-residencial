@@ -1,5 +1,35 @@
 <?php
   include_once('conexao.php');
+  session_start();
+  $idUser = ($_SESSION['idUser']);
+
+  $sqlSelect = "SELECT * FROM users WHERE idUser= $idUser";
+        $sqlSelectEndereco = "SELECT * FROM endereco WHERE idUser= $idUser";
+        $result = $conn->query($sqlSelect);
+        $resultEndereco = $conn->query($sqlSelectEndereco);
+
+        if($result->num_rows > 0){
+            while ( $user_data = mysqli_fetch_assoc($result) AND $user_data_endereco = mysqli_fetch_assoc($resultEndereco)){
+                
+                /*TABELA USERS*/ 
+                $id = $user_data['idUser'];
+                $nome = $user_data['nome'];
+                $email = $user_data['email'];
+                $dataNasc = $user_data['dataNasc'];
+                $sexo = $user_data['sexo'];
+                $telefone1 = $user_data['telefone1'];
+                /*TABELA ENDEREÇOS*/
+                $rua = $user_data_endereco['endereco'];
+                $numero = $user_data_endereco['numero'];
+                $cep = $user_data_endereco['cep'];
+                $bairro = $user_data_endereco['bairro'];
+                $cidade = $user_data_endereco['cidade'];
+            }
+           
+        }
+        else{
+            header("Location: index.php");
+        }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -134,7 +164,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Meu perfil</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="perfil.php"><?php if(!isset($_SESSION['nome'])){echo "<a class='dropdown-item' href='login.php'>Login</a>";}else echo($_SESSION['nome'])."(Meus dados)";?></a>
+                <a class="dropdown-item" href="perfil.php"><?php if(!isset($_SESSION['idUser'])){echo "<a class='dropdown-item' href='login.php'>Login</a>";}else echo $nome."(Meus dados)";?></a>
                 <a class="dropdown-item btn-primary" data-toggle="modal" data-target="#exampleModal">Trocar de conta</a>
                 <a class="dropdown-item" href="logout.php">Sair</a>
               </div>

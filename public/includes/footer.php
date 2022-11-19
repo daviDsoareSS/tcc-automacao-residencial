@@ -39,10 +39,10 @@
               <a href="index.php" class="text-white">Início</a>
             </li>
             <li>
-              <a href="#servicos" class="text-white">Serviços</a>
+              <a href="index.php#servicos" class="text-white">Serviços</a>
             </li>
             <li>
-              <a href="#sobre" class="text-white">Sobre nós</a>
+              <a href="index.php#sobre" class="text-white">Sobre nós</a>
             </li>
             <li>
               <a href="faq.php" class="text-white">Perguntas frequentes</a>
@@ -78,8 +78,7 @@
 
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2022 Copyright:
-      <a class="text-white" href="https://forhouse.herokuapp.com">4House Company</a>
+      <img src="img/logo/logo-4house.png" alt="" width="100px"><a class="text-white" href="https://forhouse.herokuapp.com">4HOUSE COMPANY</a>
     </div>
     <!-- Copyright -->
   </footer>

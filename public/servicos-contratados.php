@@ -1,5 +1,4 @@
 <?php
-  include('protect.php');
   include_once('conexao.php');
 ?>
 <?php
@@ -18,7 +17,7 @@
                 Meus dados
             </div>
                 <ul class="list-group list-group-flush">
-                    <a href="perfil.php"><li class="list-group-item">Informaçôes pessoais</li></a>
+                    <a href="perfil.php"><li class="list-group-item">Informações pessoais</li></a>
                     <a href="servicos-contratados.php"><li class="list-group-item selected">Serviços contratados</li></a>
                     <a href=""><li class="list-group-item">Vestibulum at eros</li></a>
                 </ul>

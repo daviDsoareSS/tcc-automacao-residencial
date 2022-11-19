@@ -5,12 +5,12 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<title>Sensor de proximidade | 4House</title>
+<title>Controle de TV | 4House</title>
 <body class="servicos">
-    <main class="sensor-de-proximidade">
+    <main class="controle-de-tv">
     <div class="container-text">
-        <h1>Sensor de<br>Proximidade</h1>
-        <p>Para trazer mais agilidade junto a segurança ao chegar, as cancelas de entrada do condomínio são programadas com o sensor de proximidade e as luzes dos postes também, ao identificar o carro previamente cadastrado ela já é aberta e as luzes acendem para sua passagem, sem precisar aguardar o porteiro te reconhecer e abrir para você chegar em casa.</p>
+        <h1>Controle de<br>Televisão</h1>
+        <p>Com essa função você pode programar o que quer assistir, horário ou um tempo definido para desligar.</p>
         <div class="cards-servicos">
             <div class="cards">
                 <p>Nivel de segurança</p>

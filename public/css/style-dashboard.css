@@ -347,6 +347,30 @@ main .agenda{
     border: 2px solid #3084dd;
     background-color: #3798ff;
 }
+.pag-edit-me{
+    background-color :rgb(200, 215, 252);
+    justify-content: center;
+}
+.pag-edit-me main form{
+    padding-top: 2vw !important;
+}
+.pag-edit-me img{ 
+    width: 40px;
+    margin: 2vw;
+    padding-top: 1.5vw !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.pag-edit-me form h1{
+    margin-bottom: 1vw;
+}
+.pag-edit-me form input{
+    border-bottom: 2px solid #05051d;
+}
+.pag-edit-me form label{
+    color: #05051d;
+}
 .pag-dados-atendentes #text-atendentes{
     border-left: 5px solid #416dff;
     padding-left: 8px;
@@ -493,4 +517,15 @@ main .agenda{
     .pag-dados-atendentes #text-atendentes{
         margin: 3vw;       
     }
+    /* PÁGINA EDIT-ME */
+    .pag-edit-me{ 
+        justify-content: left;
+    }
+    .pag-edit-me main{
+        width: 100% !important;
+    }
+    .pag-edit-me form {
+        width: 100% !important;
+    }
+    
 }

@@ -25,7 +25,7 @@
                 Contratando nossos serviços você terá a interação total da sua casa em apenas um toque no seu celular.
                 Irá facilitar tarefas que dependiam só de você, de acordo com as suas necessidades e vontades.
                 <i>A Casa do Futuro</i> pode estar a apenas um clique de você.</p>
-                <a href="sobre.php"><button>Venha conhecer</button></a>
+                <a href="index.php#sobre"><button>Venha conhecer</button></a>
             </div>
         </div>
       </main>
@@ -36,7 +36,7 @@
         <div class="container-section">
           <img src="img/section/ambientacao.png" alt="Ícone ambientação" width="400vw">
           <h2>Iluminação</h2>
-          <p>Pode programar a iluminação da sua casa com apenas um toque, controlar a intensidade das luzes, fazer uma sincronização com cores, e como economia de energia pode<a href=""><span class="leia">... Leia mais</span></a></p>
+          <p>Pode programar a iluminação da sua casa com apenas um toque, controlar a intensidade das luzes, fazer uma sincronização com cores, e como economia de energia pode<a href="ambientacao.php"><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
           <img src="img/section/portao-eletrico.png" alt="Ícone portão elétrico" width="400vw">
@@ -55,47 +55,47 @@
         <div class="container-section">
           <img src="img/section/sensor-de-fumaca.png" alt="Ícone ambientação" width="400vw">
           <h2>Sensor de fumaça</h2>
-          <p>Para sua maior segurança todas as instalações possuem o sensor de fumaça para caso seja identificado algum sinal de fogo emitir um alarme para que o ambiente seja evacuado.<a href=""><span class="leia">... Leia mais</span></a></p>
+          <p>Para sua maior segurança todas as instalações possuem o sensor de fumaça para caso seja identificado algum sinal de fogo emitir um alarme para que o ambiente seja evacuado.<a href="sensor-fumaca.php"><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
           <img src="img/section/controle-de-tv.png" alt="Ícone portão elétrico" width="400vw">
           <h2>Controle de TV</h2>
-          <p>Com essa função você pode programar o que quer assistir, horário ou um tempo definido para desligar.<a href=""><span class="leia">... Leia mais</span></a></p>
+          <p>Com essa função você pode programar o que quer assistir, horário ou um tempo definido para desligar.<a href="controle-de-tv"><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
           <img src="img/section/som.png" alt="Ícone sensor de proximidade" width="400vw">
           <h2>Som</h2>
-          <p>Nossas instalações te proporcionam o controle de som ambiente, podendo ser programadas situações para que elas sejam usadas, por exemplo, uma festa em casa pede um som<a href=""><span class="leia">... Leia mais</span></a></p>
+          <p>Nossas instalações te proporcionam o controle de som ambiente, podendo ser programadas situações para que elas sejam usadas, por exemplo, uma festa em casa pede um som<a href="som.php"><span class="leia">... Leia mais</span></a></p>
         </div>
       <div class="container-section">
           <img src="img/section/cortinas.png" alt="Ícone ambientação" width="400vw">
           <h2>Cortinas</h2>
-          <p>Para trazer mais agilidade pode ser definido um horário para que as cortinas e persianas se abram ao amanhecer e se fechem ao anoitecer, ao chegar em casa com apenas um.<a href=""><span class="leia">... Leia mais</span></a></p>
+          <p>Para trazer mais agilidade pode ser definido um horário para que as cortinas e persianas se abram ao amanhecer e se fechem ao anoitecer, ao chegar em casa com apenas um.<a href="cortinas.php"><span class="leia">... Leia mais</span></a></p>
       </div>
       <div class="container-section">
           <img src="img/section/ar-condicionado.png" alt="Ícone ambientação" width="400vw">
           <h2>Ar condicionado</h2>
-          <p>Para mais conforto você define em qual temperatura deseja cada cômodo ou pode programar a temperatura do ar de acordo com a temperatura do ambiente, por exemplo se<a href=""><span class="leia">... Leia mais</span></a></p>
+          <p>Para mais conforto você define em qual temperatura deseja cada cômodo ou pode programar a temperatura do ar de acordo com a temperatura do ambiente, por exemplo se<a href="ar-condicionado.php"><span class="leia">... Leia mais</span></a></p>
       </div>
       <div class="container-section">
           <img src="img/section/camera-seguranca.png" alt="Ícone ambientação" width="400vw">
           <h2>Controle de camêras</h2>
-          <p>Para sua segurança apenas pelo seu celular você tem acesso as câmeras de todos os cômodos da sua casa e das áreas comuns do condomínio, as câmeras possuem visão noturna<a href=""><span class="leia">... Leia mais</span></a></p>
+          <p>Para sua segurança apenas pelo seu celular você tem acesso as câmeras de todos os cômodos da sua casa e das áreas comuns do condomínio, as câmeras possuem visão noturna<a href="controle-cameras.php"><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
           <img src="img/section/alarmes.png" alt="Ícone ambientação" width="400vw">
           <h2>Alarmes</h2>
-          <p>Para segurança geral, os alarmes são acionados, caso alguém entre no ambiente sem desabilitar o alarme, ele é acionado e só pode ser desligado com a senha pré-definida.<a href=""><span class="leia">... Leia mais</span></a></p>
+          <p>Para segurança geral, os alarmes são acionados, caso alguém entre no ambiente sem desabilitar o alarme, ele é acionado e só pode ser desligado com a senha pré-definida.<a href="alarmes.php"><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
           <img src="img/section/fechadura-eletronica.png" alt="Ícone ambientação" width="400vw">
           <h2>Fechadura eletrônica</h2>
-          <p>Como principal característica ela tem a segurança para fechamento de portas, ao ser travada ela só pode ser desbloqueada novamente por quem possui o acesso autorizado.<a href=""><span class="leia">... Leia mais</span></a></p>
+          <p>Como principal característica ela tem a segurança para fechamento de portas, ao ser travada ela só pode ser desbloqueada novamente por quem possui o acesso autorizado.<a href="fechadura-eletronica.php"><span class="leia">... Leia mais</span></a></p>
         </div>
         <div class="container-section">
           <img src="img/section/home-theater.png" alt="Ícone ambientação" width="400vw">
           <h2>Áudio e vídeo home theater(Cinema em casa)</h2>
-          <p>Essa funcionalidade é ideal para o conforto e lazer, para as salas de TV, sala de lazer ou até mesmo sala de cinema, como quiser chamar, fazemos toda a programação<a href=""><span class="leia">... Leia mais</span></a></p>
+          <p>Essa funcionalidade é ideal para o conforto e lazer, para as salas de TV, sala de lazer ou até mesmo sala de cinema, como quiser chamar, fazemos toda a programação<a href="audio-video.php"><span class="leia">... Leia mais</span></a></p>
         </div>
         </div>
       <span id="content-line"></span>

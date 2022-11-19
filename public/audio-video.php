@@ -5,12 +5,12 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<title>Sensor de proximidade | 4House</title>
+<title>Áudio e vídeo (Cinema em casa)| 4House</title>
 <body class="servicos">
-    <main class="sensor-de-proximidade">
+    <main class="audio-video">
     <div class="container-text">
-        <h1>Sensor de<br>Proximidade</h1>
-        <p>Para trazer mais agilidade junto a segurança ao chegar, as cancelas de entrada do condomínio são programadas com o sensor de proximidade e as luzes dos postes também, ao identificar o carro previamente cadastrado ela já é aberta e as luzes acendem para sua passagem, sem precisar aguardar o porteiro te reconhecer e abrir para você chegar em casa.</p>
+        <h1>Aúdio e Vídeo<br> Home Theater<br>Cinema em casa</h1>
+        <p>Essa funcionalidade é ideal para o conforto e lazer, para as salas de TV, sala de lazer ou até mesmo sala de cinema, como quiser chamar, fazemos toda a programação para que o som e os efeitos estejam de acordo com o que está sendo assistido, com tecnologia de som 8-D para que todas as sensações possam ser vividas na sala, dando a sensação de estar na cena.</p>
         <div class="cards-servicos">
             <div class="cards">
                 <p>Nivel de segurança</p>

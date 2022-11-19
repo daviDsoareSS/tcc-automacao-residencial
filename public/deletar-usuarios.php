@@ -107,29 +107,8 @@
                                 echo "<td data-title='Nome'>".$user_data['nome']."</td>";
                                 echo "<td data-title='DataNasc'>".$user_data['dataNasc']."</td>";
                                 echo "<td data-title='Inicio da conta'>".$user_data['dataCriacaoConta']."</td>";
-                                echo "<td data-title='Deletar usuário'><a href='deletando-usuario.php?id=$user_data[idUser]'><img src='img/dashboard/icon/delete.png' class='agenda' data-toggle='modal' data-target='#exampleModalCenter' style='cursor:pointer;'></a></td>";
-                                                          
-                        
-                        //    echo"<div class='modal fade' id='exampleModalCenter' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>
-                        //             <div class='modal-dialog modal-dialog-centered' role='document'>
-                        //                 <div class='modal-content'>
-                        //                     <div class='modal-header'>
-                        //                         <h5 class='modal-title' id='exampleModalLongTitle'>Deletar usuário</h5>
-                        //                         <button type='button' class='close' data-dismiss='modal' aria-label='Close' style='border:none !important;'>
-                        //                         <span aria-hidden='true'>&times;</span>
-                        //                         </button>
-                        //                     </div>
-                        //                 <div class='modal-body'>
-                        //                     <p>Tem certeza que deseja excluir o usuário?</p>
-                        //                 </div>
-                        //                     <div class='modal-footer'>
-                        //                         <button type='button' class='btn btn-secondary' data-dismiss='modal'>Fechar</button>
-                        //                         <a href='deletando-usuario.php?id=$user_data[idUser]'><button type='button' class='btn btn-primary' style='background-color:red !important; border:none !important;'>Excluir</button></a>
-                        //                     </div>
-                        //                 </div>
-                        //             </div>
-                        //         </div> ";
-                                echo "</tr>";   
+                                echo "<td data-title='Deletar usuário'><a href='deletando-usuario.php?id=$user_data[idUser]'><img src='img/dashboard/icon/delete.png' class='agenda' data-toggle='modal' data-target='#exampleModalCenter' style='cursor:pointer;'></a></td>";                                                                            
+                            echo "</tr>";   
                         }                     
                     ?>    
                 </tbody>

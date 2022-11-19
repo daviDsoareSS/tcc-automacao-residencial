@@ -1,7 +1,7 @@
 <?php
 
-$servername = "fourhouse-db.ceplxgrj0xpi.us-east-1.rds.amazonaws.com";
-$username = "daviDsoareSS";
+$servername = "fourhouse-db-server.mysql.database.azure.com";
+$username = "daviDsoareSS@fourhouse-db-server";
 $password = "David12304$";
 $database = "fourhouse_db";
 

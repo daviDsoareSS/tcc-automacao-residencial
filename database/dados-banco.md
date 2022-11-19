@@ -1,12 +1,11 @@
 
 # DADOS IMPORTANTES 🤐
 ------------------------------------------------------------
-URL DE CONEXAO: mysql://b503ee8da3dc11:8aea5597@us-cdbr-east-06.cleardb.net/heroku_acd6119eb0eb682?reconnect=true
 
-User: b503ee8da3dc11
+User: daviDsoareSS@fourhouse-db-server
 
-Password: 8aea5597
+Password: David12304$
 
-host: us-cdbr-east-06.cleardb.net
+host: fourhouse-db-server.mysql.database.azure.com
 
-banco de dados: heroku_acd6119eb0eb682
+banco de dados: fourhouse_db

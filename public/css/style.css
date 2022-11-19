@@ -1425,6 +1425,30 @@ footer a{
     .pag-login-atendente .container-login-admin .footer-login a{
         font-size: 14px;
     }
+    /* Páginas serviços */
+    .servicos main{
+        padding: 3vw;
+        background-image: none !important;
+    }
+    .servicos .container-text .cards-servicos{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .servicos .container-text .cards-servicos #contrate-servico{
+        position: relative;
+        margin-top: 2.5vw;
+    }
+    .servicos .container-text h1{
+        font-size: 45px;
+        width: 100%;
+     }
+    .servicos .container-text p{
+       width: 100%;
+    }
+    .servicos .container-text p{
+        width: 100%;
+     }
     footer{
         text-align: center;       
     }

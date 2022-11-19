@@ -13,21 +13,21 @@
         <p>Essa funcionalidade é ideal para o conforto e lazer, para as salas de TV, sala de lazer ou até mesmo sala de cinema, como quiser chamar, fazemos toda a programação para que o som e os efeitos estejam de acordo com o que está sendo assistido, com tecnologia de som 8-D para que todas as sensações possam ser vividas na sala, dando a sensação de estar na cena.</p>
         <div class="cards-servicos">
             <div class="cards">
-                <p>Nivel de segurança</p>
-                <small>Alto nível</small>
+                <p>Contratações</p>
+                <small>+80 de instalações</small>
             </div> 
             <div class="cards">
-                <p>Campeão</p>
-                <small>Serviço mais contratado</small>
+                <p>Avaliação</p>
+                <small>+75 avaliações positivas</small>
             </div>    
             <div class="cards">
                 <p>Instalação</p>
-                <small>Tempo médio de 4 horas</small>
+                <small>Tempo médio de 1 hora e 30 minutos</small>
             </div>       
             <div class="cards">
-                <p>Nivel de segurança</p>
-                <small>Alto nível</small>
-            </div>    
+                <p>Nivel de conforto</p>
+                <small>Alto nível</small>    
+            </div>  
             <button id="contrate-servico">Contrate agora</button>
         </div>
     </div>

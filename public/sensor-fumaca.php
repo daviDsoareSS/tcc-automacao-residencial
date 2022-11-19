@@ -13,20 +13,20 @@
         <p>Para sua maior segurança todas as instalações possuem o sensor de fumaça para caso seja identificado algum sinal de fogo emitir um alarme para que o ambiente seja evacuado.</p>
         <div class="cards-servicos">
             <div class="cards">
-                <p>Nivel de segurança</p>
-                <small>Alto nível</small>
+                <p>Contratações</p>
+                <small>+90 de instalações</small>
             </div> 
             <div class="cards">
-                <p>Campeão</p>
-                <small>Serviço mais contratado</small>
+                <p>Avaliação</p>
+                <small>+79 avaliações positivas</small>
             </div>    
             <div class="cards">
                 <p>Instalação</p>
-                <small>Tempo médio de 4 horas</small>
+                <small>Tempo médio de 30 minutos</small>
             </div>       
             <div class="cards">
                 <p>Nivel de segurança</p>
-                <small>Alto nível</small>
+                <small>Alto nível</small>    
             </div>    
             <button id="contrate-servico">Contrate agora</button>
         </div>

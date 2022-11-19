@@ -13,20 +13,20 @@
         <p>Para segurança geral, os alarmes são acionados, caso alguém entre no ambiente sem desabilitar o alarme, ele é acionado e só pode ser desligado com a senha pré-definida.</p>
         <div class="cards-servicos">
             <div class="cards">
-                <p>Nivel de segurança</p>
-                <small>Alto nível</small>
+                <p>Contratações</p>
+                <small>+140 de instalações</small>
             </div> 
             <div class="cards">
-                <p>Campeão</p>
-                <small>Serviço mais contratado</small>
+                <p>Avaliação</p>
+                <small>+103 avaliações positivas</small>
             </div>    
             <div class="cards">
                 <p>Instalação</p>
-                <small>Tempo médio de 4 horas</small>
+                <small>Tempo médio de 30 minutos</small>
             </div>       
             <div class="cards">
                 <p>Nivel de segurança</p>
-                <small>Alto nível</small>
+                <small>Alto nível</small>    
             </div>    
             <button id="contrate-servico">Contrate agora</button>
         </div>

@@ -13,8 +13,8 @@
         <p>Considerado bem mais seguro que os portões convencionais, os portões e portas eletrônicas, trazem também um conforto maior em dias de chuva, por exemplo, em que não será necessário descer do carro para entrar em casa.</p>
         <div class="cards-servicos">
             <div class="cards">
-                <p>Nivel de segurança</p>
-                <small>Alto nível</small>
+                <p>Contratações</p>
+                <small>+300 de instalações</small>
             </div> 
             <div class="cards">
                 <p>Campeão</p>
@@ -22,11 +22,11 @@
             </div>    
             <div class="cards">
                 <p>Instalação</p>
-                <small>Tempo médio de 4 horas</small>
+                <small>Tempo médio de 3 horas</small>
             </div>       
             <div class="cards">
                 <p>Nivel de segurança</p>
-                <small>Alto nível</small>
+                <small>Alto nível</small>    
             </div>    
             <button id="contrate-servico">Contrate agora</button>
         </div>

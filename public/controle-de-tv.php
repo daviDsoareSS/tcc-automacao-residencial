@@ -13,21 +13,21 @@
         <p>Com essa função você pode programar o que quer assistir, horário ou um tempo definido para desligar.</p>
         <div class="cards-servicos">
             <div class="cards">
-                <p>Nivel de segurança</p>
-                <small>Alto nível</small>
+                <p>Contratações</p>
+                <small>+40 de instalações</small>
             </div> 
             <div class="cards">
-                <p>Campeão</p>
-                <small>Serviço mais contratado</small>
+                <p>Avaliação</p>
+                <small>+27 avaliações positivas</small>
             </div>    
             <div class="cards">
                 <p>Instalação</p>
-                <small>Tempo médio de 4 horas</small>
+                <small>Tempo médio de 30 minutos</small>
             </div>       
             <div class="cards">
-                <p>Nivel de segurança</p>
-                <small>Alto nível</small>
-            </div>    
+                <p>Nivel de conforto</p>
+                <small>Médio nível</small>    
+            </div>  
             <button id="contrate-servico">Contrate agora</button>
         </div>
     </div>

@@ -13,20 +13,20 @@
         <p>Pode programar a iluminação da sua casa com apenas um toque, controlar a intensidade das luzes, fazer uma sincronização com cores, e como economia de energia pode ser programado horários do dia para elas serem apagadas totalmente.</p>
         <div class="cards-servicos">
             <div class="cards">
-                <p>Nivel de segurança</p>
-                <small>Alto nível</small>
+                <p>Contratações</p>
+                <small>+210 de instalações</small>
             </div> 
             <div class="cards">
-                <p>Campeão</p>
-                <small>Serviço mais contratado</small>
+                <p>Avaliação</p>
+                <small>+189 avaliações positivas</small>
             </div>    
             <div class="cards">
                 <p>Instalação</p>
                 <small>Tempo médio de 4 horas</small>
             </div>       
             <div class="cards">
-                <p>Nivel de segurança</p>
-                <small>Alto nível</small>
+                <p>Nivel de conforto</p>
+                <small>Alto nível</small>    
             </div>    
             <button id="contrate-servico">Contrate agora</button>
         </div>

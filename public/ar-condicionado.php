@@ -13,21 +13,21 @@
         <p>Para mais conforto você define em qual temperatura deseja cada cômodo ou pode programar a temperatura do ar de acordo com a temperatura do ambiente, por exemplo se estiver um dia muito quente ele já é programado para estar com o ar condicionado mais fresco.</p>
         <div class="cards-servicos">
             <div class="cards">
-                <p>Nivel de segurança</p>
-                <small>Alto nível</small>
+                <p>Contratações</p>
+                <small>+90 de instalações</small>
             </div> 
             <div class="cards">
-                <p>Campeão</p>
-                <small>Serviço mais contratado</small>
+                <p>Avaliação</p>
+                <small>+67 avaliações positivas</small>
             </div>    
             <div class="cards">
                 <p>Instalação</p>
-                <small>Tempo médio de 4 horas</small>
+                <small>Tempo médio de 1 hora e 30 minutos</small>
             </div>       
             <div class="cards">
-                <p>Nivel de segurança</p>
-                <small>Alto nível</small>
-            </div>    
+                <p>Nivel de conforto</p>
+                <small>Médio nível</small>    
+            </div>  
             <button id="contrate-servico">Contrate agora</button>
         </div>
     </div>

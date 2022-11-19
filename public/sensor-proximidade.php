@@ -12,22 +12,22 @@
         <h1>Sensor de<br>Proximidade</h1>
         <p>Para trazer mais agilidade junto a segurança ao chegar, as cancelas de entrada do condomínio são programadas com o sensor de proximidade e as luzes dos postes também, ao identificar o carro previamente cadastrado ela já é aberta e as luzes acendem para sua passagem, sem precisar aguardar o porteiro te reconhecer e abrir para você chegar em casa.</p>
         <div class="cards-servicos">
-            <div class="cards">
-                <p>Nivel de segurança</p>
-                <small>Alto nível</small>
+        <div class="cards">
+                <p>Contratações</p>
+                <small>+120 de instalações</small>
             </div> 
             <div class="cards">
-                <p>Campeão</p>
-                <small>Serviço mais contratado</small>
+                <p>Avaliação</p>
+                <small>+100 avaliações positivas</small>
             </div>    
             <div class="cards">
                 <p>Instalação</p>
-                <small>Tempo médio de 4 horas</small>
+                <small>Tempo médio de 1 hora</small>
             </div>       
             <div class="cards">
                 <p>Nivel de segurança</p>
-                <small>Alto nível</small>
-            </div>    
+                <small>Alto nível</small>    
+            </div>   
             <button id="contrate-servico">Contrate agora</button>
         </div>
     </div>

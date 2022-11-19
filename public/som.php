@@ -12,22 +12,22 @@
         <h1>Som</h1>
         <p>Nossas instalações te proporcionam o controle de som ambiente, podendo ser programadas situações para que elas sejam usadas, por exemplo, uma festa em casa pede um som mais alto, vontade de ouvir um som para relaxar não necessita um som muito alto, mas pede que quem está na sala e quem está no quarto consigam ouvir da mesma forma.</p>
         <div class="cards-servicos">
-            <div class="cards">
-                <p>Nivel de segurança</p>
-                <small>Alto nível</small>
+        <div class="cards">
+                <p>Contratações</p>
+                <small>+40 de instalações</small>
             </div> 
             <div class="cards">
-                <p>Campeão</p>
-                <small>Serviço mais contratado</small>
+                <p>Avaliação</p>
+                <small>+37 avaliações positivas</small>
             </div>    
             <div class="cards">
                 <p>Instalação</p>
-                <small>Tempo médio de 4 horas</small>
+                <small>Tempo médio de 30 minutos</small>
             </div>       
             <div class="cards">
-                <p>Nivel de segurança</p>
-                <small>Alto nível</small>
-            </div>    
+                <p>Nivel de conforto</p>
+                <small>Alto nível</small>    
+            </div>  
             <button id="contrate-servico">Contrate agora</button>
         </div>
     </div>

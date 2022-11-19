@@ -15,20 +15,20 @@
   </div>
 </div>  -->
 <main>
-        <div class="container-main">
-            <img src="img/main/save.png" alt="Vetor Técnologia" class="image">
-            <div class="text-main">
-                <strong><h1>Automação residencial</h1></strong>
-                <small>Serviços para automatizar seu lar</small>
-                <p>
-                A solução que você precisa para tornar sua casa mais segura e inteligente.
-                Contratando nossos serviços você terá a interação total da sua casa em apenas um toque no seu celular.
-                Irá facilitar tarefas que dependiam só de você, de acordo com as suas necessidades e vontades.
-                <i>A Casa do Futuro</i> pode estar a apenas um clique de você.</p>
-                <a href="index.php#sobre"><button>Venha conhecer</button></a>
-            </div>
-        </div>
-      </main>
+  <div class="container-main">
+      <img src="img/main/save.png" alt="Vetor Técnologia" class="image">
+      <div class="text-main">
+          <strong><h1>Automação residencial</h1></strong>
+          <small>Serviços para automatizar seu lar</small>
+          <p>
+          A solução que você precisa para tornar sua casa mais segura e inteligente.
+          Contratando nossos serviços você terá a interação total da sua casa em apenas um toque no seu celular.
+          Irá facilitar tarefas que dependiam só de você, de acordo com as suas necessidades e vontades.
+          <i>A Casa do Futuro</i> pode estar a apenas um clique de você.</p>
+          <a href="index.php#sobre"><button>Venha conhecer</button></a>
+      </div>
+  </div>
+</main>
       <section>
         <small id="servicos">Alguns serviços</small>
         <h3>Mais prestados</h3>
@@ -220,7 +220,6 @@
 
 		
     // iniciaModal('modal-pergunta');
-		
     
   </script>
 </body>

@@ -138,6 +138,47 @@ nav .nav-item a:hover{
     display: flex;
     margin-left: 9vw;
 }
+.container-modal-services{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-modal-services span{
+    margin: 2vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+}
+.modal-services{
+    position: relative;
+    padding: 5vw;
+    background-color: rgb(255, 255, 255);
+    width: 30vw;
+}
+.modal-services h2{
+    font-weight: bolder;
+    font-size: 20px;
+    margin-bottom: 1vw;
+}
+.modal-services a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+.modal-services svg{
+    width: 15px;
+    margin-right: 10px;
+}
 main{
     margin-left: 10vw;
     margin-right: 10vw;

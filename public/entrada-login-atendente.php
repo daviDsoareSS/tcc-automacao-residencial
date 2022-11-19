@@ -35,8 +35,8 @@
                 header("Location: dashboard.php");
             
             }else{
-                $_SESSION['usuario_invalido']= "<p style='color:red';>Usuário não encontrado!</p>";
-                header("Location: login-atendente.html");
+                $_SESSION['usuario_invalido']= "<p style='color:red';font-weight:bolder;>Usuário não encontrado!</p>";
+                header("Location: login-atendente.php");
             }
         }
     }

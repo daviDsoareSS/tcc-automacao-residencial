@@ -5,5 +5,5 @@
 
     session_destroy();
 
-    header("Location: login-adm.html");
+    header("Location: login-adm.php");
 ?>

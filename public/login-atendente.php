@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,11 +14,17 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="pag-login-atendente">
-    <a href="login-adm.html"><img id="voltar" src="img/tela-login-admin/seta.png" alt=""></a>
+    <a href="login-adm.php"><img id="voltar" src="img/tela-login-admin/seta.png" alt="Voltar"></a>
     <form class="container-login-admin" action="entrada-login-atendente.php" method="post">
         <div class="top-login">
             <img src="img/tela-login-admin/user.png" alt="user-logo">
             <small>Usuário atendente</small>
+            <?php
+                if(isset($_SESSION['usuario_invalido'])){
+                    echo($_SESSION['usuario_invalido']);
+                    unset($_SESSION['usuario_invalido']);
+                }
+            ?>
         </div>
         <div class="main-login">
             <div class="form-group-email">
@@ -29,7 +38,7 @@
             <button type="submit">Login</button>
         </div>
         <div class="footer-login">
-           <a href="login-adm.html"><strong>Entrar como administrador</strong></a>
+           <a href="login-adm.php"><strong>Entrar como administrador</strong></a>
         </div>
     </form>
 </body>

@@ -100,6 +100,35 @@
         </div>
       <span id="content-line"></span>
       </section>
+      <aside>
+        <h3>Imagens de alguns<br>Serviços prestados</h3>
+        <div class="container-aside">
+          <div class="cards-aside">
+            <img src="img/exemplos-servicos/monitoramento-cameras.jpeg" alt="">
+            <div class="footer-cards-aside">
+              <p>Controle de camêras</p>
+              <small>Avenida Paulista, Zona Sul </small>
+              <strong>17/02/2022</strong>
+            </div>
+          </div>
+          <div class="cards-aside">
+            <img src="img/exemplos-servicos/fechadura-eletronica.jpeg" alt="">
+            <div class="footer-cards-aside">
+              <p>Fechadura Eletrônica</p>
+              <small>Auphaville, Zona Oeste </small>
+              <strong>25/08/2021</strong>
+            </div>
+          </div>
+          <div class="cards-aside">
+            <img src="img/exemplos-servicos/automação-e-iluminação.jpg" alt="">
+            <div class="footer-cards-aside">
+              <p>Iluminação</p>
+              <small>Tatuapé, Zona Leste </small>
+              <strong>05/10/2022</strong>
+            </div>
+          </div>
+        </div>
+      </aside>
       <article id="sobre">
         <div class="container-article primary-img-article">
           <img src="img/section/equipamentos-automacao-residencial 1.jpg" alt="" width="50%">

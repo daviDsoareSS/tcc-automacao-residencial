@@ -237,6 +237,54 @@ section #btn-veja-todos-servicos{
     border: 5px solid #061a27;
     background-color: #061a27;
 }
+aside{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 4vw;
+    margin-bottom: 3vw;
+    text-align: center;
+
+}
+aside h3{
+    text-align: left;
+    font-weight: bolder;
+    font-size: 50px;
+    margin-bottom: 2vw;
+}
+aside .container-aside{
+    gap: 4vw;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+aside .container-aside .cards-aside{
+    padding: 1vw;
+    background-color: #ffffff;
+    border: 1px solid black;
+} 
+aside .container-aside .cards-aside:hover{
+    box-shadow: 10px 10px 30px rgb(190, 190, 190);
+}
+aside .container-aside .cards-aside img{
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+}
+aside .container-aside .footer-cards-aside{
+    height: 3vw;
+    text-align: left;
+}
+aside .container-aside .footer-cards-aside p{
+    margin-top: 10px;
+    margin-bottom: 0 !important;
+    font-weight: bolder;
+}
+aside .container-aside .footer-cards-aside small{
+    font-style: italic;
+}
+aside .container-aside .footer-cards-aside strong{
+    float: right;
+}
+
 article{
     margin-left: 0vw;
     margin-right: 0vw;
@@ -1139,6 +1187,28 @@ footer a{
     #content-line{
         width: 30vw;
     }
+    aside{
+        margin-top: 10vw;
+        margin-bottom: 10vw;
+    }
+    aside h3{
+        padding: 7vw;
+        padding-left: 0vw;
+        font-size: 35px;
+    }
+    aside .container-aside{
+        gap: 4vw;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    aside .container-aside .cards-aside{
+        padding: 3vw;
+    }
+    aside .container-aside .cards-aside img{
+        height: 70vw;
+    }
+
+
     article .container-article{
         display: block;
     }

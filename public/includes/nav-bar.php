@@ -1,35 +1,35 @@
 <?php
   include_once('conexao.php');
   session_start();
-  $idUser = ($_SESSION['idUser']);
 
-  $sqlSelect = "SELECT * FROM users WHERE idUser= $idUser";
-        $sqlSelectEndereco = "SELECT * FROM endereco WHERE idUser= $idUser";
-        $result = $conn->query($sqlSelect);
-        $resultEndereco = $conn->query($sqlSelectEndereco);
+  if(!isset($_SESSION['idUser'])){
+    echo "<script>console.log('Bem Vindo à 4House')</script>";
+  }
+  else{
+    $idUser = ($_SESSION['idUser']);
+    $sqlSelect = "SELECT * FROM users WHERE idUser= $idUser";
+    $result = $conn->query($sqlSelect);
 
-        if($result->num_rows > 0){
-            while ( $user_data = mysqli_fetch_assoc($result) AND $user_data_endereco = mysqli_fetch_assoc($resultEndereco)){
-                
-                /*TABELA USERS*/ 
-                $id = $user_data['idUser'];
-                $nome = $user_data['nome'];
-                $email = $user_data['email'];
-                $dataNasc = $user_data['dataNasc'];
-                $sexo = $user_data['sexo'];
-                $telefone1 = $user_data['telefone1'];
-                /*TABELA ENDEREÇOS*/
-                $rua = $user_data_endereco['endereco'];
-                $numero = $user_data_endereco['numero'];
-                $cep = $user_data_endereco['cep'];
-                $bairro = $user_data_endereco['bairro'];
-                $cidade = $user_data_endereco['cidade'];
-            }
-           
+    $sqlSelectEndereco = "SELECT * FROM endereco WHERE idUser= $idUser";
+    $resultEndereco = $conn->query($sqlSelectEndereco);
+      if($result->num_rows > 0){
+          while ( $user_data = mysqli_fetch_assoc($result) AND $user_data_endereco = mysqli_fetch_assoc($resultEndereco)){
+              /*TABELA USERS*/ 
+              $id = $user_data['idUser'];
+              $nome = $user_data['nome'];
+              $email = $user_data['email'];
+              $dataNasc = $user_data['dataNasc'];
+              $sexo = $user_data['sexo'];
+              $telefone1 = $user_data['telefone1'];
+              /*TABELA ENDEREÇOS*/
+              $rua = $user_data_endereco['endereco'];
+              $numero = $user_data_endereco['numero'];
+              $cep = $user_data_endereco['cep'];
+              $bairro = $user_data_endereco['bairro'];
+              $cidade = $user_data_endereco['cidade'];
+          }   
         }
-        else{
-            header("Location: index.php");
-        }
+      }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

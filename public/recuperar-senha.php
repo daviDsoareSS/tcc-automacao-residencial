@@ -32,11 +32,12 @@
     <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!--FIM FAVICON-->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Inter:wght@700&family=Lato&display=swap');
-    </style>
+   <!-- GOOGLE FONTS -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
-<body id="pag-login" class="pag-login">
+<body id="pag-login" class="pag-login pag-recuperar-senha">
 <!-- início do preloader -->
   <div id="preloader">
     <div class="inner">
@@ -46,7 +47,12 @@
   </div>
 <!-- fim do preloader --> 
     <div class="container-left left-login">
-    <img src="img/login/background-login.png" alt="" height="100%" width="100%">
+        <div class="text-left-login">
+            <h1>Conheça nossos serviços</h1>
+            <p>Controle seu lar com apenas alguns cliques</p>
+            <small>Atendimento online e automático, tornando sua experiência muito mais dinâmica e objetiva</small>
+        </div>
+        <img src="img/login/background-login.png" alt="" height="100%" width="100%">
     </div>
     <form class="container-login" action="confirmar-usuario.php" method="post" id="form">
     <div class="top-login login-user">

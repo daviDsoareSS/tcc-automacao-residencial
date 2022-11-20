@@ -26,4 +26,5 @@
         $_SESSION['usuario_invalido']= "<p style='color:red';>Usuário não encontrado!</p>";
         header("Location: recuperar-senha.php");
     }
+    
 ?>

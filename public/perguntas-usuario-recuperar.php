@@ -1,7 +1,4 @@
-<?php
-    session_start();
-   
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,8 +10,7 @@
 <body>
     <h1>Ola Mundo</h1>
     <?php
-        echo $_SESSION['recuperar-nome']."<br>";
-        echo $_SESSION['recuperar-email'];
+        echo $user_data['nome']."<br>";
        
     ?>
 </body>

@@ -80,7 +80,7 @@
             <h3>É novo por aqui?</h3>
             <a href="signup.php"><strong><h4 id="criar-conta">CRIAR CONTA</h4></strong></a>
         </div>
-        <a href="login-adm.html"><p class="entrada-administrador">Entrar como administrador</p></a>
+        <a href="login-adm.php"><p class="entrada-administrador">Entrar como administrador</p></a>
     </form>
     <script src="script/preloader.js" defer></script>
     <script>

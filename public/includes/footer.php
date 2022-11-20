@@ -57,16 +57,16 @@
 
           <ul class="list-unstyled">
             <li>
-              <a href="#!" class="text-white">Link 1</a>
+              <small>Instagram</small>
+              <a href="#!" class="text-white">@4House</a>
             </li>
             <li>
-              <a href="#!" class="text-white">Link 2</a>
+              <small>E-mail</small>
+              <a href="" class="text-white">4House Company</a>
             </li>
             <li>
-              <a href="#!" class="text-white">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 4</a>
+              <small>Twitter</small>
+              <a href="#!" class="text-white">@4House_company</a>
             </li>
           </ul>
         </div>

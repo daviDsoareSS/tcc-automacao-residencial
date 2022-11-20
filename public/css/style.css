@@ -502,6 +502,10 @@ footer{
 footer a{
     text-decoration: none !important;
 }
+footer .list-unstyled small{
+    color: #add4ff !important;
+    font-weight: bolder !important;
+}
 .text-principal{
     font-size: 25px !important;
     color: #f36a5e;
@@ -806,8 +810,8 @@ footer a{
     margin-left: 1vw;
     padding: 10px 30px;
     font-size: 15px;
-    font-weight: bolder;
-    color: #6e7a83;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.863);
     border: 1px solid rgba(220, 220, 220, 0.813);
 }
 .pag-faq main span{
@@ -815,18 +819,20 @@ footer a{
     margin-left: 5px;
 }
 .pag-faq article{
+    gap: 1vw;
     justify-content: center;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-}
+}#1c2247
 .pag-faq article .container-social{
-    margin-left: 1vw;
-    padding: 1vw 2vw;
+    justify-content: center;
+    padding: 1vw;
     border: 1px solid rgba(220, 220, 220, 0.813);
 }
 .pag-faq article .container-social svg{
     margin-bottom: 0.8vw;
+    margin-right: 0.5vw;
 }
 .pag-faq footer{
     margin-top: 10vw;

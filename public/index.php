@@ -175,8 +175,8 @@
           <img src="img/figure/aspas.png" alt="">
           <p>Automatizei toda a minha casa, após a contratação dos serviços eu sinto que minha rotina se tornou mais dinâmica, meus vizinhos já contrataram serviços por minha indicação!</p>
             <div class="card-cliente">
-              <img class="foto-user" src="img/figure/user2.png" alt="">
-              <small>Julio César Santos</small>
+              <img class="foto-user" src="img/figure/user2.jpeg" alt="">
+              <small>Andrey de Mendonça</small>
             </div>
         </div>
       <div class="card-figure three">

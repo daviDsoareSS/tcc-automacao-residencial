@@ -306,6 +306,14 @@ main .agenda{
     padding: 8px 25px;
     color: white;
 }
+.pag-agendamento .delete-service{
+    margin-top: 10px;
+    padding: 7px 30px;
+    background-color: rgb(252, 19, 19);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 3, 3);
+}
 /* PÁGINA EDITANDO USUARIO  */
 .pag-editando-usuario .container-editar-usuario{
     width: 30rem;

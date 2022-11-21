@@ -86,7 +86,7 @@
             <p><strong>Serviços contratados:</strong>
 
             <?php
-                $sql = "SELECT s.nomeServico, a.dataAgendamento, a.horaAgendamento, a.statusServico, e.endereco, e.numero, e.cep, e.bairro FROM agendamento a 
+                $sql = "SELECT s.nomeServico, a.idAgendamento, a.dataAgendamento, a.horaAgendamento, a.statusServico, e.endereco, e.numero, e.cep, e.bairro FROM agendamento a 
                         JOIN servico s ON s.idServico = a.idServico
                         JOIN endereco e ON e.idEndereco = a.idEndereco
                         WHERE  a.idUser = '$idUser'";
@@ -96,7 +96,7 @@
 
                 $i = 1;
                 while($row = mysqli_fetch_array($result)){
-
+                    
             ?>
             <ul>
                 <small><?php echo $i; ?>º Serviço</small>
@@ -105,6 +105,9 @@
                 <li>Horário agendado <span class="dados-user hora-agendada"><?php echo $row['horaAgendamento']; ?></span></li>
                 <span class="dados-user status-servico"><?php echo $row['statusServico']; ?></span>
                 <li>Endereço <span class="dados-user endereco"><?php echo $row['endereco']; ?> , <?php echo $row['bairro']; ?> Nº<?php echo $row['numero']; ?> - <?php echo $row['cep']; ?></span></li>
+                <?php
+                    echo "<a href='excluir-servico.php?id=$user_data[idUser]&idAgendamento=$row[idAgendamento]'><button class='delete-service' style='cursor:pointer;'>Excluir</button></a>"
+                ?>
             </ul>
             <?php
                     $i++;

@@ -12,18 +12,17 @@
 </head>
 <body class="pag-perfil servicos-contratados">
     <main>
-        <div class="card" style="width: 18rem; height: 12rem;">
+        <div class="card" style="width: 18rem;">
             <div class="card-header">
                 Meus dados
             </div>
                 <ul class="list-group list-group-flush">
                     <a href="perfil.php"><li class="list-group-item">Informações pessoais</li></a>
                     <a href="servicos-contratados.php"><li class="list-group-item selected">Serviços contratados</li></a>
-                    <a href=""><li class="list-group-item">Vestibulum at eros</li></a>
                 </ul>
         </div>
         <div class="container-dados-pessoais">
-            <h2>Serviços contratados</h2> 
+            <h2 id="title-services">Serviços contratados</h2> 
             <div class="container-servicos-contratados">
                 <?php 
 

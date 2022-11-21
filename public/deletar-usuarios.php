@@ -107,7 +107,7 @@
                                 echo "<td data-title='Nome'>".$user_data['nome']."</td>";
                                 echo "<td data-title='DataNasc'>".$user_data['dataNasc']."</td>";
                                 echo "<td data-title='Inicio da conta'>".$user_data['dataCriacaoConta']."</td>";
-                                echo "<td data-title='Deletar usuário'><a href='deletando-usuario.php?id=$user_data[idUser]'><img src='img/dashboard/icon/delete.png' class='agenda' data-toggle='modal' data-target='#exampleModalCenter' style='cursor:pointer;'></a></td>";                                                                            
+                                echo "<td data-title='Deletar usuário'><a href='deletando-usuario.php?id=$user_data[idUser]'><img src='img/dashboard/icon/delete.png' class='agenda style='cursor:pointer;'></a></td>";                                                                            
                             echo "</tr>";   
                         }                     
                     ?>    

@@ -10,21 +10,27 @@
 </head>
 <body class="pag-perfil">
     <main class="session-perfil">
-        <div class="card" style="width: 18rem; height: 100%; min-heigh: 10.8rem;">
+        <div class="card" style="width: 18rem;">
             <div class="card-header">
                 Meus dados
             </div>
             <ul class="list-group list-group-flush">
                 <a href="perfil.php"><li class="list-group-item selected">Informações pessoais</li></a>
                 <a href="servicos-contratados.php"><li class="list-group-item">Serviços contratados</li></a>
-                <a href=""><li class="list-group-item">Vestibulum at eros</li></a>
             </ul>
         </div>
         <div class="container-dados-pessoais informacoes-user">
             <h2><span></span>Dados pessoais</h2>
             <ul>
                 <div class="top-informacoes">
-                    <img src="img/perfil/user.png" alt="Usuário">
+                    <?php
+                        if($sexo=='Masculino'){
+                            echo "<img src='img/perfil/user.png' alt='Usuário'>";
+                        }else{
+                            echo "<img src='img/perfil/user2.png' alt='Usuário'>";
+
+                        }
+                    ?>
                     <div class="text-top">
                         <h3 class="dados-user"><?php echo $nome;?></h3>
                         <small class="dados-user"><?php echo $email;?></small>

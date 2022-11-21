@@ -97,6 +97,10 @@ nav .nav-item a:hover{
 .navbar-nav hr{
     display: none;
 }
+.dropdown-menu{
+    left: -50% ;
+    position: absolute;
+}
 .dropdown-menu .navbar-search{
     text-align: center;
     justify-content: center;
@@ -522,27 +526,42 @@ footer .list-unstyled small{
     background-image: none;
     background-color: #ffffff !important;
 }
-.pag-perfil nav .nav-item a{
-    color: rgb(0, 0, 0) !important;
-}
-.pag-perfil nav .dropdown-menu .dropdown-item{
-    color: black !important;
-}
 .pag-perfil main{
     display: grid;
     margin-top: 4vw;
     grid-template-columns: repeat(2, 1fr);
 }
-.pag-perfil .card ul li{
-    padding: 1vw;
+.pag-perfil .card{
+    border-radius:  0px !important;
     border: none !important;
+    position: relative;
+    height: 0%;
+}
+.pag-perfil .card .card-header{
+    background-color: #1c2247 !important;
+    color: #ffffff;
+    font-weight: bolder;
+}
+.pag-perfil .card ul{
+    border-radius: 0px 0px 5px 5px;
+    background-color: white ;
+    border: 1px solid #05051d !important;
+}
+.pag-perfil .card ul li{
+    border-radius: 0px 0px 5px 5px;
+    height: 3.5vw;
+    border-bottom: 1px solid #061a2759 !important;
+    padding: 1vw;
 }
 .pag-perfil .card ul a{
+    font-size: 14px;
     color: black;
+    font-weight: normal;
     text-decoration: none;
 }
 .pag-perfil .card ul .selected{
-    color: #0093ee !important;
+    color: #061b28 !important;
+    font-size: 18px;
     font-weight: bolder;
 }
 .pag-perfil .container-dados-pessoais .container-servicos-contratados ul{
@@ -560,7 +579,18 @@ footer .list-unstyled small{
     padding: 2vw;
     border-radius: 5px;
     white-space: nowrap;
-    
+}
+.container-servicos-contratados ul li{
+    color: #0093ee !important;
+    font-weight: bolder !important;
+}
+.container-servicos-contratados ul .nome-servico{
+    color: #000000 !important; 
+    font-weight: bolder !important;
+}
+.container-servicos-contratados ul span{
+    color: black;
+    font-weight: normal !important;
 }
 .pag-perfil .container-dados-pessoais .container-servicos-contratados ul:hover{
     box-shadow: 5px 7px 15px rgb(187, 187, 187);
@@ -824,15 +854,23 @@ footer .list-unstyled small{
     text-align: center;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-}#1c2247
+}
 .pag-faq article .container-social{
     justify-content: center;
     padding: 1vw;
     border: 1px solid rgba(220, 220, 220, 0.813);
 }
+.pag-faq article .container-social a{
+    color: black !important;
+    text-decoration: none !important;
+}
 .pag-faq article .container-social svg{
     margin-bottom: 0.8vw;
     margin-right: 0.5vw;
+}
+.pag-faq article .container-social:hover{
+    box-shadow: 5px 7px 15px rgb(187, 187, 187);
+    transition: 0.4s;
 }
 .pag-faq footer{
     margin-top: 10vw;
@@ -1113,9 +1151,6 @@ footer .list-unstyled small{
     margin-left: 12px;
     z-index: 50;
 }
-.pag-login-atendente .container-login-admin .main-login input::placeholder{
-  
-}
 .pag-login-atendente .container-login-admin .main-login button{
     cursor: pointer;
     color: rgb(255, 255, 255);
@@ -1309,23 +1344,33 @@ footer .list-unstyled small{
     /*PÁGINA PERFIL*/
     .pag-perfil main{
         gap: 2vw;
-        margin: 3vw;
+        margin: 5vw;
         display: grid;
         margin-top: 4vw;
         grid-template-columns: repeat(1, 1fr);
     }
     .pag-perfil main .card{
+        margin-bottom: 0 !important;
+        margin-top: 25vw;
         width: 100% !important;
         justify-content: center;
+    }
+    .pag-perfil main .card ul {
+        padding: 2vw !important;
+    }
+    .pag-perfil main .card ul li{
+        margin-top: 1vw;
+        height: 10vw;
+        background-color: transparent !important;
+        border: none !important;
     }
     .pag-perfil main .card .list-group{
         padding: 5vw;
 
     }
-    .pag-perfil main .card .list-group a{
-        margin-bottom: 2vw;
-    }
+ 
     .pag-perfil .session-perfil .informacoes-user{
+        margin-top: 0 !important;
         text-align: center;
         padding: 5vw;
         width: 100%;
@@ -1361,6 +1406,30 @@ footer .list-unstyled small{
     .pag-perfil .container-dados-pessoais .dados-user{
         word-break: break-all;
         display: block;
+    }
+    .pag-perfil .informacoes-user{
+        margin-bottom: 20vw;
+    }
+    .pag-perfil .informacoes-user .main-informacoes{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .pag-perfil .informacoes-user .top-informacoes{
+        margin-top: 8vw !important;
+    }
+    .pag-perfil .informacoes-user .top-informacoes img{
+        width: 80px !important;
+    }
+    /* PÁGINA SERVIÇOS CONTRATADOS > PERFIL */
+    .container-dados-pessoais #title-services{
+        color: white !important;
+        padding-bottom: 4vw !important; 
+    }
+    .container-servicos-contratados ul{
+        width: 100% !important;
+    }
+    .container-servicos-contratados ul span{
+        white-space: normal;
+        font-size: 15px !important;
     }
     /* PAGINA EDIT-ME */
     .pag-editando-usuario{

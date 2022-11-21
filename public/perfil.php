@@ -1,7 +1,6 @@
 <?php
   //NAV-BAR
   include 'includes/nav-bar.php';
-
     
 ?>
 <!DOCTYPE html>
@@ -23,13 +22,19 @@
             <h2><span></span>Dados pessoais</h2>
             <ul>
                 <div class="top-informacoes">
+
+                <img src="img/perfil/<?php echo $img; ?>" alt="">
+
                     <?php
+
+/*
                         if($sexo=='Masculino'){
                             echo "<img src='img/perfil/user.png' alt='Usuário'>";
                         }else{
                             echo "<img src='img/perfil/user2.png' alt='Usuário'>";
 
                         }
+*/
                     ?>
                     <div class="text-top">
                         <h3 class="dados-user"><?php echo $nome;?></h3>

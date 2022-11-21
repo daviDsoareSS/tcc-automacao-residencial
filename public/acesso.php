@@ -50,9 +50,31 @@
         exit;
     }else{
 
-        $sql = "INSERT INTO users VALUES (DEFAULT, '$nome','$dataNasc','$sexo', '$tel1', '$tel2','$email','$senha','$dataCriacaoConta', '$dataUltimoAcesso')";
+        if(isset($_FILES['image'])){
 
-        $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
+            $img_name = $_FILES['image']['name'];
+            $img_type = $_FILES['image']['type'];
+            $tmp_name = $_FILES['image']['tmp_name'];
+            
+            $img_explode = explode('.',$img_name);
+            $img_ext = end($img_explode);
+
+            $extensions = ["jpeg", "png", "jpg"];
+            if(in_array($img_ext, $extensions) === true){
+                $types = ["image/jpeg", "image/jpg", "image/png"];
+                if(in_array($img_type, $types) === true){
+                    $time = time();
+                    $new_img_name = $time.$img_name;
+                    if(move_uploaded_file($tmp_name,"img/perfil/".$new_img_name)){
+                        
+                        $sql = "INSERT INTO users VALUES (DEFAULT, '$nome','$dataNasc','$sexo', '$tel1', '$tel2','$email','$senha', '$new_img_name', '$dataCriacaoConta', '$dataUltimoAcesso')";
+
+                        $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
+                
+                    }
+                }
+            }
+        }
 
         $sql = "SELECT idUser FROM users WHERE email = '$email' AND senha= '$senha'";
 

@@ -54,83 +54,87 @@
     </div>
   </div>
 <!-- fim do preloader --> 
-    <form class="container-login signup" action="acesso.php" method="post" id="form">
-    <img class="logo" src="img/logo/logo-4house.png" alt="">
-    <!-- Small modal -->
-    <div class="top-login">
-    <div class="container-message-user">    
-    <?php 
-        if(isset($_SESSION['campos_vazios'])){
-            echo($_SESSION['campos_vazios']);
-            unset($_SESSION['campos_vazios']);
-        }
-        if(isset($_SESSION['status_cadastro'])){
-            echo($_SESSION['status_cadastro']);
-            unset($_SESSION['status_cadastro']);
-        }
-        if(isset($_SESSION['usuario_existe'])){
-            echo($_SESSION['usuario_existe']);
-            unset($_SESSION['usuario_existe']);
-        }
-        ?>    
-    </div>
+    <form class="container-login signup" action="acesso.php" method="post" id="form" enctype="multipart/form-data">
+        <img class="logo" src="img/logo/logo-4house.png" alt="">
+        <!-- Small modal -->
+        <div class="top-login">
+            <div class="container-message-user">    
+                <?php 
+                    if(isset($_SESSION['campos_vazios'])){
+                        echo($_SESSION['campos_vazios']);
+                        unset($_SESSION['campos_vazios']);
+                    }
+                    if(isset($_SESSION['status_cadastro'])){
+                        echo($_SESSION['status_cadastro']);
+                        unset($_SESSION['status_cadastro']);
+                    }
+                    if(isset($_SESSION['usuario_existe'])){
+                        echo($_SESSION['usuario_existe']);
+                        unset($_SESSION['usuario_existe']);
+                    }
+                ?>    
+            </div>
         <h1>CRIE SUA CONTA</h1>
          
         <p>Digite seu nome e sobrenome<span>*</span></p>
-            <input style="height: 10px;" type="text" name="nome" id="nomeUser" placeholder="Digite nome e sobrenome" required>
+        <input style="height: 10px;" type="text" name="nome" id="nomeUser" placeholder="Digite nome e sobrenome" required>
         <p>Digite sua data de nascimento<span>*</span></p>
-            <input style="height: 10px;" type="date" name="dataNasc" id="dataNasc" min="1950-01-01" max="2018-01-01" required>
+        <input style="height: 10px;" type="date" name="dataNasc" id="dataNasc" min="1950-01-01" max="2018-01-01" required>
            
-            <div class="container-sexo">
-                <p>Sexo<span>*</span></p>
-                    <select name="sexoUser" id="sexoUser">
-                        <option name="sexoUser" value="Masculino">Masculino</option>
-                        <option name="sexoUser" value="Feminino">Feminino</option>
-                        <option name="sexoUser" value="Prefiro não dizer">Prefiro não dizer</option>
-                    </select>          
-            </div>
-                <p>Telefone<span>*</span></p>
-                <div class="form-group group-tel">
-                    <input class="number" style="height: 10px;" type="text" name="tel1" id="telUser" placeholder="Telefone 1">
-                    <input style="height: 10px;" type="text" name="telUser" id="tel2" placeholder="Telefone 2 (opcional)">
-                </div>
-                <span id="numberValid"></span>
-                <p>Endereço<span>*</span></p>
-                <div class="form-group">
-                    <label for="cep">CEP</label>
-                    <input style="height: 10px;" type="text" name="cep" id="cep" placeholder="ex.0000-000">
-                    <label for="rua">Rua</label>
-                    <input style="height: 10px;" type="text" name="endereco" id="logradouro" placeholder="Rua">
-                </div>
-                <div class="form-group">
-                    <label for="bairro" id="label-bairro">Bairro</label>
-                    <input style="height: 10px;" type="text" name="bairro" id="bairro" placeholder="Bairro">
-                </div>
-                <div class="form-group">
-                    <label for="localidade">Cidade</label>
-                    <input style="height: 10px;" type="text" name="cidade" id="localidade"  placeholder="Cidade">
-                    <label for="numero">Nº</label>
-                    <input style="height: 10px;" type="text" name="numero-casa" id="numero-casa"  placeholder="Numero da casa">
-                </div>
-                
-            <p>Digite um email <span>*</span></p>
-                <input class="email" style="height: 10px;" type="text" name="email" id="email" placeholder="Email">       
-            <span id="textValidate"></span>
-            <div class="form-password">    
-                <p><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12.804 9c1.038-1.793 2.977-3 5.196-3 3.311 0 6 2.689 6 6s-2.689 6-6 6c-2.219 0-4.158-1.207-5.196-3h-3.804l-1.506-1.503-1.494 1.503-1.48-1.503-1.52 1.503-3-3.032 2.53-2.968h10.274zm7.696 1.5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5z"/></svg> Insira uma senha <span>*</span></p>
-                <img id="eyeSvg" onclick="eyeCLick()" src="img/input-senha/eye-open.svg" alt="">
-                <input style="height: 10px;" type="password" name="senha" id="senha"  placeholder="Senha">
-            </div>
-            <div class="form-password2"> 
-                <p><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12.804 9c1.038-1.793 2.977-3 5.196-3 3.311 0 6 2.689 6 6s-2.689 6-6 6c-2.219 0-4.158-1.207-5.196-3h-3.804l-1.506-1.503-1.494 1.503-1.48-1.503-1.52 1.503-3-3.032 2.53-2.968h10.274zm7.696 1.5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5z"/></svg> Confirme sua senha <span>*</span></p>
-                <input style="height: 10px;" type="password" name="senha2" id="senha2"  placeholder="Repita a senha">
-            </div>
-                <?php
-                if(isset($_SESSION['senhas_iguais'])){
-                    echo($_SESSION['senhas_iguais']);
-                    unset($_SESSION['senhas_iguais']);
-                }
-            ?>
+        <div class="container-sexo">
+            <p>Sexo<span>*</span></p>
+                <select name="sexoUser" id="sexoUser">
+                    <option name="sexoUser" value="Masculino">Masculino</option>
+                    <option name="sexoUser" value="Feminino">Feminino</option>
+                    <option name="sexoUser" value="Prefiro não dizer">Prefiro não dizer</option>
+                </select> 
+        </div>
+            
+        <p>Select Image</p>
+        <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
+        
+        <p>Telefone<span>*</span></p>
+        <div class="form-group group-tel">
+            <input class="number" style="height: 10px;" type="text" name="tel1" id="telUser" placeholder="Telefone 1">
+            <input style="height: 10px;" type="text" name="telUser" id="tel2" placeholder="Telefone 2 (opcional)">
+        </div>
+        <span id="numberValid"></span>
+        <p>Endereço<span>*</span></p>
+        <div class="form-group">
+            <label for="cep">CEP</label>
+            <input style="height: 10px;" type="text" name="cep" id="cep" placeholder="ex.0000-000">
+            <label for="rua">Rua</label>
+            <input style="height: 10px;" type="text" name="endereco" id="logradouro" placeholder="Rua">
+        </div>
+        <div class="form-group">
+            <label for="bairro" id="label-bairro">Bairro</label>
+            <input style="height: 10px;" type="text" name="bairro" id="bairro" placeholder="Bairro">
+        </div>
+        <div class="form-group">
+            <label for="localidade">Cidade</label>
+            <input style="height: 10px;" type="text" name="cidade" id="localidade"  placeholder="Cidade">
+            <label for="numero">Nº</label>
+            <input style="height: 10px;" type="text" name="numero-casa" id="numero-casa"  placeholder="Numero da casa">
+        </div>
+            
+        <p>Digite um email <span>*</span></p>
+        <input class="email" style="height: 10px;" type="text" name="email" id="email" placeholder="Email">       
+        <span id="textValidate"></span>
+        <div class="form-password">    
+            <p><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12.804 9c1.038-1.793 2.977-3 5.196-3 3.311 0 6 2.689 6 6s-2.689 6-6 6c-2.219 0-4.158-1.207-5.196-3h-3.804l-1.506-1.503-1.494 1.503-1.48-1.503-1.52 1.503-3-3.032 2.53-2.968h10.274zm7.696 1.5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5z"/></svg> Insira uma senha <span>*</span></p>
+            <img id="eyeSvg" onclick="eyeCLick()" src="img/input-senha/eye-open.svg" alt="">
+            <input style="height: 10px;" type="password" name="senha" id="senha"  placeholder="Senha">
+        </div>
+        <div class="form-password2"> 
+            <p><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12.804 9c1.038-1.793 2.977-3 5.196-3 3.311 0 6 2.689 6 6s-2.689 6-6 6c-2.219 0-4.158-1.207-5.196-3h-3.804l-1.506-1.503-1.494 1.503-1.48-1.503-1.52 1.503-3-3.032 2.53-2.968h10.274zm7.696 1.5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5z"/></svg> Confirme sua senha <span>*</span></p>
+            <input style="height: 10px;" type="password" name="senha2" id="senha2"  placeholder="Repita a senha">
+        </div>
+        <?php
+            if(isset($_SESSION['senhas_iguais'])){
+                echo($_SESSION['senhas_iguais']);
+                unset($_SESSION['senhas_iguais']);
+            }
+        ?>
         <a href="login.php"><button id="entrar" type="submit"  data-toggle="modal" data-target=".bd-example-modal-sm">CRIAR CONTA</button></a>
         <div class="criarConta">
             <h3>Já tem uma conta?</h3>

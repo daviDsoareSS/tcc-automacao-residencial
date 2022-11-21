@@ -83,6 +83,7 @@ CREATE TABLE `users` (
   `telefone2` varchar(15) DEFAULT NULL,
   `email` varchar(100) NOT NULL,
   `senha` varchar(100) NOT NULL,
+  `img` varchar(255) NOT NULL,
   `dataCriacaoConta` datetime DEFAULT NULL,
   `ultimoAcesso` datetime DEFAULT NULL,
   PRIMARY KEY (`idUser`)

@@ -11,6 +11,8 @@ USE fourhouse_db;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
+/*-------------------------------------------------------------------------------------------------------------------*/
+
 DROP TABLE IF EXISTS `administrador`;
 CREATE TABLE `administrador` (
   `idAdministrador` INT NOT NULL AUTO_INCREMENT,
@@ -20,20 +22,9 @@ CREATE TABLE `administrador` (
   PRIMARY KEY (`idAdministrador`)
 );
 
+INSERT INTO administrador VALUES (DEFAULT, 'Guizin adm', 'go507744@gmail.com', 'gui27112003');
 
-
-DROP TABLE IF EXISTS `agendamento`;
-CREATE TABLE `agendamento` (
-  `idAgendamento` INT NOT NULL AUTO_INCREMENT,
-  `dataAgendamento` date NOT NULL,
-  `horaAgendamento` time NOT NULL,
-  `statusServico` varchar(11) DEFAULT NULL,
-  `idUser` INT NOT NULL ,
-  `idEndereco` INT NOT NULL ,
-  `idTecnico` INT NOT NULL ,
-  `idServico` INT NOT NULL ,
-  PRIMARY KEY (`idAgendamento`)
-);
+/*-------------------------------------------------------------------------------------------------------------------*/
 
 DROP TABLE IF EXISTS `atendente`;
 CREATE TABLE `atendente` (
@@ -44,34 +35,7 @@ CREATE TABLE `atendente` (
   PRIMARY KEY (`idAtendente`)
 );
 
-DROP TABLE IF EXISTS `endereco`;
-CREATE TABLE `endereco` (
-  `idEndereco` INT NOT NULL AUTO_INCREMENT,
-  `endereco` varchar(255) NOT NULL,
-  `numero` varchar(7) DEFAULT NULL,
-  `cep` varchar(50) DEFAULT NULL,
-  `bairro` varchar(225) DEFAULT NULL,
-  `cidade` varchar(225) DEFAULT NULL,
-  `idUser` int(11) NOT NULL,
-  PRIMARY KEY (`idEndereco`)
-) ;
-
-DROP TABLE IF EXISTS `servico`;
-CREATE TABLE `servico` (
-  `idServico` INT NOT NULL AUTO_INCREMENT,
-  `nomeServico` varchar(225) DEFAULT NULL,
-  `urlServico` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`idServico`)
-);
-
-INSERT INTO `servico` (nomeServico,urlServico) VALUES ('Portão Elétrico','portao-eletrico'),('Ambientação','ambientacao'),('Sensor de Proximidade','sensor-proximidade'),('Sensor de Fumaça','sensor-fumaca'),('Controle de TV','controle-de-tv'),('Som','som'),('Cortinas','cortinas'),('Ar Condicionado','ar-condicionado'),('Controle de Camêras','controle-cameras'),('Alarmes','alarmes'),('Fechadura Eletrônica','fechadura-eletronica'),('Áudio e Vídeo (Cinema em casa)','audio-video');
-
-DROP TABLE IF EXISTS `tecnico`;
-CREATE TABLE `tecnico` (
-  `idTecnico` INT NOT NULL AUTO_INCREMENT,
-  `nome` varchar(100) NOT NULL,
-  PRIMARY KEY (`idTecnico`)
-);
+/*-------------------------------------------------------------------------------------------------------------------*/
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
@@ -83,11 +47,63 @@ CREATE TABLE `users` (
   `telefone2` varchar(15) DEFAULT NULL,
   `email` varchar(100) NOT NULL,
   `senha` varchar(100) NOT NULL,
-  `img` varchar(255) NOT NULL,
+  `img` varchar(255),
   `dataCriacaoConta` datetime DEFAULT NULL,
   `ultimoAcesso` datetime DEFAULT NULL,
   PRIMARY KEY (`idUser`)
 );
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+DROP TABLE IF EXISTS `endereco`;
+CREATE TABLE `endereco` (
+  `idEndereco` INT NOT NULL AUTO_INCREMENT,
+  `endereco` varchar(255) NOT NULL,
+  `numero` varchar(7) DEFAULT NULL,
+  `cep` varchar(50) DEFAULT NULL,
+  `bairro` varchar(225) DEFAULT NULL,
+  `cidade` varchar(225) DEFAULT NULL,
+  `idUser` int(11) NOT NULL REFERENCES users(idUser),
+  PRIMARY KEY (`idEndereco`)
+) ;
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+DROP TABLE IF EXISTS `tecnico`;
+CREATE TABLE `tecnico` (
+  `idTecnico` INT NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) NOT NULL,
+  PRIMARY KEY (`idTecnico`)
+);
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+DROP TABLE IF EXISTS `servico`;
+CREATE TABLE `servico` (
+  `idServico` INT NOT NULL AUTO_INCREMENT,
+  `nomeServico` varchar(225) DEFAULT NULL,
+  `urlServico` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`idServico`)
+);
+
+INSERT INTO `servico` (nomeServico,urlServico) VALUES ('Portão Elétrico','portao-eletrico'),('Ambientação','ambientacao'),('Sensor de Proximidade','sensor-proximidade'),('Sensor de Fumaça','sensor-fumaca'),('Controle de TV','controle-de-tv'),('Som','som'),('Cortinas','cortinas'),('Ar Condicionado','ar-condicionado'),('Controle de Camêras','controle-cameras'),('Alarmes','alarmes'),('Fechadura Eletrônica','fechadura-eletronica'),('Áudio e Vídeo (Cinema em casa)','audio-video');
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+DROP TABLE IF EXISTS `agendamento`;
+CREATE TABLE `agendamento` (
+  `idAgendamento` INT NOT NULL AUTO_INCREMENT,
+  `dataAgendamento` date NOT NULL,
+  `horaAgendamento` time NOT NULL,
+  `statusServico` varchar(11) DEFAULT NULL,
+  `idUser` INT NOT NULL REFERENCES users(idUser),
+  `idEndereco` INT NOT NULL REFERENCES endereco(idEndereco),
+  `idTecnico` INT NOT NULL REFERENCES tecnico(idTecnico),
+  `idServico` INT NOT NULL REFERENCES servico(idServico),
+  PRIMARY KEY (`idAgendamento`)
+);
+
+/*-------------------------------------------------------------------------------------------------------------------*/
 
 --
 -- Dumping routines for database 'heroku_acd6119eb0eb682'

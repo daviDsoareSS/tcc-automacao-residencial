@@ -54,7 +54,7 @@
     </div>
   </div>
 <!-- fim do preloader --> 
-    <form class="container-login signup" action="acesso.php" method="post" id="form" enctype="multipart/form-data">
+    <form class="container-login signup" action="acesso.php" method="post" id="form">
         <img class="logo" src="img/logo/logo-4house.png" alt="">
         <!-- Small modal -->
         <div class="top-login">
@@ -89,9 +89,6 @@
                     <option name="sexoUser" value="Prefiro não dizer">Prefiro não dizer</option>
                 </select> 
         </div>
-            
-        <p>Select Image</p>
-        <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
         
         <p>Telefone<span>*</span></p>
         <div class="form-group group-tel">

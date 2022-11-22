@@ -23,19 +23,25 @@
             <ul>
                 <div class="top-informacoes">
 
-                <img src="img/perfil/<?php echo $img; ?>" alt="">
-
                     <?php
 
-/*
-                        if($sexo=='Masculino'){
-                            echo "<img src='img/perfil/user.png' alt='Usuário'>";
+                        if($img=="null"){
+
+                            if($sexo=='Masculino'){
+                                echo "<img src='img/perfil/user.png' alt='Usuário'>";
+                            }else{
+                                echo "<img src='img/perfil/user2.png' alt='Usuário'>";
+
+                            }
+
                         }else{
-                            echo "<img src='img/perfil/user2.png' alt='Usuário'>";
+
+                            echo "<img src='img/perfil/$img' alt=''>";
 
                         }
-*/
+
                     ?>
+
                     <div class="text-top">
                         <h3 class="dados-user"><?php echo $nome;?></h3>
                         <small class="dados-user"><?php echo $email;?></small>

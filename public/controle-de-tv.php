@@ -28,7 +28,7 @@
                 <p>Nivel de conforto</p>
                 <small>Médio nível</small>    
             </div>  
-            <button id="contrate-servico">Contrate agora</button>
+            <button id="contrate-servico" onclick="$crisp.push(['do', 'chat:open'])">Contrate agora</button>
         </div>
     </div>
 </main>

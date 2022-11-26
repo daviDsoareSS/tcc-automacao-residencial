@@ -25,7 +25,7 @@
           Contratando nossos serviços você terá a interação total da sua casa em apenas um toque no seu celular.
           Irá facilitar tarefas que dependiam só de você, de acordo com as suas necessidades e vontades.
           <i>A Casa do Futuro</i> pode estar a apenas um clique de você.</p>
-          <a href="index.php#sobre"><button>Venha conhecer</button></a>
+          <a href="index.php#sobre"><button onclick="$crisp.push(['do', 'session:reset']);">Venha conhecer</button></a>
       </div>
   </div>
 </main>

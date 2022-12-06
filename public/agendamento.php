@@ -180,7 +180,7 @@
                         </div>
                 </div>
                 <div class="form-group">
-                     <?php
+                    <?php
                      
                         echo "Datas Disponíveis:". $user_data_agendamento['dataAgendamento']. "<br>";
                     ?>

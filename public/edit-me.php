@@ -53,7 +53,7 @@
 <body class="pag-editando-usuario pag-edit-me">
     <a href="perfil.php"><img class="voltar-desktop" src="img/tela-login-admin/seta-editar.png" alt="Voltar"></a>
     <main>
-        <form method="post" class="container-editar-usuario" action="atualiza-me.php">         
+        <form method="post" class="container-editar-usuario" action="atualiza-me.php" enctype="multipart/form-data">         
             <h1>Editar usuário</h1>
             <div class="form-group">
                 <label for="nome">Nome</label>
@@ -67,6 +67,12 @@
                 <label for="dataNasc">Data de nascimento</label>
                 <input type="date" name="dataNasc" id="dataNasc" value="<?php echo $dataNasc?>">
             </div>
+
+            <div class="form-group">
+                <p>Selecione uma Imagem</p>
+                <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
+            </div>
+
             <div class="form-group">
                 <label for="sexoUser">Sexo</label>
                 <select name="sexoUser" id="sexoUser" value="<?php echo $sexo?>">

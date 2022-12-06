@@ -32,6 +32,7 @@
               $dataNasc = $user_data['dataNasc'];
               $sexo = $user_data['sexo'];
               $telefone1 = $user_data['telefone1'];
+              $img = $user_data['img'];
               /*TABELA ENDEREÇOS*/
               $rua = $user_data_endereco['endereco'];
               $numero = $user_data_endereco['numero'];

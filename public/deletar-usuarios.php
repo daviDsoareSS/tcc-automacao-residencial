@@ -100,15 +100,16 @@
                 <tbody>
                     <?php
                         while($user_data = mysqli_fetch_assoc($result)){
-            
-                            echo "<tr>"; 
-                                echo "<td data-title='id'>".$user_data['idUser']."</td>";
-                                echo "<td data-title='Email'>".$user_data['email']."</td>";
-                                echo "<td data-title='Nome'>".$user_data['nome']."</td>";
-                                echo "<td data-title='DataNasc'>".$user_data['dataNasc']."</td>";
-                                echo "<td data-title='Inicio da conta'>".$user_data['dataCriacaoConta']."</td>";
-                                echo "<td data-title='Deletar usuário'><a href='deletando-usuario.php?id=$user_data[idUser]'><img src='img/dashboard/icon/delete.png' class='agenda style='cursor:pointer;'></a></td>";                                                                            
-                            echo "</tr>";   
+                    ?>
+                        <tr> 
+                            <td data-title="id"> <?php echo $user_data['idUser']; ?></td>
+                            <td data-title="Email"><?php echo $user_data['email']; ?></td>
+                            <td data-title="Nome"><?php echo $user_data['nome']; ?></td>
+                            <td data-title="DataNasc"><?php echo $user_data['dataNasc']; ?></td>
+                            <td data-title="Inicio da conta"><?php echo $user_data['dataCriacaoConta']; ?></td>
+                            <td data-title="Deletar usuário"><a href="deletando-usuario.php?id=<?php echo $user_data['idUser']; ?>"><img src="img/dashboard/icon/delete.png" class="agenda" style="cursor:pointer;"></a></td>                                         
+                        </tr>
+                    <?php
                         }                     
                     ?>    
                 </tbody>

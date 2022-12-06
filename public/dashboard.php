@@ -57,7 +57,7 @@
                 <a href="dashboard.php"><img src="img/dashboard/icon/home.png" alt=""><li class="selected">Interface</li></a>
                 <a href="editar-usuarios.php"><img src="img/dashboard/icon/edit.png" alt=""><li class="">Editar usuários</li></a>
                 <a href="deletar-usuarios.php"><img src="img/dashboard/icon/apagar.png" alt=""><li class="">Deletar usuários</li></a>
-            </ul>    
+            </ul>
         </div>
 
         <div class="container-sidebar-opcoes-admin" id="opcoes-admin">

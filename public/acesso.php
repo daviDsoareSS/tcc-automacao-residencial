@@ -50,7 +50,9 @@
         exit;
     }else{
 
-        $sql = "INSERT INTO users VALUES (DEFAULT, '$nome','$dataNasc','$sexo', '$tel1', '$tel2','$email','$senha','$dataCriacaoConta', '$dataUltimoAcesso')";
+        $new_img_name = "null";
+        
+        $sql = "INSERT INTO users VALUES (DEFAULT, '$nome','$dataNasc','$sexo', '$tel1', '$tel2','$email','$senha', '$new_img_name', '$dataCriacaoConta', '$dataUltimoAcesso')";
 
         $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
 

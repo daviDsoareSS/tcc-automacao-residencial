@@ -77,7 +77,7 @@
     <!--FIM FAVICON-->
     <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="5f0a251c-2746-4d3e-90a8-0893be62345e";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
   </head>
-<body >
+<body onload="$crisp.push(['do', 'session:reset'])">
       <!-- início do preloader -->
         <div id="preloader">
     <div class="inner">

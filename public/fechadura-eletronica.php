@@ -28,7 +28,15 @@
                 <p>Nivel de segurança</p>
                 <small>Alto nível</small>    
             </div>   
-            <button id="contrate-servico" onclick="$crisp.push(['do', 'chat:open'])">Contrate agora</button>
+            <button id="contrate-servico" onclick="$crisp.push(['do', 'chat:open'])" 
+            <?php
+                if(!isset($_SESSION['idUser'])){
+                    echo "data-toggle='modal' data-target='#exampleModalCadastro'>";
+                }else{
+                    echo ">";
+                }
+            ?>Contrate 
+            agora</button>
         </div>
     </div>
 </main>

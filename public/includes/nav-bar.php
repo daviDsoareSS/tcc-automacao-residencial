@@ -32,7 +32,6 @@
               $dataNasc = $user_data['dataNasc'];
               $sexo = $user_data['sexo'];
               $telefone1 = $user_data['telefone1'];
-              $img = $user_data['img'];
               /*TABELA ENDEREÇOS*/
               $rua = $user_data_endereco['endereco'];
               $numero = $user_data_endereco['numero'];
@@ -96,7 +95,7 @@
   <svg height="52vw" width="10vw"></svg>
 </span>
 <!-- fim do preloader --> 
-<!-- Modal -->
+<!-- Modal Trocar de Conta-->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -120,6 +119,25 @@
     </div>
   </div>
 </div>
+<!-- FIM Modal Trocar de Conta-->
+<!-- Modal Cadastro -->
+<div class="modal fade" id="exampleModalCadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><strong>Cadastro</strong></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Você ainda não possui um cadastro em nosso site. Clique no link abaixo e realize o cadastro para realizar o agendamento.</p>
+        <a href="signup.php"><p>Cadastre-se agora</p></a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIM Modal Cadastro -->
     <nav class="navbar navbar-expand-lg ">
         <a class="navbar-brand" href="index.php"><img class="logo" src="img/logo/logo-4house.png" width="200vw" alt="Logo 4House"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

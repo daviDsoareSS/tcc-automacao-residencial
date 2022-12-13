@@ -25,21 +25,13 @@
 
                     <?php
 
-                        if($img=="null"){
-
-                            if($sexo=='Masculino'){
-                                echo "<img src='img/perfil/user.png' alt='Usuário'>";
-                            }else{
-                                echo "<img src='img/perfil/user2.png' alt='Usuário'>";
-
-                            }
-
+                        if($sexo=='Masculino'){
+                            echo "<img src='img/perfil/user.png' alt='Usuário'>";
                         }else{
+                            echo "<img src='img/perfil/user2.png' alt='Usuário'>";
 
-                            echo "<img src='img/perfil/$img' alt=''>";
-
-                        }
-
+                        }                    
+                        
                     ?>
 
                     <div class="text-top">

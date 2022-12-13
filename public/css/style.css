@@ -1340,7 +1340,16 @@ footer .list-unstyled small{
     figure .card-figure .foto-user{
         width: 10vw;
     }
-    
+    /* Modal pesquisa de serviços */
+    .container-modal-services .modal-services{
+        height: 40rem;
+        margin: 2vw;
+        padding: 10vw;
+        width: 100% !important;
+    }
+    .container-modal-services .modal-services h2{
+        margin-bottom: 6vw !important;
+    }
     /*PÁGINA PERFIL*/
     .pag-perfil main{
         gap: 2vw;

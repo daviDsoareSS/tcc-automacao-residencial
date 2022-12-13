@@ -28,7 +28,7 @@
                 <p>Nivel de segurança</p>
                 <small>Alto nível</small>    
             </div>    
-            <button id="contrate-servico" onclick="$crisp.push(['do', 'chat:open'])">Contrate agora</button>
+            <button id="contrate-servico" onclick="$crisp.push(['do', 'chat:open'])" class="dropdown-item btn-primary" data-toggle="modal-cadastro" data-target="#exampleModalCadastro">Contrate agora</button>
         </div>
     </div>
 </main>

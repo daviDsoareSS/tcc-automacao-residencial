@@ -208,29 +208,6 @@
         echo "</div>";     
       ?>
 
-      <div class="modal-cadastro fade" id="exampleModalCadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form class="container-login" action="entrada-login.php" method="post">
-                <strong><small>Email:</small></strong><br>
-                <input type="text" name="email" id="" required><br>
-                <strong><small>Senha:</small></strong><br>
-                <input type="password" name="senha" required>
-                <hr>
-                <a href="signup.php"><button type="button" class="btn btn-secondary">Não tenho conta</button></a>
-                <a href="index.php"><button type="submit" class="btn btn-primary">Entrar</button></a>
-              </form>
-            </div>
-          </div>
-        </div>
-    </div>
       <script>
         /*SISTEMA DE BUSCA DE SERVIÇOS*/
         const search = document.getElementById('pesquisa-servicos');

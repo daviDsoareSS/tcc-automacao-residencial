@@ -244,13 +244,6 @@
         function fechar(){
           modal.classList.add("fechar");
         }
-
-        /*MODAL DE CADASTRO*/
-       
-        const modal = document.getElementById('modal-cadastro');
-        function fechar(){
-          modal.classList.add("fechar");
-        }
       </script>
 </body>
     <script src="script/preloader.js" defer></script>
